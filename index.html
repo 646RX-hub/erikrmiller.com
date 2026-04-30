@@ -64,8 +64,15 @@ nav.stuck{padding:1rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:blur(2
 .hero-bg{
   position:absolute;inset:0;z-index:0;
   background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920&q=88&auto=format&fit=crop&crop=center');
-  background-size:cover;background-position:center 40%;
+  background-size:110%;
+  background-position:center 40%;
   filter:saturate(0.25) brightness(0.22) contrast(1.2);
+  animation:heroBgPan 20s ease-in-out infinite alternate !important;
+}
+@keyframes heroBgPan{
+  0%  { background-position: 40% 40%; background-size:110%; }
+  50% { background-position: 60% 44%; background-size:114%; }
+  100%{ background-position: 44% 38%; background-size:110%; }
 }
 .hero-glow{
   position:absolute;inset:0;z-index:1;pointer-events:none;
@@ -947,11 +954,7 @@ htl
   .to('#hscr',        {opacity:1,duration:0.6},1.3);
 // hero-bg uses CSS animation
 // Hero background ambient drift — GSAP controlled
-// Background ambient drift
-gsap.fromTo('#heroBg', 
-  {scale:1.0, xPercent:0, yPercent:0},
-  {scale:1.06, xPercent:-1, yPercent:0.8, duration:14, ease:'sine.inOut', yoyo:true, repeat:-1}
-);
+// bg animated via CSS background-position
 
 gsap.to('.hero-portrait',{yPercent:5,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1.8}});
 gsap.to('.hero-content',{opacity:0,yPercent:16,ease:'none',scrollTrigger:{trigger:'.hero',start:'12% top',end:'bottom top',scrub:1.2}});
