@@ -63,23 +63,20 @@ nav.stuck{padding:1rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:blur(2
 }
 .hero-bg{
   position:absolute;inset:0;z-index:0;
-  /* Dark urban alleyway — depth, thought, grit */
   background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920&q=88&auto=format&fit=crop&crop=center');
   background-size:cover;background-position:center 40%;
   filter:saturate(0.25) brightness(0.22) contrast(1.2);
-  transform:scale(1.05);
-  transition:transform 20s cubic-bezier(0.23,1,0.32,1);
+  animation:bgDrift 25s ease-in-out infinite;
+  will-change:transform;
 }
-.hero-bg.loaded{transform:scale(1);}
-/* Slow ambient drift to give the bg life */
 @keyframes bgDrift{
   0%{transform:scale(1.0) translate(0,0);}
-  25%{transform:scale(1.02) translate(-0.5%,0.3%);}
-  50%{transform:scale(1.04) translate(0.4%,-0.4%);}
-  75%{transform:scale(1.02) translate(-0.3%,0.2%);}
+  25%{transform:scale(1.03) translate(-0.6%,0.4%);}
+  50%{transform:scale(1.05) translate(0.5%,-0.5%);}
+  75%{transform:scale(1.03) translate(-0.4%,0.3%);}
   100%{transform:scale(1.0) translate(0,0);}
 }
-.hero-bg.loaded{animation:bgDrift 25s ease-in-out infinite;}
+.hero-bg.loaded{opacity:1;}
 .hero-glow{
   position:absolute;inset:0;z-index:1;pointer-events:none;
   background:
