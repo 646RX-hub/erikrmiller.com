@@ -165,12 +165,32 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 .ft-soc{display:flex;gap:1.6rem;}
 .ft-soc a{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.18);text-decoration:none;transition:color 0.2s;}
 .ft-soc a:hover{color:var(--gold);}
+
+@media (max-width: 768px) {
+  nav{padding:1.25rem 1.5rem;}
+  .nav-links{display:none;}
+  .blog-hero{padding:7rem 0 3rem;}
+  .blog-hero-inner{padding:0 1.5rem;}
+  .blog-title{font-size:clamp(2rem,8vw,3rem);}
+  .blog-body{padding:3rem 1.5rem 4rem;}
+  .blog-body p{font-size:1rem;line-height:1.78;}
+  .blog-body h2{font-size:clamp(1.4rem,5vw,1.8rem);}
+  .blog-author{padding:2rem 1.5rem;flex-direction:column;gap:1rem;}
+  .blog-nav{padding:2rem 1.5rem 3rem;flex-direction:column;gap:1.5rem;align-items:flex-start;}
+  .blog-subscribe{padding:3rem 1.5rem;}
+  .blog-subscribe h3{font-size:clamp(1.6rem,6vw,2.5rem);}
+  footer{padding:3rem 1.5rem 2rem;}
+  .ft{grid-template-columns:1fr;gap:2rem;}
+  .ft-bot{flex-direction:column;gap:1rem;}
+  .ft-soc{justify-content:center;}
+}
+
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav id="nav">
+<nav id="nav" style="background:rgba(12,11,9,0.95);backdrop-filter:blur(20px);">
   <div class="nav-logo">E.R.M.</div>
   <ul class="nav-links">
     <li><a href="/#who">About</a></li>
@@ -253,11 +273,11 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <div>
       <p class="ft-ht">Navigate</p>
       <ul class="ft-ul">
-        <li><a href="#who">About</a></li>
-        <li><a href="#global">Global Reach</a></li>
-        <li><a href="#advisory">Advisory</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#resources">Resources</a></li>
+        <li><a href="/#who">About</a></li>
+        <li><a href="/#global">Global Reach</a></li>
+        <li><a href="/#advisory">Advisory</a></li>
+        <li><a href="/#blog">Blog</a></li>
+        <li><a href="/#resources">Resources</a></li>
       </ul>
     </div>
     <div>
