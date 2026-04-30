@@ -955,7 +955,7 @@ htl
   .to('#hctas',        {opacity:1,duration:0.8,ease:'power2.out'},0.92)
   .to('#hstats',      {opacity:1,y:0,duration:0.9,ease:'power2.out'},0.95)
   .to('#hscr',        {opacity:1,duration:0.6},1.3);
-gsap.to('.hero-bg',{yPercent:8,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:2.2}});
+// hero-bg uses CSS animation
 gsap.to('.hero-portrait',{yPercent:5,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1.8}});
 gsap.to('.hero-content',{opacity:0,yPercent:16,ease:'none',scrollTrigger:{trigger:'.hero',start:'12% top',end:'bottom top',scrub:1.2}});
 gsap.to('#hstats',{opacity:0,ease:'none',scrollTrigger:{trigger:'.hero',start:'8% top',end:'30% top',scrub:1}});
