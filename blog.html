@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Erik R. Miller</title>
+<meta name="description" content="B2B marketing intel three times a week. ABM, demand gen, AI workflows, GTM strategy, and global marketing from Erik R. Miller.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --ink:#0c0b09;
+  --ink2:#161411;
+  --paper:#f7f4ee;
+  --cream:#edeae0;
+  --warm:#e5e0d4;
+  --gold:#b8922a;
+  --gold-lt:#d4ac4e;
+  --gold-pale:rgba(184,146,42,0.1);
+  --muted:#6b6456;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Syne',sans-serif;
+  --body:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);overflow-x:hidden;}
+
+/* CURSOR */
+.cur{position:fixed;width:5px;height:5px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+.cur-ring{position:fixed;width:30px;height:30px;border-radius:50%;border:1px solid rgba(184,146,42,0.35);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.75rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:blur(20px);}
+.nav-logo{font-family:var(--sans);font-size:0.7rem;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--paper);text-decoration:none;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:rgba(247,244,238,0.58);text-decoration:none;transition:color 0.22s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:100%;height:1px;background:var(--gold);transition:right 0.3s ease;}
+.nav-links a:hover{color:var(--paper);}
+.nav-links a:hover::after{right:0;}
+.nav-links a.active{color:var(--gold);}
+.nav-links a.active::after{right:0;}
+.nav-cta{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold) !important;border:1px solid rgba(184,146,42,0.4);padding:0.4rem 1rem;}
+.nav-cta:hover{background:rgba(184,146,42,0.1);}
+.nav-cta::after{display:none !important;}
+
+/* BLOG HEADER */
+.blog-header{
+  background:var(--ink);
+  padding:10rem 4rem 5rem;
+  position:relative;
+  overflow:hidden;
+}
+.bh-atmo{position:absolute;inset:0;pointer-events:none;}
+.bh-blob{position:absolute;border-radius:50%;filter:blur(100px);}
+.bhb1{width:60vw;height:60vw;background:radial-gradient(circle,rgba(184,146,42,0.08) 0%,transparent 65%);top:-20%;right:-10%;}
+.bhb2{width:35vw;height:35vw;background:radial-gradient(circle,rgba(184,146,42,0.05) 0%,transparent 65%);bottom:-10%;left:-5%;}
+.bh-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;}
+.bh-kicker{font-family:var(--sans);font-size:0.56rem;font-weight:600;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:2rem;}
+.bh-kicker::before{content:'';width:30px;height:1px;background:var(--gold);}
+.bh-title{font-family:var(--serif);font-size:clamp(3.5rem,7vw,7rem);font-weight:300;line-height:0.92;letter-spacing:-0.02em;color:var(--paper);margin-bottom:2rem;}
+.bh-title em{font-style:italic;color:var(--gold-lt);}
+.bh-desc{font-family:var(--body);font-size:1rem;font-weight:300;color:rgba(247,244,238,0.42);max-width:520px;line-height:1.82;margin-bottom:3rem;}
+.bh-cadence{display:flex;align-items:center;gap:1.5rem;}
+.bh-day{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--paper);padding:0.45rem 1rem;border:1px solid rgba(247,244,238,0.12);}
+.bh-day.active{color:var(--gold);border-color:rgba(184,146,42,0.4);background:rgba(184,146,42,0.06);}
+
+/* FILTER BAR */
+.filter-bar{background:var(--cream);border-bottom:1px solid rgba(10,9,8,0.08);padding:0 4rem;position:sticky;top:0;z-index:100;}
+.filter-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:0;overflow-x:auto;scrollbar-width:none;}
+.filter-inner::-webkit-scrollbar{display:none;}
+.filter-btn{font-family:var(--sans);font-size:0.54rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);padding:1.1rem 1.5rem;border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s;white-space:nowrap;}
+.filter-btn:hover{color:var(--ink);}
+.filter-btn.active{color:var(--ink);border-bottom-color:var(--gold);}
+
+/* FEATURED POST */
+.featured{background:var(--paper);padding:5rem 4rem 0;}
+.featured-inner{max-width:1200px;margin:0 auto;}
+.featured-label{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;}
+.featured-card{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border:1px solid rgba(10,9,8,0.09);background:var(--cream);transition:border-color 0.3s;cursor:pointer;text-decoration:none;}
+.featured-card:hover{border-color:rgba(184,146,42,0.35);}
+.fc-left{padding:3.5rem;}
+.fc-tag{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.25rem;}
+.fc-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,3rem);font-weight:300;line-height:1.15;color:var(--ink);margin-bottom:1.25rem;}
+.fc-title em{font-style:italic;color:var(--gold);}
+.fc-body{font-family:var(--body);font-size:0.88rem;font-weight:300;color:var(--muted);line-height:1.78;margin-bottom:2rem;}
+.fc-meta{display:flex;align-items:center;justify-content:space-between;}
+.fc-date{font-family:var(--body);font-size:0.72rem;color:rgba(10,9,8,0.3);}
+.fc-read{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(184,146,42,0.3);padding-bottom:2px;}
+.fc-right{background:var(--ink);position:relative;overflow:hidden;min-height:320px;display:flex;align-items:flex-end;padding:2.5rem;}
+.fc-ghost{font-family:var(--serif);font-size:10rem;font-weight:300;font-style:italic;color:rgba(184,146,42,0.07);line-height:1;position:absolute;top:0.5rem;right:1rem;user-select:none;}
+.fc-num{font-family:var(--serif);font-size:0.9rem;font-weight:300;font-style:italic;color:rgba(247,244,238,0.18);position:relative;z-index:2;}
+
+/* POST GRID */
+.posts{background:var(--paper);padding:4rem 4rem 8rem;}
+.posts-inner{max-width:1200px;margin:0 auto;}
+.posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.post-card{background:var(--cream);border:1px solid rgba(10,9,8,0.08);padding:2.5rem;transition:border-color 0.3s,background 0.3s;cursor:pointer;text-decoration:none;display:block;opacity:0;transform:translateY(18px);}
+.post-card:hover{border-color:rgba(184,146,42,0.3);background:rgba(184,146,42,0.03);}
+.post-card.hidden{display:none;}
+.pc-tag{font-family:var(--sans);font-size:0.5rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.9rem;}
+.pc-title{font-family:var(--serif);font-size:1.45rem;font-weight:300;line-height:1.22;color:var(--ink);margin-bottom:0.85rem;}
+.pc-title em{font-style:italic;color:var(--gold);}
+.pc-body{font-family:var(--body);font-size:0.8rem;font-weight:300;color:var(--muted);line-height:1.72;margin-bottom:1.5rem;}
+.pc-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(10,9,8,0.07);padding-top:1.1rem;margin-top:auto;}
+.pc-date{font-family:var(--body);font-size:0.65rem;color:rgba(10,9,8,0.28);}
+.pc-arrow{font-family:var(--sans);font-size:0.5rem;font-weight:600;letter-spacing:0.12em;color:var(--gold);}
+
+/* NEWSLETTER CTA */
+.blog-nl{background:var(--ink);padding:8rem 4rem;text-align:center;position:relative;overflow:hidden;}
+.bnl-glow{position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 50% 50%,rgba(184,146,42,0.07) 0%,transparent 65%);pointer-events:none;}
+.bnl-k{font-family:var(--sans);font-size:0.56rem;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;position:relative;}
+.bnl-hl{font-family:var(--serif);font-size:clamp(2.5rem,5vw,5.5rem);font-weight:300;line-height:1;letter-spacing:-0.02em;color:var(--paper);margin-bottom:1.25rem;position:relative;}
+.bnl-hl em{font-style:italic;color:var(--gold-lt);}
+.bnl-sub{font-family:var(--body);font-size:0.95rem;font-weight:300;color:rgba(247,244,238,0.4);max-width:400px;margin:0 auto 2.5rem;line-height:1.82;position:relative;}
+.bnl-form{display:flex;max-width:400px;margin:0 auto;position:relative;}
+.bnl-inp{flex:1;padding:0.9rem 1.35rem;border:1px solid rgba(247,244,238,0.11);border-right:none;background:rgba(247,244,238,0.04);font-family:var(--body);font-size:0.85rem;color:var(--paper);outline:none;transition:border-color 0.2s;}
+.bnl-inp::placeholder{color:rgba(247,244,238,0.2);}
+.bnl-inp:focus{border-color:rgba(184,146,42,0.42);}
+.bnl-btn{padding:0.9rem 1.7rem;background:var(--gold);color:var(--ink);border:1px solid var(--gold);font-family:var(--sans);font-size:0.56rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background 0.22s;}
+.bnl-btn:hover{background:var(--gold-lt);}
+
+/* FOOTER */
+footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(247,244,238,0.05);}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;padding-bottom:3rem;margin-bottom:3rem;border-bottom:1px solid rgba(247,244,238,0.06);}
+.ft-brand{font-family:var(--serif);font-size:1.55rem;font-weight:300;color:var(--paper);margin-bottom:0.7rem;}
+.ft-tag{font-family:var(--body);font-size:0.8rem;font-weight:300;color:rgba(247,244,238,0.25);line-height:1.72;max-width:230px;margin-bottom:1.25rem;}
+.ft-global{font-family:var(--sans);font-size:0.5rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(247,244,238,0.2);margin-top:0.75rem;}
+.ft-ht{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem;}
+.ft-ul{list-style:none;display:flex;flex-direction:column;gap:0.62rem;}
+.ft-ul a{font-family:var(--body);font-size:0.8rem;font-weight:300;color:rgba(247,244,238,0.28);text-decoration:none;transition:color 0.2s;}
+.ft-ul a:hover{color:var(--paper);}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;}
+.ft-copy{font-family:var(--body);font-size:0.65rem;color:rgba(247,244,238,0.14);}
+.ft-soc{display:flex;gap:1.6rem;}
+.ft-soc a{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.18);text-decoration:none;transition:color 0.2s;}
+.ft-soc a:hover{color:var(--gold);}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav{padding:1.25rem 1.5rem;}
+  .nav-links{display:none;}
+  .blog-header{padding:8rem 1.5rem 4rem;}
+  .bh-title{font-size:clamp(2.8rem,12vw,4.5rem);}
+  .filter-bar{padding:0 1.5rem;}
+  .featured{padding:3rem 1.5rem 0;}
+  .featured-card{grid-template-columns:1fr;}
+  .fc-right{min-height:180px;}
+  .posts{padding:3rem 1.5rem 5rem;}
+  .posts-grid{grid-template-columns:1fr;}
+  .blog-nl{padding:5rem 1.5rem;}
+  footer{padding:4rem 1.5rem 2.5rem;}
+  .ft{grid-template-columns:1fr;gap:2.5rem;}
+}
+@media(min-width:769px) and (max-width:1024px){
+  .posts-grid{grid-template-columns:repeat(2,1fr);}
+  .blog-header{padding:9rem 3rem 4rem;}
+  .featured{padding:4rem 3rem 0;}
+  .posts{padding:3rem 3rem 6rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="cring"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">E.R.M.</a>
+  <ul class="nav-links">
+    <li><a href="index.html#who">About</a></li>
+    <li><a href="index.html#global">Global</a></li>
+    <li><a href="index.html#advisory">Advisory</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="index.html#resources">Resources</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Work Together</a></li>
+  </ul>
+</nav>
+
+<!-- BLOG HEADER -->
+<section class="blog-header">
+  <div class="bh-atmo">
+    <div class="bh-blob bhb1"></div>
+    <div class="bh-blob bhb2"></div>
+  </div>
+  <div class="bh-inner">
+    <div class="bh-kicker" id="bhk">The Operator</div>
+    <h1 class="bh-title" id="bht">B2B marketing<br><em>without the fluff.</em></h1>
+    <p class="bh-desc" id="bhd">Frameworks, tactics, and honest takes from someone who has built the function — not just advised on it. Three times a week.</p>
+    <div class="bh-cadence" id="bhc">
+      <span class="bh-day active">Monday</span>
+      <span class="bh-day active">Wednesday</span>
+      <span class="bh-day active">Friday</span>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <button class="filter-btn active" data-filter="all">All Posts</button>
+    <button class="filter-btn" data-filter="abm">ABM</button>
+    <button class="filter-btn" data-filter="demand-gen">Demand Gen</button>
+    <button class="filter-btn" data-filter="ai">AI in Marketing</button>
+    <button class="filter-btn" data-filter="gtm">GTM Strategy</button>
+    <button class="filter-btn" data-filter="global">Global Marketing</button>
+    <button class="filter-btn" data-filter="frameworks">Frameworks</button>
+  </div>
+</div>
+
+<!-- FEATURED POST -->
+<section class="featured">
+  <div class="featured-inner">
+    <p class="featured-label">Featured Post</p>
+    <a class="featured-card" href="blog/why-most-abm-programs-fail.html">
+      <div class="fc-left">
+        <span class="fc-tag">ABM Strategy</span>
+        <h2 class="fc-title">Why Most ABM Programs Fail <em>Before They Start</em></h2>
+        <p class="fc-body">It's not execution. It's that teams skip the foundational work — ICP, tier structure, and real sales alignment — then wonder why nothing converts. Here's the framework that changes that.</p>
+        <div class="fc-meta">
+          <span class="fc-date">Monday, April 28, 2025</span>
+          <span class="fc-read">Read →</span>
+        </div>
+      </div>
+      <div class="fc-right">
+        <div class="fc-ghost">01</div>
+        <span class="fc-num">Featured · 01</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- POST GRID -->
+<section class="posts">
+  <div class="posts-inner">
+    <div class="posts-grid" id="postsGrid">
+
+      <a class="post-card" href="blog/how-i-cut-content-production-time.html" data-category="ai">
+        <span class="pc-tag">AI in Marketing</span>
+        <h3 class="pc-title">How I Cut Content Production Time by <em>60%</em></h3>
+        <p class="pc-body">Specific workflows, prompt structures, and the guardrails that keep output sounding human. No hype — just what actually works inside a real marketing org.</p>
+        <div class="pc-footer">
+          <span class="pc-date">Wednesday, April 23, 2025</span>
+          <span class="pc-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="post-card" href="blog/the-mql-is-dead.html" data-category="demand-gen">
+        <span class="pc-tag">Demand Gen</span>
+        <h3 class="pc-title">The MQL Is Dead. <em>What to Measure Instead.</em></h3>
+        <p class="pc-body">Pipeline velocity, account engagement, and why intent data changes your entire CRO conversation. Stop optimizing for a metric nobody in revenue trusts.</p>
+        <div class="pc-footer">
+          <span class="pc-date">Friday, April 18, 2025</span>
+          <span class="pc-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="post-card" href="blog/running-marketing-across-four-continents.html" data-category="global">
+        <span class="pc-tag">Global Marketing</span>
+        <h3 class="pc-title">Running Marketing Across <em>Four Continents</em></h3>
+        <p class="pc-body">What you learn when your team is in New York, London, Mumbai, and Singapore — and the campaigns have to work in all four markets simultaneously.</p>
+        <div class="pc-footer">
+          <span class="pc-date">Monday, April 14, 2025</span>
+          <span class="pc-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="post-card" href="blog/icp-development-the-framework-i-use-every-time.html" data-category="frameworks">
+        <span class="pc-tag">Frameworks</span>
+        <h3 class="pc-title">ICP Development: <em>The Framework I Use Every Time</em></h3>
+        <p class="pc-body">Firmographic filters are table stakes. Behavioral and technographic signals actually predict conversion. Here's the full process, step by step.</p>
+        <div class="pc-footer">
+          <span class="pc-date">Wednesday, April 9, 2025</span>
+          <span class="pc-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="post-card" href="blog/why-most-abm-programs-fail.html" data-category="abm">
+        <span class="pc-tag">ABM Strategy</span>
+        <h3 class="pc-title">The ABM Tier Model <em>Nobody Talks About</em></h3>
+        <p class="pc-body">Tier 1, 2, and 3 accounts need completely different motions. Most teams treat them the same and wonder why their named account program stalls out.</p>
+        <div class="pc-footer">
+          <span class="pc-date">Monday, April 7, 2025</span>
+          <span class="pc-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="post-card" href="blog/why-most-abm-programs-fail.html" data-category="gtm">
+        <span class="pc-tag">GTM Strategy</span>
+        <h3 class="pc-title">What Most GTM Plans Get <em>Wrong in Year One</em></h3>
+        <p class="pc-body">The mistake isn't the strategy — it's treating GTM like a launch event instead of an ongoing operating system. Here's how to build one that compounds.</p>
+        <div class="pc-footer">
+          <span class="pc-date">Friday, April 4, 2025</span>
+          <span class="pc-arrow">→</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="blog-nl">
+  <div class="bnl-glow"></div>
+  <p class="bnl-k">Stay Sharp</p>
+  <h2 class="bnl-hl">Three times a week.<br><em>No fluff.</em></h2>
+  <p class="bnl-sub">Frameworks, tactics, and honest takes. Unsubscribe anytime.</p>
+  <div class="bnl-form">
+    <input type="email" class="bnl-inp" placeholder="Your work email">
+    <button class="bnl-btn">Subscribe →</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div>
+      <div class="ft-brand">Erik R. Miller</div>
+      <p class="ft-tag">Marketing Leader. Builder. Operator. Building things that actually work — for companies of every size, anywhere in the world.</p>
+      <p class="ft-global">New York · London · Mumbai · Singapore</p>
+    </div>
+    <div>
+      <p class="ft-ht">Navigate</p>
+      <ul class="ft-ul">
+        <li><a href="index.html#who">About</a></li>
+        <li><a href="index.html#global">Global Reach</a></li>
+        <li><a href="index.html#advisory">Advisory</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#resources">Resources</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="ft-ht">Connect</p>
+      <ul class="ft-ul">
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="mailto:erikrmiller@outlook.com">Email Erik</a></li>
+        <li><a href="index.html#contact">Work Together</a></li>
+        <li><a href="#">Download CV</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <p class="ft-copy">© 2025 Erik R. Miller · E.R.M. Advisory · New York City</p>
+    <div class="ft-soc">
+      <a href="#">LinkedIn</a>
+      <a href="#">YouTube</a>
+      <a href="#">Twitter / X</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// CURSOR
+const cur=document.getElementById('cur'),cr=document.getElementById('cring');
+let mx=0,my=0,rx=0,ry=0;
+window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+(function t(){cur.style.left=mx+'px';cur.style.top=my+'px';rx+=(mx-rx)*0.09;ry+=(my-ry)*0.09;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(t);})();
+
+// HEADER ENTRANCE
+gsap.from('#bhk',{opacity:0,y:12,duration:0.8,delay:0.3,ease:'power2.out'});
+gsap.from('#bht',{opacity:0,y:24,duration:1,delay:0.45,ease:'power3.out'});
+gsap.from('#bhd',{opacity:0,y:16,duration:0.9,delay:0.6,ease:'power2.out'});
+gsap.from('#bhc',{opacity:0,y:12,duration:0.8,delay:0.75,ease:'power2.out'});
+
+// FEATURED
+gsap.from('.featured-label',{opacity:0,y:10,duration:0.7,scrollTrigger:{trigger:'.featured',start:'top 85%'}});
+gsap.from('.featured-card',{opacity:0,y:24,duration:0.9,ease:'power2.out',scrollTrigger:{trigger:'.featured-card',start:'top 85%'}});
+
+// POST CARDS
+document.querySelectorAll('.post-card').forEach((card,i)=>{
+  gsap.to(card,{opacity:1,y:0,duration:0.7,ease:'power2.out',delay:(i%3)*0.1,
+    scrollTrigger:{trigger:card,start:'top 88%'}});
+});
+
+// FILTER
+const filterBtns = document.querySelectorAll('.filter-btn');
+const postCards = document.querySelectorAll('.post-card');
+
+filterBtns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    filterBtns.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    postCards.forEach(card=>{
+      if(filter==='all' || card.dataset.category===filter){
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+
+ScrollTrigger.refresh();
+</script>
+</body>
+</html>
