@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Running Marketing Across Four Continents | Erik R. Miller</title>
+<meta name="description" content="Running Marketing Across Four Continents — B2B marketing insights from Erik R. Miller, fractional CMO and revenue marketing executive.">
+<meta name="author" content="Erik R. Miller">
+<meta property="og:title" content="Running Marketing Across Four Continents | Erik R. Miller">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://erikrmiller.com/blog/running-marketing-across-four-continents.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDN7MBR58X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LDN7MBR58X');
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --ink:#0c0b09;--ink2:#161411;--paper:#f7f4ee;--cream:#edeae0;
+  --warm:#e5e0d4;--gold:#b8922a;--gold-lt:#d4ac4e;--muted:#6b6456;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Syne',sans-serif;--body:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.75rem 4rem;transition:padding 0.5s,background 0.5s;}
+nav.stuck{padding:1rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:blur(20px);}
+.nav-logo{font-family:var(--sans);font-size:0.7rem;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--paper);text-decoration:none;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:rgba(247,244,238,0.58);text-decoration:none;transition:color 0.22s;}
+.nav-links a:hover{color:var(--paper);}
+.nav-cta{color:var(--gold) !important;border:1px solid rgba(184,146,42,0.4);padding:0.4rem 1rem;}
+
+/* BLOG LAYOUT */
+.blog-hero{
+  background:var(--ink);
+  padding:10rem 0 5rem;
+  position:relative;
+  overflow:hidden;
+}
+.blog-hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 40% at 50% 100%,rgba(184,146,42,0.1),transparent 65%);
+}
+.blog-hero-inner{max-width:820px;margin:0 auto;padding:0 4rem;position:relative;z-index:2;}
+.blog-tag{
+  font-family:var(--sans);font-size:0.58rem;font-weight:700;
+  letter-spacing:0.28em;text-transform:uppercase;
+  color:var(--gold);display:flex;align-items:center;gap:0.75rem;
+  margin-bottom:1.5rem;
+}
+.blog-tag::before{content:'';width:22px;height:1px;background:var(--gold);}
+.blog-title{
+  font-family:var(--serif);font-size:clamp(2.8rem,5vw,4.5rem);
+  font-weight:300;line-height:1.05;letter-spacing:-0.02em;
+  color:var(--paper);margin-bottom:1.5rem;
+}
+.blog-title em{font-style:italic;color:var(--gold-lt);}
+.blog-meta{
+  font-family:var(--body);font-size:0.82rem;font-weight:300;
+  color:rgba(247,244,238,0.35);
+  display:flex;align-items:center;gap:1.5rem;
+}
+.blog-meta-dot{width:3px;height:3px;border-radius:50%;background:rgba(184,146,42,0.4);}
+
+/* ARTICLE BODY */
+.blog-body{
+  max-width:820px;margin:0 auto;padding:5rem 4rem 6rem;
+}
+.blog-body p{
+  font-family:var(--body);font-size:1.08rem;font-weight:300;
+  line-height:1.88;color:#3d3830;margin-bottom:1.6rem;
+}
+.blog-body h2{
+  font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);
+  font-weight:300;line-height:1.2;letter-spacing:-0.01em;
+  color:var(--ink);margin:3.5rem 0 1.2rem;
+  padding-bottom:0.6rem;
+  border-bottom:1px solid rgba(10,9,8,0.08);
+}
+.blog-body h2::before{
+  content:'';display:block;width:28px;height:2px;
+  background:var(--gold);margin-bottom:0.8rem;
+}
+.blog-body hr{
+  border:none;border-top:1px solid rgba(10,9,8,0.08);
+  margin:3rem 0;
+}
+.blog-body strong{font-weight:600;color:var(--ink);}
+.blog-body em{font-style:italic;}
+
+/* Author strip */
+.blog-author{
+  max-width:820px;margin:0 auto;padding:3rem 4rem;
+  border-top:1px solid rgba(10,9,8,0.08);
+  display:flex;align-items:center;gap:2rem;
+}
+.blog-author-name{
+  font-family:var(--sans);font-size:0.75rem;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);
+  margin-bottom:0.3rem;
+}
+.blog-author-bio{
+  font-family:var(--body);font-size:0.9rem;font-weight:300;
+  color:var(--muted);line-height:1.65;
+}
+.blog-author-bio a{color:var(--gold);text-decoration:none;}
+
+/* Post navigation */
+.blog-nav{
+  max-width:820px;margin:0 auto;padding:2.5rem 4rem 5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(10,9,8,0.08);
+}
+.blog-nav-link{
+  font-family:var(--sans);font-size:0.62rem;font-weight:600;
+  letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;
+  border-bottom:1px solid rgba(10,9,8,0.15);padding-bottom:2px;
+  transition:color 0.2s,border-color 0.2s;
+}
+.blog-nav-link:hover{color:var(--gold);border-color:var(--gold);}
+
+/* Subscribe CTA */
+.blog-subscribe{
+  background:var(--ink);padding:5rem 4rem;text-align:center;
+}
+.blog-subscribe h3{
+  font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);
+  font-weight:300;color:var(--paper);margin-bottom:0.8rem;
+}
+.blog-subscribe h3 em{font-style:italic;color:var(--gold-lt);}
+.blog-subscribe p{
+  font-family:var(--body);font-size:0.95rem;font-weight:300;
+  color:rgba(247,244,238,0.45);margin-bottom:2rem;
+}
+.blog-subscribe-btn{
+  display:inline-flex;font-family:var(--sans);font-size:0.58rem;
+  font-weight:700;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);text-decoration:none;
+  padding:0.9rem 2rem;transition:background 0.22s;
+}
+.blog-subscribe-btn:hover{background:var(--gold-lt);}
+
+/* Footer */
+footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(247,244,238,0.05);}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;padding-bottom:3rem;margin-bottom:3rem;border-bottom:1px solid rgba(247,244,238,0.06);}
+.ft-brand{font-family:var(--serif);font-size:1.55rem;font-weight:300;color:var(--paper);margin-bottom:0.7rem;}
+.ft-tag{font-family:var(--body);font-size:0.9rem;font-weight:300;color:rgba(247,244,238,0.25);line-height:1.72;max-width:230px;margin-bottom:1.25rem;}
+.ft-ht{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem;}
+.ft-ul{list-style:none;display:flex;flex-direction:column;gap:0.62rem;}
+.ft-ul a{font-family:var(--body);font-size:0.92rem;font-weight:300;color:rgba(247,244,238,0.28);text-decoration:none;transition:color 0.2s;}
+.ft-ul a:hover{color:var(--paper);}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;}
+.ft-copy{font-family:var(--body);font-size:0.72rem;color:rgba(247,244,238,0.14);}
+.ft-soc{display:flex;gap:1.6rem;}
+.ft-soc a{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.18);text-decoration:none;transition:color 0.2s;}
+.ft-soc a:hover{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">E.R.M.</div>
+  <ul class="nav-links">
+    <li><a href="/#who">About</a></li>
+    <li><a href="/#global">Global</a></li>
+    <li><a href="/#advisory">Advisory</a></li>
+    <li><a href="/#blog">Blog</a></li>
+    <li><a href="/#resources">Resources</a></li>
+    <li><a href="/#contact" class="nav-cta">Work Together</a></li>
+  </ul>
+</nav>
+
+<div class="blog-hero">
+  <div class="blog-hero-inner">
+    <div class="blog-tag">Global Marketing</div>
+    <h1 class="blog-title">Running Marketing Across Four Continents</h1>
+    <div class="blog-meta">
+      <span>Erik R. Miller</span>
+      <span class="blog-meta-dot"></span>
+      <span>Monday, April 14, 2025</span>
+      <span class="blog-meta-dot"></span>
+      <span>6 min read</span>
+    </div>
+  </div>
+</div>
+
+<article class="blog-body">
+
+<p>The first time I got on a plane to meet my team in Mumbai, I thought I understood global marketing. I'd run campaigns that targeted international markets. I knew the time zone math. I'd been on enough early morning calls to know what "does this work for everyone?" really means.</p>
+<p>I was wrong about almost everything. What I learned over the years of actually running marketing across New York, London, Mumbai, and Singapore — not directing it from one place, but building real teams in each — is that global marketing isn't international marketing with a bigger budget. It's a fundamentally different operating model.</p>
+<hr>
+<h2>The translation trap</h2>
+<p>The most expensive mistake in global marketing is treating localization as translation. You take the campaign you built for North America, translate the copy, swap the stock photos for more diverse faces, and call it localized. It isn't.</p>
+<p>What you've done is made the content legible in another language. You haven't made it relevant to another market. Relevance means understanding what your buyer in that market actually cares about — shaped by their regulatory environment, competitive landscape, the maturity of the category in their region, and cultural factors that don't show up in any brief.</p>
+<p>In EMEA, enterprise buyers tend to be more risk-averse and want more proof before engaging with sales. In APAC, particularly India, relationship matters enormously — the trust you build at the human level often matters more than the content you send. None of that comes from translating your North American playbook.</p>
+<hr>
+<h2>The team structure question</h2>
+<p>I tried a few different models before landing on what worked. Centralized with regional coordinators fails because the coordinators don't have enough authority to make programs relevant. Fully decentralized fails in the other direction — four brand voices, four content strategies, no economies of scale.</p>
+<p>What worked was a hub model: a strong center that owned brand, strategy, core content, and technology, with regional leads who had real authority over program execution and budget allocation. Clear swim lanes so everyone knew what was decided globally versus locally. The hardest part isn't the org chart. It's building enough trust across time zones that people actually use the swim lanes instead of fighting over them.</p>
+<hr>
+<h2>What actually travels well</h2>
+<p>Despite all of this, some things translate effectively across every market I've worked in: strong points of view, original research, real customer stories (not polished case studies — actual human stories about problems solved), and executive presence. Having leadership show up in markets to build relationships and listen signals commitment in a way that no campaign can replicate.</p>
+<p>The honest truth about global marketing is that it's harder than it looks from headquarters and more rewarding than most people expect. The teams I built in Mumbai and Singapore and London taught me as much about marketing as anything I learned in New York.</p>
+<p><em>— Erik R. Miller</em></p>
+</article>
+
+<div class="blog-author">
+  <div>
+    <div class="blog-author-name">Erik R. Miller</div>
+    <p class="blog-author-bio">B2B marketing executive. Builder. Operator. 15 years. Four continents. Still fascinated. <a href="https://theoperator-erm.beehiiv.com/subscribe">Subscribe to The Operator</a> for more.</p>
+  </div>
+</div>
+
+<div class="blog-nav">
+  <a href="the-mql-is-dead.html" class="blog-nav-link">← The MQL Is Dead. What to Measure Instead.</a>
+  <a href="icp-development-the-framework-i-use-every-time.html" class="blog-nav-link">ICP Development: The Framework I Use Every Time →</a>
+</div>
+
+<div class="blog-subscribe">
+  <h3>Enjoyed this? Get <em>The Operator.</em></h3>
+  <p>B2B marketing intel three times a week. No fluff.</p>
+  <a href="https://theoperator-erm.beehiiv.com/subscribe" class="blog-subscribe-btn" target="_blank">Subscribe Free →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div>
+      <div class="ft-brand">Erik R. Miller</div>
+      <p class="ft-tag">Marketing Leader. Builder. Operator. Building things that actually work — for companies of every size, anywhere in the world.</p>
+      <p class="ft-global">New York · London · Mumbai · Singapore</p>
+    </div>
+    <div>
+      <p class="ft-ht">Navigate</p>
+      <ul class="ft-ul">
+        <li><a href="#who">About</a></li>
+        <li><a href="#global">Global Reach</a></li>
+        <li><a href="#advisory">Advisory</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="ft-ht">Connect</p>
+      <ul class="ft-ul">
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Email Erik</a></li>
+        <li><a href="#">Book a Call</a></li>
+        <li><a href="#">Download CV</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <p class="ft-copy">© 2025 Erik R. Miller · E.R.M. Advisory · New York City</p>
+    <div class="ft-soc">
+      <a href="#">LinkedIn</a>
+      <a href="#">YouTube</a>
+      <a href="#">Twitter / X</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('stuck',scrollY>60));
+</script>
+</body>
+</html>
