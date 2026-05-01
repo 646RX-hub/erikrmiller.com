@@ -31,8 +31,27 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);overflow-x
 .cur{position:fixed;width:5px;height:5px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
 .cur-ring{position:fixed;width:30px;height:30px;border-radius:50%;border:1px solid rgba(184,146,42,0.35);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);}
 
+
+/* ── MOBILE NAV ── */
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:300;}
+.nav-hamburger span{display:block;width:24px;height:1.5px;background:var(--paper);transition:transform 0.3s,opacity 0.3s;}
+@media(min-width:769px){
+  .nav-hamburger{display:none !important;}
+  .nav-links-mobile{display:none !important;}
+}
+.nav-hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.nav-hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.nav-links-mobile{display:none;position:fixed;inset:0;z-index:250;background:rgba(9,8,10,0.97);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;list-style:none;padding:0;margin:0;}
+.nav-links-mobile.open{display:flex;}
+.nav-links-mobile a{font-family:var(--serif);font-size:clamp(2rem,6vw,3.5rem);font-weight:300;color:rgba(247,244,238,0.9);text-decoration:none;letter-spacing:0.02em;transition:color 0.2s;}
+.nav-links-mobile a:hover{color:var(--gold-lt);}
+.nav-links-mobile .nav-cta{font-family:var(--sans);font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold) !important;border:1px solid rgba(184,146,42,0.5);padding:0.75rem 2rem;}
+/* sr-only */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.75rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:blur(20px);}
+nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.75rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:blur(20px);}
 .nav-logo{font-family:var(--sans);font-size:0.7rem;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--paper);text-decoration:none;}
 .nav-links{display:flex;gap:2.5rem;list-style:none;}
 .nav-links a{font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:rgba(247,244,238,0.58);text-decoration:none;transition:color 0.22s;position:relative;}
@@ -125,22 +144,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(247,244,238,0.05);}
 .ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;padding-bottom:3rem;margin-bottom:3rem;border-bottom:1px solid rgba(247,244,238,0.06);}
 .ft-brand{font-family:var(--serif);font-size:1.55rem;font-weight:300;color:var(--paper);margin-bottom:0.7rem;}
-.ft-tag{font-family:var(--body);font-size:0.8rem;font-weight:300;color:rgba(247,244,238,0.25);line-height:1.72;max-width:230px;margin-bottom:1.25rem;}
+.ft-tag{font-family:var(--body);font-size:0.8rem;font-weight:300;color:rgba(247,244,238,0.62);line-height:1.72;max-width:230px;margin-bottom:1.25rem;}
 .ft-global{font-family:var(--sans);font-size:0.5rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(247,244,238,0.2);margin-top:0.75rem;}
 .ft-ht{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem;}
 .ft-ul{list-style:none;display:flex;flex-direction:column;gap:0.62rem;}
-.ft-ul a{font-family:var(--body);font-size:0.8rem;font-weight:300;color:rgba(247,244,238,0.28);text-decoration:none;transition:color 0.2s;}
+.ft-ul a{font-family:var(--body);font-size:0.8rem;font-weight:300;color:rgba(247,244,238,0.72);text-decoration:none;transition:color 0.2s;}
 .ft-ul a:hover{color:var(--paper);}
 .ft-bot{display:flex;justify-content:space-between;align-items:center;}
-.ft-copy{font-family:var(--body);font-size:0.65rem;color:rgba(247,244,238,0.14);}
+.ft-copy{font-family:var(--body);font-size:0.65rem;color:rgba(247,244,238,0.55);}
 .ft-soc{display:flex;gap:1.6rem;}
-.ft-soc a{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.18);text-decoration:none;transition:color 0.2s;}
+.ft-soc a{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.62);text-decoration:none;transition:color 0.2s;}
 .ft-soc a:hover{color:var(--gold);}
 
 /* MOBILE */
 @media(max-width:768px){
-  nav{padding:1.25rem 1.5rem;}
+  nav#nav{padding:1.25rem 1.5rem;}
   .nav-links{display:none;}
+  .nav-hamburger{display:flex;}
   .blog-header{padding:8rem 1.5rem 4rem;}
   .bh-title{font-size:clamp(2.8rem,12vw,4.5rem);}
   .filter-bar{padding:0 1.5rem;}
@@ -167,9 +187,9 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <div class="cur-ring" id="cring"></div>
 
 <!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-logo">E.R.M.</a>
-  <ul class="nav-links">
+<nav id="nav" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Erik R. Miller — Home">E.R.M.</a>
+  <ul class="nav-links" role="list">
     <li><a href="index.html#who">About</a></li>
     <li><a href="index.html#global">Global</a></li>
     <li><a href="index.html#advisory">Advisory</a></li>
@@ -177,7 +197,19 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <li><a href="index.html#resources">Resources</a></li>
     <li><a href="index.html#contact" class="nav-cta">Work Together</a></li>
   </ul>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<!-- Mobile nav overlay -->
+<ul class="nav-links-mobile" id="mobileNav" role="list" aria-label="Mobile navigation">
+  <li><a href="index.html#who" onclick="closeMobileNav()">About</a></li>
+  <li><a href="index.html#global" onclick="closeMobileNav()">Global</a></li>
+  <li><a href="index.html#advisory" onclick="closeMobileNav()">Advisory</a></li>
+  <li><a href="blog.html">Blog</a></li>
+  <li><a href="index.html#resources" onclick="closeMobileNav()">Resources</a></li>
+  <li><a href="index.html#contact" class="nav-cta" onclick="closeMobileNav()">Work Together</a></li>
+</ul>
 
 <!-- BLOG HEADER -->
 <section class="blog-header">
@@ -214,7 +246,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <section class="featured">
   <div class="featured-inner">
     <p class="featured-label">Featured Post</p>
-    <a class="featured-card" href="blog/why-most-abm-programs-fail.html">
+    <a class="featured-card" href="blog/why-most-abm-programs-fail/">
       <div class="fc-left">
         <span class="fc-tag">ABM Strategy</span>
         <h2 class="fc-title">Why Most ABM Programs Fail <em>Before They Start</em></h2>
@@ -237,7 +269,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   <div class="posts-inner">
     <div class="posts-grid" id="postsGrid">
 
-      <a class="post-card" href="blog/how-i-cut-content-production-time.html" data-category="ai">
+      <a class="post-card" href="blog/how-i-cut-content-production-time/" data-category="ai">
         <span class="pc-tag">AI in Marketing</span>
         <h3 class="pc-title">How I Cut Content Production Time by <em>60%</em></h3>
         <p class="pc-body">Specific workflows, prompt structures, and the guardrails that keep output sounding human. No hype — just what actually works inside a real marketing org.</p>
@@ -247,7 +279,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
         </div>
       </a>
 
-      <a class="post-card" href="blog/the-mql-is-dead.html" data-category="demand-gen">
+      <a class="post-card" href="blog/the-mql-is-dead/" data-category="demand-gen">
         <span class="pc-tag">Demand Gen</span>
         <h3 class="pc-title">The MQL Is Dead. <em>What to Measure Instead.</em></h3>
         <p class="pc-body">Pipeline velocity, account engagement, and why intent data changes your entire CRO conversation. Stop optimizing for a metric nobody in revenue trusts.</p>
@@ -257,7 +289,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
         </div>
       </a>
 
-      <a class="post-card" href="blog/running-marketing-across-four-continents.html" data-category="global">
+      <a class="post-card" href="blog/running-marketing-across-four-continents/" data-category="global">
         <span class="pc-tag">Global Marketing</span>
         <h3 class="pc-title">Running Marketing Across <em>Four Continents</em></h3>
         <p class="pc-body">What you learn when your team is in New York, London, Mumbai, and Singapore — and the campaigns have to work in all four markets simultaneously.</p>
@@ -267,7 +299,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
         </div>
       </a>
 
-      <a class="post-card" href="blog/icp-development-the-framework-i-use-every-time.html" data-category="frameworks">
+      <a class="post-card" href="blog/icp-development-the-framework-i-use-every-time/" data-category="frameworks">
         <span class="pc-tag">Frameworks</span>
         <h3 class="pc-title">ICP Development: <em>The Framework I Use Every Time</em></h3>
         <p class="pc-body">Firmographic filters are table stakes. Behavioral and technographic signals actually predict conversion. Here's the full process, step by step.</p>
@@ -277,7 +309,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
         </div>
       </a>
 
-      <a class="post-card" href="blog/why-most-abm-programs-fail.html" data-category="abm">
+      <a class="post-card" href="blog/why-most-abm-programs-fail/" data-category="abm">
         <span class="pc-tag">ABM Strategy</span>
         <h3 class="pc-title">The ABM Tier Model <em>Nobody Talks About</em></h3>
         <p class="pc-body">Tier 1, 2, and 3 accounts need completely different motions. Most teams treat them the same and wonder why their named account program stalls out.</p>
@@ -287,7 +319,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
         </div>
       </a>
 
-      <a class="post-card" href="blog/why-most-abm-programs-fail.html" data-category="gtm">
+      <a class="post-card" href="blog/why-most-abm-programs-fail/" data-category="gtm">
         <span class="pc-tag">GTM Strategy</span>
         <h3 class="pc-title">What Most GTM Plans Get <em>Wrong in Year One</em></h3>
         <p class="pc-body">The mistake isn't the strategy — it's treating GTM like a launch event instead of an ongoing operating system. Here's how to build one that compounds.</p>
@@ -342,7 +374,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     </div>
   </div>
   <div class="ft-bot">
-    <p class="ft-copy">© 2025 Erik R. Miller · E.R.M. Advisory · New York City</p>
+    <p class="ft-copy">© 2026 Erik R. Miller · E.R.M. Advisory · New York City</p>
     <div class="ft-soc">
       <a href="#">LinkedIn</a>
       <a href="#">YouTube</a>
@@ -398,6 +430,27 @@ filterBtns.forEach(btn=>{
 });
 
 ScrollTrigger.refresh();
+
+// MOBILE NAV
+const hamburger = document.getElementById('navHamburger');
+const mobileNav = document.getElementById('mobileNav');
+function closeMobileNav(){
+  mobileNav.classList.remove('open');
+  hamburger.setAttribute('aria-expanded','false');
+  hamburger.setAttribute('aria-label','Open navigation menu');
+  document.body.style.overflow='';
+}
+if(hamburger){
+  hamburger.addEventListener('click',function(){
+    const isOpen = mobileNav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape' && mobileNav.classList.contains('open')) closeMobileNav();
+  });
+}
 </script>
 </body>
 </html>
