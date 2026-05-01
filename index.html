@@ -191,11 +191,13 @@ nav#nav.stuck{padding:1rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:bl
   overflow:hidden;background:#09080a;
   display:flex;align-items:flex-end;
 }
-/* Video background — hide native controls & play button on all browsers */
+/* Video background — hide native controls & play button on all browsers/iOS */
 .hero-video::-webkit-media-controls{display:none !important;}
 .hero-video::-webkit-media-controls-enclosure{display:none !important;}
 .hero-video::-webkit-media-controls-panel{display:none !important;}
 .hero-video::-webkit-media-play-button{display:none !important;}
+.hero-video::-webkit-media-controls-start-playback-button{display:none !important;}
+.hero-video::-webkit-media-controls-overlay-play-button{display:none !important;}
 .hero-video{
   position:absolute;inset:0;z-index:0;
   width:100%;height:100%;object-fit:cover;object-position:center 40%;
@@ -673,8 +675,22 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   .nav-links{display:none;}
   .nav-logo{font-size:0.65rem;}
 
-  /* HERO */
-  .hero{height:100svh;min-height:0;display:flex;align-items:flex-end;}
+  /* HERO — fill full viewport flush to top, no black gap */
+  .hero{
+    height:100svh;
+    min-height:0;
+    display:flex;
+    align-items:flex-end;
+    /* Ensure hero sits behind the fixed nav, no margin/padding top */
+    margin-top:0;
+    padding-top:0;
+    /* Background fallback while video loads — never black */
+    background:#09080a;
+  }
+  /* On portrait mobile, keep video centered on the skyline */
+  .hero-video{
+    object-position:center center;
+  }
   .hero-portrait{
     height:65%;
     right:0;
@@ -1322,7 +1338,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
           <span class="htag">Featured · ABM</span>
           <h3 class="htitle">Why Most ABM Programs Fail <em>Before They Start</em></h3>
           <p class="hbody">It's not execution. It's that teams skip the foundational work — ICP, tier structure, and real sales alignment — then wonder why nothing converts.</p>
-          <span class="hdate"><time datetime="2025-04-28">Monday, April 28, 2025</time></span>
+          <span class="hdate"><time datetime="2026-04-27">Monday, April 27, 2026</time></span>
         </a>
       </article>
       <article class="hcard" role="listitem">
@@ -1331,7 +1347,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
           <span class="htag">AI in Marketing</span>
           <h3 class="htitle">How I Cut Content Production Time by <em>60%</em></h3>
           <p class="hbody">Specific workflows, prompt structures, and the guardrails that keep output sounding human.</p>
-          <span class="hdate"><time datetime="2025-04-23">Wednesday, April 23, 2025</time></span>
+          <span class="hdate"><time datetime="2026-04-22">Wednesday, April 22, 2026</time></span>
         </a>
       </article>
       <article class="hcard" role="listitem">
@@ -1340,7 +1356,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
           <span class="htag">Demand Gen</span>
           <h3 class="htitle">The MQL Is Dead. <em>What to Measure Instead.</em></h3>
           <p class="hbody">Pipeline velocity, account engagement, and why intent data changes your entire CRO conversation.</p>
-          <span class="hdate"><time datetime="2025-04-18">Friday, April 18, 2025</time></span>
+          <span class="hdate"><time datetime="2026-04-17">Friday, April 17, 2026</time></span>
         </a>
       </article>
       <article class="hcard" role="listitem">
@@ -1349,7 +1365,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
           <span class="htag">Global Marketing</span>
           <h3 class="htitle">Running Marketing Across <em>Four Continents</em></h3>
           <p class="hbody">What you learn when your team is in New York, London, Mumbai, and Singapore — and the campaigns have to work in all four markets.</p>
-          <span class="hdate"><time datetime="2025-04-14">Monday, April 14, 2025</time></span>
+          <span class="hdate"><time datetime="2026-04-13">Monday, April 13, 2026</time></span>
         </a>
       </article>
       <article class="hcard" role="listitem">
@@ -1358,7 +1374,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
           <span class="htag">Frameworks</span>
           <h3 class="htitle">ICP Development: <em>The Framework I Use Every Time</em></h3>
           <p class="hbody">Firmographic filters are table stakes. Behavioral and technographic signals actually predict conversion.</p>
-          <span class="hdate"><time datetime="2025-04-09">Wednesday, April 9, 2025</time></span>
+          <span class="hdate"><time datetime="2026-04-08">Wednesday, April 8, 2026</time></span>
         </a>
       </article>
       <div class="hcard" role="listitem" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:1rem;">
@@ -1537,6 +1553,14 @@ gsap.registerPlugin(ScrollTrigger);
   const vid = document.getElementById('heroVideo');
   if(!vid) return;
 
+  // Ensure all attributes are set for iOS autoplay
+  vid.muted = true;
+  vid.setAttribute('muted', '');
+  vid.setAttribute('playsinline', '');
+  vid.setAttribute('webkit-playsinline', '');
+  vid.controls = false;
+  vid.removeAttribute('controls');
+
   function tryPlay(){
     const p = vid.play();
     if(p !== undefined){
@@ -1545,6 +1569,7 @@ gsap.registerPlugin(ScrollTrigger);
       }).catch(()=>{
         // Autoplay blocked — hide play button, wait for user gesture
         vid.controls = false;
+        vid.removeAttribute('controls');
         vid.classList.add('loaded'); // still show the static frame
       });
     } else {
@@ -1557,18 +1582,45 @@ gsap.registerPlugin(ScrollTrigger);
     tryPlay();
   } else {
     vid.addEventListener('loadeddata', tryPlay, {once:true});
+    vid.addEventListener('canplay', tryPlay, {once:true});
     // Fallback timeout
     setTimeout(tryPlay, 200);
   }
 
   // If blocked, retry on first user interaction (tap/scroll)
   function retryOnGesture(){
+    vid.muted = true;
+    vid.controls = false;
+    vid.removeAttribute('controls');
     vid.play().catch(()=>{});
     document.removeEventListener('touchstart', retryOnGesture);
     document.removeEventListener('scroll', retryOnGesture);
+    document.removeEventListener('touchmove', retryOnGesture);
   }
   document.addEventListener('touchstart', retryOnGesture, {once:true, passive:true});
   document.addEventListener('scroll', retryOnGesture, {once:true, passive:true});
+  document.addEventListener('touchmove', retryOnGesture, {once:true, passive:true});
+})();
+
+// MOBILE HERO HEIGHT FIX — use actual window.innerHeight to avoid
+// iOS Safari address-bar gaps (100svh can still leave dead space on some versions)
+(function(){
+  function setHeroHeight(){
+    const hero = document.querySelector('.hero');
+    if(!hero) return;
+    // Only apply on mobile viewports
+    if(window.innerWidth <= 768){
+      hero.style.height = window.innerHeight + 'px';
+    } else {
+      hero.style.height = '';
+    }
+  }
+  setHeroHeight();
+  // Re-run on resize and orientation change
+  window.addEventListener('resize', setHeroHeight, {passive:true});
+  window.addEventListener('orientationchange', function(){
+    setTimeout(setHeroHeight, 100);
+  }, {passive:true});
 })();
 gsap.set('#hstats',{y:10});
 const htl=gsap.timeline({delay:0.08});
