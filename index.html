@@ -168,8 +168,8 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);overflow-x
 
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.75rem 4rem;transition:padding 0.5s,background 0.5s,backdrop-filter 0.5s;}
-nav.stuck{padding:1rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:blur(20px);}
+nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.75rem 4rem;transition:padding 0.5s,background 0.5s,backdrop-filter 0.5s;}
+nav#nav.stuck{padding:1rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:blur(20px);}
 .nav-logo{font-family:var(--sans);font-size:0.75rem;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--paper);}
 .nav-links{display:flex;gap:2.5rem;list-style:none;}
 .nav-links a{font-family:var(--sans);font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(247,244,238,0.82);text-decoration:none;transition:color 0.22s;position:relative;}
@@ -355,7 +355,7 @@ nav.stuck{padding:1rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:blur(2
 .gb2{width:40vw;height:40vw;background:radial-gradient(circle,rgba(184,146,42,0.05) 0%,transparent 65%);bottom:-15%;right:-10%;animation:gdrift 26s ease-in-out infinite alternate-reverse;}
 @keyframes gdrift{from{transform:translate(0,0);}to{transform:translate(4%,3%);}}
 .g-inner{max-width:1200px;margin:0 auto;padding:0 4rem;position:relative;z-index:2;}
-.g-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;}
+.g-header{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:4rem;gap:1.5rem;}
 .g-headline{font-family:var(--serif);font-size:clamp(2.5rem,4vw,4.5rem);font-weight:300;line-height:1.05;letter-spacing:-0.02em;color:var(--paper);}
 .g-headline em{font-style:italic;color:var(--gold-lt);}
 .g-sub{font-family:var(--sans);font-size:0.7rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(184,146,42,0.55);text-align:right;line-height:2;}
@@ -673,7 +673,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   .g-inner{padding:0 1.5rem;}
   .g-header{flex-direction:column;gap:1.5rem;}
   .g-headline{font-size:clamp(2rem,8vw,3rem);}
-  .g-sub{text-align:left;max-width:100%;}
+  .g-sub{max-width:100%;}
   .g-stats{grid-template-columns:repeat(3,1fr);}
   .g-stat{padding:1.25rem 1rem;}
   .g-stat-n{font-size:1.8rem;}
@@ -797,8 +797,8 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   .svc:nth-child(2n){border-right:none;}
   .imp-grid{grid-template-columns:repeat(3,1fr);}
 
-  nav{padding:1.5rem 3rem;}
-  nav.stuck{padding:0.9rem 3rem;}
+  nav#nav{padding:1.5rem 3rem;}
+  nav#nav.stuck{padding:0.9rem 3rem;}
   .nl{padding:7rem 3rem;}
   footer{padding:4rem 3rem 2.5rem;}
 }
@@ -1440,7 +1440,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     </nav>
   </div>
   <div class="ft-bot">
-    <p class="ft-copy">© 2025 Erik R. Miller · E.R.M. Advisory · New York City</p>
+    <p class="ft-copy">© 2026 Erik R. Miller · E.R.M. Advisory · New York City</p>
     <nav aria-label="Social media links">
       <div class="ft-soc">
         <a href="https://www.linkedin.com/in/erikrmiller" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn (opens in new tab)">LinkedIn</a>
