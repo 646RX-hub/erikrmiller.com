@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sales Enablement Playbook: What BDRs and AEs Actually Use | Erik R. Miller</title>
+<meta name="description" content="A practical guide to building sales enablement that BDRs, SDRs, and AEs actually open. Battlecards, case studies, objection handling, and the frameworks that close deals — from someone who built it from scratch.">
+<meta name="author" content="Erik R. Miller">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.erikrmiller.com/blog/sales-enablement-that-sales-actually-uses/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.erikrmiller.com/blog/sales-enablement-that-sales-actually-uses/">
+<meta property="og:title" content="The Sales Enablement Playbook: What BDRs and AEs Actually Use | Erik R. Miller">
+<meta property="og:description" content="A practical guide to building sales enablement that BDRs, SDRs, and AEs actually open. Battlecards, case studies, objection handling, and the frameworks that close deals.">
+<meta property="og:image" content="https://www.erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png">
+<meta property="og:image:width" content="1344">
+<meta property="og:image:height" content="896">
+<meta property="og:site_name" content="Erik R. Miller">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Erik R. Miller">
+<meta property="article:published_time" content="2026-05-04T08:00:00-05:00">
+<meta property="article:section" content="Sales Enablement">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.erikrmiller.com/blog/sales-enablement-that-sales-actually-uses/">
+<meta name="twitter:title" content="The Sales Enablement Playbook: What BDRs and AEs Actually Use | Erik R. Miller">
+<meta name="twitter:description" content="Battlecards, objection handling, case studies. The sales enablement assets that actually get used — and how to build them right.">
+<meta name="twitter:image" content="https://www.erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Sales Enablement Playbook: What BDRs and AEs Actually Use",
+  "description": "A practical guide to building sales enablement that BDRs, SDRs, and AEs actually open. Battlecards, case studies, objection handling, and the frameworks that close deals — from someone who built it from scratch.",
+  "author": {
+    "@type": "Person",
+    "name": "Erik R. Miller",
+    "url": "https://www.erikrmiller.com",
+    "jobTitle": "Senior B2B Marketing Executive & Fractional CMO"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Erik R. Miller",
+    "url": "https://www.erikrmiller.com"
+  },
+  "datePublished": "2026-05-04",
+  "dateModified": "2026-05-04",
+  "url": "https://www.erikrmiller.com/blog/sales-enablement-that-sales-actually-uses/",
+  "image": "https://www.erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.erikrmiller.com/blog/sales-enablement-that-sales-actually-uses/"
+  },
+  "keywords": "sales enablement, battlecards, objection handling, BDR, SDR, B2B marketing, case studies, Erik R. Miller"
+}
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDN7MBR58X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LDN7MBR58X');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --ink:#0c0b09;--ink2:#161411;--paper:#f7f4ee;--cream:#edeae0;
+  --gold:#b8922a;--gold-lt:#d4ac4e;--muted:#6b6456;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Syne',sans-serif;--body:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.75rem 4rem;transition:padding 0.5s,background 0.5s;}
+nav.stuck{padding:1rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:blur(20px);}
+.nav-logo{font-family:var(--sans);font-size:0.7rem;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--paper);text-decoration:none;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:rgba(247,244,238,0.58);text-decoration:none;transition:color 0.22s;}
+.nav-links a:hover{color:var(--paper);}
+.nav-cta{color:var(--gold) !important;border:1px solid rgba(184,146,42,0.4);padding:0.4rem 1rem;}
+
+/* HERO */
+.blog-hero{background:var(--ink);padding:10rem 0 5rem;position:relative;overflow:hidden;}
+.blog-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 100%,rgba(184,146,42,0.1),transparent 65%);}
+.blog-hero-inner{max-width:820px;margin:0 auto;padding:0 4rem;position:relative;z-index:2;}
+.blog-tag{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;}
+.blog-tag::before{content:'';width:22px;height:1px;background:var(--gold);}
+.blog-title{font-family:var(--serif);font-size:clamp(2.8rem,5vw,4.5rem);font-weight:300;line-height:1.05;letter-spacing:-0.02em;color:var(--paper);margin-bottom:1.5rem;}
+.blog-title em{font-style:italic;color:var(--gold-lt);}
+.blog-meta{font-family:var(--body);font-size:0.82rem;font-weight:300;color:rgba(247,244,238,0.35);display:flex;align-items:center;gap:1.5rem;}
+.blog-meta-dot{width:3px;height:3px;border-radius:50%;background:rgba(184,146,42,0.4);}
+
+/* BODY */
+.blog-body{max-width:820px;margin:0 auto;padding:5rem 4rem 6rem;}
+.blog-body p{font-family:var(--body);font-size:1.08rem;font-weight:300;line-height:1.88;color:#3d3830;margin-bottom:1.6rem;}
+.blog-body h2{font-family:var(--serif);font-size:clamp(1.8rem,2.8vw,2.5rem);font-weight:300;line-height:1.15;letter-spacing:-0.01em;color:var(--ink);margin:4rem 0 1.2rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(10,9,8,0.08);}
+.blog-body h2::before{content:'';display:block;width:28px;height:2px;background:var(--gold);margin-bottom:0.8rem;}
+.blog-body h3{font-family:var(--sans);font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin:2.5rem 0 0.85rem;}
+.blog-body hr{border:none;border-top:1px solid rgba(10,9,8,0.08);margin:3rem 0;}
+.blog-body strong{font-weight:600;color:var(--ink);}
+.blog-body em{font-style:italic;}
+
+/* CALLOUT */
+.blog-callout{background:var(--cream);border-left:3px solid var(--gold);padding:1.75rem 2rem;margin:2.5rem 0;}
+.blog-callout p{font-family:var(--serif);font-size:1.2rem;font-weight:300;font-style:italic;line-height:1.55;color:var(--ink);margin-bottom:0;}
+
+/* FRAMEWORK BOX */
+.framework-box{background:var(--ink);padding:2.25rem 2.5rem;margin:2.5rem 0;border-left:3px solid var(--gold);}
+.framework-box-label{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;display:block;}
+.framework-box-title{font-family:var(--serif);font-size:1.35rem;font-weight:300;color:var(--paper);margin-bottom:1rem;line-height:1.3;}
+.framework-row{display:grid;grid-template-columns:1fr 2fr;gap:1rem;padding:0.85rem 0;border-top:1px solid rgba(247,244,238,0.07);}
+.framework-row:first-of-type{border-top:none;}
+.framework-label{font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-lt);padding-top:0.1rem;}
+.framework-value{font-family:var(--body);font-size:0.88rem;font-weight:300;color:rgba(247,244,238,0.7);line-height:1.65;}
+
+/* OBJECTION BLOCK */
+.objection-block{margin:1.5rem 0;padding:1.5rem 1.75rem;background:var(--cream);border-radius:0;}
+.objection-q{font-family:var(--sans);font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);margin-bottom:0.6rem;}
+.objection-a{font-family:var(--body);font-size:0.95rem;font-weight:300;color:#3d3830;line-height:1.75;}
+.objection-note{font-family:var(--body);font-size:0.78rem;font-style:italic;color:var(--muted);margin-top:0.5rem;}
+
+/* AUTHOR */
+.blog-author{max-width:820px;margin:0 auto;padding:3rem 4rem;border-top:1px solid rgba(10,9,8,0.08);}
+.blog-author-name{font-family:var(--sans);font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);margin-bottom:0.3rem;}
+.blog-author-bio{font-family:var(--body);font-size:0.9rem;font-weight:300;color:var(--muted);line-height:1.65;}
+.blog-author-bio a{color:var(--gold);text-decoration:none;}
+
+/* NAV */
+.blog-nav{max-width:820px;margin:0 auto;padding:2.5rem 4rem 5rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(10,9,8,0.08);}
+.blog-nav-link{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(10,9,8,0.15);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
+.blog-nav-link:hover{color:var(--gold);border-color:var(--gold);}
+
+/* SUBSCRIBE */
+.blog-subscribe{background:var(--ink);padding:5rem 4rem;text-align:center;}
+.blog-subscribe h3{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--paper);margin-bottom:0.8rem;}
+.blog-subscribe h3 em{font-style:italic;color:var(--gold-lt);}
+.blog-subscribe p{font-family:var(--body);font-size:0.95rem;font-weight:300;color:rgba(247,244,238,0.45);margin-bottom:2rem;}
+.blog-subscribe-btn{display:inline-flex;font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink);background:var(--gold);text-decoration:none;padding:0.9rem 2rem;transition:background 0.22s;}
+.blog-subscribe-btn:hover{background:var(--gold-lt);}
+
+/* FOOTER */
+footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(247,244,238,0.05);}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;padding-bottom:3rem;margin-bottom:3rem;border-bottom:1px solid rgba(247,244,238,0.06);}
+.ft-brand{font-family:var(--serif);font-size:1.55rem;font-weight:300;color:var(--paper);margin-bottom:0.7rem;}
+.ft-tag{font-family:var(--body);font-size:0.9rem;font-weight:300;color:rgba(247,244,238,0.25);line-height:1.72;max-width:230px;margin-bottom:1.25rem;}
+.ft-ht{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem;}
+.ft-ul{list-style:none;display:flex;flex-direction:column;gap:0.62rem;}
+.ft-ul a{font-family:var(--body);font-size:0.92rem;font-weight:300;color:rgba(247,244,238,0.28);text-decoration:none;transition:color 0.2s;}
+.ft-ul a:hover{color:var(--paper);}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;}
+.ft-copy{font-family:var(--body);font-size:0.72rem;color:rgba(247,244,238,0.14);}
+.ft-soc{display:flex;gap:1.6rem;}
+.ft-soc a{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.18);text-decoration:none;transition:color 0.2s;}
+.ft-soc a:hover{color:var(--gold);}
+
+@media(max-width:768px){
+  nav{padding:1.25rem 1.5rem;}
+  .nav-links{display:none;}
+  .blog-hero{padding:7rem 0 3rem;}
+  .blog-hero-inner{padding:0 1.5rem;}
+  .blog-title{font-size:clamp(2rem,8vw,3rem);}
+  .blog-body{padding:3rem 1.5rem 4rem;}
+  .blog-body p{font-size:1rem;line-height:1.78;}
+  .blog-body h2{font-size:clamp(1.5rem,5vw,2rem);}
+  .framework-row{grid-template-columns:1fr;}
+  .blog-callout{padding:1.25rem 1.5rem;}
+  .blog-author{padding:2rem 1.5rem;}
+  .blog-nav{padding:2rem 1.5rem 3rem;flex-direction:column;gap:1.5rem;align-items:flex-start;}
+  .blog-subscribe{padding:3rem 1.5rem;}
+  footer{padding:3rem 1.5rem 2rem;}
+  .ft{grid-template-columns:1fr;gap:2rem;}
+  .ft-bot{flex-direction:column;gap:1rem;}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav" style="background:rgba(12,11,9,0.95);backdrop-filter:blur(20px);">
+  <a href="/" class="nav-logo">E.R.M.</a>
+  <ul class="nav-links">
+    <li><a href="/#who">About</a></li>
+    <li><a href="/#global">Global</a></li>
+    <li><a href="/#advisory">Advisory</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/#resources">Resources</a></li>
+    <li><a href="/#contact" class="nav-cta">Work Together</a></li>
+  </ul>
+</nav>
+
+<div class="blog-hero">
+  <div class="blog-hero-inner">
+    <div class="blog-tag">Sales Enablement</div>
+    <h1 class="blog-title">The Sales Enablement Playbook: <em>What BDRs and AEs Actually Use</em></h1>
+    <div class="blog-meta">
+      <span>Erik R. Miller</span>
+      <span class="blog-meta-dot"></span>
+      <time datetime="2026-05-04">Monday, May 4, 2026</time>
+      <span class="blog-meta-dot"></span>
+      <span>12 min read</span>
+    </div>
+  </div>
+</div>
+
+<article class="blog-body">
+
+<p>Most sales enablement libraries are a graveyard. Slide decks from three product launches ago. A case study written by someone who never spoke to the customer. A competitive battlecard so outdated it still lists a competitor that got acquired in 2023. And somewhere in a shared drive folder nobody opens, a 47-page sales playbook that took marketing six weeks to build and sales opened exactly once.</p>
+
+<p>I have inherited a lot of these libraries. And I have built a few from scratch that actually got used. The difference is not production quality. It is not design. It is whether the content was built with sales, for sales, around the specific moments where sales actually needs help.</p>
+
+<p>This is a practical guide to building sales enablement that does not collect dust. It covers battlecards, objection handling, case studies, and proposal support — with specific frameworks you can take and use today.</p>
+
+<hr>
+
+<h2>Start with the moments that matter</h2>
+
+<p>Before you build a single asset, map the three to five moments in your sales cycle where deals slow down or die. Not the full funnel — the specific friction points. In most B2B organizations those moments are: the first outbound touch that gets ignored, the discovery call where the rep cannot articulate differentiation under pressure, the multi-stakeholder deal where the champion cannot sell internally without your help, and the final stage where procurement raises price or a competitor gets brought in.</p>
+
+<p>Every piece of enablement content should be traceable back to one of these moments. If you cannot name which moment a piece of content serves, you should not build it yet. The sales team does not need more content. They need the right content at the right stage, formatted so they can use it in thirty seconds or less.</p>
+
+<div class="blog-callout">
+  <p>If a rep cannot find what they need in thirty seconds, it does not exist. Discoverability is not a nice-to-have — it is the whole game.</p>
+</div>
+
+<hr>
+
+<h2>Battlecards: the one page that wins deals</h2>
+
+<p>A battlecard is not a comparison chart. A comparison chart lists features side by side and pretends objectivity. A battlecard is a competitive weapon — a single page that gives a rep exactly what to say when a specific competitor comes up in a deal, with enough context to handle the conversation confidently without sounding scripted.</p>
+
+<h3>What a good battlecard contains</h3>
+
+<p><strong>Their real strengths.</strong> Do not soft-pedal this. If the competitor has a genuinely better product in a specific area, your rep will find out in the deal. Better they hear it from you first with context than from the prospect with no response prepared. List two or three things the competitor actually does well and be honest about it.</p>
+
+<p><strong>Where they break down.</strong> Not features — situations. The competitor works well for X type of customer at Y scale. When the deal looks like Z, here is what their customers run into. Specific, sourced where possible, grounded in what your sales team actually hears on calls.</p>
+
+<p><strong>Your three talking points.</strong> Not ten. Three. The three things that matter most when this competitor is in the room. Framed as responses to what the prospect is likely to say, not as feature statements.</p>
+
+<p><strong>The landmine questions.</strong> Two or three questions the rep can ask that naturally surface the competitor's weaknesses without seeming like a takedown. Questions that make the prospect think rather than questions that make the rep look defensive.</p>
+
+<div class="framework-box">
+  <span class="framework-box-label">Battlecard Template</span>
+  <div class="framework-box-title">Competitor: [Name] — One Page, Active Voice, No Fluff</div>
+  <div class="framework-row">
+    <div class="framework-label">Their Strengths</div>
+    <div class="framework-value">Be honest. 2-3 things they genuinely do well. Removes the credibility risk of pretending they have none.</div>
+  </div>
+  <div class="framework-row">
+    <div class="framework-label">Where They Break</div>
+    <div class="framework-value">Situation-based, not feature-based. "When a customer needs X, they typically hit Y wall at Z stage." Sourced from real deal intel.</div>
+  </div>
+  <div class="framework-row">
+    <div class="framework-label">Our 3 Points</div>
+    <div class="framework-value">The three things to land in any competitive conversation. Framed as responses, not monologue. Conversational, not slide-speak.</div>
+  </div>
+  <div class="framework-row">
+    <div class="framework-label">Landmine Questions</div>
+    <div class="framework-value">"Have you asked them how they handle X when Y happens?" Questions that open the prospect's mind without making the rep look threatened.</div>
+  </div>
+  <div class="framework-row">
+    <div class="framework-label">When to Use This Card</div>
+    <div class="framework-value">Discovery. Multi-stakeholder deals. Procurement stage. Be specific about the moment — reps should not have to figure that out.</div>
+  </div>
+  <div class="framework-row">
+    <div class="framework-label">Last Updated</div>
+    <div class="framework-value">Date and owner. If there is no date, the rep will not trust it. If there is no owner, it will never get updated.</div>
+  </div>
+</div>
+
+<p>Build one battlecard per meaningful competitor. Prioritize by deal frequency, not by who you think is the biggest threat. The competitor that shows up in 40% of your deals matters more than the market leader who rarely appears at your price point.</p>
+
+<hr>
+
+<h2>Objection handling: the script that does not sound like a script</h2>
+
+<p>The goal of objection handling is not to overcome objections. That framing puts the rep in an adversarial position with the prospect. The goal is to understand what is behind the objection and respond to that — because most objections are not what they appear to be on the surface.</p>
+
+<p>"Your price is too high" is rarely about price. It is usually about one of three things: the prospect cannot see enough value to justify the number, they have a reference price from a competitor, or they need help making the internal case. Each of those requires a completely different response. A rep who has only been trained on "here is how to handle the price objection" will not know which of these they are actually dealing with.</p>
+
+<h3>The four objections that appear in almost every B2B deal</h3>
+
+<div class="objection-block">
+  <div class="objection-q">Objection: "Your price is too high."</div>
+  <div class="objection-a">First response: "Compared to what?" Not defensively. Genuinely. You need to know if this is a budget constraint, a competitive reference point, or an internal approval problem before you say anything else. The answer shapes everything. If it is a competitive reference: "I would like to understand how they are pricing it — sometimes what looks like an apples-to-apples comparison has meaningful differences in what is actually included." If it is an internal approval problem: "It sounds like the value is there for you — where does the friction sit internally? Let me see if I can help you build the case."</div>
+  <div class="objection-note">Note: Never discount before you diagnose. Discounting without understanding the objection trains the buyer to use price as a lever in every deal.</div>
+</div>
+
+<div class="objection-block">
+  <div class="objection-q">Objection: "We are happy with our current vendor."</div>
+  <div class="objection-a">This is an early-stage objection and almost never true in the way it sounds. Happy customers do not take sales calls. Respond with curiosity, not challenge: "That is great to hear. Most of the clients I work with said the same thing before we started talking. What I find is that there are usually one or two things that are working less well than they would like — areas where the current setup is more of a workaround than a solution. Would you be open to sharing what those are for you?" Then stop talking.</div>
+  <div class="objection-note">Note: The instinct is to pitch. Resist it. Ask one question and listen. The prospect will usually tell you exactly where the opening is.</div>
+</div>
+
+<div class="objection-block">
+  <div class="objection-q">Objection: "We do not have the budget right now."</div>
+  <div class="objection-a">Separate timing from interest. "I hear you on timing — is the constraint this fiscal year specifically, or is this more about overall prioritization right now?" If it is timing: "Would it be useful to keep this moving slowly so you are positioned when budget opens? The last thing I want is for you to have to restart the evaluation from scratch in Q1." If it is prioritization: "That makes sense. Help me understand what is above this on the list — sometimes there are ways to frame this that connect it to those priorities directly."</div>
+  <div class="objection-note">Note: A prospect with no budget and genuine interest is a future deal. Treat them accordingly. Stay in contact without pressure.</div>
+</div>
+
+<div class="objection-block">
+  <div class="objection-q">Objection: "We need to think about it."</div>
+  <div class="objection-a">This is a signal that something is unresolved, not a signal to wait. "Of course — what specifically do you want to think through? I ask because I want to make sure you have everything you need to make a good decision, and sometimes there are questions I can answer now that would save time." If they cannot name what they need to think about, the real issue is usually risk — they are not confident enough in the decision to move forward. Address the risk directly: "Sometimes when I hear this, it is because something still feels uncertain. What would need to be true for this to feel like an obvious yes?"</div>
+  <div class="objection-note">Note: Never just say "sounds good, I will follow up next week." That is how deals stall for months.</div>
+</div>
+
+<hr>
+
+<h2>Case studies: the asset almost everyone builds wrong</h2>
+
+<p>The standard B2B case study follows a formula that makes procurement happy and tells sales almost nothing useful. Problem. Solution. Results. Logo. It reads like a press release because it usually is one.</p>
+
+<p>The case studies that actually get used in deals look different. They are short — one page or less in a deal context. They are told from the customer's perspective, not the vendor's. And they are indexed not by industry or company size but by the specific problem the prospect is facing right now.</p>
+
+<h3>The case study format that works in a live deal</h3>
+
+<p><strong>The situation in one sentence.</strong> Not their industry or their size. The specific situation they were in before they bought. "A professional services firm with a 30-person marketing team and no attribution model, trying to justify a $2M marketing budget to a skeptical CFO." A rep in a deal with that exact profile will reach for that story immediately.</p>
+
+<p><strong>The moment they knew something had to change.</strong> A specific event or realization, told in the customer's words where possible. This is the part that creates emotional resonance. A prospect recognizes their own situation in it. That recognition is worth more than any ROI statistic.</p>
+
+<p><strong>What we actually did.</strong> Not "we implemented our platform." The specific things that happened. Which team was involved. How long it took. What the first 90 days looked like. Prospects want to know what buying from you actually feels like, not what your solution theoretically does.</p>
+
+<p><strong>One specific outcome with context.</strong> Not five metrics. One number, with enough context to make it believable. "Pipeline influenced by marketing increased from 18% to 61% of total pipeline over 14 months — which changed the conversation in the boardroom completely" is more powerful than a generic percentage improvement with no frame of reference.</p>
+
+<p><strong>One sentence from the customer.</strong> A real quote, in real language, that no PR team touched. If your customer would not say it in a conversation, it should not be in the case study.</p>
+
+<hr>
+
+<h2>Internal selling: the asset nobody builds</h2>
+
+<p>In enterprise B2B, the person you sell to is rarely the person who signs. Your champion has to sell internally — to their CFO, their IT team, their procurement function, sometimes their board. Most marketing teams build content for the first sale. Almost nobody builds content for the second sale, the one that happens inside the customer's organization without you in the room.</p>
+
+<p>Build a one-page internal justification document your champion can take into that conversation. It should cover: the business problem in financial terms their CFO will recognize, the cost of inaction stated specifically, a clear ROI model with conservative assumptions, risk mitigation language for the skeptics, and a short list of reference customers they can speak to. This is not a proposal. It is ammunition for your internal champion. It should read like something they wrote, not something a vendor sent them.</p>
+
+<div class="blog-callout">
+  <p>The deal does not close in your meeting. It closes in the conversation your champion has with their CFO at 7pm on a Tuesday. Build for that moment.</p>
+</div>
+
+<hr>
+
+<h2>The maintenance problem: why enablement libraries die</h2>
+
+<p>Building the assets is the easy part. Keeping them current is where almost every sales enablement function fails. A battlecard that is six months out of date is worse than no battlecard because it gives the rep false confidence going into a competitive deal.</p>
+
+<p>The fix is not a bigger review process. It is ownership and triggers. Every piece of enablement content needs one owner — a specific person who is accountable for keeping it current, not a committee. And every piece needs a defined trigger for review: a new competitor funding round, a lost deal where the asset came up, a product update that changes the comparison. When the trigger happens, the owner updates the asset. That is the whole process.</p>
+
+<p>Run a quarterly audit — sixty minutes, every quarter, with one person from sales and one from marketing. Go through the library. Kill anything that has not been used. Update anything that is stale. Add one new asset based on the most common conversation happening in deals right now. Sixty minutes, four times a year, will keep a library alive longer than any governance process you can build.</p>
+
+<p>The goal is not a comprehensive library. The goal is a small set of assets that every rep trusts, every rep knows how to find, and every rep reaches for automatically when the moment calls for it. Ten assets that get used beat a hundred that do not.</p>
+
+<p><em>— Erik R. Miller</em></p>
+
+</article>
+
+<div class="blog-author">
+  <div class="blog-author-name">Erik R. Miller</div>
+  <p class="blog-author-bio">B2B marketing executive. Builder. Operator. 15+ years building revenue marketing functions across four continents. Sales enablement built with sales, not handed to them. <a href="https://theoperator-erm.beehiiv.com/subscribe">Subscribe to The Operator</a> for more.</p>
+</div>
+
+<div class="blog-nav">
+  <a href="/blog/why-your-ai-marketing-stack-isnt-working/" class="blog-nav-link">← Why Your AI Marketing Stack Isn't Working</a>
+  <span></span>
+</div>
+
+<div class="blog-subscribe">
+  <h3>Enjoyed this? Get <em>The Operator.</em></h3>
+  <p>B2B marketing intel three times a week. No fluff.</p>
+  <a href="https://theoperator-erm.beehiiv.com/subscribe" class="blog-subscribe-btn" target="_blank" rel="noopener noreferrer">Subscribe Free →</a>
+</div>
+
+<footer>
+  <div class="ft">
+    <div>
+      <div class="ft-brand">Erik R. Miller</div>
+      <p class="ft-tag">Marketing Leader. Builder. Operator. Building things that actually work — for companies of every size, anywhere in the world.</p>
+      <p class="ft-global">New York · London · Mumbai · Singapore</p>
+    </div>
+    <div>
+      <p class="ft-ht">Navigate</p>
+      <ul class="ft-ul">
+        <li><a href="/#who">About</a></li>
+        <li><a href="/#global">Global Reach</a></li>
+        <li><a href="/#advisory">Advisory</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/#resources">Resources</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="ft-ht">Connect</p>
+      <ul class="ft-ul">
+        <li><a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+        <li><a href="mailto:erikrmiller@outlook.com">Email Erik</a></li>
+        <li><a href="/#contact">Work Together</a></li>
+        <li><a href="#">Download CV</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <p class="ft-copy">© 2026 Erik R. Miller · E.R.M. Advisory · New York City</p>
+    <div class="ft-soc">
+      <a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      <a href="#">YouTube</a>
+      <a href="#">Twitter / X</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('stuck',scrollY>60));
+</script>
+</body>
+</html>
