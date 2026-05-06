@@ -1,63 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.erikrmiller.com/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://erikrmiller.com/</loc>
+    <lastmod>2026-05-06T08:00:00-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png</image:loc>
+      <image:title>Erik R. Miller — B2B Marketing Leader</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.erikrmiller.com/blog/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://erikrmiller.com/blog/</loc>
+    <lastmod>2026-05-06T08:00:00-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png</image:loc>
+      <image:title>Blog — Erik R. Miller</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.erikrmiller.com/blog/intent-data-is-mostly-hype/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://erikrmiller.com/blog/intent-data-is-mostly-hype/</loc>
+    <lastmod>2026-05-06T08:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png</image:loc>
+      <image:title>Intent Data Is Mostly Hype. Here&apos;s When It Isn&apos;t.</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.erikrmiller.com/blog/sales-enablement-that-sales-actually-uses/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <loc>https://erikrmiller.com/blog/sales-enablement-that-sales-actually-uses/</loc>
+    <lastmod>2026-05-04T08:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png</image:loc>
+      <image:title>The Sales Enablement Playbook</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.erikrmiller.com/blog/why-your-ai-marketing-stack-isnt-working/</loc>
-    <lastmod>2026-05-01</lastmod>
+    <loc>https://erikrmiller.com/blog/why-your-ai-marketing-stack-isnt-working/</loc>
+    <lastmod>2026-05-01T08:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png</image:loc>
+      <image:title>Why Your AI Marketing Stack Isn&apos;t Working</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.erikrmiller.com/blog/why-most-abm-programs-fail/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://erikrmiller.com/blog/why-most-abm-programs-fail/</loc>
+    <lastmod>2026-04-27T08:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png</image:loc>
+      <image:title>Why Most ABM Programs Fail Before They Start</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.erikrmiller.com/blog/how-i-cut-content-production-time/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://erikrmiller.com/blog/how-i-cut-content-production-time/</loc>
+    <lastmod>2026-04-22T08:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png</image:loc>
+      <image:title>How I Cut Content Production Time by 60%</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.erikrmiller.com/blog/the-mql-is-dead/</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://erikrmiller.com/blog/the-mql-is-dead/</loc>
+    <lastmod>2026-04-17T08:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png</image:loc>
+      <image:title>The MQL Is Dead. What to Measure Instead.</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.erikrmiller.com/blog/running-marketing-across-four-continents/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <loc>https://erikrmiller.com/blog/running-marketing-across-four-continents/</loc>
+    <lastmod>2026-04-13T08:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png</image:loc>
+      <image:title>Running Marketing Across Four Continents</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.erikrmiller.com/blog/icp-development-the-framework-i-use-every-time/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <loc>https://erikrmiller.com/blog/icp-development-the-framework-i-use-every-time/</loc>
+    <lastmod>2026-04-08T08:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png</image:loc>
+      <image:title>ICP Development: The Framework I Use Every Time</image:title>
+    </image:image>
   </url>
 </urlset>
