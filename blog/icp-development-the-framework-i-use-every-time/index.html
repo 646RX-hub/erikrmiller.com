@@ -246,6 +246,14 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 .related-tag{font-family:var(--sans);font-size:0.55rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
 .related-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;line-height:1.3;color:var(--ink);}
 @media(max-width:768px){.related{padding:2rem 1.5rem 2.5rem;}.related-grid{grid-template-columns:1fr;}}
+/* FAQ */
+.faq{max-width:820px;margin:0 auto;padding:1rem 4rem 3rem;}
+.faq-item{border-top:1px solid rgba(10,9,8,0.08);padding:1.5rem 0;}
+.faq-item:first-of-type{border-top:none;}
+.faq-q{font-family:var(--serif);font-size:1.4rem;font-weight:400;line-height:1.3;color:var(--ink);margin-bottom:0.85rem;letter-spacing:-0.01em;}
+.faq-a{font-family:var(--body);font-size:1.02rem;font-weight:300;line-height:1.78;color:#3d3830;}
+@media(max-width:768px){.faq{padding:1rem 1.5rem 2rem;}.faq-q{font-size:1.2rem;}.faq-a{font-size:0.98rem;}}
+
 
 
 </style>
@@ -253,6 +261,54 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is ICP development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ICP development is the structured process of defining which accounts your company can win, retain, and grow profitably. It is the foundation that everything downstream \u2014 ABM tier structure, demand-gen targeting, sales territory planning, content strategy \u2014 depends on. A good ICP is not a wishlist; it's a filter built from data on your best customers, your worst customers, and the patterns that distinguish them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between ICP, TAM, and personas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAM (Total Addressable Market) is the universe of accounts that could theoretically buy. ICP (Ideal Customer Profile) is the subset of TAM your company can actually win and retain profitably \u2014 typically 5-15% of TAM. Personas are the individual buyer types within ICP accounts. You sell to personas, but you target ICP accounts. Confusing these is the most common GTM mistake \u2014 teams build messaging for personas without filtering against an ICP and waste budget on accounts that will never close."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do firmographic-only ICPs fail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Firmographics \u2014 industry, size, geography \u2014 are necessary but insufficient. Two companies in the same vertical at the same revenue band can have entirely different buying behaviors based on technology stack, organizational maturity, leadership tenure, or current strategic priorities. A firmographic ICP is a starting filter, not a finished targeting model. The accounts that look identical in your CRM behave very differently in your pipeline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should you update your ICP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quarterly review, annually revise. Each quarter, look at closed-won and closed-lost data \u2014 does the pattern still hold? Did a new vertical emerge? Did a previously-strong segment go cold? Annual revisions reset the model with new data. Don't change the ICP every quarter \u2014 that creates whiplash for sales and marketing. But don't go more than a year without revisiting it; your market shifts faster than the ICP frame does."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the four dimensions of an ICP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Firmographic (industry, size, geography), behavioral (how they research, what triggers a purchase, who is involved), technographic (current stack, integration needs, technical maturity), and situational (current strategic initiatives, recent funding events, leadership changes, competitive pressure). Each dimension on its own is incomplete. Together, they create an ICP filter that survives scrutiny \u2014 predicting not just who might buy, but who can buy now."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -316,6 +372,31 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   <a href="/blog/running-marketing-across-four-continents/" class="blog-nav-link">← Running Marketing Across Four Continents</a>
   <span></span>
 </div>
+
+<hr style="max-width:820px;margin:2rem auto;border:none;border-top:1px solid rgba(10,9,8,0.08);">
+<section class="faq">
+<h2 class="blog-body" style="font-family:var(--serif);font-size:clamp(1.8rem,2.8vw,2.5rem);font-weight:300;line-height:1.15;letter-spacing:-0.01em;color:var(--ink);margin:0 0 1.5rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(10,9,8,0.08);position:relative;">Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <h3 class="faq-q">What is ICP development?</h3>
+    <p class="faq-a">ICP development is the structured process of defining which accounts your company can win, retain, and grow profitably. It is the foundation that everything downstream — ABM tier structure, demand-gen targeting, sales territory planning, content strategy — depends on. A good ICP is not a wishlist; it&#x27;s a filter built from data on your best customers, your worst customers, and the patterns that distinguish them.</p>
+  </div>
+  <div class="faq-item">
+    <h3 class="faq-q">What&#x27;s the difference between ICP, TAM, and personas?</h3>
+    <p class="faq-a">TAM (Total Addressable Market) is the universe of accounts that could theoretically buy. ICP (Ideal Customer Profile) is the subset of TAM your company can actually win and retain profitably — typically 5-15% of TAM. Personas are the individual buyer types within ICP accounts. You sell to personas, but you target ICP accounts. Confusing these is the most common GTM mistake — teams build messaging for personas without filtering against an ICP and waste budget on accounts that will never close.</p>
+  </div>
+  <div class="faq-item">
+    <h3 class="faq-q">Why do firmographic-only ICPs fail?</h3>
+    <p class="faq-a">Firmographics — industry, size, geography — are necessary but insufficient. Two companies in the same vertical at the same revenue band can have entirely different buying behaviors based on technology stack, organizational maturity, leadership tenure, or current strategic priorities. A firmographic ICP is a starting filter, not a finished targeting model. The accounts that look identical in your CRM behave very differently in your pipeline.</p>
+  </div>
+  <div class="faq-item">
+    <h3 class="faq-q">How often should you update your ICP?</h3>
+    <p class="faq-a">Quarterly review, annually revise. Each quarter, look at closed-won and closed-lost data — does the pattern still hold? Did a new vertical emerge? Did a previously-strong segment go cold? Annual revisions reset the model with new data. Don&#x27;t change the ICP every quarter — that creates whiplash for sales and marketing. But don&#x27;t go more than a year without revisiting it; your market shifts faster than the ICP frame does.</p>
+  </div>
+  <div class="faq-item">
+    <h3 class="faq-q">What are the four dimensions of an ICP?</h3>
+    <p class="faq-a">Firmographic (industry, size, geography), behavioral (how they research, what triggers a purchase, who is involved), technographic (current stack, integration needs, technical maturity), and situational (current strategic initiatives, recent funding events, leadership changes, competitive pressure). Each dimension on its own is incomplete. Together, they create an ICP filter that survives scrutiny — predicting not just who might buy, but who can buy now.</p>
+  </div>
+</section>
 
 <div class="related">
   <p class="related-label">Read Next</p>

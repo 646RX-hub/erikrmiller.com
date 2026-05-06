@@ -198,12 +198,68 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 .related-tag{font-family:var(--sans);font-size:0.55rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
 .related-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;line-height:1.3;color:var(--ink);}
 @media(max-width:768px){.related{padding:2rem 1.5rem 2.5rem;}.related-grid{grid-template-columns:1fr;}}
+/* FAQ */
+.faq{max-width:820px;margin:0 auto;padding:1rem 4rem 3rem;}
+.faq-item{border-top:1px solid rgba(10,9,8,0.08);padding:1.5rem 0;}
+.faq-item:first-of-type{border-top:none;}
+.faq-q{font-family:var(--serif);font-size:1.4rem;font-weight:400;line-height:1.3;color:var(--ink);margin-bottom:0.85rem;letter-spacing:-0.01em;}
+.faq-a{font-family:var(--body);font-size:1.02rem;font-weight:300;line-height:1.78;color:#3d3830;}
+@media(max-width:768px){.faq{padding:1rem 1.5rem 2rem;}.faq-q{font-size:1.2rem;}.faq-a{font-size:0.98rem;}}
+
 
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why isn't my AI marketing stack delivering results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The gap isn't the tools \u2014 it's that nobody built the system. 96% of B2B marketers use AI; only 19% have it in daily workflows. AI tools fail when treated as standalone features rather than wired into existing workflows, when no one owns model output quality, and when the team buys point solutions instead of building an operating layer. AI doesn't fix a broken process; it amplifies whichever process you already have."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What separates successful AI marketing from failed AI marketing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Successful teams treat AI as one input into a motion they already had. They start with a specific friction point (e.g., content production lag), define what 'good output' looks like, name an owner, integrate AI into the existing tool stack, and measure against a baseline. Failed teams buy the tool first and look for use cases later. The platform doesn't save you from a missing operating system; it amplifies a good one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you operationalize AI in marketing workflows?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pick one workflow at a time. Identify the specific step where AI helps (drafting, summarization, classification, personalization). Build a prompt template that lives in your tool stack, not in a Slack thread. Define quality gates \u2014 what passes, what gets a human review. Train the team on the prompt, not the tool. Iterate on the prompt monthly based on output quality. Don't try to AI-enable five workflows at once; you'll degrade all of them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between AI tools and AI systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An AI tool is a feature you bought (a copilot, a content generator, a meeting summarizer). An AI system is the operating layer that connects tools to workflows, ownership, quality standards, and outcomes. Tools without a system create noise. Systems without tools are slow but functional. Most marketing teams have collected tools and called it an AI strategy. The companies winning with AI built the system first and then chose tools to fit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you measure ROI from AI marketing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anchor measurement to the workflow you AI-enabled, not to the tool. If AI is producing content, measure: production time per piece, quality scores against your editorial standard, downstream pipeline contribution from AI-touched content versus baseline. If AI is scoring leads, measure: precision and recall against historical conversion. Avoid vanity metrics like 'AI-generated assets count.' Without a control group or pre-AI baseline, you're spending budget on a feeling."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -309,6 +365,31 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   <a href="/blog/icp-development-the-framework-i-use-every-time/" class="blog-nav-link">← ICP Development: The Framework I Use Every Time</a>
   <span></span>
 </div>
+
+<hr style="max-width:820px;margin:2rem auto;border:none;border-top:1px solid rgba(10,9,8,0.08);">
+<section class="faq">
+<h2 class="blog-body" style="font-family:var(--serif);font-size:clamp(1.8rem,2.8vw,2.5rem);font-weight:300;line-height:1.15;letter-spacing:-0.01em;color:var(--ink);margin:0 0 1.5rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(10,9,8,0.08);position:relative;">Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <h3 class="faq-q">Why isn&#x27;t my AI marketing stack delivering results?</h3>
+    <p class="faq-a">The gap isn&#x27;t the tools — it&#x27;s that nobody built the system. 96% of B2B marketers use AI; only 19% have it in daily workflows. AI tools fail when treated as standalone features rather than wired into existing workflows, when no one owns model output quality, and when the team buys point solutions instead of building an operating layer. AI doesn&#x27;t fix a broken process; it amplifies whichever process you already have.</p>
+  </div>
+  <div class="faq-item">
+    <h3 class="faq-q">What separates successful AI marketing from failed AI marketing?</h3>
+    <p class="faq-a">Successful teams treat AI as one input into a motion they already had. They start with a specific friction point (e.g., content production lag), define what &#x27;good output&#x27; looks like, name an owner, integrate AI into the existing tool stack, and measure against a baseline. Failed teams buy the tool first and look for use cases later. The platform doesn&#x27;t save you from a missing operating system; it amplifies a good one.</p>
+  </div>
+  <div class="faq-item">
+    <h3 class="faq-q">How do you operationalize AI in marketing workflows?</h3>
+    <p class="faq-a">Pick one workflow at a time. Identify the specific step where AI helps (drafting, summarization, classification, personalization). Build a prompt template that lives in your tool stack, not in a Slack thread. Define quality gates — what passes, what gets a human review. Train the team on the prompt, not the tool. Iterate on the prompt monthly based on output quality. Don&#x27;t try to AI-enable five workflows at once; you&#x27;ll degrade all of them.</p>
+  </div>
+  <div class="faq-item">
+    <h3 class="faq-q">What&#x27;s the difference between AI tools and AI systems?</h3>
+    <p class="faq-a">An AI tool is a feature you bought (a copilot, a content generator, a meeting summarizer). An AI system is the operating layer that connects tools to workflows, ownership, quality standards, and outcomes. Tools without a system create noise. Systems without tools are slow but functional. Most marketing teams have collected tools and called it an AI strategy. The companies winning with AI built the system first and then chose tools to fit.</p>
+  </div>
+  <div class="faq-item">
+    <h3 class="faq-q">How do you measure ROI from AI marketing?</h3>
+    <p class="faq-a">Anchor measurement to the workflow you AI-enabled, not to the tool. If AI is producing content, measure: production time per piece, quality scores against your editorial standard, downstream pipeline contribution from AI-touched content versus baseline. If AI is scoring leads, measure: precision and recall against historical conversion. Avoid vanity metrics like &#x27;AI-generated assets count.&#x27; Without a control group or pre-AI baseline, you&#x27;re spending budget on a feeling.</p>
+  </div>
+</section>
 
 <div class="related">
   <p class="related-label">Read Next</p>
