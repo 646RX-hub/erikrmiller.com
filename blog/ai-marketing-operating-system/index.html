@@ -225,10 +225,40 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   .faq{padding:1rem 1.5rem 2rem;}.faq-q{font-size:1.2rem;}
   footer{padding:3rem 1.5rem 2rem;}.ft{grid-template-columns:1fr;gap:2rem;}.ft-bot{flex-direction:column;gap:1rem;}
 }
+  /* Fix blog table of contents being treated like the main nav */
+nav.blog-toc{
+  position:relative !important;
+  top:auto !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  z-index:1 !important;
+  display:block !important;
+  background:transparent !important;
+  backdrop-filter:none !important;
+  padding:3rem 4rem 0 !important;
+  max-width:820px !important;
+  margin:0 auto !important;
+}
+
+nav.blog-toc .toc-grid{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:0.4rem 2rem !important;
+}
+
+@media(max-width:768px){
+  nav.blog-toc{
+    padding:2rem 1.5rem 0 !important;
+  }
+
+  nav.blog-toc .toc-grid{
+    grid-template-columns:1fr !important;
+  }
+}
 </style>
 </head>
 <body>
-
 <nav id="nav" style="background:rgba(12,11,9,0.95);backdrop-filter:blur(20px);">
   <a href="/" class="nav-logo">E.R.M.</a>
   <ul class="nav-links">
