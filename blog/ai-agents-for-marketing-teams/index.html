@@ -295,6 +295,12 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 .faq-item:first-of-type{border-top:none;}
 .faq-q{font-family:var(--serif);font-size:1.4rem;font-weight:400;line-height:1.3;color:var(--ink);margin-bottom:0.85rem;letter-spacing:-0.01em;}
 .faq-a{font-family:var(--body);font-size:1rem;font-weight:300;line-height:1.78;color:#3d3830;}
+.cell-list{list-style:none;margin:0 !important;padding:0;}
+.cell-list li{font-family:var(--body);font-size:0.88rem;font-weight:300;color:#3d3830;line-height:1.55;margin:0 0 0.3rem 0 !important;padding-left:0.85rem;position:relative;}
+.cell-list li:last-child{margin-bottom:0 !important;}
+.cell-list li::before{content:'';position:absolute;left:0;top:0.55rem;width:5px;height:5px;background:var(--gold);border-radius:50%;}
+.cell-list li strong{color:var(--ink);}
+.spec-table td .cell-list{font-size:0.88rem;}
 @media(max-width:768px){
   nav{padding:1.25rem 1.5rem;}.nav-links{display:none;}
   .blog-hero{padding:7rem 0 3rem;}.blog-hero-inner{padding:0 1.5rem;}.blog-title{font-size:clamp(2rem,8vw,3rem);}
@@ -345,7 +351,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   </div>
 </div>
 
-<nav class="blog-toc" aria-label="Table of contents">
+<section class="blog-toc" aria-label="Table of contents">
   <p class="toc-label">In this playbook</p>
   <div class="toc-grid">
     <a href="#why-2026"><span class="toc-num">01</span>Why 2026 is the agent year</a>
@@ -367,7 +373,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <a href="#faq"><span class="toc-num">17</span>Frequently asked questions</a>
     <a href="#bottom"><span class="toc-num">18</span>The bottom line</a>
   </div>
-</nav>
+</section>
 
 <article class="blog-body">
 
@@ -489,12 +495,32 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <p>The org model below is not prescriptive. It is the structure I use as a starting point in the consulting engagements I run, and the one I tune to each company's existing org. The agent-aware org model has four operating units.</p>
 
 <table class="spec-table">
-  <thead><tr><th>Operating Unit</th><th>Lead</th><th>Agents Owned</th><th>Human-in-the-Loop Responsibilities</th></tr></thead>
+  <thead><tr><th>Operating Unit</th><th>Lead</th><th>Agents Owned</th><th>Human-in-the-Loop</th></tr></thead>
   <tbody>
-    <tr><td><strong>Strategy &amp; Insight</strong></td><td>Head of Strategy / VP Marketing</td><td>ICP Research . Buyer Persona . Account Selection . Intent Signal . Competitor Intelligence</td><td>Final ICP and account-tier decisions; approval of strategic shifts; quarterly competitive narrative</td></tr>
-    <tr><td><strong>Content &amp; Brand</strong></td><td>Head of Content / Editorial Director</td><td>Brand Voice Governance . Content Strategy . Editorial Planning . SEO . AEO . LinkedIn / Social . Ad Copy</td><td>Voice rewrites; angle/POV; final publish approval; quarterly editorial direction</td></tr>
-    <tr><td><strong>Demand &amp; Campaigns</strong></td><td>Head of Demand Gen / ABM Lead</td><td>Campaign Optimization . ABM Orchestration . Email Nurture . Event Marketing</td><td>Campaign kickoff approval; budget release; channel mix adjustments; account-level orchestration sign-off</td></tr>
-    <tr><td><strong>Operations &amp; Intelligence</strong></td><td>Head of Marketing Ops / RevOps</td><td>Analytics &amp; Reporting . Workflow Automation . CRM Hygiene . Knowledge Base . Meeting Notes . Executive Briefing . Sales Enablement . Customer Journey . RFP Support</td><td>Data-quality gates; process change approvals; executive briefing accuracy; sales-marketing alignment</td></tr>
+    <tr>
+      <td><strong>Strategy &amp; Insight</strong></td>
+      <td>Head of Strategy / VP Marketing</td>
+      <td><ul class="cell-list"><li>ICP Research</li><li>Buyer Persona</li><li>Account Selection</li><li>Intent Signal</li><li>Competitor Intelligence</li></ul></td>
+      <td><ul class="cell-list"><li>Final ICP and account-tier decisions</li><li>Approval of strategic shifts</li><li>Quarterly competitive narrative</li></ul></td>
+    </tr>
+    <tr>
+      <td><strong>Content &amp; Brand</strong></td>
+      <td>Head of Content / Editorial Director</td>
+      <td><ul class="cell-list"><li>Brand Voice Governance</li><li>Content Strategy</li><li>Editorial Planning</li><li>SEO</li><li>AEO</li><li>LinkedIn / Social</li><li>Ad Copy</li></ul></td>
+      <td><ul class="cell-list"><li>Voice rewrites</li><li>Angle and POV</li><li>Final publish approval</li><li>Quarterly editorial direction</li></ul></td>
+    </tr>
+    <tr>
+      <td><strong>Demand &amp; Campaigns</strong></td>
+      <td>Head of Demand Gen / ABM Lead</td>
+      <td><ul class="cell-list"><li>Campaign Optimization</li><li>ABM Orchestration</li><li>Email Nurture</li><li>Event Marketing</li></ul></td>
+      <td><ul class="cell-list"><li>Campaign kickoff approval</li><li>Budget release</li><li>Channel-mix adjustments</li><li>Account-level orchestration sign-off</li></ul></td>
+    </tr>
+    <tr>
+      <td><strong>Operations &amp; Intelligence</strong></td>
+      <td>Head of Marketing Ops / RevOps</td>
+      <td><ul class="cell-list"><li>Analytics &amp; Reporting</li><li>Workflow Automation</li><li>CRM Hygiene</li><li>Knowledge Base</li><li>Meeting Notes</li><li>Executive Briefing</li><li>Sales Enablement</li><li>Customer Journey</li><li>RFP Support</li></ul></td>
+      <td><ul class="cell-list"><li>Data-quality gates</li><li>Process-change approvals</li><li>Executive-briefing accuracy</li><li>Sales-marketing alignment</li></ul></td>
+    </tr>
   </tbody>
 </table>
 
@@ -999,9 +1025,21 @@ Escalate to the Head of Strategy when:
 <table class="spec-table">
   <thead><tr><th>Risk Tier</th><th>Examples</th><th>Review Discipline</th></tr></thead>
   <tbody>
-    <tr><td><strong>High</strong></td><td>Executive briefings, board materials, customer-facing emails, RFP responses, ABM 1:1 motion, paid media spend over budget thresholds, public PR responses</td><td>Always reviewed by named human before external use. Never auto-published. Brand Voice Governance Agent score must be 9+ for external content.</td></tr>
-    <tr><td><strong>Medium</strong></td><td>Cornerstone blog posts, LinkedIn executive posts, sales enablement assets, ABM Tier 2 motion, persona briefs, ICP refreshes</td><td>Reviewed by functional lead. Brand Voice score 8+. Spot-check audit weekly. Sample 10% for editor calibration.</td></tr>
-    <tr><td><strong>Low</strong></td><td>Internal meeting summaries, internal knowledge-base queries, draft outlines, internal data-quality reports, internal workflow documentation</td><td>Spot-checked monthly. Audited quarterly for accuracy. No mandatory pre-distribution review unless flagged.</td></tr>
+    <tr>
+      <td><strong>High</strong></td>
+      <td><ul class="cell-list"><li>Executive briefings</li><li>Board materials</li><li>Customer-facing emails</li><li>RFP responses</li><li>ABM 1:1 motion</li><li>Paid-media spend over budget thresholds</li><li>Public PR responses</li></ul></td>
+      <td>Always reviewed by named human before external use. Never auto-published. Brand Voice Governance Agent score must be 9+ for external content.</td>
+    </tr>
+    <tr>
+      <td><strong>Medium</strong></td>
+      <td><ul class="cell-list"><li>Cornerstone blog posts</li><li>LinkedIn executive posts</li><li>Sales-enablement assets</li><li>ABM Tier 2 motion</li><li>Persona briefs</li><li>ICP refreshes</li></ul></td>
+      <td>Reviewed by functional lead. Brand Voice score 8+. Spot-check audit weekly. Sample 10% for editor calibration.</td>
+    </tr>
+    <tr>
+      <td><strong>Low</strong></td>
+      <td><ul class="cell-list"><li>Internal meeting summaries</li><li>Knowledge-base queries</li><li>Draft outlines</li><li>Internal data-quality reports</li><li>Internal workflow documentation</li></ul></td>
+      <td>Spot-checked monthly. Audited quarterly for accuracy. No mandatory pre-distribution review unless flagged.</td>
+    </tr>
   </tbody>
 </table>
 
