@@ -425,6 +425,26 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
         </div>
       </a>
 
+      <a class="post-card" href="/blog/why-firmographic-icps-fail/" data-category="abm">
+        <span class="pc-tag">ABM Strategy</span>
+        <h3 class="pc-title">Why <em>Firmographic ICPs</em> Fail</h3>
+        <p class="pc-body">Industry, size, and geography aren't an ICP — they're a starting filter. The signals that actually predict conversion live one layer deeper, and they're what separate ABM programs that work from ones that stall.</p>
+        <div class="pc-footer">
+          <span class="pc-date">Wednesday, April 1, 2026</span>
+          <span class="pc-arrow">&rarr;</span>
+        </div>
+      </a>
+
+      <a class="post-card" href="/blog/icp-vs-tam-vs-personas/" data-category="frameworks">
+        <span class="pc-tag">Frameworks</span>
+        <h3 class="pc-title">ICP vs TAM vs Personas: <em>The 3-Layer Model</em></h3>
+        <p class="pc-body">ICP, TAM, and personas are not interchangeable. The three-layer B2B targeting model: TAM is the universe, ICP is the filter, personas are the buyers inside.</p>
+        <div class="pc-footer">
+          <span class="pc-date">Friday, March 27, 2026</span>
+          <span class="pc-arrow">&rarr;</span>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -516,10 +536,13 @@ filterBtns.forEach(btn=>{
     postCards.forEach(card=>{
       if(filter==='all' || card.dataset.category===filter){
         card.classList.remove('hidden');
+        // Force visible: GSAP scroll-trigger may not have fired for cards below the fold yet.
+        gsap.set(card,{opacity:1,y:0,clearProps:'transform'});
       } else {
         card.classList.add('hidden');
       }
     });
+    ScrollTrigger.refresh();
   });
 });
 
