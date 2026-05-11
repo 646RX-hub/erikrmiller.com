@@ -55,6 +55,19 @@
       "name": "Erik R. Miller",
       "description": "Marketing Leader. Builder. Operator.",
       "publisher": {"@id": "https://erikrmiller.com/#erik"}
+    }    ,
+    {
+      "@type": "WebSite",
+      "@id": "https://erikrmiller.com/#website-search",
+      "url": "https://erikrmiller.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://erikrmiller.com/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
   ]
 }
@@ -861,6 +874,16 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 }
 
 </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDN7MBR58X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LDN7MBR58X');
+</script>
+<link rel="stylesheet" href="/assets/search/search.css">
+<script src="/assets/search/search.js" defer></script>
 </head>
 <body>
 
@@ -877,7 +900,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <li><a href="#global">Global</a></li>
     <li><a href="#advisory">Advisory</a></li>
     <li><a href="/blog/">Blog</a></li>
-    <li><a href="#resources">Resources</a></li>
+    <li><a href="#resources">Resources</a></li>    <li><button type="button" class="erm-search-trigger" data-erm-search-trigger aria-label="Open search (Cmd+K)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search<kbd>⌘K</kbd></button></li>
     <li><a href="#contact" class="nav-cta">Work Together</a></li>
   </ul>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
@@ -890,7 +913,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   <li><a href="#global" onclick="closeMobileNav()">Global</a></li>
   <li><a href="#advisory" onclick="closeMobileNav()">Advisory</a></li>
   <li><a href="/blog/">Blog</a></li>
-  <li><a href="#resources" onclick="closeMobileNav()">Resources</a></li>
+  <li><a href="#resources" onclick="closeMobileNav()">Resources</a></li>  <li><button type="button" class="erm-search-trigger" data-erm-search-trigger onclick="closeMobileNav && closeMobileNav();" style="font-size:0.75rem;letter-spacing:0.2em;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search</button></li>
   <li><a href="#contact" class="nav-cta" onclick="closeMobileNav()">Work Together</a></li>
 </ul>
 
@@ -1321,15 +1344,24 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
       <article class="hcard hcard-hero" role="listitem">
         <a href="blog/ai-agents-for-marketing-teams/" class="hcard-link" aria-label="Read: AI Agents for Marketing Teams">
           <div class="hghost" aria-hidden="true">01</div>
-          <span class="htag">New · Cornerstone · AI in Marketing</span>
+          <span class="htag">Cornerstone · AI in Marketing</span>
           <h3 class="htitle">AI Agents for <em>Marketing Teams.</em> The 2026 Operating System Playbook.</h3>
           <p class="hbody">25 specialized AI agents, sample prompts, governance, and a 90-day rollout for the modern AI-enabled marketing organization.</p>
           <span class="hdate"><time datetime="2026-05-08">Friday, May 8, 2026</time></span>
         </a>
       </article>
       <article class="hcard" role="listitem">
-        <a href="blog/ai-marketing-operating-system/" class="hcard-link" aria-label="Read: The AI-Enabled Marketing Operating System">
+        <a href="blog/year-one-gtm-seven-questions/" class="hcard-link" aria-label="Read: Year-One GTM: 7 Questions That Predict Failure">
           <div class="hghost" aria-hidden="true">02</div>
+          <span class="htag">New · GTM Strategy</span>
+          <h3 class="htitle">Year-One GTM: <em>7 Questions That Predict Failure</em></h3>
+          <p class="hbody">The seven questions that separate year-one GTM plans that compound from plans that stall in Q2. Buyer, math, channels, handoffs, and the discipline of saying no.</p>
+          <span class="hdate"><time datetime="2026-05-11">Monday, May 11, 2026</time></span>
+        </a>
+      </article>
+      <article class="hcard" role="listitem">
+        <a href="blog/ai-marketing-operating-system/" class="hcard-link" aria-label="Read: The AI-Enabled Marketing Operating System">
+          <div class="hghost" aria-hidden="true">03</div>
           <span class="htag">AI in Marketing</span>
           <h3 class="htitle">The AI-Enabled <em>Marketing Operating System</em></h3>
           <p class="hbody">Five layers, twenty agents, governance, and the maturity model that scales output without breaking quality. The architectural deep-dive.</p>
@@ -1338,7 +1370,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
       </article>
       <article class="hcard" role="listitem">
         <a href="blog/intent-data-is-mostly-hype/" class="hcard-link" aria-label="Read: Intent Data Is Mostly Hype">
-          <div class="hghost" aria-hidden="true">03</div>
+          <div class="hghost" aria-hidden="true">04</div>
           <span class="htag">Demand Generation</span>
           <h3 class="htitle">Intent Data Is <em>Mostly Hype.</em> Here's When It Isn't.</h3>
           <p class="hbody">When third-party B2B intent data earns its budget, when it doesn't, and the first-party signals that predict pipeline more reliably than any dashboard.</p>
@@ -1347,7 +1379,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
       </article>
       <article class="hcard" role="listitem">
         <a href="blog/sales-enablement-that-sales-actually-uses/" class="hcard-link" aria-label="Read: The Sales Enablement Playbook">
-          <div class="hghost" aria-hidden="true">04</div>
+          <div class="hghost" aria-hidden="true">05</div>
           <span class="htag">Sales Enablement</span>
           <h3 class="htitle">The Sales Enablement Playbook: <em>What BDRs and AEs Actually Use</em></h3>
           <p class="hbody">Battlecards, objection handling, case studies, and internal selling frameworks. The assets that actually get used — and how to build them right.</p>
@@ -1356,7 +1388,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
       </article>
       <article class="hcard" role="listitem">
         <a href="blog/why-your-ai-marketing-stack-isnt-working/" class="hcard-link" aria-label="Read: Why Your AI Marketing Stack Isn't Working">
-          <div class="hghost" aria-hidden="true">05</div>
+          <div class="hghost" aria-hidden="true">06</div>
           <span class="htag">AI in Marketing</span>
           <h3 class="htitle">Why Your AI Marketing Stack <em>Isn't Working</em></h3>
           <p class="hbody">96% of B2B marketers use AI. Only 19% have it in daily workflows. The gap isn't the tools — it's that nobody built the system.</p>
@@ -1365,20 +1397,11 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
       </article>
       <article class="hcard" role="listitem">
         <a href="blog/why-most-abm-programs-fail/" class="hcard-link" aria-label="Read: Why Most ABM Programs Fail Before They Start">
-          <div class="hghost" aria-hidden="true">06</div>
+          <div class="hghost" aria-hidden="true">07</div>
           <span class="htag">ABM</span>
           <h3 class="htitle">Why Most ABM Programs Fail <em>Before They Start</em></h3>
           <p class="hbody">It's not execution. It's that teams skip the foundational work — ICP, tier structure, and real sales alignment — then wonder why nothing converts.</p>
           <span class="hdate"><time datetime="2026-04-27">Monday, April 27, 2026</time></span>
-        </a>
-      </article>
-      <article class="hcard" role="listitem">
-        <a href="blog/how-i-cut-content-production-time/" class="hcard-link" aria-label="Read: How I Cut Content Production Time by 60%">
-          <div class="hghost" aria-hidden="true">07</div>
-          <span class="htag">AI in Marketing</span>
-          <h3 class="htitle">How I Cut Content Production Time by <em>60%</em></h3>
-          <p class="hbody">Specific workflows, prompt structures, and the guardrails that keep output sounding human.</p>
-          <span class="hdate"><time datetime="2026-04-22">Wednesday, April 22, 2026</time></span>
         </a>
       </article>
       <div class="hcard" role="listitem" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:1rem;">

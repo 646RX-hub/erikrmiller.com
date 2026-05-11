@@ -1,0 +1,302 @@
+/* ============================================================
+   Cmd+K Search Modal — Erik R. Miller
+   Inherits site design tokens: --ink, --paper, --gold, --gold-lt,
+   --muted, --serif, --sans, --body. Falls back if not defined.
+   ============================================================ */
+
+:root {
+  --erm-search-ink: var(--ink, #0c0b09);
+  --erm-search-ink2: var(--ink2, #161411);
+  --erm-search-paper: var(--paper, #f7f4ee);
+  --erm-search-gold: var(--gold, #b8922a);
+  --erm-search-gold-lt: var(--gold-lt, #d4ac4e);
+  --erm-search-muted: var(--muted, #6b6456);
+  --erm-search-sans: var(--sans, 'Syne', sans-serif);
+  --erm-search-serif: var(--serif, 'Cormorant Garamond', Georgia, serif);
+  --erm-search-body: var(--body, 'DM Sans', sans-serif);
+}
+
+/* --- Nav trigger button (placed inside existing nav <ul>) --- */
+.erm-search-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid rgba(247,244,238,0.18);
+  color: rgba(247,244,238,0.62);
+  font-family: var(--erm-search-sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.75rem 0.45rem 0.85rem;
+  cursor: pointer;
+  transition: color 0.22s, border-color 0.22s, background 0.22s;
+  line-height: 1;
+}
+.erm-search-trigger:hover,
+.erm-search-trigger:focus-visible {
+  color: var(--erm-search-paper);
+  border-color: rgba(184,146,42,0.45);
+  background: rgba(184,146,42,0.04);
+  outline: none;
+}
+.erm-search-trigger svg { width: 12px; height: 12px; stroke: currentColor; }
+.erm-search-trigger kbd {
+  font-family: var(--erm-search-sans);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  background: rgba(247,244,238,0.06);
+  border: 1px solid rgba(247,244,238,0.12);
+  padding: 0.18rem 0.4rem;
+  border-radius: 3px;
+  margin-left: 0.35rem;
+  line-height: 1;
+}
+@media (max-width: 760px) {
+  .erm-search-trigger kbd { display: none; }
+  .erm-search-trigger { padding: 0.45rem 0.65rem; }
+}
+
+/* --- Backdrop + modal shell --- */
+.erm-search-backdrop {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(9, 8, 7, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 7vh 1rem 1rem;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+.erm-search-backdrop[data-open="true"] { opacity: 1; }
+@media (max-width: 640px) {
+  .erm-search-backdrop { padding: 0; align-items: stretch; }
+}
+
+.erm-search-dialog {
+  width: 100%;
+  max-width: 640px;
+  background: var(--erm-search-paper);
+  color: var(--erm-search-ink);
+  border-radius: 6px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(184,146,42,0.18);
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  overflow: hidden;
+  transform: translateY(-8px);
+  transition: transform 0.18s ease;
+}
+.erm-search-backdrop[data-open="true"] .erm-search-dialog { transform: translateY(0); }
+@media (max-width: 640px) {
+  .erm-search-dialog { max-width: 100%; max-height: 100vh; border-radius: 0; }
+}
+
+/* --- Input row --- */
+.erm-search-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid rgba(10,9,8,0.08);
+}
+.erm-search-input-row svg.icon {
+  width: 16px; height: 16px;
+  stroke: var(--erm-search-muted);
+  flex-shrink: 0;
+}
+.erm-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--erm-search-body);
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--erm-search-ink);
+  line-height: 1.4;
+}
+.erm-search-input::placeholder {
+  color: var(--erm-search-muted);
+  opacity: 0.75;
+}
+.erm-search-close {
+  background: transparent;
+  border: 1px solid rgba(10,9,8,0.12);
+  color: var(--erm-search-muted);
+  font-family: var(--erm-search-sans);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.32rem 0.6rem;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 1;
+}
+.erm-search-close:hover { color: var(--erm-search-ink); border-color: rgba(10,9,8,0.3); }
+
+/* --- Results region --- */
+.erm-search-results {
+  overflow-y: auto;
+  flex: 1;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(184,146,42,0.3) transparent;
+}
+.erm-search-results::-webkit-scrollbar { width: 6px; }
+.erm-search-results::-webkit-scrollbar-thumb { background: rgba(184,146,42,0.25); border-radius: 3px; }
+
+.erm-search-group-label {
+  font-family: var(--erm-search-sans);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--erm-search-gold);
+  padding: 1rem 1.25rem 0.5rem;
+}
+
+.erm-search-result {
+  display: block;
+  padding: 0.85rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  border-left: 2px solid transparent;
+  transition: background 0.12s, border-color 0.12s;
+}
+.erm-search-result:hover,
+.erm-search-result[data-active="true"] {
+  background: rgba(184,146,42,0.06);
+  border-left-color: var(--erm-search-gold);
+}
+.erm-search-result-title {
+  font-family: var(--erm-search-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--erm-search-ink);
+  margin-bottom: 0.25rem;
+}
+.erm-search-result-title mark {
+  background: rgba(184,146,42,0.18);
+  color: inherit;
+  padding: 0 1px;
+  border-radius: 2px;
+}
+.erm-search-result-meta {
+  font-family: var(--erm-search-sans);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--erm-search-muted);
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.erm-search-result-meta .type-badge {
+  color: var(--erm-search-gold);
+}
+.erm-search-result-snippet {
+  font-family: var(--erm-search-body);
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #3d3830;
+}
+.erm-search-result-snippet mark {
+  background: rgba(184,146,42,0.22);
+  color: inherit;
+  padding: 0 1px;
+  border-radius: 2px;
+  font-weight: 400;
+}
+
+/* --- Empty / no-results / loading --- */
+.erm-search-empty {
+  padding: 2rem 1.25rem;
+  text-align: center;
+  color: var(--erm-search-muted);
+  font-family: var(--erm-search-body);
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.erm-search-empty strong {
+  font-family: var(--erm-search-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: var(--erm-search-ink);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.erm-search-empty .suggest {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.erm-search-empty .suggest a {
+  font-family: var(--erm-search-sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--erm-search-gold);
+  text-decoration: none;
+  border: 1px solid rgba(184,146,42,0.35);
+  padding: 0.45rem 0.85rem;
+  border-radius: 3px;
+  transition: background 0.18s, color 0.18s;
+}
+.erm-search-empty .suggest a:hover {
+  background: var(--erm-search-gold);
+  color: var(--erm-search-paper);
+}
+
+/* --- Footer hint row --- */
+.erm-search-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 1.25rem;
+  border-top: 1px solid rgba(10,9,8,0.06);
+  background: rgba(10,9,8,0.02);
+  font-family: var(--erm-search-sans);
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--erm-search-muted);
+}
+.erm-search-footer kbd {
+  font-family: var(--erm-search-sans);
+  font-size: 0.55rem;
+  font-weight: 600;
+  background: rgba(10,9,8,0.06);
+  border: 1px solid rgba(10,9,8,0.1);
+  padding: 0.12rem 0.35rem;
+  border-radius: 3px;
+  margin: 0 0.2rem;
+  line-height: 1;
+}
+@media (max-width: 640px) {
+  .erm-search-footer { display: none; }
+}
+
+/* --- Reduce motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .erm-search-backdrop,
+  .erm-search-dialog { transition: none; }
+}
+
+/* Lock body scroll when modal open */
+html.erm-search-open, body.erm-search-open { overflow: hidden; }

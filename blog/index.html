@@ -228,6 +228,16 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDN7MBR58X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LDN7MBR58X');
+</script>
+<link rel="stylesheet" href="/assets/search/search.css">
+<script src="/assets/search/search.js" defer></script>
 </head>
 <body>
 
@@ -242,7 +252,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <li><a href="/#global">Global</a></li>
     <li><a href="/#advisory">Advisory</a></li>
     <li><a href="/blog/" class="active">Blog</a></li>
-    <li><a href="/#resources">Resources</a></li>
+    <li><a href="/#resources">Resources</a></li>    <li><button type="button" class="erm-search-trigger" data-erm-search-trigger aria-label="Open search (Cmd+K)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search<kbd>⌘K</kbd></button></li>
     <li><a href="/#contact" class="nav-cta">Work Together</a></li>
   </ul>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
@@ -255,7 +265,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   <li><a href="/#global" onclick="closeMobileNav()">Global</a></li>
   <li><a href="/#advisory" onclick="closeMobileNav()">Advisory</a></li>
   <li><a href="/blog/">Blog</a></li>
-  <li><a href="/#resources" onclick="closeMobileNav()">Resources</a></li>
+  <li><a href="/#resources" onclick="closeMobileNav()">Resources</a></li>  <li><button type="button" class="erm-search-trigger" data-erm-search-trigger onclick="closeMobileNav && closeMobileNav();" style="font-size:0.75rem;letter-spacing:0.2em;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search</button></li>
   <li><a href="/#contact" class="nav-cta" onclick="closeMobileNav()">Work Together</a></li>
 </ul>
 
