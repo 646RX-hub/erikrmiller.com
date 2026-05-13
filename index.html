@@ -1047,7 +1047,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <div class="g-map" id="gmapwrap">
       <div id="worldMapContainer" style="width:100%;height:440px;position:relative;border:1px solid rgba(184,146,42,0.12);border-radius:3px;overflow:hidden;background:rgba(12,11,9,0.3);"
         role="img"
-        aria-label="World map showing Erik R. Miller's team locations in New York, London, Mumbai, and Singapore">
+        aria-label="World map showing markets and regions Erik R. Miller has worked in: New York, London, Mumbai, and Singapore">
         <!-- D3 Real World Map — renders at runtime -->
       </div>
       <script>
@@ -1059,10 +1059,10 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
         }
         // City locations
         var cities = [
-          {name:'New York',sub:'Based here',lon:-74.006,lat:40.713,hq:true},
-          {name:'London',sub:'UK & Europe',lon:-0.128,lat:51.507,hq:false},
-          {name:'Mumbai',sub:'South Asia',lon:72.877,lat:19.076,hq:false},
-          {name:'Singapore',sub:'Southeast Asia',lon:103.820,lat:1.352,hq:false},
+          {name:'New York',sub:'Home base',lon:-74.006,lat:40.713,hq:true},
+          {name:'London',sub:'Worked & lived',lon:-0.128,lat:51.507,hq:false},
+          {name:'Mumbai',sub:'Built programs in',lon:72.877,lat:19.076,hq:false},
+          {name:'Singapore',sub:'Operated across',lon:103.820,lat:1.352,hq:false},
         ];
         loadScript('https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js', function(){
           loadScript('https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js', function(){
@@ -1419,15 +1419,19 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   <div class="res-wrap">
     <div class="res-header">
       <div>
-        <div class="kicker" id="resk" style="margin-bottom:0.5rem;">Free Resources</div>
-        <h2 class="res-hl"><span class="res-hli" id="reshl">Templates & Frameworks</span></h2>
+        <div class="kicker" id="resk" style="margin-bottom:0.5rem;">The Operator Playbook</div>
+        <h2 class="res-hl"><span class="res-hli" id="reshl">Free Playbooks for B2B Marketers</span></h2>
       </div>
-      <a href="#" class="res-link">All resources →</a>
+      <a href="/resources/" class="res-link">Browse all playbooks →</a>
     </div>
     <div class="res-grid">
-      <div class="rcard" id="rc1"><span class="rbadge">Template</span><div class="ricon">⬡</div><p class="rname">ICP Development Framework</p><p class="rdesc">Firmographic, technographic, and behavioral signals structured into a repeatable definition process.</p><a href="#" class="rdl">Download free →</a></div>
-      <div class="rcard" id="rc2"><span class="rbadge">Template</span><div class="ricon">◈</div><p class="rname">B2B Content Strategy Canvas</p><p class="rdesc">Map content to buyer stage, persona, and sales play. Includes editorial calendar and distribution checklist.</p><a href="#" class="rdl">Download free →</a></div>
-      <div class="rcard" id="rc3"><span class="rbadge">Guide</span><div class="ricon">◎</div><p class="rname">AI Adoption Playbook for Marketing</p><p class="rdesc">Introduce AI into your marketing workflow without chaos — tool stack, governance, and training framework.</p><a href="#" class="rdl">Download free →</a></div>
+      <div class="rcard" id="rc1"><span class="rbadge">Vol. 01 · Flagship</span><div class="ricon">⬡</div><p class="rname">AI Agents for Marketing Teams</p><p class="rdesc">The complete 72-page playbook. 25 specialized agents, 4 hero workflows, governance, and the 90-day rollout.</p><a href="/resources/ai-agents-for-marketing-teams/" class="rdl">Read the flagship →</a></div>
+      <div class="rcard" id="rc2"><span class="rbadge">Vol. 02 · Demand Gen</span><div class="ricon">◈</div><p class="rname">AI Agents for Demand Generation</p><p class="rdesc">The agent stack for the people who own the pipeline number. Campaign optimization, ABM orchestration, email nurture.</p><a href="/resources/ai-agents-for-demand-generation/" class="rdl">Read Vol. 02 →</a></div>
+      <div class="rcard" id="rc3"><span class="rbadge">Vol. 03 · Content</span><div class="ricon">◎</div><p class="rname">AI Agents for Content Marketing</p><p class="rdesc">Seven agents and one workflow that take content velocity from human-throughput to operating-system speed.</p><a href="/resources/ai-agents-for-content-marketing/" class="rdl">Read Vol. 03 →</a></div>
+      <div class="rcard" id="rc4"><span class="rbadge">Vol. 04 · ABM</span><div class="ricon">◇</div><p class="rname">AI Agents for ABM</p><p class="rdesc">Five agents and one workflow that make Tier 1 account orchestration possible at scale.</p><a href="/resources/ai-agents-for-abm/" class="rdl">Read Vol. 04 →</a></div>
+      <div class="rcard" id="rc5"><span class="rbadge">Vol. 05 · MarOps</span><div class="ricon">◉</div><p class="rname">AI Agents for Marketing Operations</p><p class="rdesc">The agent stack that turns the ops function into the leverage point of the entire GTM org.</p><a href="/resources/ai-agents-for-marketing-operations/" class="rdl">Read Vol. 05 →</a></div>
+      <div class="rcard" id="rc6"><span class="rbadge">Vol. 06 · ICP</span><div class="ricon">⊕</div><p class="rname">AI Agents for ICP & GTM Strategy</p><p class="rdesc">Four agents that keep your ICP, personas, and account selection live, accurate, and defendable.</p><a href="/resources/ai-agents-for-icp-development/" class="rdl">Read Vol. 06 →</a></div>
+      <div class="rcard" id="rc7"><span class="rbadge">Vol. 07 · Enablement</span><div class="ricon">◼</div><p class="rname">AI Agents for Sales Enablement</p><p class="rdesc">Five agents and one workflow that close the handoff between marketing and the field.</p><a href="/resources/ai-agents-for-sales-enablement/" class="rdl">Read Vol. 07 →</a></div>
     </div>
   </div>
 </section>
@@ -1550,6 +1554,8 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
       <p class="ft-ht">Connect</p>
       <ul class="ft-ul" role="list">
         <li><a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank" aria-label="Erik R. Miller on LinkedIn (opens in new tab)">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/ERMAdvisory/" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
         <li><a href="mailto:erikrmiller@outlook.com">Email Erik</a></li>
         <li><a href="#contact">Work Together</a></li>
         <li><a href="#">Download CV</a></li>
