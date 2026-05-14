@@ -424,7 +424,7 @@ nav#nav.stuck{padding:1rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:bl
 .g-sub{font-family:var(--sans);font-size:0.7rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(184,146,42,0.55);text-align:right;line-height:2;}
 
 /* World map SVG wrapper */
-.g-map{position:relative;margin-bottom:4rem;}
+.g-map{position:relative;margin-bottom:2.5rem;}
 /* Map handled by D3 */
 /* pin labels */
 .g-pins{position:absolute;inset:0;pointer-events:none;}
@@ -565,9 +565,9 @@ nav#nav.stuck{padding:1rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:bl
 .hdate{font-family:var(--body);font-size:0.75rem;color:rgba(247,244,238,0.55);margin-top:1.75rem;display:block;}
 
 /* ═══ RESOURCES ═══ CREAM */
-.resources{padding:8rem 0;background:var(--cream);overflow:hidden;}
+.resources{padding:5rem 0;background:var(--cream);overflow:hidden;}
 .res-wrap{max-width:1200px;margin:0 auto;padding:0 4rem;}
-.res-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;}
+.res-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;}
 .res-hl{font-family:var(--serif);font-size:clamp(2.5rem,4vw,4rem);font-weight:300;letter-spacing:-0.02em;}
 .res-hli{display:block;transform:translateY(106%);}
 .res-link{font-family:var(--sans);font-size:0.56rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;}
@@ -813,7 +813,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   .hbody{font-size:0.88rem;}
 
   /* RESOURCES */
-  .resources{padding:5rem 0;}
+  .resources{padding:3rem 0;}
   .res-wrap{padding:0 1.5rem;}
   .res-header{flex-direction:column;gap:1rem;margin-bottom:2.5rem;}
   .res-hl{font-size:clamp(2rem,7vw,3rem);}
@@ -1707,7 +1707,7 @@ gsap.to('#advr',{opacity:1,x:0,duration:0.9,scrollTrigger:{trigger:'.adv-header'
 // RESOURCES
 gsap.to('#resk',{opacity:1,duration:0.7,scrollTrigger:{trigger:'#resk',start:'top 85%'}});
 gsap.to('#reshl',{translateY:'0%',duration:1,ease:'power3.out',scrollTrigger:{trigger:'.res-header',start:'top 80%'}});
-['#rc1','#rc2','#rc3'].forEach((id,i)=>gsap.to(id,{opacity:1,y:0,scale:1,duration:0.75,ease:'power2.out',delay:i*0.11,scrollTrigger:{trigger:id,start:'top 88%'}}));
+['#rc1','#rc2','#rc3','#rc4','#rc5','#rc6','#rc7'].forEach((id,i)=>gsap.to(id,{opacity:1,y:0,scale:1,duration:0.75,ease:'power2.out',delay:(i%3)*0.11,scrollTrigger:{trigger:id,start:'top 92%'}}));
 
 // NEWSLETTER
 gsap.to('#nlk',{opacity:1,scrollTrigger:{trigger:'.nl',start:'top 75%'}});
