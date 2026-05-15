@@ -458,10 +458,13 @@ filterBtns.forEach(btn=>{
     postCards.forEach(card=>{
       if(filter==='all' || card.dataset.category===filter){
         card.classList.remove('hidden');
+        // Force visible in case GSAP hasn't animated this card yet
+        gsap.set(card,{opacity:1,y:0});
       } else {
         card.classList.add('hidden');
       }
     });
+    ScrollTrigger.refresh();
   });
 });
 
