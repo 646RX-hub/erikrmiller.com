@@ -176,11 +176,11 @@ nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items
 .callout{border-left:2px solid var(--gold);padding:1.5rem 2rem;background:var(--cream);margin:2.5rem 0;}
 .callout p{font-family:var(--serif);font-size:clamp(1.1rem,1.8vw,1.4rem);font-weight:300;font-style:italic;line-height:1.55;color:var(--ink);margin-bottom:0 !important;}
 .art-num{list-style:none;counter-reset:art-counter;margin:2rem 0 2.5rem;}
-.art-num li{counter-increment:art-counter;display:grid;grid-template-columns:2.5rem 1fr;gap:1.25rem;margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(10,9,8,0.06);}
-.art-num li:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-.art-num li::before{content:counter(art-counter, decimal-leading-zero);font-family:var(--serif);font-size:1.4rem;font-weight:300;font-style:italic;color:var(--gold);padding-top:0.1rem;}
-.art-num li .li-head{font-family:var(--sans);font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);margin-bottom:0.65rem;margin-top:0;}
-.art-num li .li-body p{font-size:0.9rem;margin-bottom:0.75rem;word-wrap:break-word;overflow-wrap:break-word;white-space:normal;}
+.art-num > li{counter-increment:art-counter;display:grid;grid-template-columns:2.5rem 1fr;gap:1.25rem;margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(10,9,8,0.06);}
+.art-num > li:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.art-num > li::before{content:counter(art-counter, decimal-leading-zero);font-family:var(--serif);font-size:1.4rem;font-weight:300;font-style:italic;color:var(--gold);padding-top:0.1rem;}
+.art-num > li .li-head{font-family:var(--sans);font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);margin-bottom:0.65rem;margin-top:0;}
+.art-num > li .li-body p{font-size:0.9rem;margin-bottom:0.75rem;word-wrap:break-word;overflow-wrap:break-word;white-space:normal;}
 .art-num li .li-body p:last-child{margin-bottom:0;}
 .signal-box{background:var(--ink);padding:2.5rem;margin:2.5rem 0;text-align:left;}
 .signal-box .sb-label{font-family:var(--sans);font-size:0.5rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;display:block;}
@@ -240,6 +240,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 }
 
 .signal-box ul.q-list li{color:rgba(247,244,238,0.85);font-size:0.95rem;margin-bottom:1.2rem;display:block;overflow-wrap:break-word;}
+.signal-box strong{color:rgba(247,244,238,0.95);font-weight:600;}
 .signal-box ul.q-list li::before{color:var(--gold-lt);}
 
 .art-wrap p{word-spacing:0.05em;text-rendering:optimizeLegibility;}
@@ -255,13 +256,13 @@ h2{word-spacing:0.05em;}
 }
 
 
-.art-wrap ol.art-num li {
+.art-wrap ol.art-num > li {
   margin-bottom: 2.5rem;
 }
-.art-wrap ol.art-num .li-body p {
+.art-wrap ol.art-num > li .li-body p {
   margin-bottom: 1rem;
 }
-.art-wrap ol.art-num .li-body ul.q-list {
+.art-wrap ol.art-num > li .li-body ul.q-list {
   margin: 1rem 0;
 }
 
@@ -286,6 +287,47 @@ h2{word-spacing:0.05em;}
 }
 
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Build an AI-Powered ICP Framework",
+  "description": "A practical 5-step methodology for building an AI-assisted Ideal Customer Profile that drives continuous GTM improvement.",
+  "totalTime": "PT30D",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Define Your North Star Metric",
+      "text": "Identify the customer success outcome you want to optimize for — typically a combination of expansion rate (ARR growth in year 2+), net retention, and sales efficiency. Example: companies that expand to 2.5x initial ARR within 18 months."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Run Historical Cohort Analysis",
+      "text": "Segment your customer base by firmographic attributes and analyze which segments hit your north star metric at the highest rates. Identify which firmographic buckets produce the best conversion and expansion outcomes."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Expand with Behavioral Signals",
+      "text": "Layer the five AI-powered data signals onto your firmographic analysis: win/loss patterns, expansion and retention rates, sales conversation intelligence, market intent signals, and competitive displacement data. Build a dynamic probability model instead of static criteria."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Set Up Continuous Monitoring",
+      "text": "Implement weekly win/loss analysis, monthly expansion tracking, and quarterly persona analysis. Make ICP review part of your weekly GTM rhythm rather than an annual event."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Close the Feedback Loop",
+      "text": "Route intelligence from sales, marketing, and customer success back into your ICP logic. Analyze every win, loss, expansion, and churn event. This closed loop is what separates data-informed GTM from genuinely intelligent GTM."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -409,7 +451,7 @@ h2{word-spacing:0.05em;}
 
   <p>The process is <strong>event-based, not continuous.</strong> You review your ICP once or twice a year, but the market you're selling into is changing weekly. New competitors emerge. Your product evolves. Customer needs shift. But your ICP stays static.</p>
 
-  <p><strong>Account-based organizations with well-defined ICPs achieve 86% higher win rates, 80% improvement in customer lifetime value, and 76% higher ROI</strong> compared to traditional approaches (Gartner, 2024 Tech Marketing Benchmarks Survey).</p>
+  <p><strong>Account-based organizations with well-defined ICPs achieve 86% higher win rates, 80% improvement in customer lifetime value, and 76% higher ROI</strong> compared to traditional approaches (<a href="https://www.gartner.com/en/marketing/topics/account-based-marketing" target="_blank" rel="noopener noreferrer">Gartner, 2024 Tech Marketing Benchmarks Survey</a>).</p>
 
   <p>Your data sources are <strong>backward-looking and incomplete.</strong> You analyze historical wins, which tell you about customers who were good fits 12-24 months ago. But they don't tell you about adjacent segments that would be perfect fits today. They don't surface which customers expanded, which churned, or why.</p>
 
@@ -512,7 +554,6 @@ h2{word-spacing:0.05em;}
           <p>You already have this data. The question is whether you're analyzing it correctly. Most teams focus on company size, industry, revenue, and funding stage. But what actually matters for ICP development:</p>
           <p><strong>Sales cycle length, expansion trajectory, first-year spending, NPS scores, and referral behavior</strong> are the signals that predict whether an account will become valuable. A company that closes quickly but stagnates at $10K ARR tells a very different story than one that takes longer but expands to $100K.</p>
           <p><strong>Real example:</strong> Your best customers aren't Series B companies—they're Series B companies with existing MarTech stacks and 3+ existing vendors. That specificity matters. It explains why they expand faster and become your strongest advocates.</p>
-          <p>Real example: You might discover that your best customers aren't Series B companies—they're Series B companies with existing MarTech stacks and 3+ existing vendors. That specificity matters. It explains why they expand faster.</p>
         </div>
       </div>
     </li>
@@ -523,7 +564,6 @@ h2{word-spacing:0.05em;}
           <p>This is where most ICP development fails. You win an account at $10K ARR—great. But the real question isn't whether you sold them; it's whether they'll stay, expand, and advocate.</p>
           <p><strong>An account that lands at $10K but expands to $75K is infinitely more valuable than one that stays at $10K and churns.</strong> This is the metric that separates high-performing ICPs from mediocre ones. AI can identify which firmographic and persona characteristics predict expansion. You might find that companies with fragmented vendor stacks expand faster. Or that industries experiencing digital transformation compound usage more.</p>
           <p>This shifts your ICP from "who's an easy initial sale" to "who creates the most lifetime value." That's the difference between a pipeline metric and a revenue metric.</p>
-          <p>This shifts your ICP from "who's an easy initial sale" to "who creates the most lifetime value."</p>
         </div>
       </div>
     </li>
