@@ -180,9 +180,9 @@ nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items
 .art-num li:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
 .art-num li::before{content:counter(art-counter, decimal-leading-zero);font-family:var(--serif);font-size:1.4rem;font-weight:300;font-style:italic;color:var(--gold);padding-top:0.1rem;}
 .art-num li .li-head{font-family:var(--sans);font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);margin-bottom:0.65rem;margin-top:0;}
-.art-num li .li-body p{font-size:0.9rem;margin-bottom:0.75rem;}
+.art-num li .li-body p{font-size:0.9rem;margin-bottom:0.75rem;word-wrap:break-word;overflow-wrap:break-word;white-space:normal;}
 .art-num li .li-body p:last-child{margin-bottom:0;}
-.signal-box{background:var(--ink);padding:2.5rem;margin:2.5rem 0;}
+.signal-box{background:var(--ink);padding:2.5rem;margin:2.5rem 0;text-align:left;}
 .signal-box .sb-label{font-family:var(--sans);font-size:0.5rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;display:block;}
 .signal-box p{font-family:var(--body);font-size:0.9rem;font-weight:300;color:rgba(247,244,238,0.72);line-height:1.8;margin-bottom:0;}
 .faq-section{margin:4rem 0;padding:3rem;background:var(--cream);border:1px solid rgba(10,9,8,0.07);}
@@ -486,7 +486,7 @@ h2{word-spacing:0.05em;}
     <li><strong>Which personas matter most</strong> (ranked by expansion potential, not assumptions)</li>
   </ul>
 
-  <p><strong>Sales teams using AI are 1.3x more likely to see revenue growth</strong>, with AI-driven targeting improving lead conversion rates up to 30% and reducing sales cycle times by 25% (Salesforce, 2024 Sales AI Research).</p>
+  <p><strong>Sales teams using AI are 1.3x more likely to see revenue growth</strong>, with AI-driven targeting improving lead conversion rates up to 30% and reducing sales cycle times by 25% (<a href="https://www.salesforce.com/research/state-of-sales/" target="_blank" rel="noopener noreferrer">Salesforce, 2024 Sales AI Research</a>).</p>
 
   <div class="signal-box">
     <span class="sb-label">For Your GTM Team</span>
@@ -774,8 +774,8 @@ h2{word-spacing:0.05em;}
 
   <ul class="q-list" style="margin: 1.5rem 0 2.5rem;">
     <li><a href="/blog/ai-agents-demand-gen-use-cases/"><strong>AI Agents for Demand Generation</strong></a> — How to automate account targeting and persona engagement at scale while maintaining precision</li>
-    <li><a href="/blog/icp-development-the-framework-i-use-every-time/"><strong>ICP Development: The Framework I Use Every Time</strong></a> — A practical, field-tested methodology for recurring ICP updates and continuous refinement</li>
-    <li><a href="/blog/why-most-abm-programs-fail/"><strong>Why Most ABM Programs Fail</strong></a> — Understanding the operational breakpoints in account-based strategy and how to fix them</li>
+    <li><a href="/blog/icp-development-the-framework-i-use-every-time/"><strong>ICP Development: The Framework I Use Every Time</strong></a> — A practical, field-tested methodology for <a href="/blog/icp-development-the-framework-i-use-every-time/">recurring ICP updates</a> and continuous refinement</li>
+    <li><a href="/blog/why-most-abm-programs-fail/"><strong>Why Most ABM Programs Fail</strong></a> — Understanding the operational breakpoints in <a href="/blog/why-most-abm-programs-fail/">account-based strategy</a> and how to fix them</li>
     <li><a href="/resources/ai-agents-for-abm/"><strong>AI Agents for ABM</strong></a> — Operationalizing account-based marketing through AI-enabled workflows and continuous optimization</li>
     <li><a href="/resources/ai-agents-for-content-marketing/"><strong>AI Agents for Content Marketing</strong></a> — How to align your content production with account-level targeting and buyer journey precision</li>
   </ul>
