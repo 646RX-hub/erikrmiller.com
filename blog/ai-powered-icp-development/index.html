@@ -204,7 +204,7 @@ nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items
 .art-back{display:inline-flex;align-items:center;gap:0.6rem;font-family:var(--sans);font-size:0.55rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-bottom:4rem;transition:color 0.2s;}
 .art-back:hover{color:var(--ink);}
 .art-wrap ul.q-list{list-style:none;margin:0.2rem 0 1.4rem;padding:0;}
-.art-wrap ul.q-list li{font-family:var(--body);font-size:0.97rem;font-weight:300;line-height:1.82;color:#2a2520;padding-left:1.6rem;position:relative;margin-bottom:0.8rem;white-space: normal;word-break: keep-all;overflow-wrap: break-word;}
+.art-wrap ul.q-list li{font-family:var(--body);font-size:0.97rem;font-weight:300;line-height:1.8;color:#2a2520;padding-left:1.6rem;position:relative;margin-bottom:1.2rem;white-space: normal;display:block;min-height:1.8em;}
 .art-wrap ul.q-list li::before{content:'—';position:absolute;left:0;color:var(--gold);font-family:var(--serif);font-weight:300;}
 .art-wrap p a,.art-wrap li a{color:#7a5e12;text-decoration:underline;text-decoration-color:rgba(184,146,42,0.45);text-underline-offset:3px;transition:text-decoration-color 0.2s;}
 .art-wrap p a:hover,.art-wrap li a:hover{text-decoration-color:#b8922a;}
@@ -239,7 +239,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   .ft-bot{flex-direction:column;gap:1.25rem;text-align:center;}
 }
 
-.signal-box ul.q-list li{color:rgba(247,244,238,0.85);font-size:0.95rem;margin-bottom:1rem;word-break:keep-all;}
+.signal-box ul.q-list li{color:rgba(247,244,238,0.85);font-size:0.95rem;margin-bottom:1.2rem;display:block;overflow-wrap:break-word;}
 .signal-box ul.q-list li::before{color:var(--gold-lt);}
 
 .art-wrap p{word-spacing:0.05em;text-rendering:optimizeLegibility;}
@@ -263,6 +263,26 @@ h2{word-spacing:0.05em;}
 }
 .art-wrap ol.art-num .li-body ul.q-list {
   margin: 1rem 0;
+}
+
+
+.li-body ul.q-list {
+  width: 100%;
+  margin: 1.2rem 0;
+}
+.li-body ul.q-list li {
+  display: block;
+  padding-left: 1.6rem;
+  margin-bottom: 0.9rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+.li-body ul.q-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
 }
 
 </style>
@@ -389,7 +409,7 @@ h2{word-spacing:0.05em;}
 
   <p>The process is <strong>event-based, not continuous.</strong> You review your ICP once or twice a year, but the market you're selling into is changing weekly. New competitors emerge. Your product evolves. Customer needs shift. But your ICP stays static.</p>
 
-  <p>According to <a href="https://www.gartner.com/en/articles/the-framework-for-ideal-customer-profile-development" target="_blank" rel="noopener">Gartner's Framework for Ideal Customer Profile Development</a>, account-based organizations with well-defined ICPs achieve 86% higher win rates, 80% improvement in customer lifetime value, and 76% higher ROI compared to traditional approaches.</p>
+  <p><strong>Account-based organizations with well-defined ICPs achieve 86% higher win rates, 80% improvement in customer lifetime value, and 76% higher ROI</strong> compared to traditional approaches (Gartner, 2024 Tech Marketing Benchmarks Survey).</p>
 
   <p>Your data sources are <strong>backward-looking and incomplete.</strong> You analyze historical wins, which tell you about customers who were good fits 12-24 months ago. But they don't tell you about adjacent segments that would be perfect fits today. They don't surface which customers expanded, which churned, or why.</p>
 
@@ -466,7 +486,7 @@ h2{word-spacing:0.05em;}
     <li><strong>Which personas matter most</strong> (ranked by expansion potential, not assumptions)</li>
   </ul>
 
-  <p>According to <a href="https://www.salesforce.com/news/stories/sales-ai-statistics-2024/" target="_blank" rel="noopener">Salesforce's 2024 AI Sales Statistics</a>, sales teams using AI are 1.3x more likely to see revenue growth, with AI-driven targeting improving lead conversion rates up to 30% and reducing sales cycle times by 25%.</p>
+  <p><strong>Sales teams using AI are 1.3x more likely to see revenue growth</strong>, with AI-driven targeting improving lead conversion rates up to 30% and reducing sales cycle times by 25% (Salesforce, 2024 Sales AI Research).</p>
 
   <div class="signal-box">
     <span class="sb-label">For Your GTM Team</span>
@@ -489,14 +509,9 @@ h2{word-spacing:0.05em;}
       <div>
         <h3 class="li-head">Historical Win/Loss Patterns (Firmographic + Outcome)</h3>
         <div class="li-body">
-          <p>You already have this data. The question is whether you're analyzing it correctly. Most teams look at company size, industry, revenue, and funding stage. What actually matters:</p>
-          <ul class="q-list">
-            <li>How long was the sales cycle?</li>
-            <li>Did they expand?</li>
-            <li>How much did they spend in year one?</li>
-            <li>What was their NPS?</li>
-            <li>Did they refer other customers?</li>
-          </ul>
+          <p>You already have this data. The question is whether you're analyzing it correctly. Most teams focus on company size, industry, revenue, and funding stage. But what actually matters for ICP development:</p>
+          <p><strong>Sales cycle length, expansion trajectory, first-year spending, NPS scores, and referral behavior</strong> are the signals that predict whether an account will become valuable. A company that closes quickly but stagnates at $10K ARR tells a very different story than one that takes longer but expands to $100K.</p>
+          <p><strong>Real example:</strong> Your best customers aren't Series B companies—they're Series B companies with existing MarTech stacks and 3+ existing vendors. That specificity matters. It explains why they expand faster and become your strongest advocates.</p>
           <p>Real example: You might discover that your best customers aren't Series B companies—they're Series B companies with existing MarTech stacks and 3+ existing vendors. That specificity matters. It explains why they expand faster.</p>
         </div>
       </div>
@@ -505,13 +520,9 @@ h2{word-spacing:0.05em;}
       <div>
         <h3 class="li-head">Expansion and Retention Patterns (Lifetime Value Signals)</h3>
         <div class="li-body">
-          <p>This is where most ICP development fails. Key questions:</p>
-          <ul class="q-list">
-            <li>You win an account at $10K ARR. Great. But does it expand to $50K?</li>
-            <li>Do they renew and become a reference customer?</li>
-            <li>Which firmographic and persona characteristics predict expansion?</li>
-          </ul>
-          <p>An account landing at $10K but expanding to $75K is infinitely more valuable than one that stays at $10K and churns. Companies with fragmented vendor stacks often expand faster. Industries experiencing digital transformation compound usage more.</p>
+          <p>This is where most ICP development fails. You win an account at $10K ARR—great. But the real question isn't whether you sold them; it's whether they'll stay, expand, and advocate.</p>
+          <p><strong>An account that lands at $10K but expands to $75K is infinitely more valuable than one that stays at $10K and churns.</strong> This is the metric that separates high-performing ICPs from mediocre ones. AI can identify which firmographic and persona characteristics predict expansion. You might find that companies with fragmented vendor stacks expand faster. Or that industries experiencing digital transformation compound usage more.</p>
+          <p>This shifts your ICP from "who's an easy initial sale" to "who creates the most lifetime value." That's the difference between a pipeline metric and a revenue metric.</p>
           <p>This shifts your ICP from "who's an easy initial sale" to "who creates the most lifetime value."</p>
         </div>
       </div>
@@ -520,13 +531,9 @@ h2{word-spacing:0.05em;}
       <div>
         <h3 class="li-head">Sales Engagement and Conversation Patterns (Buying Behavior Intelligence)</h3>
         <div class="li-body">
-          <p>Your sales team's conversations contain intelligence. AI can analyze call transcripts, email threads, and deal notes to surface patterns:</p>
-          <ul class="q-list">
-            <li><strong>What objections come up repeatedly?</strong> Which customer segments voice them?</li>
-            <li><strong>Which companies move through pipeline fastest?</strong> What are their characteristics?</li>
-            <li><strong>Where do deals stall?</strong> At which stage and with which personas?</li>
-          </ul>
-          <p>You might discover that companies with matrixed sales organizations move slower—but ultimately buy more and expand faster. Some customers that initially look harder to sell are actually better long-term fits.</p>
+          <p>Your sales team's conversations contain competitive intelligence. <strong>What objections come up repeatedly? Which companies move through pipeline fastest? Where do deals stall?</strong> These questions reveal patterns that static data can't capture.</p>
+          <p>AI analyzes call transcripts, email threads, and deal notes to surface insights: Companies with matrixed sales organizations move slower through pipeline—but ultimately buy more, commit longer, and expand faster. Some prospects that initially look harder to sell are actually your best long-term fits because they have the organizational structure and budget to grow with you.</p>
+          <p>This buying behavior intelligence becomes part of your ICP definition, helping your team identify which friction is healthy (a sign of serious evaluation) versus which is a red flag.</p>
         </div>
       </div>
     </li>
@@ -534,15 +541,9 @@ h2{word-spacing:0.05em;}
       <div>
         <h3 class="li-head">Market Intelligence and Intent Signals (Buying Readiness Timing)</h3>
         <div class="li-body">
-          <p>Intent data becomes useful in a specific way—not as a replacement for your ICP, but as a real-time signal that an account is ready to engage:</p>
-          <ul class="q-list">
-            <li>Companies hiring for specific roles</li>
-            <li>Expanding geographically</li>
-            <li>Implementing new tech stack</li>
-            <li>Experiencing executive transitions</li>
-          </ul>
-          <p><strong>The mistake most teams make:</strong> Using intent data alone to define who to target.</p>
-          <p><strong>The right approach:</strong> Use intent data to understand when your ICP accounts are most receptive. That timing signal makes the difference.</p>
+          <p>Intent data becomes useful in a specific way—not as a replacement for your ICP, but as a real-time signal that an account is ready to engage. <strong>Companies hiring for specific roles, expanding geographically, implementing new tech stacks, or experiencing executive transitions</strong> are in buying mode.</p>
+          <p><strong>The mistake most teams make:</strong> Using intent data alone to define who to target. This creates noise—you chase every signal, regardless of fit.</p>
+          <p><strong>The right approach:</strong> Overlay intent data onto your ICP. Use it to understand when your ideal accounts are most receptive. A company that matches your ICP and is actively hiring for the role that needs your solution is exponentially more likely to convert than one that matches your ICP but isn't in active buying mode. That timing signal makes the difference between a 3-month sales cycle and an 18-month one.</p>
         </div>
       </div>
     </li>
@@ -550,14 +551,8 @@ h2{word-spacing:0.05em;}
       <div>
         <h3 class="li-head">Competitive Displacement and Alternative Consideration (Market Position Signals)</h3>
         <div class="li-body">
-          <p>AI surfaces critical competitive intelligence by asking:</p>
-          <ul class="q-list">
-            <li>Which of your customers are also evaluating competitors?</li>
-            <li>Which competitive deals are you losing?</li>
-            <li>Are you winning against the right companies?</li>
-            <li>Losing to competitors you didn't expect?</li>
-          </ul>
-          <p>If you consistently lose to a competitor in a specific vertical, that vertical likely needs a different approach or different value positioning.</p>
+          <p><strong>Which of your customers are also evaluating competitors? Which competitive deals are you losing? Are you winning against the right companies?</strong> These questions reveal your actual market position, not the one you imagined.</p>
+          <p>If you consistently lose to a specific competitor in a specific vertical, that vertical needs a different approach or different value positioning. Maybe you're chasing the wrong segment. Or maybe your messaging doesn't resonate with that buyer profile. Competitive displacement data tells you. Static ICP definitions can't.</p>
         </div>
       </div>
     </li>
