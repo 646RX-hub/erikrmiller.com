@@ -165,7 +165,7 @@ nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items
 .ah-divider{width:1px;height:24px;background:rgba(247,244,238,0.1);}
 .ah-date{font-family:var(--body);font-size:0.75rem;color:rgba(247,244,238,0.32);}
 .ah-read{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(247,244,238,0.25);}
-.art-wrap{max-width:900px;margin:0 auto;padding:5rem 3rem 8rem;}
+.art-wrap{max-width:960px;margin:0 auto;padding:5rem 3rem 8rem;}
 .art-lede{font-family:var(--serif);font-size:clamp(1.25rem,2vw,1.6rem);font-weight:300;line-height:1.55;color:var(--ink);margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(10,9,8,0.08);}
 .art-wrap p{font-family:var(--body);font-size:0.97rem;font-weight:300;line-height:1.88;color:#2a2520;margin-bottom:1.5rem;max-width:100%;word-spacing:normal;}
 .art-wrap h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.5rem);font-weight:300;line-height:1.15;color:var(--ink);margin:3.5rem 0 1.25rem;}
@@ -204,7 +204,7 @@ nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items
 .art-back{display:inline-flex;align-items:center;gap:0.6rem;font-family:var(--sans);font-size:0.55rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-bottom:4rem;transition:color 0.2s;}
 .art-back:hover{color:var(--ink);}
 .art-wrap ul.q-list{list-style:none;margin:0.2rem 0 1.4rem;padding:0;}
-.art-wrap ul.q-list li{font-family:var(--body);font-size:0.97rem;font-weight:300;line-height:1.82;color:#2a2520;padding-left:1.6rem;position:relative;margin-bottom:0.3rem;}
+.art-wrap ul.q-list li{font-family:var(--body);font-size:0.97rem;font-weight:300;line-height:1.82;color:#2a2520;padding-left:1.6rem;position:relative;margin-bottom:0.8rem;white-space: normal;word-break: keep-all;overflow-wrap: break-word;}
 .art-wrap ul.q-list li::before{content:'—';position:absolute;left:0;color:var(--gold);font-family:var(--serif);font-weight:300;}
 .art-wrap p a,.art-wrap li a{color:#7a5e12;text-decoration:underline;text-decoration-color:rgba(184,146,42,0.45);text-underline-offset:3px;transition:text-decoration-color 0.2s;}
 .art-wrap p a:hover,.art-wrap li a:hover{text-decoration-color:#b8922a;}
@@ -238,6 +238,33 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   .ft{grid-template-columns:1fr;gap:2.5rem;}
   .ft-bot{flex-direction:column;gap:1.25rem;text-align:center;}
 }
+
+.signal-box ul.q-list li{color:rgba(247,244,238,0.85);font-size:0.95rem;margin-bottom:1rem;word-break:keep-all;}
+.signal-box ul.q-list li::before{color:var(--gold-lt);}
+
+.art-wrap p{word-spacing:0.05em;text-rendering:optimizeLegibility;}
+h2{word-spacing:0.05em;}
+
+.art-wrap > ol, .art-wrap > ul {
+  margin-left: 0;
+  margin-right: 0;
+}
+.li-body ul.q-list li {
+  word-break: keep-all;
+  min-width: 200px;
+}
+
+
+.art-wrap ol.art-num li {
+  margin-bottom: 2.5rem;
+}
+.art-wrap ol.art-num .li-body p {
+  margin-bottom: 1rem;
+}
+.art-wrap ol.art-num .li-body ul.q-list {
+  margin: 1rem 0;
+}
+
 </style>
 </head>
 <body>
@@ -362,7 +389,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 
   <p>The process is <strong>event-based, not continuous.</strong> You review your ICP once or twice a year, but the market you're selling into is changing weekly. New competitors emerge. Your product evolves. Customer needs shift. But your ICP stays static.</p>
 
-  <p>According to <a href="https://www.gartner.com/en/documents/4012820" target="_blank" rel="noopener">Gartner's research on B2B marketing effectiveness</a>, organizations that treat ICPs as living documents—continuously refined through behavioral data—see 30% improvement in pipeline quality compared to static ICP approaches.</p>
+  <p>According to <a href="https://www.gartner.com/en/articles/the-framework-for-ideal-customer-profile-development" target="_blank" rel="noopener">Gartner's Framework for Ideal Customer Profile Development</a>, account-based organizations with well-defined ICPs achieve 86% higher win rates, 80% improvement in customer lifetime value, and 76% higher ROI compared to traditional approaches.</p>
 
   <p>Your data sources are <strong>backward-looking and incomplete.</strong> You analyze historical wins, which tell you about customers who were good fits 12-24 months ago. But they don't tell you about adjacent segments that would be perfect fits today. They don't surface which customers expanded, which churned, or why.</p>
 
@@ -439,7 +466,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <li><strong>Which personas matter most</strong> (ranked by expansion potential, not assumptions)</li>
   </ul>
 
-  <p>According to <a href="https://www.salesforce.com/research/state-of-ai/" target="_blank" rel="noopener">Salesforce's research on AI impact on B2B sales</a>, companies using AI to refine customer targeting see 25-30% improvement in win rates and 40% faster sales cycles.</p>
+  <p>According to <a href="https://www.salesforce.com/news/stories/sales-ai-statistics-2024/" target="_blank" rel="noopener">Salesforce's 2024 AI Sales Statistics</a>, sales teams using AI are 1.3x more likely to see revenue growth, with AI-driven targeting improving lead conversion rates up to 30% and reducing sales cycle times by 25%.</p>
 
   <div class="signal-box">
     <span class="sb-label">For Your GTM Team</span>
@@ -453,7 +480,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 
   <hr class="section-divider">
 
-  <h2>The 5 Data Signals<br>That Predict Customer Fit at Scale</h2>
+  <h2>The 5&nbsp;Data&nbsp;Signals<br>That Predict Customer Fit at&nbsp;Scale</h2>
 
   <p>Building an AI-powered ICP means knowing which signals matter. Here are the ones that consistently predict customer success:</p>
 
@@ -478,8 +505,13 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
       <div>
         <h3 class="li-head">Expansion and Retention Patterns (Lifetime Value Signals)</h3>
         <div class="li-body">
-          <p>This is where most ICP development fails. You win an account at $10K ARR. Great. But does it expand to $50K ARR? Do they renew? Become a reference?</p>
-          <p>An account that lands at $10K but expands to $75K is infinitely more valuable than one that stays at $10K and churns. AI can identify which firmographic and persona characteristics predict expansion. You might find that companies with fragmented vendor stacks expand faster. Or that industries experiencing digital transformation compound usage more.</p>
+          <p>This is where most ICP development fails. Key questions:</p>
+          <ul class="q-list">
+            <li>You win an account at $10K ARR. Great. But does it expand to $50K?</li>
+            <li>Do they renew and become a reference customer?</li>
+            <li>Which firmographic and persona characteristics predict expansion?</li>
+          </ul>
+          <p>An account landing at $10K but expanding to $75K is infinitely more valuable than one that stays at $10K and churns. Companies with fragmented vendor stacks often expand faster. Industries experiencing digital transformation compound usage more.</p>
           <p>This shifts your ICP from "who's an easy initial sale" to "who creates the most lifetime value."</p>
         </div>
       </div>
@@ -502,8 +534,15 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
       <div>
         <h3 class="li-head">Market Intelligence and Intent Signals (Buying Readiness Timing)</h3>
         <div class="li-body">
-          <p>Intent data becomes useful in a specific way—not as a replacement for your ICP, but as a real-time signal that an account is ready to engage. Companies hiring for specific roles, expanding geographically, implementing new tech stack, experiencing executive transitions—these are signals.</p>
-          <p><strong>The mistake most teams make:</strong> They use intent data alone to define who to target. <strong>The right approach:</strong> Use intent data to understand when your ICP accounts are most receptive. That timing signal makes the difference.</p>
+          <p>Intent data becomes useful in a specific way—not as a replacement for your ICP, but as a real-time signal that an account is ready to engage:</p>
+          <ul class="q-list">
+            <li>Companies hiring for specific roles</li>
+            <li>Expanding geographically</li>
+            <li>Implementing new tech stack</li>
+            <li>Experiencing executive transitions</li>
+          </ul>
+          <p><strong>The mistake most teams make:</strong> Using intent data alone to define who to target.</p>
+          <p><strong>The right approach:</strong> Use intent data to understand when your ICP accounts are most receptive. That timing signal makes the difference.</p>
         </div>
       </div>
     </li>
@@ -552,32 +591,32 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
         <h3 class="li-head">Historical Cohort Analysis</h3>
         <div class="li-body">
           <p>Segment your customer base by firmographic attributes. Analyze which segments hit your north star at the highest rates:</p>
-          <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.9rem;background:#fff;">
+          <table style="width:100%;border-collapse:collapse;margin:2rem 0;font-size:0.9rem;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
             <thead>
-              <tr style="border-bottom:2px solid var(--gold);">
-                <th style="text-align:left;padding:0.75rem;font-weight:600;color:var(--ink);">Segment</th>
-                <th style="text-align:center;padding:0.75rem;font-weight:600;color:var(--ink);">Conversion</th>
-                <th style="text-align:center;padding:0.75rem;font-weight:600;color:var(--ink);">Expansion</th>
-                <th style="text-align:left;padding:0.75rem;font-weight:600;color:var(--ink);">Signal Strength</th>
+              <tr style="border-bottom:3px solid var(--gold);background:rgba(184,146,42,0.05);">
+                <th style="text-align:left;padding:1rem 0.75rem;font-weight:600;color:var(--ink);">Segment</th>
+                <th style="text-align:center;padding:1rem 0.75rem;font-weight:600;color:var(--ink);">Conversion</th>
+                <th style="text-align:center;padding:1rem 0.75rem;font-weight:600;color:var(--ink);">Expansion</th>
+                <th style="text-align:left;padding:1rem 0.75rem;font-weight:600;color:var(--ink);">Signal Strength</th>
               </tr>
             </thead>
             <tbody>
-              <tr style="border-bottom:1px solid rgba(10,9,8,0.1);">
-                <td style="text-align:left;padding:0.75rem;"><strong>Segment A</strong></td>
-                <td style="text-align:center;padding:0.75rem;">65%</td>
-                <td style="text-align:center;padding:0.75rem;">2.5x</td>
+              <tr style="border-bottom:1px solid rgba(10,9,8,0.08);">
+                <td style="text-align:left;padding:0.85rem 1rem;"><strong>Segment A</strong></td>
+                <td style="text-align:center;padding:0.85rem 1rem;">65%</td>
+                <td style="text-align:center;padding:0.85rem 1rem;">2.5x</td>
                 <td style="text-align:left;padding:0.75rem;color:var(--gold);font-weight:500;">Strong ICP Signal</td>
               </tr>
-              <tr style="border-bottom:1px solid rgba(10,9,8,0.1);">
-                <td style="text-align:left;padding:0.75rem;"><strong>Segment B</strong></td>
-                <td style="text-align:center;padding:0.75rem;">35%</td>
-                <td style="text-align:center;padding:0.75rem;">2.5x</td>
+              <tr style="border-bottom:1px solid rgba(10,9,8,0.08);">
+                <td style="text-align:left;padding:0.85rem 1rem;"><strong>Segment B</strong></td>
+                <td style="text-align:center;padding:0.85rem 1rem;">35%</td>
+                <td style="text-align:center;padding:0.85rem 1rem;">2.5x</td>
                 <td style="text-align:left;padding:0.75rem;color:var(--muted);">Medium Signal</td>
               </tr>
               <tr>
-                <td style="text-align:left;padding:0.75rem;"><strong>Segment C</strong></td>
-                <td style="text-align:center;padding:0.75rem;">12%</td>
-                <td style="text-align:center;padding:0.75rem;">2.5x</td>
+                <td style="text-align:left;padding:0.85rem 1rem;"><strong>Segment C</strong></td>
+                <td style="text-align:center;padding:0.85rem 1rem;">12%</td>
+                <td style="text-align:center;padding:0.85rem 1rem;">2.5x</td>
                 <td style="text-align:left;padding:0.75rem;color:var(--muted);">Weak Signal</td>
               </tr>
             </tbody>
