@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hidden ABM Problem: Buying Groups, Not Accounts | Erik R. Miller</title>
+<meta name="description" content="Most ABM programs underperform because they only engage part of the buying committee. Here is the buying group mapping framework that fixes it.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="The Hidden ABM Problem: Most Teams Target Accounts, Not Buying Groups">
+<meta property="og:description" content="Most ABM programs do not fail because they target the wrong accounts. They fail because they only engage part of the buying committee.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://erikrmiller.com/blog/the-hidden-abm-problem-buying-groups/">
+<meta property="og:image" content="https://erikrmiller.com/og-image.jpg">
+<meta property="article:published_time" content="2025-05-29">
+<meta property="article:author" content="Erik R. Miller">
+<meta property="article:tag" content="ABM">
+<meta property="article:tag" content="B2B Marketing">
+<meta property="article:tag" content="Buying Group">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Hidden ABM Problem: Most Teams Target Accounts, Not Buying Groups">
+<meta name="twitter:description" content="Most ABM programs do not fail because they target the wrong accounts. They fail because they only engage part of the buying committee.">
+<meta name="twitter:image" content="https://erikrmiller.com/og-image.jpg">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://erikrmiller.com/blog/the-hidden-abm-problem-buying-groups/">
+
+<!-- Schema.org Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Hidden ABM Problem: Most Teams Target Accounts, Not Buying Groups",
+  "description": "Most ABM programs underperform not because they target the wrong accounts, but because they only engage part of the buying committee.",
+  "datePublished": "2025-05-29",
+  "dateModified": "2025-05-29",
+  "author": {
+    "@type": "Person",
+    "name": "Erik R. Miller",
+    "url": "https://erikrmiller.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "E.R.M. Advisory",
+    "url": "https://erikrmiller.com"
+  },
+  "mainEntityOfPage": "https://erikrmiller.com/blog/the-hidden-abm-problem-buying-groups/",
+  "keywords": ["buying group ABM", "B2B buying committee", "buying committee mapping", "account-based marketing buying group", "enterprise ABM strategy", "ABM stakeholders", "buying group orchestration"]
+}
+</script>
+
+<!-- FAQ Schema for AEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is buying group ABM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buying group ABM is an approach to account-based marketing that targets all relevant stakeholders inside a target account rather than one or two primary contacts. Instead of building campaigns around a single champion or economic buyer, you map the full group of people involved in the purchase decision and build content, messaging, and outreach for each role at each stage of the buying process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many people are in a typical B2B buying committee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on deal size and complexity. Gartner puts the typical enterprise group at 6 to 10 decision-makers. Forrester's 2024 State of Business Buying report places the average at 13 internal stakeholders, with 89% of decisions crossing multiple departments. For enterprise technology and managed services deals, navigating 8 to 14 stakeholders before final approval is common."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do ABM programs underperform even when account selection is strong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common reason is single-threading: building the entire program around one or two relationships per account while the rest of the buying committee forms opinions, conducts independent research, and surfaces objections without any engagement from marketing. Strong account selection gets you into the right room. Buying group coverage determines whether you can close."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is buying group orchestration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buying group orchestration is the coordinated execution of campaigns, content, and sales outreach across all stakeholders in a buying committee, timed to what each role needs at each stage of their decision process. It goes beyond identifying who is in the room. It is the operational system for engaging all of them in a way that builds consensus rather than leaving it to chance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I start building a buying group ABM program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with your 10 to 15 highest-priority tier-one accounts. For each one, sit with a sales rep and answer: who are the 6 to 10 people involved in this decision? What does each one care about? Which have we contacted? Which are silent? Build a simple matrix. The coverage gaps you find will tell you exactly what to build next."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDN7MBR58X"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LDN7MBR58X');</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --ink:#0c0b09;
+  --ink2:#161411;
+  --paper:#f7f4ee;
+  --cream:#edeae0;
+  --warm:#e5e0d4;
+  --gold:#b8922a;
+  --gold-lt:#d4ac4e;
+  --gold-pale:rgba(184,146,42,0.1);
+  --gold-a11y:#7a5e12;
+  --muted:#6b6456;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Syne',sans-serif;
+  --body:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);overflow-x:hidden;}
+
+/* CURSOR */
+.cur{position:fixed;width:5px;height:5px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+.cur-ring{position:fixed;width:30px;height:30px;border-radius:50%;border:1px solid rgba(184,146,42,0.35);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);}
+
+/* NAV */
+nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.75rem 4rem;transition:padding 0.5s,background 0.5s,backdrop-filter 0.5s;}
+nav#nav.stuck{padding:1rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:blur(20px);}
+.nav-logo{font-family:var(--sans);font-size:0.7rem;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--paper);text-decoration:none;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{font-family:var(--sans);font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:rgba(247,244,238,0.58);text-decoration:none;transition:color 0.22s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:100%;height:1px;background:var(--gold);transition:right 0.3s ease;}
+.nav-links a:hover{color:var(--paper);}
+.nav-links a:hover::after{right:0;}
+.nav-cta{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold)!important;border:1px solid rgba(184,146,42,0.4);padding:0.4rem 1rem;}
+.nav-cta:hover{background:rgba(184,146,42,0.1);}
+.nav-cta::after{display:none!important;}
+
+/* ── POST HERO ───────────────────────────────────────────── */
+.post-hero{
+  position:relative;
+  min-height:62vh;
+  background:var(--ink);
+  display:flex;
+  align-items:flex-end;
+  padding:0 4rem 4.5rem;
+  overflow:hidden;
+}
+.ph-atmo{position:absolute;inset:0;pointer-events:none;}
+.ph-blob{position:absolute;border-radius:50%;filter:blur(100px);}
+.phb1{width:65vw;height:65vw;background:radial-gradient(circle,rgba(184,146,42,0.09) 0%,transparent 68%);top:-22%;right:-12%;}
+.phb2{width:38vw;height:38vw;background:radial-gradient(circle,rgba(184,146,42,0.05) 0%,transparent 68%);bottom:-8%;left:-4%;}
+.ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(247,244,238,0.022) 1px,transparent 1px),linear-gradient(90deg,rgba(247,244,238,0.022) 1px,transparent 1px);background-size:120px 120px;}
+.ph-inner{position:relative;z-index:3;max-width:820px;animation:fadeUp 0.8s ease 0.2s both;}
+.ph-breadcrumb{font-family:var(--sans);font-size:0.54rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(247,244,238,0.28);margin-bottom:1.6rem;display:flex;align-items:center;gap:0.55rem;flex-wrap:wrap;}
+.ph-breadcrumb a{color:rgba(247,244,238,0.28);text-decoration:none;transition:color 0.2s;}
+.ph-breadcrumb a:hover{color:var(--gold);}
+.ph-breadcrumb span{color:var(--gold);}
+.ph-meta{display:flex;align-items:center;gap:1.25rem;margin-bottom:1.4rem;}
+.ph-tag{font-family:var(--sans);font-size:0.54rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(184,146,42,0.35);padding:0.25rem 0.7rem;}
+.ph-date{font-family:var(--body);font-size:0.72rem;font-weight:300;color:rgba(247,244,238,0.3);}
+.ph-read{font-family:var(--body);font-size:0.72rem;font-weight:300;color:rgba(247,244,238,0.3);}
+.ph-sep{width:1px;height:10px;background:rgba(247,244,238,0.15);}
+.post-hero h1{font-family:var(--serif);font-size:clamp(2.6rem,5.5vw,5.5rem);font-weight:300;line-height:1.0;letter-spacing:-0.02em;color:var(--paper);margin-bottom:1.4rem;}
+.post-hero h1 em{font-style:italic;color:var(--gold-lt);}
+.ph-deck{font-family:var(--body);font-size:1rem;font-weight:300;color:rgba(247,244,238,0.48);max-width:620px;line-height:1.82;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── ARTICLE LAYOUT ──────────────────────────────────────── */
+.post-wrap{
+  max-width:1140px;
+  margin:0 auto;
+  padding:0 4rem;
+  display:grid;
+  grid-template-columns:1fr 280px;
+  gap:5rem;
+  align-items:start;
+}
+.post-body{padding:5rem 0 6rem;}
+.post-sidebar{padding:5rem 0 6rem;position:sticky;top:7rem;}
+
+/* ── PROSE ───────────────────────────────────────────────── */
+.prose h2{
+  font-family:var(--serif);
+  font-size:clamp(1.7rem,2.8vw,2.4rem);
+  font-weight:300;
+  line-height:1.12;
+  letter-spacing:-0.015em;
+  color:var(--ink);
+  margin:3.5rem 0 1.2rem;
+  padding-top:0.5rem;
+  border-top:1px solid rgba(10,9,8,0.08);
+}
+.prose h2:first-child{margin-top:0;border-top:none;}
+.prose h2 em{font-style:italic;color:var(--gold);}
+.prose p{
+  font-family:var(--body);
+  font-size:1.02rem;
+  font-weight:300;
+  line-height:1.88;
+  color:#3d3830;
+  margin-bottom:1.4rem;
+}
+.prose p:last-child{margin-bottom:0;}
+.prose strong{font-weight:500;color:var(--ink);}
+.prose a{color:var(--gold-a11y);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;transition:color 0.2s;}
+.prose a:hover{color:var(--gold);}
+
+/* Role definitions */
+.prose .role-block{margin:1.8rem 0;}
+.prose .role-name{
+  font-family:var(--sans);
+  font-size:0.66rem;
+  font-weight:700;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--ink);
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+  margin-bottom:0.5rem;
+}
+.prose .role-name::before{
+  content:'';
+  width:18px;
+  height:1px;
+  background:var(--gold);
+  flex-shrink:0;
+}
+.prose .role-body{
+  font-family:var(--body);
+  font-size:0.95rem;
+  font-weight:300;
+  line-height:1.82;
+  color:#3d3830;
+  padding-left:1.6rem;
+}
+
+/* Pull quote */
+.prose .pull-quote{
+  margin:3rem 0;
+  padding:2rem 2.5rem;
+  background:var(--cream);
+  border-left:3px solid var(--gold);
+  position:relative;
+}
+.prose .pull-quote p{
+  font-family:var(--serif);
+  font-size:clamp(1.3rem,2.2vw,1.75rem);
+  font-weight:300;
+  font-style:italic;
+  line-height:1.45;
+  color:var(--ink);
+  margin-bottom:0;
+}
+.prose .pull-quote cite{
+  display:block;
+  font-family:var(--sans);
+  font-size:0.52rem;
+  font-weight:600;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-top:0.85rem;
+  font-style:normal;
+}
+
+/* Framework CTA block */
+.framework-cta{
+  margin:3rem 0;
+  padding:2.25rem 2.5rem;
+  background:var(--ink);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:2rem;
+  flex-wrap:wrap;
+}
+.framework-cta-copy{}
+.framework-cta-label{
+  font-family:var(--sans);
+  font-size:0.54rem;
+  font-weight:700;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:0.4rem;
+}
+.framework-cta-title{
+  font-family:var(--serif);
+  font-size:1.35rem;
+  font-weight:300;
+  color:var(--paper);
+  line-height:1.2;
+}
+.framework-cta-title em{font-style:italic;color:var(--gold-lt);}
+.framework-cta-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:0.55rem;
+  font-family:var(--sans);
+  font-size:0.58rem;
+  font-weight:700;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--ink);
+  background:var(--gold);
+  padding:0.8rem 1.6rem;
+  text-decoration:none;
+  white-space:nowrap;
+  flex-shrink:0;
+  transition:background 0.2s;
+}
+.framework-cta-btn:hover{background:var(--gold-lt);}
+.framework-cta-btn svg{width:13px;height:13px;fill:currentColor;}
+
+/* Stage mapping table */
+.stage-table{width:100%;border-collapse:collapse;margin:2rem 0;font-family:var(--body);}
+.stage-table thead th{
+  font-family:var(--sans);
+  font-size:0.55rem;
+  font-weight:700;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  background:var(--ink);
+  color:var(--paper);
+  padding:0.75rem 0.9rem;
+  text-align:left;
+  border:none;
+}
+.stage-table thead th:first-child{color:var(--gold);}
+.stage-table tbody td{
+  font-size:0.82rem;
+  font-weight:300;
+  color:#3d3830;
+  padding:0.75rem 0.9rem;
+  border-bottom:1px solid rgba(10,9,8,0.07);
+  vertical-align:top;
+  line-height:1.65;
+}
+.stage-table tbody tr:nth-child(even) td{background:var(--cream);}
+.stage-table tbody td:first-child{
+  font-family:var(--sans);
+  font-size:0.58rem;
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--ink);
+  white-space:nowrap;
+}
+
+/* FAQ section */
+.faq-section{margin-top:4rem;padding-top:3rem;border-top:1px solid rgba(10,9,8,0.08);}
+.faq-kicker{font-family:var(--sans);font-size:0.54rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:0.8rem;margin-bottom:2rem;}
+.faq-kicker::before{content:'';width:20px;height:1px;background:var(--gold);}
+.faq-item{border-bottom:1px solid rgba(10,9,8,0.08);padding:1.4rem 0;}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-family:var(--sans);font-size:0.72rem;font-weight:700;letter-spacing:0.04em;color:var(--ink);margin-bottom:0.6rem;cursor:pointer;display:flex;justify-content:space-between;align-items:start;gap:1rem;}
+.faq-q::after{content:'+';font-family:var(--sans);font-size:1.1rem;font-weight:300;color:var(--gold);flex-shrink:0;transition:transform 0.2s;}
+.faq-item.open .faq-q::after{transform:rotate(45deg);}
+.faq-a{font-family:var(--body);font-size:0.88rem;font-weight:300;line-height:1.82;color:var(--muted);display:none;padding-top:0.4rem;}
+.faq-item.open .faq-a{display:block;}
+
+/* Go deeper links */
+.go-deeper{margin-top:3.5rem;padding:2.25rem;background:var(--cream);}
+.go-deeper-label{font-family:var(--sans);font-size:0.54rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.6rem;}
+.go-deeper-label::before{content:'';width:16px;height:1px;background:var(--gold);}
+.go-deeper-list{list-style:none;display:flex;flex-direction:column;gap:0;}
+.go-deeper-list li{border-bottom:1px solid rgba(10,9,8,0.08);padding:0.9rem 0;}
+.go-deeper-list li:last-child{border-bottom:none;padding-bottom:0;}
+.go-deeper-list a{
+  display:flex;
+  flex-direction:column;
+  gap:0.2rem;
+  text-decoration:none;
+  transition:opacity 0.2s;
+}
+.go-deeper-list a:hover{opacity:0.75;}
+.gdl-tag{font-family:var(--sans);font-size:0.5rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);}
+.gdl-title{font-family:var(--serif);font-size:1.05rem;font-weight:300;color:var(--ink);line-height:1.25;}
+.gdl-desc{font-family:var(--body);font-size:0.75rem;font-weight:300;color:var(--muted);line-height:1.6;}
+
+/* Author bio */
+.author-bio{margin-top:4rem;padding-top:2.5rem;border-top:1px solid rgba(10,9,8,0.08);display:flex;gap:1.5rem;align-items:flex-start;}
+.author-initial{width:48px;height:48px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.4rem;font-weight:300;color:var(--ink);flex-shrink:0;}
+.author-name{font-family:var(--sans);font-size:0.64rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);margin-bottom:0.35rem;}
+.author-text{font-family:var(--body);font-size:0.82rem;font-weight:300;color:var(--muted);line-height:1.75;}
+.author-text a{color:var(--gold-a11y);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+.author-text a:hover{color:var(--gold);}
+
+/* ── SIDEBAR ─────────────────────────────────────────────── */
+.sidebar-card{background:var(--ink);padding:1.75rem;margin-bottom:1.5rem;}
+.sidebar-label{font-family:var(--sans);font-size:0.5rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;}
+.sidebar-label::before{content:'';width:14px;height:1px;background:var(--gold);}
+.sidebar-card h3{font-family:var(--serif);font-size:1.25rem;font-weight:300;color:var(--paper);line-height:1.2;margin-bottom:0.6rem;}
+.sidebar-card h3 em{font-style:italic;color:var(--gold-lt);}
+.sidebar-card p{font-family:var(--body);font-size:0.78rem;font-weight:300;color:rgba(247,244,238,0.38);line-height:1.72;margin-bottom:1.2rem;}
+.sidebar-btn{display:inline-flex;align-items:center;gap:0.45rem;font-family:var(--sans);font-size:0.54rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:0.65rem 1.2rem;text-decoration:none;transition:background 0.2s;width:100%;justify-content:center;}
+.sidebar-btn:hover{background:var(--gold-lt);}
+.sidebar-btn svg{width:12px;height:12px;fill:currentColor;}
+
+.sidebar-toc{background:var(--cream);padding:1.75rem;}
+.sidebar-toc .sidebar-label{color:var(--gold-a11y);}
+.sidebar-toc .sidebar-label::before{background:var(--gold);}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:0;}
+.toc-list li{border-bottom:1px solid rgba(10,9,8,0.07);}
+.toc-list li:last-child{border-bottom:none;}
+.toc-list a{display:block;font-family:var(--body);font-size:0.78rem;font-weight:300;color:var(--muted);text-decoration:none;padding:0.55rem 0;transition:color 0.2s;line-height:1.4;}
+.toc-list a:hover{color:var(--gold);}
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(247,244,238,0.05);}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;padding-bottom:3rem;margin-bottom:3rem;border-bottom:1px solid rgba(247,244,238,0.06);}
+.ft-brand{font-family:var(--serif);font-size:1.55rem;font-weight:300;color:var(--paper);margin-bottom:0.7rem;}
+.ft-tag{font-family:var(--body);font-size:0.8rem;font-weight:300;color:rgba(247,244,238,0.25);line-height:1.72;max-width:230px;margin-bottom:1.25rem;}
+.ft-global{font-family:var(--sans);font-size:0.5rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(247,244,238,0.2);margin-top:0.75rem;}
+.ft-ht{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem;}
+.ft-ul{list-style:none;display:flex;flex-direction:column;gap:0.62rem;}
+.ft-ul a{font-family:var(--body);font-size:0.8rem;font-weight:300;color:rgba(247,244,238,0.28);text-decoration:none;transition:color 0.2s;}
+.ft-ul a:hover{color:var(--paper);}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;}
+.ft-copy{font-family:var(--body);font-size:0.65rem;color:rgba(247,244,238,0.14);}
+.ft-soc{display:flex;gap:1.6rem;}
+.ft-soc a{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.18);text-decoration:none;transition:color 0.2s;}
+.ft-soc a:hover{color:var(--gold);}
+
+/* Responsive */
+@media(max-width:900px){
+  .post-wrap{grid-template-columns:1fr;gap:0;}
+  .post-sidebar{display:none;}
+  nav#nav{padding:1.25rem 1.5rem;}
+  nav#nav.stuck{padding:0.85rem 1.5rem;}
+  .nav-links{display:none;}
+  .post-hero{padding:0 1.5rem 3.5rem;}
+  .post-wrap{padding:0 1.5rem;}
+  .ft{grid-template-columns:1fr;gap:2rem;}
+  footer{padding:3rem 1.5rem 2rem;}
+}
+@media(max-width:600px){
+  .stage-table thead{display:none;}
+  .stage-table tbody td{display:block;padding:0.4rem 0.6rem;}
+  .stage-table tbody td:first-child{padding-top:0.9rem;padding-bottom:0.2rem;}
+  .framework-cta{flex-direction:column;}
+  .framework-cta-btn{width:100%;justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="cring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="nav-logo">E.R.M.</a>
+  <ul class="nav-links">
+    <li><a href="/#who">About</a></li>
+    <li><a href="/#global">Global</a></li>
+    <li><a href="/#advisory">Advisory</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/#resources">Resources</a></li>
+    <li><a href="/#contact" class="nav-cta">Work Together</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="post-hero">
+  <div class="ph-atmo">
+    <div class="ph-blob phb1"></div>
+    <div class="ph-blob phb2"></div>
+  </div>
+  <div class="ph-grid"></div>
+  <div class="ph-inner">
+    <div class="ph-breadcrumb">
+      <a href="/">Home</a> /
+      <a href="/blog/">Blog</a> /
+      <span>ABM Strategy</span>
+    </div>
+    <div class="ph-meta">
+      <span class="ph-tag">ABM Strategy</span>
+      <span class="ph-sep"></span>
+      <span class="ph-date">Thursday, May 29, 2025</span>
+      <span class="ph-sep"></span>
+      <span class="ph-read">9 min read</span>
+    </div>
+    <h1>The Hidden ABM Problem:<br><em>Most Teams Target Accounts,<br>Not Buying Groups</em></h1>
+    <p class="ph-deck">Most ABM programs do not fail because they target the wrong accounts. They fail because they only engage part of the buying committee.</p>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<div class="post-wrap">
+
+  <!-- BODY -->
+  <main class="post-body" id="article-body">
+    <article class="prose">
+
+      <p>You build the right list. You run coordinated campaigns. You track engagement scores at the account level and report on activity. The program looks healthy. The pipeline looks like it is moving. And then it stalls. Not because the account was wrong, but because you were only talking to part of the room.</p>
+
+      <p>This is the buying group gap. It is the most common reason well-built ABM programs underperform, and it is almost never named on the post-mortem.</p>
+
+      <h2 id="who-this-is-for">Who This Is For</h2>
+
+      <p>Before getting into the mechanics, a quick orientation by role. The implication the implication of this problem is different depending on where you sit.</p>
+
+      <p><strong>Practitioners and demand gen leaders:</strong> the buying group gap is an operational failure in your campaign architecture. You can have perfect account selection and still generate no pipeline if your content and outreach only reach one or two people per account. This article gives you the mapping framework to fix that.</p>
+
+      <p><strong>CMOs and VPs of Marketing:</strong> this is a measurement problem as much as a program problem. If your ABM reporting tracks account engagement but cannot tell you which stakeholders are covered and which are silent, you are flying partially blind on your most strategic accounts.</p>
+
+      <p><strong>CEOs and founders:</strong> buying group coverage is a leading indicator of deal health. A sales team that reports one enthusiastic contact at a strategic account is not running ABM. They are managing a relationship that disappears the moment that person changes jobs or loses internal momentum.</p>
+
+      <p><strong>PE-backed operators and portfolio company leaders:</strong> if you are scaling a B2B GTM motion and buying group mapping is not built into the program design, you are generating pipeline activity that converts at lower rates than it should. The fix is structural, not a campaign change, and it tends to show up as the clearest lever in a marketing audit.</p>
+
+      <h2 id="the-data">The Data That Makes This Hard to Ignore</h2>
+
+      <p><a href="https://www.forrester.com/report/the-state-of-business-buying/RES180790" target="_blank" rel="noopener">According to Forrester's State of Business Buying report</a>, the average B2B purchase now involves 13 stakeholders, with nearly 89% of buying decisions crossing multiple departments. Gartner puts the typical enterprise buying group at 6 to 10 decision-makers for complex solutions, with each member entering the process carrying 4 to 5 pieces of independent research they rarely share in full with the rest of the group.</p>
+
+      <p>Run the arithmetic. If your ABM program reaches two contacts per account at a 13-person average committee, you are engaging roughly 15 percent of the people shaping that decision. The other 85 percent are forming opinions, surfacing concerns, and talking to each other. Without you in the conversation.</p>
+
+      <p>That is not a relationship problem. That is a program design problem.</p>
+
+      <h2 id="what-happened">What Happened When We Mapped the Room</h2>
+
+      <p>Early in building out an enterprise ABM program, we were working a global financial institution. Large account. High strategic priority. One senior stakeholder who had been cultivated through several quarters of consistent outreach and relationship development.</p>
+
+      <p>By every metric in the system, the account was progressing. Engagement scores looked strong. A proposal had been delivered. The stakeholder was responsive and aligned.</p>
+
+      <p>Then it stalled.</p>
+
+      <p>When we went back and properly mapped the full buying group, we found everything we had missed. Operations leadership had concerns about implementation complexity that had never surfaced in our conversations. A technology evaluator we had never contacted had been doing independent research and had questions no one had addressed. Procurement had a vendor onboarding requirement we were unaware of. Risk and compliance had a review process that had not been initiated.</p>
+
+      <p>Our stakeholder was not stalling on us. He was stuck internally. He had organizational alignment to build before the deal could move, and we had given him nothing to build it with.</p>
+
+      <p>When we rebuilt the approach around the full buying group, the entire conversation changed. We moved from product interest to organizational readiness. We produced content for the operations leaders and technical evaluators. We built champion enablement specifically for internal consensus building. We got procurement and compliance engaged before they became last-minute blockers.</p>
+
+      <p>The deal moved forward. Stakeholders we had been ignoring became active supporters. And that experience became the operating model for every ABM program we built after it.</p>
+
+      <div class="pull-quote">
+        <p>The deals that close without drama are almost always the ones where marketing helped the entire room say yes. Not just the one person willing to take the sales call.</p>
+        <cite>Erik R. Miller</cite>
+      </div>
+
+      <h2 id="seven-roles">The Seven Roles That Show Up in Every Enterprise Deal</h2>
+
+      <p>Every enterprise buying group contains roughly the same cast of characters, even when the titles change. The value of mapping them is not organizational completeness. It is understanding what each person needs from you, when they need it, and what their silence usually means.</p>
+
+      <div class="role-block">
+        <div class="role-name">Economic Buyer</div>
+        <p class="role-body">Controls the budget and makes or formally approves the final decision. Cares about business outcomes, ROI clarity, and strategic fit. Does not want to be sold to. Wants to make a well-informed decision that reflects well on them internally. Reaching this person too early with product detail is a common mistake. Reaching them at the right moment with clear business case framing is one of the highest-leverage plays in the program.</p>
+      </div>
+
+      <div class="role-block">
+        <div class="role-name">Executive Sponsor</div>
+        <p class="role-body">A senior internal advocate who has decided this purchase aligns with an organizational priority. Often the primary relationship the sales team manages. Influential, but rarely the decision-maker in isolation. The most underserved stakeholder in most ABM programs. They are running an internal sales process on your behalf and most marketing teams give them nothing to do it with.</p>
+      </div>
+
+      <div class="role-block">
+        <div class="role-name">Business Champion</div>
+        <p class="role-body">The internal operator who will live with the solution and drives the day-to-day evaluation. Cares deeply about fit, usability, and whether this actually solves the problem they own. Your most honest critic or your most powerful advocate. Usually both at different points in the process.</p>
+      </div>
+
+      <div class="role-block">
+        <div class="role-name">Technical Evaluator</div>
+        <p class="role-body">Validates whether the solution integrates, scales, and performs as represented. Often operates entirely independently from the business stakeholders and rarely surfaces in your CRM until they have already formed a view. The source of more late-stage deal collapses than most teams account for.</p>
+      </div>
+
+      <div class="role-block">
+        <div class="role-name">Procurement</div>
+        <p class="role-body">Manages vendor process, contracts, and compliance requirements. Not a decision-maker in the traditional sense, but holds full veto power through process control. Engaging procurement before the deal is at close is not bureaucratic overhead. It is deal hygiene. Teams that treat it as a closing-stage formality routinely lose weeks to requirements that could have been addressed in advance.</p>
+      </div>
+
+      <div class="role-block">
+        <div class="role-name">Risk &amp; Compliance</div>
+        <p class="role-body">Increasingly influential in regulated industries and larger organizations. Their concerns are not objections to handle. They are organizational requirements to address. <a href="https://www.gartner.com/en/sales/insights/b2b-buying-journey" target="_blank" rel="noopener">Gartner research shows that 74% of B2B buying teams experience unhealthy internal conflict</a>. Content that proactively addresses security posture, data governance, and regulatory fit before they ask is among the highest-leverage material marketing ever builds. Most teams never build it.</p>
+      </div>
+
+      <div class="role-block">
+        <div class="role-name">End User</div>
+        <p class="role-body">The people who will actually use the product or service daily. Frequently excluded from ABM because they are not on the decision-making org chart. That framing misses something important. End users who are engaged and reassured give champions the internal social proof they need to push a decision through. Their enthusiasm is not soft. It reduces internal conflict at the consensus stage when deals most commonly stall.</p>
+      </div>
+
+      <h2 id="buying-journey">The Buying Journey Mapped Against Each Role</h2>
+
+      <p>Most buying group frameworks stop at the org chart and never get operational. That is where they lose their value. Different stakeholders need different things at different moments. Not in your marketing funnel, but in the actual sequence of organizational decisions that must happen before a purchase gets authorized.</p>
+
+      <table class="stage-table">
+        <thead>
+          <tr>
+            <th>Stage</th>
+            <th>The Question Buyers Are Answering</th>
+            <th>Who Is Most Active</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Awareness</td>
+            <td>Why does this problem matter now?</td>
+            <td>Economic Buyer, Executive Sponsor, Business Champion</td>
+          </tr>
+          <tr>
+            <td>Validation</td>
+            <td>Does this actually work for us?</td>
+            <td>Business Champion, Technical Evaluator, Risk &amp; Compliance (early)</td>
+          </tr>
+          <tr>
+            <td>Consensus</td>
+            <td>Can we align internally?</td>
+            <td>Executive Sponsor, Business Champion, End User, Economic Buyer</td>
+          </tr>
+          <tr>
+            <td>Approval</td>
+            <td>Is it worth it?</td>
+            <td>Economic Buyer, Procurement, Risk &amp; Compliance</td>
+          </tr>
+          <tr>
+            <td>Purchase</td>
+            <td>Close it out.</td>
+            <td>Procurement, Risk &amp; Compliance</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Consensus is where most deals stall. The Executive Sponsor needs internal communication tools: talking points, executive summaries, ROI calculators built to help them align stakeholders above and beside them. If you are not producing content specifically for this stage, you are leaving your champion to improvise in the moment that matters most.</p>
+
+      <h2 id="framework">The ERM Buying Group Mapping Framework</h2>
+
+      <p>The framework operationalizes this in one place: seven stakeholder roles across five buying stages, with engagement priority at every intersection. Use it before you write a single brief. Sit with a sales rep, map who is actually in the room at your top accounts, and find the coverage gaps.</p>
+
+      <div class="framework-cta">
+        <div class="framework-cta-copy">
+          <div class="framework-cta-label">Free Download</div>
+          <div class="framework-cta-title">ERM Buying Group <em>Mapping Framework</em></div>
+        </div>
+        <a href="/resources/ERM-Buying-Group-Mapping-Framework.pdf" download class="framework-cta-btn">
+          <svg viewBox="0 0 20 20"><path d="M10 14l-5-5h3V3h4v6h3l-5 5zm-6 2h12v2H4v-2z"/></svg>
+          Download Free PDF
+        </a>
+      </div>
+
+      <h2 id="three-things">Three Things to Build Before Your Next ABM Campaign</h2>
+
+      <p>You do not need a 40-person team or an enterprise ABM platform to run buying group programs. You need three things in place before the campaign brief is written.</p>
+
+      <p><strong>A mapped account template.</strong> For every tier-one target account, define who the buying group is before the first asset is produced or the first email is sent. Sales and marketing build this together. It does not need to be perfect on day one. It needs to exist, be shared, and be updated as the account progresses. If your CRM shows one or two contacts per strategic account, your program is underdeveloped regardless of what else it does well.</p>
+
+      <p><strong>Role-specific content.</strong> Not ten custom assets for every account. A content matrix that maps your existing library to buying group roles and buying stages, identifies the gaps, and closes them systematically. Most teams have more useful content than they realize. It is just organized by format or topic instead of by who needs it and when.</p>
+
+      <p><strong>Champion enablement.</strong> Your Executive Sponsor is running an internal sales process you will never be in the room for. They need tools: short-form internal summaries, competitive talking points, ROI framing, and prepared responses to the objections they are already hearing. This is some of the highest-leverage content marketing ever builds. Most teams treat it as a one-off sales request rather than a repeatable marketing deliverable.</p>
+
+      <h2 id="diagnostic">The Diagnostic Question</h2>
+
+      <p>Here is a question worth asking about every tier-one account in your current program right now.</p>
+
+      <p>If the person you are primarily engaged with left the organization tomorrow, would the deal survive?</p>
+
+      <p>If the answer is no, you are running a relationship-based program dressed in ABM language. Which works, until it does not.</p>
+
+      <p>Relationships leave. Committees are institutional. The deals that close without drama are almost always the ones where marketing helped the entire room say yes. Not just the one person willing to take the sales call.</p>
+
+      <!-- GO DEEPER -->
+      <div class="go-deeper">
+        <div class="go-deeper-label">Go Deeper</div>
+        <ul class="go-deeper-list">
+          <li>
+            <a href="/blog/why-most-abm-programs-fail/">
+              <span class="gdl-tag">ABM</span>
+              <span class="gdl-title">Why Most ABM Programs Fail Before They Start</span>
+              <span class="gdl-desc">The foundational mistakes that make buying group programs harder to build than they should be.</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog/intent-data-is-mostly-hype/">
+              <span class="gdl-tag">Intent Data</span>
+              <span class="gdl-title">Intent Data Is Mostly Hype (Until You Use It This Way)</span>
+              <span class="gdl-desc">How behavioral signals can tell you which buying group members are in-market before they identify themselves.</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog/account-activation-gap-icp-target-account-list/">
+              <span class="gdl-tag">ICP Strategy</span>
+              <span class="gdl-title">The Account Activation Gap: Why Your ICP and Target Account List Are Not the Same Thing</span>
+              <span class="gdl-desc">The list-building discipline that determines whether the accounts you are working are worth working at all.</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog/ai-agents-for-marketing-teams/">
+              <span class="gdl-tag">AI in Marketing</span>
+              <span class="gdl-title">AI Agents for ABM</span>
+              <span class="gdl-desc">How AI-native workflows are changing the speed and precision of buying group research and activation.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq-section">
+        <div class="faq-kicker">Frequently Asked Questions</div>
+
+        <div class="faq-item">
+          <div class="faq-q">What is buying group ABM?</div>
+          <div class="faq-a">Buying group ABM is an approach to account-based marketing that targets all relevant stakeholders inside a target account rather than one or two primary contacts. Instead of building campaigns around a single champion or economic buyer, you map the full group of people involved in the purchase decision and build content, messaging, and outreach for each role at each stage of the buying process. It is the operational evolution beyond standard account-based programs.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">How many people are in a typical B2B buying committee?</div>
+          <div class="faq-a">It depends on deal size and organizational complexity. Gartner research puts the typical enterprise group at 6 to 10 decision-makers for complex solutions. Forrester's 2024 State of Business Buying report places the number at an average of 13 internal stakeholders, with 89% of decisions crossing multiple departments. For enterprise technology, managed services, or professional services deals, navigating 8 to 14 stakeholders before final approval is common.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Why do ABM programs underperform even when account selection is strong?</div>
+          <div class="faq-a">The most common reason is single-threading: building the entire program around one or two relationships per account while the rest of the buying committee forms opinions, conducts independent research, and surfaces objections without any engagement from marketing. Strong account selection gets you into the right room. Buying group coverage determines whether you can close.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">What content should marketing build for a buying group ABM program?</div>
+          <div class="faq-a">At minimum: category-level thought leadership for Economic Buyers and Executive Sponsors; capability and integration proof points for Technical Evaluators; internal consensus materials for champions; early-stage compliance and security documentation for Risk and Procurement; adoption-focused content for End Users. The specific mix depends on deal complexity, industry, and average sales cycle length.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">What is buying group orchestration?</div>
+          <div class="faq-a">Buying group orchestration is the coordinated execution of campaigns, content, and sales outreach across all stakeholders in a buying committee, timed to what each role needs at each stage of their decision process. It goes beyond identifying who is in the room. It is the operational system for engaging all of them in a way that builds consensus rather than leaving it to chance.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">How do I start building a buying group ABM program?</div>
+          <div class="faq-a">Start with your 10 to 15 highest-priority tier-one accounts. For each one, sit with a sales rep and answer: who are the 6 to 10 people involved in this decision? What does each one care about? Which have we contacted? Which are silent? Build a simple matrix. The coverage gaps you find will tell you exactly what to build next. The ERM Buying Group Mapping Framework is a ready-to-use starting point. Download it free above.</div>
+        </div>
+      </div>
+
+      <!-- AUTHOR BIO -->
+      <div class="author-bio">
+        <div class="author-initial">E</div>
+        <div>
+          <div class="author-name">Erik R. Miller</div>
+          <p class="author-text">Fractional CMO and B2B marketing operator based in New York City. A decade building and running enterprise marketing functions across four continents. E.R.M. Advisory works with B2B technology companies, professional services firms, and high-growth founders who want marketing built to produce revenue, not reports. <a href="/#advisory">Start with the Marketing Audit.</a></p>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="post-sidebar">
+
+    <!-- Framework download -->
+    <div class="sidebar-card">
+      <div class="sidebar-label">Free Download</div>
+      <h3>Buying Group <em>Mapping Framework</em></h3>
+      <p>Seven roles. Five stages. Every engagement priority mapped. Print it, fill it in, use it before your next campaign brief.</p>
+      <a href="/resources/ERM-Buying-Group-Mapping-Framework.pdf" download class="sidebar-btn">
+        <svg viewBox="0 0 20 20"><path d="M10 14l-5-5h3V3h4v6h3l-5 5zm-6 2h12v2H4v-2z"/></svg>
+        Download Free PDF
+      </a>
+    </div>
+
+    <!-- Table of contents -->
+    <div class="sidebar-toc">
+      <div class="sidebar-label">In This Article</div>
+      <ul class="toc-list">
+        <li><a href="#who-this-is-for">Who This Is For</a></li>
+        <li><a href="#the-data">The Data</a></li>
+        <li><a href="#what-happened">What Happened When We Mapped the Room</a></li>
+        <li><a href="#seven-roles">The Seven Roles</a></li>
+        <li><a href="#buying-journey">The Buying Journey</a></li>
+        <li><a href="#framework">The Framework</a></li>
+        <li><a href="#three-things">Three Things to Build</a></li>
+        <li><a href="#diagnostic">The Diagnostic Question</a></li>
+      </ul>
+    </div>
+
+  </aside>
+
+</div><!-- /post-wrap -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div>
+      <div class="ft-brand">Erik R. Miller</div>
+      <p class="ft-tag">Marketing Leader. Builder. Operator. Building things that actually work, for companies of every size, anywhere in the world.</p>
+      <p class="ft-global">New York · London · Mumbai · Singapore</p>
+    </div>
+    <div>
+      <p class="ft-ht">Navigate</p>
+      <ul class="ft-ul">
+        <li><a href="/#who">About</a></li>
+        <li><a href="/#global">Global Reach</a></li>
+        <li><a href="/#advisory">Advisory</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#resources">Resources</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="ft-ht">Connect</p>
+      <ul class="ft-ul">
+        <li><a href="https://www.linkedin.com/in/erikrm/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:erikrmiller@outlook.com">Email Erik</a></li>
+        <li><a href="/#contact">Work Together</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <p class="ft-copy">© 2026 Erik R. Miller · E.R.M. Advisory · New York City</p>
+    <div class="ft-soc">
+      <a href="https://www.linkedin.com/in/erikrm/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cur=document.getElementById('cur'),cr=document.getElementById('cring');
+let mx=0,my=0,rx=0,ry=0;
+window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+(function t(){cur.style.left=mx+'px';cur.style.top=my+'px';rx+=(mx-rx)*0.09;ry+=(my-ry)*0.09;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(t);})();
+
+// Nav stuck
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('stuck',scrollY>60));
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+
+// TOC active state on scroll
+const headings=document.querySelectorAll('.prose h2[id]');
+const tocLinks=document.querySelectorAll('.toc-list a');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      tocLinks.forEach(l=>l.style.color='');
+      const active=document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+      if(active) active.style.color='var(--gold)';
+    }
+  });
+},{rootMargin:'-20% 0px -70% 0px'});
+headings.forEach(h=>observer.observe(h));
+
+// GA4 download tracking
+document.querySelectorAll('[download]').forEach(el=>{
+  el.addEventListener('click',()=>{
+    if(typeof gtag!=='undefined'){
+      gtag('event','file_download',{file_name:'ERM-Buying-Group-Mapping-Framework.pdf',link_text:el.textContent.trim(),page_location:window.location.href});
+    }
+  });
+});
+</script>
+</body>
+</html>
