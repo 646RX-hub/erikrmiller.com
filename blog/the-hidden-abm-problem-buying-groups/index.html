@@ -34,8 +34,8 @@
   "@type": "Article",
   "headline": "The Hidden ABM Problem: Most Teams Target Accounts, Not Buying Groups",
   "description": "Most ABM programs underperform not because they target the wrong accounts, but because they only engage part of the buying committee.",
-  "datePublished": "2025-05-29",
-  "dateModified": "2025-05-29",
+  "datePublished": "2026-05-29",
+  "dateModified": "2026-05-29",
   "author": {
     "@type": "Person",
     "name": "Erik R. Miller",
@@ -145,6 +145,17 @@ nav#nav.stuck{padding:1rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:bl
 .nav-cta{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold)!important;border:1px solid rgba(184,146,42,0.4);padding:0.4rem 1rem;}
 .nav-cta:hover{background:rgba(184,146,42,0.1);}
 .nav-cta::after{display:none!important;}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:300;}
+.nav-hamburger span{display:block;width:24px;height:1.5px;background:var(--paper);transition:transform 0.3s,opacity 0.3s;}
+@media(min-width:769px){.nav-hamburger{display:none !important;}.nav-links-mobile{display:none !important;}}
+.nav-hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.nav-hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.nav-links-mobile{display:none;position:fixed;inset:0;z-index:250;background:rgba(9,8,10,0.97);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;list-style:none;padding:0;margin:0;}
+.nav-links-mobile.open{display:flex;}
+.nav-links-mobile a{font-family:var(--serif);font-size:clamp(2rem,6vw,3.5rem);font-weight:300;color:rgba(247,244,238,0.9);text-decoration:none;letter-spacing:0.02em;transition:color 0.2s;}
+.nav-links-mobile a:hover{color:var(--gold-lt);}
+.nav-links-mobile .nav-cta{font-family:var(--sans);font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)!important;border:1px solid rgba(184,146,42,0.5);padding:0.75rem 2rem;}
 
 /* ── POST HERO ───────────────────────────────────────────── */
 .post-hero{
@@ -442,6 +453,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   nav#nav{padding:1.25rem 1.5rem;}
   nav#nav.stuck{padding:0.85rem 1.5rem;}
   .nav-links{display:none;}
+  .nav-hamburger{display:flex;}
   .post-hero{padding:0 1.5rem 3.5rem;}
   .post-wrap{padding:0 1.5rem;}
   .ft{grid-template-columns:1fr;gap:2rem;}
@@ -462,17 +474,28 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <div class="cur-ring" id="cring"></div>
 
 <!-- NAV -->
-<nav id="nav">
+<nav id="nav" style="background:rgba(12,11,9,0.95);backdrop-filter:blur(20px);">
   <a href="/" class="nav-logo">E.R.M.</a>
   <ul class="nav-links">
     <li><a href="/#who">About</a></li>
     <li><a href="/#global">Global</a></li>
     <li><a href="/#advisory">Advisory</a></li>
     <li><a href="/blog/">Blog</a></li>
-    <li><a href="/#resources">Resources</a></li>
+    <li><a href="/resources/">Resources</a></li>
     <li><a href="/#contact" class="nav-cta">Work Together</a></li>
   </ul>
+  <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<ul class="nav-links-mobile" id="mobileNav" role="list">
+  <li><a href="/#who">About</a></li>
+  <li><a href="/#global">Global</a></li>
+  <li><a href="/#advisory">Advisory</a></li>
+  <li><a href="/blog/">Blog</a></li>
+  <li><a href="/resources/">Resources</a></li>
+  <li><a href="/#contact" class="nav-cta">Work Together</a></li>
+</ul>
 
 <!-- HERO -->
 <header class="post-hero">
@@ -490,7 +513,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <div class="ph-meta">
       <span class="ph-tag">ABM Strategy</span>
       <span class="ph-sep"></span>
-      <span class="ph-date">Thursday, May 29, 2025</span>
+      <span class="ph-date">Friday, May 29, 2026</span>
       <span class="ph-sep"></span>
       <span class="ph-read">9 min read</span>
     </div>
@@ -642,7 +665,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
           <div class="framework-cta-label">Free Download</div>
           <div class="framework-cta-title">ERM Buying Group <em>Mapping Framework</em></div>
         </div>
-        <a href="/resources/ERM-Buying-Group-Mapping-Framework.pdf" download class="framework-cta-btn">
+        <a href="/resources/erm-buying-group-mapping-framework/" class="framework-cta-btn">
           <svg viewBox="0 0 20 20"><path d="M10 14l-5-5h3V3h4v6h3l-5 5zm-6 2h12v2H4v-2z"/></svg>
           Download Free PDF
         </a>
@@ -758,7 +781,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
       <div class="sidebar-label">Free Download</div>
       <h3>Buying Group <em>Mapping Framework</em></h3>
       <p>Seven roles. Five stages. Every engagement priority mapped. Print it, fill it in, use it before your next campaign brief.</p>
-      <a href="/resources/ERM-Buying-Group-Mapping-Framework.pdf" download class="sidebar-btn">
+      <a href="/resources/erm-buying-group-mapping-framework/" class="sidebar-btn">
         <svg viewBox="0 0 20 20"><path d="M10 14l-5-5h3V3h4v6h3l-5 5zm-6 2h12v2H4v-2z"/></svg>
         Download Free PDF
       </a>
@@ -798,7 +821,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
         <li><a href="/#global">Global Reach</a></li>
         <li><a href="/#advisory">Advisory</a></li>
         <li><a href="/blog/">Blog</a></li>
-        <li><a href="/#resources">Resources</a></li>
+        <li><a href="/resources/">Resources</a></li>
       </ul>
     </div>
     <div>
@@ -851,6 +874,9 @@ const observer=new IntersectionObserver(entries=>{
   });
 },{rootMargin:'-20% 0px -70% 0px'});
 headings.forEach(h=>observer.observe(h));
+
+var btn=document.querySelector('.nav-hamburger'),menu=document.getElementById('mobileNav');
+if(btn&&menu){btn.addEventListener('click',function(){var open=menu.classList.toggle('open');btn.setAttribute('aria-expanded',open);});}
 
 // GA4 download tracking
 document.querySelectorAll('[download]').forEach(el=>{
