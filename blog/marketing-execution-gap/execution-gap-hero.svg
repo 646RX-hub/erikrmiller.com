@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="svg-gap-title svg-gap-desc" aria-label="The Marketing Execution Gap framework — contrasting strategy inputs with execution infrastructure, and the gap between them." focusable="false">
+  <title id="svg-gap-title">The Marketing Execution Gap — Strategy vs Execution Framework | E.R.M. Advisory</title>
+  <desc id="svg-gap-desc">A framework diagram by Erik R. Miller contrasting the Strategy side (Vision, Priorities, Goals) with the Execution side (Ownership, Cadence, Metrics, Communication). The gap between them represents the marketing execution gap — the structural distance most organizations fail to close.</desc>
+
+  <!-- Background -->
+  <rect width="900" height="500" fill="#0c0b09"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="250" x2="900" y2="250" stroke="rgba(247,244,238,0.03)" stroke-width="1"/>
+  <line x1="450" y1="0" x2="450" y2="500" stroke="rgba(247,244,238,0.03)" stroke-width="1"/>
+
+  <!-- STRATEGY SIDE — left column -->
+  <rect x="0" y="0" width="305" height="500" fill="rgba(247,244,238,0.04)"/>
+  <rect x="0" y="0" width="3" height="500" fill="#b8922a" opacity="0.5"/>
+
+  <!-- Strategy label -->
+  <text x="152" y="72" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="2.5" fill="#b8922a" opacity="0.8">STRATEGY</text>
+  <line x1="60" y1="82" x2="244" y2="82" stroke="#b8922a" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- Strategy items -->
+  <text x="152" y="148" text-anchor="middle" font-family="Georgia,serif" font-size="28" font-weight="300" font-style="italic" fill="#f7f4ee" opacity="0.9">Vision</text>
+  <text x="152" y="202" text-anchor="middle" font-family="Georgia,serif" font-size="24" font-weight="300" font-style="italic" fill="#f7f4ee" opacity="0.65">Priorities</text>
+  <text x="152" y="252" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="300" font-style="italic" fill="#f7f4ee" opacity="0.45">Goals</text>
+
+  <!-- Fade arrows pointing right -->
+  <text x="254" y="152" text-anchor="middle" font-family="Arial" font-size="18" fill="#b8922a" opacity="0.2">&#8594;</text>
+  <text x="254" y="206" text-anchor="middle" font-family="Arial" font-size="18" fill="#b8922a" opacity="0.14">&#8594;</text>
+  <text x="254" y="256" text-anchor="middle" font-family="Arial" font-size="18" fill="#b8922a" opacity="0.10">&#8594;</text>
+
+  <!-- CENTER GAP — the chasm -->
+  <!-- Gap background band -->
+  <rect x="305" y="0" width="290" height="500" fill="rgba(0,0,0,0.4)"/>
+
+  <!-- Vertical dashed borders of the gap -->
+  <line x1="305" y1="40" x2="305" y2="460" stroke="rgba(184,146,42,0.35)" stroke-width="1" stroke-dasharray="4,6"/>
+  <line x1="595" y1="40" x2="595" y2="460" stroke="rgba(184,146,42,0.35)" stroke-width="1" stroke-dasharray="4,6"/>
+
+  <!-- Gap label -->
+  <text x="450" y="185" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="3" fill="#b8922a" opacity="0.6">THE</text>
+  <text x="450" y="230" text-anchor="middle" font-family="Georgia,serif" font-size="38" font-weight="300" font-style="italic" fill="#b8922a">Execution</text>
+  <text x="450" y="270" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="3" fill="#b8922a" opacity="0.6">GAP</text>
+
+  <!-- Divider line under GAP label -->
+  <line x1="380" y1="285" x2="520" y2="285" stroke="#b8922a" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- Subheading in gap -->
+  <text x="450" y="316" text-anchor="middle" font-family="'DM Sans',Arial,sans-serif" font-size="9" font-weight="300" fill="#f7f4ee" opacity="0.32">Most organizations don't have</text>
+  <text x="450" y="330" text-anchor="middle" font-family="'DM Sans',Arial,sans-serif" font-size="9" font-weight="300" fill="#f7f4ee" opacity="0.32">a strategy problem.</text>
+  <text x="450" y="348" text-anchor="middle" font-family="'DM Sans',Arial,sans-serif" font-size="9.5" font-weight="400" fill="#f7f4ee" opacity="0.55">They have an execution problem.</text>
+
+  <!-- EXECUTION SIDE — right column -->
+  <rect x="595" y="0" width="305" height="500" fill="rgba(184,146,42,0.04)"/>
+  <rect x="897" y="0" width="3" height="500" fill="#b8922a" opacity="0.5"/>
+
+  <!-- Execution label -->
+  <text x="748" y="72" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="2.5" fill="#b8922a" opacity="0.8">EXECUTION</text>
+  <line x1="656" y1="82" x2="840" y2="82" stroke="#b8922a" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- Execution items — faded, signaling incomplete connection -->
+  <text x="748" y="138" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="300" font-style="italic" fill="#f7f4ee" opacity="0.45">Ownership</text>
+  <text x="748" y="188" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="300" font-style="italic" fill="#f7f4ee" opacity="0.45">Cadence</text>
+  <text x="748" y="238" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="300" font-style="italic" fill="#f7f4ee" opacity="0.45">Metrics</text>
+  <text x="748" y="288" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="300" font-style="italic" fill="#f7f4ee" opacity="0.45">Communication</text>
+
+  <!-- Lock icons (X marks) to show disconnection -->
+  <text x="648" y="142" text-anchor="middle" font-family="Arial" font-size="11" fill="#b8922a" opacity="0.18">&#215;</text>
+  <text x="648" y="192" text-anchor="middle" font-family="Arial" font-size="11" fill="#b8922a" opacity="0.18">&#215;</text>
+  <text x="648" y="242" text-anchor="middle" font-family="Arial" font-size="11" fill="#b8922a" opacity="0.18">&#215;</text>
+  <text x="648" y="292" text-anchor="middle" font-family="Arial" font-size="11" fill="#b8922a" opacity="0.18">&#215;</text>
+
+  <!-- Bottom attribution -->
+  <text x="450" y="478" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="7.5" font-weight="600" letter-spacing="1.5" fill="#f7f4ee" opacity="0.2">ERM FRAMEWORK — ERIKRMILLER.COM</text>
+</svg>

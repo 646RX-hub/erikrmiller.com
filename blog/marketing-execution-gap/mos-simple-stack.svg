@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" focusable="false"
+     aria-labelledby="mos-stack-title mos-stack-desc">
+  <title id="mos-stack-title">The Marketing Operating System — Five Components | E.R.M. Advisory</title>
+  <desc id="mos-stack-desc">A framework diagram showing the five components of the Marketing Operating System: Planning Architecture, Operating Cadence, Accountability Framework, Metrics System, and Communication Infrastructure — connecting to Execution Excellence.</desc>
+
+  <!-- Background -->
+  <rect width="900" height="700" fill="#0c0b09"/>
+
+  <!-- Gold left edge rule -->
+  <rect x="0" y="0" width="4" height="700" fill="#b8922a" opacity="0.6"/>
+
+  <!-- Header band -->
+  <rect x="0" y="0" width="900" height="88" fill="rgba(247,244,238,0.03)"/>
+  <line x1="5" y1="88" x2="900" y2="88" stroke="#b8922a" stroke-width="0.6" opacity="0.2"/>
+
+  <!-- Header text -->
+  <text x="48" y="36" font-family="'Syne',Arial,sans-serif" font-size="11" font-weight="700"
+        letter-spacing="3.5" fill="#b8922a" opacity="0.75">MARKETING OPERATING SYSTEM</text>
+  <text x="48" y="65" font-family="'Cormorant Garamond',Georgia,serif" font-size="28" font-weight="300"
+        font-style="italic" letter-spacing="-0.3" fill="#f7f4ee" opacity="0.9">The Five Components of Marketing Execution</text>
+
+  <!-- Row 1: Planning Architecture -->
+  <rect x="4" y="88" width="896" height="86" fill="rgba(247,244,238,0.025)"/>
+  <line x1="4" y1="174" x2="900" y2="174" stroke="#b8922a" stroke-width="0.5" opacity="0.12"/>
+  <rect x="42" y="124" width="14" height="14" fill="#b8922a" opacity="0.85"/>
+  <text x="49" y="135" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="8" font-weight="700" fill="#0c0b09" opacity="0.9">01</text>
+  <text x="74" y="126" font-family="'Syne',Arial,sans-serif" font-size="13.5" font-weight="700" letter-spacing="0.3" fill="#f7f4ee" opacity="0.95">Planning Architecture</text>
+  <text x="74" y="147" font-family="'DM Sans',Arial,sans-serif" font-size="11.5" font-weight="300" fill="#f7f4ee" opacity="0.45">Annual vision to weekly commitment</text>
+  <!-- Row 2: Operating Cadence -->
+  <rect x="4" y="174" width="896" height="86" fill="rgba(247,244,238,0.0)"/>
+  <line x1="4" y1="260" x2="900" y2="260" stroke="#b8922a" stroke-width="0.5" opacity="0.12"/>
+  <rect x="42" y="210" width="14" height="14" fill="#b8922a" opacity="0.85"/>
+  <text x="49" y="221" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="8" font-weight="700" fill="#0c0b09" opacity="0.9">02</text>
+  <text x="74" y="212" font-family="'Syne',Arial,sans-serif" font-size="13.5" font-weight="700" letter-spacing="0.3" fill="#f7f4ee" opacity="0.95">Operating Cadence</text>
+  <text x="74" y="233" font-family="'DM Sans',Arial,sans-serif" font-size="11.5" font-weight="300" fill="#f7f4ee" opacity="0.45">Weekly review. Monthly MBR. Quarterly planning.</text>
+  <!-- Row 3: Accountability Framework -->
+  <rect x="4" y="260" width="896" height="86" fill="rgba(247,244,238,0.025)"/>
+  <line x1="4" y1="346" x2="900" y2="346" stroke="#b8922a" stroke-width="0.5" opacity="0.12"/>
+  <rect x="42" y="296" width="14" height="14" fill="#b8922a" opacity="0.85"/>
+  <text x="49" y="307" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="8" font-weight="700" fill="#0c0b09" opacity="0.9">03</text>
+  <text x="74" y="298" font-family="'Syne',Arial,sans-serif" font-size="13.5" font-weight="700" letter-spacing="0.3" fill="#f7f4ee" opacity="0.95">Accountability Framework</text>
+  <text x="74" y="319" font-family="'DM Sans',Arial,sans-serif" font-size="11.5" font-weight="300" fill="#f7f4ee" opacity="0.45">One owner. Clear authority. No committees.</text>
+  <!-- Row 4: Metrics System -->
+  <rect x="4" y="346" width="896" height="86" fill="rgba(247,244,238,0.0)"/>
+  <line x1="4" y1="432" x2="900" y2="432" stroke="#b8922a" stroke-width="0.5" opacity="0.12"/>
+  <rect x="42" y="382" width="14" height="14" fill="#b8922a" opacity="0.85"/>
+  <text x="49" y="393" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="8" font-weight="700" fill="#0c0b09" opacity="0.9">04</text>
+  <text x="74" y="384" font-family="'Syne',Arial,sans-serif" font-size="13.5" font-weight="700" letter-spacing="0.3" fill="#f7f4ee" opacity="0.95">Metrics System</text>
+  <text x="74" y="405" font-family="'DM Sans',Arial,sans-serif" font-size="11.5" font-weight="300" fill="#f7f4ee" opacity="0.45">Outcomes, not activity. Signal, not noise.</text>
+  <!-- Row 5: Communication Infrastructure -->
+  <rect x="4" y="432" width="896" height="86" fill="rgba(247,244,238,0.025)"/>
+  <line x1="4" y1="518" x2="900" y2="518" stroke="#b8922a" stroke-width="0.5" opacity="0.12"/>
+  <rect x="42" y="468" width="14" height="14" fill="#b8922a" opacity="0.85"/>
+  <text x="49" y="479" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="8" font-weight="700" fill="#0c0b09" opacity="0.9">05</text>
+  <text x="74" y="470" font-family="'Syne',Arial,sans-serif" font-size="13.5" font-weight="700" letter-spacing="0.3" fill="#f7f4ee" opacity="0.95">Communication Infrastructure</text>
+  <text x="74" y="491" font-family="'DM Sans',Arial,sans-serif" font-size="11.5" font-weight="300" fill="#f7f4ee" opacity="0.45">Strategy alive at every level of the team.</text>
+
+  <!-- Down arrow -->
+  <line x1="450" y1="526" x2="450" y2="552"
+        stroke="#b8922a" stroke-width="1.5" opacity="0.5"/>
+  <polygon points="450,558 443,546 457,546"
+           fill="#b8922a" opacity="0.5"/>
+
+  <!-- Footer: Execution Excellence -->
+  <rect x="4" y="562" width="896" height="78" fill="rgba(184,146,42,0.06)"/>
+  <line x1="4" y1="562" x2="900" y2="562" stroke="#b8922a" stroke-width="0.8" opacity="0.3"/>
+
+  <text x="450" y="590" text-anchor="middle"
+        font-family="'Syne',Arial,sans-serif" font-size="11" font-weight="700"
+        letter-spacing="3.5" fill="#b8922a" opacity="0.65">EXECUTION EXCELLENCE</text>
+  <text x="450" y="614" text-anchor="middle"
+        font-family="'Cormorant Garamond',Georgia,serif" font-size="17" font-weight="300" font-style="italic"
+        fill="#f7f4ee" opacity="0.45">The output of an operating system that actually works</text>
+
+  <!-- Attribution -->
+  <text x="876" y="686" text-anchor="end"
+        font-family="'Syne',Arial,sans-serif" font-size="8" font-weight="600"
+        letter-spacing="1.5" fill="#f7f4ee" opacity="0.18">ERM FRAMEWORK — ERIKRMILLER.COM</text>
+</svg>
