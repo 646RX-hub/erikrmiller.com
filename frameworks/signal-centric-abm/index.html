@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal-Centric ABM Operating Model — ERM Advisory</title>
+<meta name="description" content="The Signal-Centric ABM Operating Model by Erik R. Miller — replace campaign-centric ABM with a signal-driven account intelligence system across four layers.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Erik R. Miller">
+<link rel="canonical" href="https://www.erikrmiller.com/frameworks/signal-centric-abm/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.erikrmiller.com/frameworks/signal-centric-abm/">
+<meta property="og:title" content="Signal-Centric ABM Operating Model — ERM Advisory">
+<meta property="og:description" content="An operating model replacing campaign-centric ABM with signal-driven account intelligence across four layers.">
+<meta property="og:image" content="https://www.erikrmiller.com/frameworks/signal-centric-abm/erm-erik-r-miller-signal-centric-abm-operating-model-og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Erik R. Miller — ERM Advisory">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Signal-Centric ABM Operating Model — ERM Advisory">
+<meta name="twitter:description" content="An operating model replacing campaign-centric ABM with signal-driven account intelligence across four layers.">
+<meta name="twitter:image" content="https://www.erikrmiller.com/frameworks/signal-centric-abm/erm-erik-r-miller-signal-centric-abm-operating-model-og-image.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Signal-Centric ABM Operating Model", "description": "An operating model that replaces campaign-centric ABM with a signal-driven account intelligence system.", "url": "https://www.erikrmiller.com/frameworks/signal-centric-abm/", "author": {"@type": "Person", "name": "Erik R. Miller", "url": "https://www.erikrmiller.com"}, "publisher": {"@type": "Organization", "name": "E.R.M. Advisory", "url": "https://www.erikrmiller.com"}, "keywords": ["signal-centric ABM", "account-based marketing", "intent signals", "ABM operating model", "account intelligence", "demand generation"], "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.erikrmiller.com/"}, {"@type": "ListItem", "position": 2, "name": "Frameworks", "item": "https://www.erikrmiller.com/frameworks/"}, {"@type": "ListItem", "position": 3, "name": "Signal-Centric ABM Operating Model", "item": "https://www.erikrmiller.com/frameworks/signal-centric-abm/"}]}}</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230c0b09'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2Cserif' font-size='18' font-style='italic' font-weight='300' fill='%23b8922a'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0c0b09;--ink-soft:rgba(12,11,9,.72);
+  --paper:#f7f4ee;--cream:#edeae0;--warm:#e5e0d4;--white:#ffffff;
+  --gold:#b8922a;--gold-a11y:#7a5e12;--muted:#5a5047;
+  --border:rgba(12,11,9,.10);--border-md:rgba(12,11,9,.16);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Syne',sans-serif;--body:'DM Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);overflow-x:hidden;font-size:1.0625rem;line-height:1.75;}
+.skip-link{position:absolute;top:-100%;left:1rem;z-index:10000;padding:.65rem 1.25rem;background:var(--gold-a11y);color:#fff;font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:top .2s;}
+.skip-link:focus{top:1rem;}
+:focus-visible{outline:3px solid var(--gold-a11y);outline-offset:3px;}
+:focus:not(:focus-visible){outline:none;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+/* NAV — dark bar, white text 19.7:1 */
+nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 4rem;background:rgba(12,11,9,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(184,146,42,.18);}
+.nav-logo{font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:#fff;text-decoration:none;}
+.nav-links{display:flex;gap:2.25rem;list-style:none;}
+.nav-links a{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.82);text-decoration:none;transition:color .2s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:100%;height:1px;background:var(--gold);transition:right .3s;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-links a:hover::after,.nav-links a.active::after{right:0;}
+.nav-links a.active{color:rgba(212,172,78,.9);}
+.nav-cta{color:rgba(212,172,78,.9)!important;border:1px solid rgba(184,146,42,.55);padding:.38rem .95rem;}
+.nav-cta:hover{background:rgba(184,146,42,.12);}
+.nav-cta::after{display:none!important;}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:300;}
+.nav-hamburger span{display:block;width:24px;height:1.5px;background:#fff;transition:transform .3s,opacity .3s;}
+.nav-hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.nav-hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.nav-links-mobile{display:none;position:fixed;inset:0;z-index:250;background:rgba(12,11,9,.97);flex-direction:column;align-items:center;justify-content:center;gap:2.25rem;list-style:none;}
+.nav-links-mobile.open{display:flex;}
+.nav-links-mobile a{font-family:var(--serif);font-size:clamp(2rem,6vw,3.2rem);font-weight:300;color:rgba(255,255,255,.9);text-decoration:none;transition:color .2s;}
+.nav-links-mobile a:hover{color:rgba(212,172,78,.9);}
+.nav-links-mobile .nav-cta{font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(212,172,78,.9)!important;border:1px solid rgba(184,146,42,.45);padding:.75rem 2rem;}
+@media(min-width:769px){.nav-hamburger{display:none!important;}.nav-links-mobile{display:none!important;}}
+/* HERO — paper bg */
+.fd-hero{background:var(--paper);padding:6rem 0 4rem;border-bottom:1px solid var(--border);position:relative;}
+.fd-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold) 0%,rgba(184,146,42,.25) 100%);}
+.fd-hero-inner{max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);}
+.fd-breadcrumb{display:flex;align-items:center;gap:.6rem;margin-bottom:1.75rem;flex-wrap:wrap;}
+.fd-breadcrumb a{font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.fd-breadcrumb a:hover{color:var(--gold-a11y);}
+.fd-breadcrumb-sep{font-family:var(--sans);font-size:.6rem;color:var(--border-md);}
+.fd-breadcrumb-cur{font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-a11y);}
+.fd-eyebrow{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-a11y);display:flex;align-items:center;gap:.8rem;margin-bottom:1.1rem;}
+.fd-eyebrow::before{content:'';width:20px;height:2px;background:var(--gold);flex-shrink:0;}
+.fd-tag-row{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.25rem;}
+.fd-tag{font-family:var(--sans);font-size:.52rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-a11y);border:1px solid var(--gold);padding:.22rem .65rem;}
+.fd-h1{font-family:var(--serif);font-size:clamp(2.8rem,6vw,6rem);font-weight:300;line-height:.92;letter-spacing:-.025em;color:var(--ink);margin-bottom:1.35rem;}
+.fd-h1 em{font-style:italic;color:var(--gold-a11y);}
+.fd-summary{font-family:var(--serif);font-size:clamp(1.1rem,1.7vw,1.4rem);font-weight:300;font-style:italic;color:var(--muted);line-height:1.65;max-width:620px;border-left:3px solid var(--gold);padding-left:1.25rem;}
+/* VISUAL — cream bg */
+.fd-visual-section{background:var(--cream);border-bottom:1px solid var(--border);}
+.fd-visual-inner{max-width:1200px;margin:0 auto;padding:4.5rem 4rem;}
+.fd-visual-wrap{max-width:760px;margin:0 auto;}
+.fd-figure{border:1px solid var(--border-md);background:var(--white);}
+.fd-figure svg{width:100%;height:auto;display:block;}
+.fd-figcaption{font-family:var(--body);font-size:.78rem;color:var(--muted);padding:.75rem 1rem;border-top:1px solid var(--border);line-height:1.5;}
+/* LAYOUT */
+.fd-layout{max-width:1200px;margin:0 auto;padding:0 4rem;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start;}
+.fd-article{padding:4rem 0 5rem;}
+.fd-sidebar{position:sticky;top:calc(70px + 2rem);padding:4rem 0 5rem;}
+/* ARTICLE TYPOGRAPHY */
+.fd-sect-label{font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-a11y);display:flex;align-items:center;gap:.7rem;margin-bottom:1.1rem;margin-top:3rem;}
+.fd-sect-label:first-child{margin-top:0;}
+.fd-sect-label::before{content:'';width:14px;height:2px;background:var(--gold);flex-shrink:0;}
+.fd-h2{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.2rem);font-weight:300;line-height:1.15;color:var(--ink);margin-bottom:1.1rem;}
+.fd-h2 em{font-style:italic;color:var(--gold-a11y);}
+.fd-p{font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.85;margin-bottom:1.25rem;}
+.fd-ul{margin-bottom:1.25rem;}
+.fd-ul li{font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.8;margin-bottom:.65rem;list-style:none;padding-left:1.5rem;position:relative;}
+.fd-ul li::before{content:'';position:absolute;left:0;top:.72em;width:6px;height:2px;background:var(--gold);flex-shrink:0;}
+.fd-highlight{background:var(--cream);border-left:4px solid var(--gold);padding:1.4rem 1.6rem;margin:2rem 0;}
+.fd-highlight p{font-family:var(--serif);font-size:1.15rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.72;margin:0;}
+/* SIDEBAR */
+.fd-sidebar-card{background:var(--white);border:1px solid var(--border-md);border-top:3px solid var(--gold);padding:1.75rem;margin-bottom:1.25rem;}
+.fd-sidebar-label{font-family:var(--sans);font-size:.55rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-a11y);margin-bottom:1.1rem;}
+.fd-sidebar-list{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
+.fd-sidebar-list a{font-family:var(--body);font-size:1rem;font-weight:300;color:var(--muted);text-decoration:none;transition:color .2s;display:flex;align-items:flex-start;gap:.55rem;}
+.fd-sidebar-list a::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.5em;}
+.fd-sidebar-list a:hover{color:var(--gold-a11y);}
+.fd-dl-cta{background:var(--ink);padding:1.5rem;text-align:center;margin-bottom:1.25rem;}
+.fd-dl-cta p{font-family:var(--body);font-size:.9rem;font-weight:300;color:rgba(255,255,255,.75);margin-bottom:.7rem;line-height:1.55;}
+.fd-dl-cta a{font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(212,172,78,.9);text-decoration:none;}
+.fd-dl-cta a:hover{color:#fff;}
+/* TAKEAWAYS — cream */
+.fd-takeaways{background:var(--cream);padding:5rem 0;border-top:1px solid var(--border);}
+.fd-takeaways-inner{max-width:1200px;margin:0 auto;padding:0 4rem;}
+.fd-takeaway-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem;}
+.fd-takeaway{background:var(--white);border:1px solid var(--border-md);border-top:3px solid var(--gold);padding:1.75rem;}
+.fd-takeaway-n{font-family:var(--serif);font-size:2.25rem;font-weight:300;font-style:italic;color:var(--gold);line-height:1;margin-bottom:.65rem;}
+.fd-takeaway-txt{font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.72;}
+/* AUTHOR — paper bg */
+.fd-author{background:var(--paper);padding:4.5rem 0;border-top:1px solid var(--border);}
+.fd-author-inner{max-width:1200px;margin:0 auto;padding:0 4rem;}
+.fd-author-grid{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:start;}
+.fd-author-avatar{width:76px;height:76px;border-radius:50%;background:var(--cream);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:2rem;font-weight:300;font-style:italic;color:var(--gold-a11y);flex-shrink:0;}
+.fd-author-label{font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-a11y);margin-bottom:.5rem;}
+.fd-author-name{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--ink);margin-bottom:.75rem;}
+.fd-author-bio{font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.8;}
+.fd-author-link{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-a11y);text-decoration:none;margin-top:.9rem;border-bottom:2px solid var(--gold);padding-bottom:2px;transition:color .2s,border-color .2s;}
+.fd-author-link:hover{color:var(--ink);border-color:var(--ink);}
+/* FOOTER */
+footer{background:var(--ink);padding:4.5rem 4rem 2.5rem;border-top:3px solid var(--gold);}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;padding-bottom:2.5rem;margin-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.08);}
+.ft-brand{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:#fff;margin-bottom:.6rem;}
+.ft-tag{font-family:var(--body);font-size:.95rem;font-weight:300;color:rgba(255,255,255,.62);line-height:1.72;max-width:230px;margin-bottom:1rem;}
+.ft-global{font-family:var(--sans);font-size:.55rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);}
+.ft-ht{font-family:var(--sans);font-size:.55rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(212,172,78,.75);margin-bottom:1.25rem;}
+.ft-ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.ft-ul a{font-family:var(--body);font-size:.95rem;font-weight:300;color:rgba(255,255,255,.62);text-decoration:none;transition:color .2s;}
+.ft-ul a:hover{color:#fff;}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.ft-copy{font-family:var(--body);font-size:.8rem;color:rgba(255,255,255,.38);}
+.ft-soc{display:flex;gap:1.5rem;}
+.ft-soc a{font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s;}
+.ft-soc a:hover{color:rgba(212,172,78,.9);}
+/* RESPONSIVE */
+@media(min-width:769px) and (max-width:1024px){
+  nav#nav{padding:1.25rem 3rem;}
+  .fd-hero-inner,.fd-visual-inner,.fd-layout,.fd-takeaways-inner,.fd-author-inner{padding-left:3rem;padding-right:3rem;}
+  .fd-layout{grid-template-columns:1fr 260px;gap:3rem;}
+  .fd-takeaway-grid{grid-template-columns:repeat(2,1fr);}
+  footer{padding:4rem 3rem 2rem;}
+  .ft{grid-template-columns:1fr 1fr;gap:3rem;}
+}
+@media(max-width:768px){
+  nav#nav{padding:1rem 1.5rem;}
+  .nav-links{display:none;}
+  .nav-hamburger{display:flex;}
+  .fd-hero-inner,.fd-visual-inner,.fd-takeaways-inner,.fd-author-inner{padding-left:1.5rem;padding-right:1.5rem;}
+  .fd-layout{grid-template-columns:1fr;gap:0;padding:0 1.5rem;}
+  .fd-sidebar{position:relative;top:auto;padding-top:0;padding-bottom:3rem;}
+  .fd-h1{font-size:clamp(2.6rem,10vw,4.2rem);}
+  .fd-takeaway-grid{grid-template-columns:1fr;gap:1rem;}
+  .fd-author-grid{grid-template-columns:1fr;gap:1.5rem;}
+  footer{padding:3rem 1.5rem 2rem;}
+  .ft{grid-template-columns:1fr;gap:2.5rem;}
+  .ft-bot{flex-direction:column;align-items:flex-start;}
+}
+/* PRINT */
+@media print{
+  *{background:#fff!important;color:#000!important;box-shadow:none!important;}
+  nav#nav,.nav-links-mobile,.fd-dl-cta,.fd-sidebar .fd-sidebar-card:last-child,footer{display:none!important;}
+  .fd-hero::before,.fd-takeaway-n{display:none!important;}
+  body{font-size:11pt;line-height:1.6;}
+  .fd-hero{padding:.75cm 0 .5cm;border-bottom:1pt solid #ccc;}
+  .fd-hero-inner,.fd-visual-inner,.fd-layout,.fd-takeaways-inner,.fd-author-inner{padding-left:0;padding-right:0;}
+  .fd-h1{font-size:26pt;}
+  .fd-summary{border-left:2pt solid #7a5e12!important;font-size:12pt;}
+  .fd-visual-section{background:#fff!important;}
+  .fd-layout{grid-template-columns:1fr!important;gap:0;}
+  .fd-sidebar{display:none!important;}
+  .fd-highlight{background:#f5f5f5!important;border-left:2pt solid #7a5e12!important;}
+  .fd-p,.fd-ul li,.fd-takeaway-txt,.fd-author-bio{color:#222!important;}
+  .fd-takeaway-grid{grid-template-columns:repeat(3,1fr)!important;}
+  .fd-takeaway{border-top:2pt solid #7a5e12!important;}
+  .fd-figure{border:1pt solid #ccc!important;}
+  a{color:#000!important;text-decoration:none!important;}
+  .fd-sect-label,.fd-eyebrow,.fd-author-label{color:#7a5e12!important;}
+  .fd-h2{font-size:16pt;}
+  .fd-author{padding-top:1cm;border-top:1pt solid #ccc;}
+}
+</style>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Erik R. Miller", "url": "https://www.erikrmiller.com", "jobTitle": "Marketing Leader & GTM Operator", "description": "Senior B2B marketing executive, fractional CMO, and builder of revenue marketing functions. 15+ years across four continents.", "sameAs": ["https://www.linkedin.com/in/erikrm/", "https://www.instagram.com/ermadvisory/"], "knowsAbout": ["B2B Marketing", "Account-Based Marketing", "Demand Generation", "GTM Strategy", "Revenue Marketing", "Buying Group Marketing", "Signal-Centric ABM", "Marketing Execution"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "E.R.M. Advisory", "url": "https://www.erikrmiller.com", "founder": {"@type": "Person", "name": "Erik R. Miller", "url": "https://www.erikrmiller.com"}, "description": "E.R.M. Advisory provides fractional CMO services, GTM strategy, ABM programs, and demand generation for B2B technology and professional services companies.", "sameAs": ["https://www.linkedin.com/in/erikrm/", "https://www.instagram.com/ermadvisory/", "https://www.facebook.com/ERMAdvisory"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is signal-centric ABM?", "acceptedAnswer": {"@type": "Answer", "text": "Signal-centric ABM is an account-based marketing operating model that replaces fixed campaign schedules with real-time buyer signal intelligence. Instead of running campaigns on a marketing calendar, engagement is triggered dynamically when accounts show active buying behavior through intent signals, website activity, or CRM engagement."}}, {"@type": "Question", "name": "What are the four layers of the signal-centric ABM model?", "acceptedAnswer": {"@type": "Answer", "text": "The four layers are: Account Selection (ICP definition and fit scoring), Intent Intelligence (signal aggregation and scoring from multiple sources), Multi-Channel Orchestration (coordinated engagement triggered by signal thresholds), and Revenue Activation (pipeline creation and buying group expansion)."}}, {"@type": "Question", "name": "How is signal-centric ABM different from campaign-centric ABM?", "acceptedAnswer": {"@type": "Answer", "text": "Campaign-centric ABM is organized around marketing schedules and fixed target lists. Signal-centric ABM is organized around buyer readiness \u2014 engagement begins when an account signals active buying intent, not when a campaign is scheduled. This means resources are concentrated on in-market accounts rather than spread evenly across the target universe."}}]}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Signal-Centric ABM Operating Model", "name": "Signal-Centric ABM Operating Model", "description": "An operating model that replaces campaign-centric ABM with a signal-driven account intelligence system using four layers: Account Selection, Intent Intelligence, Multi-Channel Orchestration, and Revenue Activation.", "url": "https://www.erikrmiller.com/frameworks/signal-centric-abm/", "datePublished": "2026-06-05", "dateModified": "2026-06-05", "version": "v1.0", "keywords": ["signal-centric ABM", "account-based marketing", "intent signals", "ABM operating model", "account intelligence", "demand generation"], "author": {"@type": "Person", "name": "Erik R. Miller", "url": "https://www.erikrmiller.com", "sameAs": "https://www.linkedin.com/in/erikrm/"}, "publisher": {"@type": "Organization", "name": "E.R.M. Advisory", "url": "https://www.erikrmiller.com", "logo": {"@type": "ImageObject", "url": "https://www.erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png"}}, "about": ["signal-centric ABM", "account-based marketing", "intent signals", "ABM operating model"], "isPartOf": {"@type": "WebSite", "name": "ERM Advisory Framework Library", "url": "https://www.erikrmiller.com/frameworks/"}, "image": {"@type": "ImageObject", "url": "https://www.erikrmiller.com/frameworks/signal-centric-abm/erm-erik-r-miller-signal-centric-abm-operating-model-og-image.png", "width": 1200, "height": 630}}</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<nav id="nav" aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="Erik R. Miller — Home">E.R.M.</a>
+  <ul class="nav-links" role="list">
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/#advisory">Advisory</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/frameworks/" class="active">Frameworks</a></li>
+    <li><a href="/#resources">Resources</a></li>
+    <li><a href="/#contact" class="nav-cta">Work Together</a></li>
+  </ul>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<ul class="nav-links-mobile" id="mobileNav" role="list" aria-label="Mobile navigation">
+  <li><a href="/about.html">About</a></li>
+  <li><a href="/#advisory">Advisory</a></li>
+  <li><a href="/blog/">Blog</a></li>
+  <li><a href="/frameworks/">Frameworks</a></li>
+  <li><a href="/#resources">Resources</a></li>
+  <li><a href="/#contact" class="nav-cta">Work Together</a></li>
+</ul>
+<main id="main" style="padding-top:62px;">
+  <section class="fd-hero" aria-labelledby="fd-h1">
+    <div class="fd-hero-inner">
+      <nav aria-label="Breadcrumb" class="fd-breadcrumb">
+        <a href="/">Home</a><span class="fd-breadcrumb-sep" aria-hidden="true">›</span>
+        <a href="/frameworks/">Frameworks</a><span class="fd-breadcrumb-sep" aria-hidden="true">›</span>
+        <span class="fd-breadcrumb-cur" aria-current="page">Signal-Centric ABM</span>
+      </nav>
+      <p class="fd-eyebrow">ERM Advisory · Framework</p>
+      <div class="fd-tag-row"><span class="fd-tag">ABM</span><span class="fd-tag">Strategy</span><span class="fd-tag">Operating Model</span><span class="fd-tag">Intent Signals</span></div>
+      <h1 class="fd-h1" id="fd-h1">Signal-Centric ABM<br><em>Operating Model</em></h1>
+      <p class="fd-summary">Campaign-centric ABM is organized around marketing schedules. Signal-centric ABM is organized around buyer readiness — a fundamentally different model that responds to when buyers are actually in market.</p>
+    </div>
+  </section>
+  <section class="fd-visual-section" aria-label="Framework diagram">
+    <div class="fd-visual-inner"><div class="fd-visual-wrap">
+      <figure class="fd-figure">
+        <svg viewBox="0 0 700 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="scabm-t scabm-d">
+<title id="scabm-t">Signal-Centric ABM Operating Model — Four Layers of Account Intelligence</title>
+<desc id="scabm-d">Concentric circle diagram. Innermost filled circle labeled Account Selection with ICP and Fit Scoring. Second ring: Intent Intelligence with Signal Aggregation. Third ring: Multi-Channel Orchestration. Outer ring: Revenue Activation. Five signal nodes radiate from the system labeled Website Intent, Third-Party Intent, Social Signals, CRM Signals, and Event Signals.</desc>
+<rect width="700" height="470" fill="#f7f4ee"/>
+<circle cx="350" cy="235" r="205" fill="none" stroke="rgba(184,146,42,0.18)" stroke-width="2"/>
+<circle cx="350" cy="235" r="158" fill="none" stroke="rgba(184,146,42,0.28)" stroke-width="2"/>
+<circle cx="350" cy="235" r="108" fill="none" stroke="rgba(184,146,42,0.42)" stroke-width="2"/>
+<circle cx="350" cy="235" r="62" fill="rgba(184,146,42,0.12)" stroke="#7a5e12" stroke-width="2.5"/>
+<text x="350" y="228" text-anchor="middle" font-family="Syne,sans-serif" font-size="9.5" font-weight="700" fill="#0c0b09">ACCOUNT</text>
+<text x="350" y="243" text-anchor="middle" font-family="Syne,sans-serif" font-size="9.5" font-weight="700" fill="#0c0b09">SELECTION</text>
+<text x="350" y="258" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5a5047">ICP + Fit Scoring</text>
+<text x="350" y="155" text-anchor="middle" font-family="Syne,sans-serif" font-size="9.5" font-weight="700" fill="#0c0b09" letter-spacing="0.5">INTENT INTELLIGENCE</text>
+<text x="350" y="168" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5a5047">Signal Aggregation &amp; Scoring</text>
+<text x="350" y="97" text-anchor="middle" font-family="Syne,sans-serif" font-size="9" font-weight="700" fill="#5a5047" letter-spacing="0.5">MULTI-CHANNEL ORCHESTRATION</text>
+<text x="350" y="110" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5a5047">Coordinated Engagement</text>
+<text x="350" y="44" text-anchor="middle" font-family="Syne,sans-serif" font-size="9.5" font-weight="700" fill="#7a5e12" letter-spacing="0.5">REVENUE ACTIVATION</text>
+<text x="350" y="57" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#7a5e12">Pipeline &amp; Conversion</text>
+<circle cx="155" cy="150" r="6" fill="#b8922a" opacity="0.8"/>
+<circle cx="545" cy="150" r="6" fill="#b8922a" opacity="0.75"/>
+<circle cx="120" cy="305" r="5" fill="#b8922a" opacity="0.55"/>
+<circle cx="580" cy="305" r="5" fill="#b8922a" opacity="0.55"/>
+<circle cx="350" cy="453" r="5" fill="#b8922a" opacity="0.45"/>
+<line x1="205" y1="175" x2="158" y2="153" stroke="rgba(184,146,42,0.4)" stroke-width="1.2" stroke-dasharray="3,3"/>
+<line x1="495" y1="175" x2="542" y2="153" stroke="rgba(184,146,42,0.4)" stroke-width="1.2" stroke-dasharray="3,3"/>
+<line x1="180" y1="278" x2="124" y2="302" stroke="rgba(184,146,42,0.3)" stroke-width="1.2" stroke-dasharray="3,3"/>
+<line x1="520" y1="278" x2="576" y2="302" stroke="rgba(184,146,42,0.3)" stroke-width="1.2" stroke-dasharray="3,3"/>
+<line x1="350" y1="440" x2="350" y2="456" stroke="rgba(184,146,42,0.25)" stroke-width="1.2" stroke-dasharray="3,3"/>
+<text x="140" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5a5047">Website</text>
+<text x="140" y="151" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5a5047">Intent</text>
+<text x="562" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5a5047">3rd-Party</text>
+<text x="562" y="151" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5a5047">Intent</text>
+<text x="100" y="320" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5a5047">Social</text>
+<text x="598" y="320" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5a5047">CRM</text>
+<text x="350" y="462" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5a5047">Events</text>
+<text x="350" y="460" text-anchor="middle" font-family="Syne,sans-serif" font-size="7.5" letter-spacing="2" fill="rgba(122,94,18,0.35)">ERM ADVISORY</text>
+</svg>
+        <figcaption class="fd-figcaption">Signal-Centric ABM Operating Model — Four Layers of Account Intelligence · ERM Advisory · Erik R. Miller</figcaption>
+      </figure>
+    </div></div>
+  </section>
+  <div class="fd-layout" style="background:var(--paper);">
+    <article class="fd-article" aria-label="Framework content">
+<p class="fd-sect-label">Framework Overview</p>
+<h2 class="fd-h2">Why Campaign-Centric ABM Fails</h2>
+<p class="fd-p">Campaign-centric ABM asks: what campaigns are we running this quarter? Which accounts are in the tier-one list? The answers drive engagement on fixed timelines — regardless of whether target accounts are in a buying cycle. The structural problem is that buying cycles do not align to marketing calendars.</p>
+<p class="fd-p">The Signal-Centric ABM Operating Model replaces this logic entirely. Engagement is driven by buyer signals, not marketing schedules. When an account activates, the system responds dynamically. When an account is quiet, resources are conserved.</p>
+<div class="fd-highlight"><p>"The question is not what campaigns are we running. The question is which accounts are showing buying signals right now — and what are we doing about it."</p></div>
+<p class="fd-sect-label">The Four Layers</p>
+<h2 class="fd-h2">How the Operating Model Works</h2>
+<p class="fd-p"><strong>Layer 1 — Account Selection:</strong> ICP definition and fit scoring. Use firmographic, technographic, and behavioral data to score accounts by predicted conversion probability and strategic fit.</p>
+<p class="fd-p"><strong>Layer 2 — Intent Intelligence:</strong> Aggregate signals from multiple sources: third-party intent data, website behavior, CRM history, social listening, and event attendance. Establish thresholds that trigger engagement escalation.</p>
+<p class="fd-p"><strong>Layer 3 — Multi-Channel Orchestration:</strong> When signal thresholds are crossed, orchestrate coordinated engagement across all channels simultaneously — with consistent messaging and role-appropriate framing.</p>
+<p class="fd-p"><strong>Layer 4 — Revenue Activation:</strong> Convert engaged accounts into pipeline through coordinated sales-marketing handoffs, buying group coverage expansion, and deal acceleration. Feed insights back into layers 1 and 2 continuously.</p>
+<p class="fd-sect-label">How to Apply</p>
+<h2 class="fd-h2">Implementation Roadmap</h2>
+<ul class="fd-ul">
+<li><strong>Phase 1 (30 days):</strong> Audit signal infrastructure. Identify what signals you are capturing and where the blind spots are.</li>
+<li><strong>Phase 2 (60 days):</strong> Build the signal scoring model. Define the signals that predict buying readiness in your market and establish engagement escalation thresholds.</li>
+<li><strong>Phase 3 (90 days):</strong> Redesign orchestration logic. Move from campaign-calendar scheduling to signal-triggered engagement playbooks.</li>
+<li><strong>Phase 4 (ongoing):</strong> Measure and calibrate. Track pipeline contribution by signal source and continuously refine the model.</li>
+</ul></article>
+    <aside class="fd-sidebar" aria-label="Framework resources">
+      <div class="fd-dl-cta"><p>Download the full framework — free PDF.</p><a href="/frameworks/signal-centric-abm/download/">Download Framework PDF →</a></div>
+      <div class="fd-sidebar-card">
+        <p class="fd-sidebar-label">Related Frameworks</p>
+        <ul class="fd-sidebar-list" role="list"><li><a href="/frameworks/buying-group-orchestration/">Buying Group Orchestration Framework</a></li><li><a href="/frameworks/account-activation-gap/">Account Activation Gap Framework</a></li><li><a href="/frameworks/buying-group-mapping/">Buying Group Mapping Framework</a></li></ul>
+      </div>
+      <div class="fd-sidebar-card">
+        <p class="fd-sidebar-label">Related Articles</p>
+        <ul class="fd-sidebar-list" role="list"><li><a href="/blog/signal-centric-abm-operating-model/">Signal-Centric ABM: The Operating Model Replacing Campaign-Centric ABM</a></li></ul>
+      </div>
+      <div class="fd-sidebar-card">
+        <p class="fd-sidebar-label">Work with Erik</p>
+        <p style="font-family:var(--body);font-size:1rem;font-weight:300;color:var(--muted);line-height:1.65;margin-bottom:1rem;">Bring these frameworks to your revenue team with hands-on advisory support.</p>
+        <a href="/frameworks/erm-revenue-execution-system/" style="font-family:var(--body);font-size:.95rem;font-weight:300;color:var(--muted);text-decoration:none;display:block;margin-bottom:1rem;border-bottom:2px solid var(--gold);padding-bottom:2px;color:var(--gold-a11y);">The ERM Revenue Execution System™ →</a>
+        <a href="/#contact" style="font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-a11y);text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:2px;">Get in Touch →</a>
+      </div>
+    </aside>
+  </div>
+  <section class="fd-takeaways" aria-labelledby="tk-h2">
+    <div class="fd-takeaways-inner">
+      <p style="font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-a11y);display:flex;align-items:center;gap:.7rem;margin-bottom:.5rem;"><span style="width:14px;height:2px;background:var(--gold);display:inline-block;flex-shrink:0;"></span>Summary</p>
+      <h2 id="tk-h2" style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:var(--ink);">Key <em style="font-style:italic;color:var(--gold-a11y);">Takeaways</em></h2>
+      <div class="fd-takeaway-grid"><div class="fd-takeaway"><div class="fd-takeaway-n">01</div><p class="fd-takeaway-txt">Campaign-centric ABM is organized around marketing schedules. Signal-centric ABM is organized around buyer readiness — a fundamentally more effective model.</p></div><div class="fd-takeaway"><div class="fd-takeaway-n">02</div><p class="fd-takeaway-txt">The four layers form a closed-loop system that gets smarter over time: Account Selection → Intent Intelligence → Orchestration → Revenue Activation.</p></div><div class="fd-takeaway"><div class="fd-takeaway-n">03</div><p class="fd-takeaway-txt">Signal infrastructure is the foundation. Teams cannot build a signal-centric operating model without first investing in signal aggregation and scoring.</p></div></div>
+    </div>
+  </section>
+  
+  <!-- FAQ / AEO Section -->
+  <section style="background:var(--cream);padding:4.5rem 0;border-top:1px solid var(--border);" aria-labelledby="faq-h2">
+    <div style="max-width:1200px;margin:0 auto;padding:0 4rem;">
+      <p style="font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-a11y);display:flex;align-items:center;gap:.7rem;margin-bottom:.5rem;"><span style="width:14px;height:2px;background:var(--gold);display:inline-block;"></span>Frequently Asked Questions</p>
+      <h2 id="faq-h2" style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:var(--ink);margin-bottom:2rem;">Common <em style="font-style:italic;color:var(--gold-a11y);">Questions</em></h2>
+      <dl>
+      <div style="margin-bottom:2rem;">
+        <dt style="font-family:var(--sans);font-size:.88rem;font-weight:700;letter-spacing:.04em;color:var(--ink);margin-bottom:.65rem;padding-left:1.25rem;border-left:3px solid var(--gold);">What is signal-centric ABM?</dt>
+        <dd style="font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.8;padding-left:1.25rem;">Signal-centric ABM is an account-based marketing operating model that replaces fixed campaign schedules with real-time buyer signal intelligence. Instead of running campaigns on a marketing calendar, engagement is triggered dynamically when accounts show active buying behavior through intent signals, website activity, or CRM engagement.</dd>
+      </div>
+      <div style="margin-bottom:2rem;">
+        <dt style="font-family:var(--sans);font-size:.88rem;font-weight:700;letter-spacing:.04em;color:var(--ink);margin-bottom:.65rem;padding-left:1.25rem;border-left:3px solid var(--gold);">What are the four layers of the signal-centric ABM model?</dt>
+        <dd style="font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.8;padding-left:1.25rem;">The four layers are: Account Selection (ICP definition and fit scoring), Intent Intelligence (signal aggregation and scoring from multiple sources), Multi-Channel Orchestration (coordinated engagement triggered by signal thresholds), and Revenue Activation (pipeline creation and buying group expansion).</dd>
+      </div>
+      <div style="margin-bottom:2rem;">
+        <dt style="font-family:var(--sans);font-size:.88rem;font-weight:700;letter-spacing:.04em;color:var(--ink);margin-bottom:.65rem;padding-left:1.25rem;border-left:3px solid var(--gold);">How is signal-centric ABM different from campaign-centric ABM?</dt>
+        <dd style="font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.8;padding-left:1.25rem;">Campaign-centric ABM is organized around marketing schedules and fixed target lists. Signal-centric ABM is organized around buyer readiness — engagement begins when an account signals active buying intent, not when a campaign is scheduled. This means resources are concentrated on in-market accounts rather than spread evenly across the target universe.</dd>
+      </div>
+      </dl>
+    </div>
+  </section>
+  
+  <!-- Referenced In — Topic Cluster -->
+  <section style="background:var(--white);padding:4rem 0;border-top:1px solid var(--border);" aria-labelledby="ref-h2-signal-centric-abm">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);">
+      <p style="font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-a11y);display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;"><span style="width:14px;height:2px;background:var(--gold);display:inline-block;"></span>Topic Cluster</p>
+      <p style="font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-a11y);margin-bottom:.4rem;">Cited across 4 ERM Advisory publications</p>
+      <h2 id="ref-h2-signal-centric-abm" style="font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:300;color:var(--ink);margin-bottom:.5rem;">Referenced <em style="font-style:italic;color:var(--gold-a11y);">In</em></h2>
+      <p style="font-family:var(--body);font-size:1rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:2rem;">This framework is cited in the following articles and resources. Each citation links back here — strengthening topical authority across the site.</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.85rem;">
+                <li style="display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 1.25rem;background:var(--paper);border:1px solid var(--border);border-left:3px solid var(--gold);">
+          <span style="font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-a11y);padding-top:.2rem;flex-shrink:0;">↗</span>
+          <div>
+            <a href="/blog/signal-centric-abm-operating-model/" style="font-family:var(--sans);font-size:.82rem;font-weight:700;letter-spacing:.04em;color:var(--ink);text-decoration:none;transition:color .2s;display:block;margin-bottom:.25rem;" onmouseover="this.style.color='#7a5e12'" onmouseout="this.style.color='#0c0b09'">Signal-Centric ABM: The Operating Model Replacing Campaign-Centric ABM</a>
+            <span style="font-family:var(--body);font-size:.82rem;font-weight:300;color:var(--muted);">ERM Advisory Blog</span>
+          </div>
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 1.25rem;background:var(--paper);border:1px solid var(--border);border-left:3px solid var(--gold);">
+          <span style="font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-a11y);padding-top:.2rem;flex-shrink:0;">↗</span>
+          <div>
+            <a href="/blog/buying-group-orchestration-abm-strategy/" style="font-family:var(--sans);font-size:.82rem;font-weight:700;letter-spacing:.04em;color:var(--ink);text-decoration:none;transition:color .2s;display:block;margin-bottom:.25rem;" onmouseover="this.style.color='#7a5e12'" onmouseout="this.style.color='#0c0b09'">Buying Group Orchestration & ABM Strategy</a>
+            <span style="font-family:var(--body);font-size:.82rem;font-weight:300;color:var(--muted);">ERM Advisory Blog</span>
+          </div>
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 1.25rem;background:var(--paper);border:1px solid var(--border);border-left:3px solid var(--gold);">
+          <span style="font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-a11y);padding-top:.2rem;flex-shrink:0;">↗</span>
+          <div>
+            <a href="/frameworks/all/" style="font-family:var(--sans);font-size:.82rem;font-weight:700;letter-spacing:.04em;color:var(--ink);text-decoration:none;transition:color .2s;display:block;margin-bottom:.25rem;" onmouseover="this.style.color='#7a5e12'" onmouseout="this.style.color='#0c0b09'">The ERM Advisory Framework Collection</a>
+            <span style="font-family:var(--body);font-size:.82rem;font-weight:300;color:var(--muted);">ERM Advisory Framework Collection</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="fd-author" aria-labelledby="auth-h2">
+    <div class="fd-author-inner">
+      <div class="fd-author-grid">
+        <div class="fd-author-avatar" aria-hidden="true">E</div>
+        <div>
+          <p class="fd-author-label" id="auth-h2">About the Author</p>
+          <p class="fd-author-name">Erik R. Miller</p>
+          <p class="fd-author-bio">Marketing leader, builder, and operator with 15+ years building revenue marketing functions across four continents. Erik has designed ABM programs, demand generation systems, and GTM architectures for companies ranging from early-stage startups to $10B+ enterprises. The frameworks here are drawn directly from that operational experience.</p>
+          <a href="/about.html" class="fd-author-link">Learn More About Erik →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer role="contentinfo">
+  <div class="ft">
+    <div>
+      <div class="ft-brand">Erik R. Miller</div>
+      <p class="ft-tag">Marketing Leader. Builder. Operator. Based in New York.</p>
+      <p class="ft-global">New York · Globally experienced</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <p class="ft-ht">Navigate</p>
+      <ul class="ft-ul" role="list">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/frameworks/">Frameworks</a></li>
+        <li><a href="/#resources">Resources</a></li>
+        <li><a href="/#contact">Work Together</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Connect">
+      <p class="ft-ht">Connect</p>
+      <ul class="ft-ul" role="list">
+        <li><a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+        <li><a href="mailto:erikrmiller@outlook.com">Email Erik</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="ft-bot">
+    <p class="ft-copy">© 2026 Erik R. Miller · E.R.M. Advisory · New York City</p>
+    <div class="ft-soc">
+      <a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank">Instagram</a>
+    </div>
+  </div>
+</footer>
+<script>
+const nav=document.getElementById('nav');
+const hb=document.getElementById('navHamburger');
+const mn=document.getElementById('mobileNav');
+hb.addEventListener('click',()=>{
+  const e=hb.getAttribute('aria-expanded')==='true';
+  hb.setAttribute('aria-expanded',String(!e));
+  mn.classList.toggle('open',!e);
+  document.body.style.overflow=e?'':'hidden';
+});
+mn.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  hb.setAttribute('aria-expanded','false');mn.classList.remove('open');document.body.style.overflow='';
+}));
+</script>
+</body></html>

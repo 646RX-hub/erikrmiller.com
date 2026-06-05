@@ -998,8 +998,6 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 }
 
 </style>
-<link rel="stylesheet" href="/assets/search/search.css">
-<script src="/assets/search/search.js" defer></script>
 </head>
 <body>
 
@@ -1011,13 +1009,12 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <!-- NAV -->
 <nav id="nav" aria-label="Main navigation">
   <a href="#top" class="nav-logo" aria-label="Erik R. Miller — Home">E.R.M.</a>
-  <ul class="nav-links" role="list">
-    <li><a href="about.html">About</a></li>
-    <li><a href="about.html#global">Global</a></li>
-    
-    <li><a href="blog/">Blog</a></li>
-    <li><a href="/resources/">Resources</a></li>
-    <li><button type="button" class="erm-search-trigger" data-erm-search-trigger aria-label="Open search (Cmd+K)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search<kbd>⌘K</kbd></button></li>
+    <ul class="nav-links" role="list">
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/about.html#global">Global</a></li>
+    <li><a href="/frameworks/">Frameworks</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="#resources">Resources</a></li>
     <li><a href="#contact" class="nav-cta">Work Together</a></li>
   </ul>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
@@ -1026,12 +1023,12 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 </nav>
 <!-- Mobile nav overlay -->
 <ul class="nav-links-mobile" id="mobileNav" role="list" aria-label="Mobile navigation">
-  <li><a href="about.html" onclick="closeMobileNav()">About</a></li>
-  <li><a href="about.html#global" onclick="closeMobileNav()">Global</a></li>
-  
-  <li><a href="blog/">Blog</a></li>
-  <li><a href="/resources/" onclick="closeMobileNav()">Resources</a></li>
-  <li><a href="#contact" class="nav-cta" onclick="closeMobileNav()">Work Together</a></li>
+  <li><a href="/about.html">About</a></li>
+  <li><a href="/about.html#global">Global</a></li>
+  <li><a href="/frameworks/">Frameworks</a></li>
+  <li><a href="/blog/">Blog</a></li>
+  <li><a href="#resources">Resources</a></li>
+  <li><a href="#contact" class="nav-cta">Work Together</a></li>
 </ul>
 
 <main id="main-content">
@@ -1257,6 +1254,59 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 </section>
 
 <!-- ⑩ NEWSLETTER -->
+
+<!-- ═══ FEATURED FRAMEWORKS ═══ -->
+<section style="padding:8rem 0;background:#f7f4ee;border-top:1px solid rgba(10,9,8,0.07);" aria-labelledby="ff-heading">
+  <div style="max-width:1200px;margin:0 auto;padding:0 4rem;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;">
+      <div>
+        <p style="font-family:'Syne',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:#7a5e12;display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem;"><span style="width:18px;height:2px;background:#b8922a;display:inline-block;"></span>ERM Advisory · Intellectual Property Library</p>
+        <h2 id="ff-heading" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.2rem,3.5vw,3.5rem);font-weight:300;line-height:1.05;letter-spacing:-.02em;color:#0c0b09;">Featured <em style="font-style:italic;color:#7a5e12;">Frameworks</em></h2>
+      </div>
+      <a href="/frameworks/" style="font-family:'Syne',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#7a5e12;text-decoration:none;border-bottom:2px solid #b8922a;padding-bottom:2px;white-space:nowrap;transition:color .2s,border-color .2s;" onmouseover="this.style.color='#0c0b09';this.style.borderColor='#0c0b09'" onmouseout="this.style.color='#7a5e12';this.style.borderColor='#b8922a'">View All Frameworks &#8594;</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+
+      <!-- Signal-Centric ABM -->
+      <a href="/frameworks/signal-centric-abm/" style="background:#fff;border:1px solid rgba(12,11,9,.15);border-top:3px solid #b8922a;padding:2rem;text-decoration:none;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s;" onmouseover="this.style.boxShadow='0 6px 26px rgba(12,11,9,.10)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='';this.style.transform=''">
+        <span style="font-family:'Syne',sans-serif;font-size:.48rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7a5e12;border:1px solid #b8922a;padding:.18rem .55rem;display:inline-flex;margin-bottom:1rem;align-self:flex-start;">ABM · Operating Model</span>
+        <h3 style="font-family:'Syne',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#0c0b09;margin-bottom:.7rem;line-height:1.3;">Signal-Centric ABM Operating Model</h3>
+        <p style="font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:300;color:#5a5047;line-height:1.75;flex:1;">Replace campaign-centric ABM with a signal-driven account intelligence system — dynamically orchestrated around buyer readiness, not marketing schedules.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1.5rem;padding-top:1.1rem;border-top:1px solid rgba(12,11,9,.08);">
+          <span style="font-family:'Syne',sans-serif;font-size:.54rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7a5e12;">Read Framework</span>
+          <span style="color:#b8922a;font-size:1rem;">&#8594;</span>
+        </div>
+      </a>
+
+      <!-- Buying Group Mapping -->
+      <a href="/frameworks/buying-group-mapping/" style="background:#fff;border:1px solid rgba(12,11,9,.15);border-top:3px solid #b8922a;padding:2rem;text-decoration:none;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s;" onmouseover="this.style.boxShadow='0 6px 26px rgba(12,11,9,.10)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='';this.style.transform=''">
+        <span style="font-family:'Syne',sans-serif;font-size:.48rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7a5e12;border:1px solid #b8922a;padding:.18rem .55rem;display:inline-flex;margin-bottom:1rem;align-self:flex-start;">Buying Groups · ABM</span>
+        <h3 style="font-family:'Syne',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#0c0b09;margin-bottom:.7rem;line-height:1.3;">Buying Group Mapping Framework</h3>
+        <p style="font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:300;color:#5a5047;line-height:1.75;flex:1;">Identify, map, and prioritize every stakeholder in the B2B buying committee — roles, influence levels, and optimal engagement sequences.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1.5rem;padding-top:1.1rem;border-top:1px solid rgba(12,11,9,.08);">
+          <span style="font-family:'Syne',sans-serif;font-size:.54rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7a5e12;">Read Framework</span>
+          <span style="color:#b8922a;font-size:1rem;">&#8594;</span>
+        </div>
+      </a>
+
+      <!-- Marketing Execution Gap -->
+      <a href="/frameworks/marketing-execution-gap/" style="background:#fff;border:1px solid rgba(12,11,9,.15);border-top:3px solid #b8922a;padding:2rem;text-decoration:none;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s;" onmouseover="this.style.boxShadow='0 6px 26px rgba(12,11,9,.10)';this.style.transform='translateY(-2px)'" onmouseover="this.style.boxShadow='0 6px 26px rgba(12,11,9,.10)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='';this.style.transform=''">
+        <span style="font-family:'Syne',sans-serif;font-size:.48rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7a5e12;border:1px solid #b8922a;padding:.18rem .55rem;display:inline-flex;margin-bottom:1rem;align-self:flex-start;">Strategy · Rev Ops</span>
+        <h3 style="font-family:'Syne',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#0c0b09;margin-bottom:.7rem;line-height:1.3;">Marketing Execution Gap Framework</h3>
+        <p style="font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:300;color:#5a5047;line-height:1.75;flex:1;">Diagnose and close the gap between marketing strategy and what actually ships — the five execution killers and a 90-day remediation roadmap.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1.5rem;padding-top:1.1rem;border-top:1px solid rgba(12,11,9,.08);">
+          <span style="font-family:'Syne',sans-serif;font-size:.54rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7a5e12;">Read Framework</span>
+          <span style="color:#b8922a;font-size:1rem;">&#8594;</span>
+        </div>
+      </a>
+
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="/frameworks/" style="font-family:'Syne',sans-serif;font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:#0c0b09;text-decoration:none;padding:.95rem 2.2rem;display:inline-flex;transition:background .2s;" onmouseover="this.style.background='#7a5e12'" onmouseout="this.style.background='#0c0b09'">Explore the Full Framework Library &#8594;</a>
+    </div>
+  </div>
+</section>
+
 <section class="nl" id="nl-section" aria-labelledby="nl-heading">
   <div class="nl-glow" aria-hidden="true"></div>
   <div class="nl-dust" aria-hidden="true"></div>
@@ -1367,7 +1417,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
         <li><a href="about.html#global">Global Reach</a></li>
         
         <li><a href="blog/">Blog</a></li>
-        <li><a href="/resources/">Resources</a></li>
+        <li><a href="#resources">Resources</a></li>
       </ul>
     </nav>
     <nav aria-label="Connect with Erik">
