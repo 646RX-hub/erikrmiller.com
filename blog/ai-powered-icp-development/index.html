@@ -328,6 +328,7 @@ h2{word-spacing:0.05em;}
   ]
 }
 </script>
+<link rel="stylesheet" href="/assets/search/search.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -344,6 +345,7 @@ h2{word-spacing:0.05em;}
     <li><a href="../../frameworks/">Frameworks</a></li>
     <li><a href="../" class="active">Blog</a></li>
     <li><a href="../../#resources">Resources</a></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
     <li><a href="../../#contact" class="nav-cta">Work Together</a></li>
   </ul>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
@@ -357,6 +359,7 @@ h2{word-spacing:0.05em;}
   
   <li><a href="../">Blog</a></li>
   <li><a href="../../#resources" onclick="closeMobileNav()">Resources</a></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
   <li><a href="../../#contact" class="nav-cta" onclick="closeMobileNav()">Work Together</a></li>
 </ul>
 
@@ -1001,5 +1004,6 @@ document.addEventListener('mousemove', (e) => {
 });
 </script>
 
+<script src="/assets/search/search.js"></script>
 </body>
 </html>

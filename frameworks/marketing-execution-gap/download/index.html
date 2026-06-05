@@ -105,6 +105,7 @@ footer{background:var(--ink);padding:3.5rem clamp(1.5rem,4vw,4rem) 2rem;border-t
 @media(max-width:768px){.dl-page{padding:4.5rem 0 4rem;}}
 @media print{*{background:#fff!important;color:#000!important;}nav#nav,.dl-card,footer{display:none!important;}}
 </style>
+<link rel="stylesheet" href="/assets/search/search.css">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -115,6 +116,7 @@ footer{background:var(--ink);padding:3.5rem clamp(1.5rem,4vw,4rem) 2rem;border-t
     <li><a href="/frameworks/" class="active">Frameworks</a></li>
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/#resources">Resources</a></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
     <li><a href="/#contact" class="nav-cta">Work Together</a></li>
   </ul>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
@@ -123,6 +125,7 @@ footer{background:var(--ink);padding:3.5rem clamp(1.5rem,4vw,4rem) 2rem;border-t
   <li><a href="/about.html">About</a></li>
   <li><a href="/frameworks/">Frameworks</a></li>
   <li><a href="/blog/">Blog</a></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
   <li><a href="/#contact" class="nav-cta">Work Together</a></li>
 </ul>
 <main id="main" style="padding-top:56px;">
@@ -165,7 +168,7 @@ footer{background:var(--ink);padding:3.5rem clamp(1.5rem,4vw,4rem) 2rem;border-t
               <div class="dl-card-meta-item"><span class="dl-card-meta-key">Format</span><span class="dl-card-meta-val">14-page PDF</span></div>
               <div class="dl-card-meta-item"><span class="dl-card-meta-key">License</span><span class="dl-card-meta-val">Free with attribution</span></div>
             </div>
-            <a href="/#resources" class="dl-btn" download>↓ Download PDF — Free</a>
+            <a href="/ERM-Marketing-Execution-Gap-Framework.pdf" class="dl-btn" download>↓ Download PDF — Free</a>
             <a href="/frameworks/marketing-execution-gap/" class="dl-btn dl-btn-outline">Read Online →</a>
             <p class="dl-notice">No email required. Free forever. Please credit Erik R. Miller / ERM Advisory when sharing.</p>
           </div>
@@ -187,5 +190,6 @@ footer{background:var(--ink);padding:3.5rem clamp(1.5rem,4vw,4rem) 2rem;border-t
 const hb=document.getElementById('navHamburger'),mn=document.getElementById('mobileNav');
 if(hb&&mn){hb.addEventListener('click',()=>{const e=hb.getAttribute('aria-expanded')==='true';hb.setAttribute('aria-expanded',String(!e));mn.classList.toggle('open',!e);document.body.style.overflow=e?'':'hidden';});mn.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hb.setAttribute('aria-expanded','false');mn.classList.remove('open');document.body.style.overflow='';}));}
 </script>
+<script src="/assets/search/search.js"></script>
 </body>
 </html>

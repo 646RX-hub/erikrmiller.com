@@ -275,6 +275,7 @@ footer{background:var(--ink);padding:4.5rem 4rem 2.5rem;border-top:3px solid var
   .lib-card{border:1pt solid #ccc!important;border-top:2pt solid #7a5e12!important;break-inside:avoid;}
 }
 </style>
+<link rel="stylesheet" href="/assets/search/search.css">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -286,6 +287,7 @@ footer{background:var(--ink);padding:4.5rem 4rem 2.5rem;border-top:3px solid var
     <li><a href="/frameworks/" aria-current="page">Frameworks</a></li>
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/#resources">Resources</a></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
     <li><a href="/#contact" class="nav-cta">Work Together</a></li>
   </ul>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
@@ -297,6 +299,7 @@ footer{background:var(--ink);padding:4.5rem 4rem 2.5rem;border-top:3px solid var
   <li><a href="/frameworks/">Frameworks</a></li>
   <li><a href="/blog/">Blog</a></li>
   <li><a href="/#resources">Resources</a></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
   <li><a href="/#contact" class="nav-cta">Work Together</a></li>
 </ul>
 
@@ -776,5 +779,6 @@ btns.forEach(b=>b.addEventListener('click',()=>{
   cards.forEach(c=>{c.style.display=(f==='all'||(c.dataset.cats||'').includes(f))?'':'none';});
 }));
 </script>
+<script src="/assets/search/search.js"></script>
 </body>
 </html>
