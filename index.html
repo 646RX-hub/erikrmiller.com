@@ -998,8 +998,6 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 }
 
 </style>
-<link rel="stylesheet" href="/assets/search/search.css">
-<script src="/assets/search/search.js" defer></script>
 </head>
 <body>
 
@@ -1012,11 +1010,11 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <nav id="nav" aria-label="Main navigation">
   <a href="#top" class="nav-logo" aria-label="Erik R. Miller — Home">E.R.M.</a>
   <ul class="nav-links" role="list">
-    <li><a href="/about/">About</a></li>
-    <li><a href="#advisory">Advisory</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="about.html#global">Global</a></li>
+    
     <li><a href="blog/">Blog</a></li>
-    <li><a href="/resources/">Resources</a></li>
-    <li><button type="button" class="erm-search-trigger" data-erm-search-trigger aria-label="Open search (Cmd+K)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search<kbd>⌘K</kbd></button></li>
+    <li><a href="#resources">Resources</a></li>
     <li><a href="#contact" class="nav-cta">Work Together</a></li>
   </ul>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
@@ -1025,10 +1023,11 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 </nav>
 <!-- Mobile nav overlay -->
 <ul class="nav-links-mobile" id="mobileNav" role="list" aria-label="Mobile navigation">
-  <li><a href="/about/" onclick="closeMobileNav()">About</a></li>
-  <li><a href="#advisory" onclick="closeMobileNav()">Advisory</a></li>
+  <li><a href="about.html" onclick="closeMobileNav()">About</a></li>
+  <li><a href="about.html#global" onclick="closeMobileNav()">Global</a></li>
+  
   <li><a href="blog/">Blog</a></li>
-  <li><a href="/resources/" onclick="closeMobileNav()">Resources</a></li>
+  <li><a href="#resources" onclick="closeMobileNav()">Resources</a></li>
   <li><a href="#contact" class="nav-cta" onclick="closeMobileNav()">Work Together</a></li>
 </ul>
 
@@ -1069,7 +1068,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <p class="hero-desc" id="hdesc">I partner with founders, executives, and business owners who believe great marketing builds real businesses — and want someone who will roll up their sleeves and build it with them.</p>
     <div class="hero-ctas" id="hctas">
       <a href="#contact" class="hero-cta-primary">Work Together</a>
-      <a href="/about/" class="hero-cta-secondary">The full story →</a>
+      <a href="about.html" class="hero-cta-secondary">The full story →</a>
     </div>
   </div>
   <div class="hero-scroll" id="hscr" aria-hidden="true">
@@ -1087,18 +1086,27 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     </div>
     <div class="featured-grid">
       <article class="featured-main">
-        <a href="blog/marketing-execution-gap/" class="featured-main-link"
-           aria-label="Read: The Marketing Execution Gap — Why Great Strategies Fail and How High-Performing Teams Close It">
-          <span class="htag">New &middot; Marketing Leadership</span>
-          <h3 class="featured-main-title">The Marketing Execution Gap: <em>Why Great Strategies Fail and How High-Performing Teams Close It</em></h3>
-          <p class="featured-main-body">Most organizations don&rsquo;t have a strategy problem. They have an execution problem. The five execution killers, the Marketing Operating System framework, and a 90-day roadmap for closing the gap.</p>
+        <a href="blog/demand-creation-vs-demand-capture/" class="featured-main-link"
+           aria-label="Read: Demand Creation vs. Demand Capture — The Budget Architecture B2B Leaders Get Wrong">
+          <span class="htag">New &middot; Demand Generation</span>
+          <h3 class="featured-main-title">Demand Creation vs. <em>Demand Capture:</em> The Budget Architecture B2B Leaders Get Wrong</h3>
+          <p class="featured-main-body">Most B2B marketing budgets are structurally inverted &mdash; built for the 5% in-market today while the 95% who will buy tomorrow go uninfluenced. The ERM Demand Architecture, the Capture Decay Curve, and the board-level framework for CMOs, CEOs, Founders, and PE investors.</p>
           <div class="featured-meta">
-            <time datetime="2026-06-03">June 3, 2026</time>
+            <time datetime="2026-06-05">June 5, 2026</time>
             <span class="featured-read">Read &rarr;</span>
           </div>
         </a>
       </article>
       <div class="featured-side">
+        <article class="featured-side-card">
+          <a href="blog/marketing-execution-gap/" class="featured-side-link"
+             aria-label="Read: The Marketing Execution Gap — Why Great Strategies Fail and How High-Performing Teams Close It">
+            <span class="htag">Marketing Leadership</span>
+            <h3 class="featured-side-title">The Marketing Execution Gap: <em>Why Great Strategies Fail and How High-Performing Teams Close It</em></h3>
+            <p class="featured-side-body">Most organizations don&rsquo;t have a strategy problem. They have an execution problem. Five execution killers, the Marketing Operating System, and a 90-day roadmap for closing the gap.</p>
+            <time class="featured-side-date" datetime="2026-06-03">June 3, 2026</time>
+          </a>
+        </article>
         <article class="featured-side-card">
           <a href="blog/buying-group-orchestration-abm-strategy/" class="featured-side-link"
              aria-label="Read: Buying Group Orchestration — The Missing Layer in Your ABM Strategy">
@@ -1352,11 +1360,11 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <nav aria-label="Footer navigation">
       <p class="ft-ht">Navigate</p>
       <ul class="ft-ul" role="list">
-        <li><a href="/about/">About</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="about.html#global">Global Reach</a></li>
-        <li><a href="#advisory">Advisory</a></li>
+        
         <li><a href="blog/">Blog</a></li>
-        <li><a href="/resources/">Resources</a></li>
+        <li><a href="#resources">Resources</a></li>
       </ul>
     </nav>
     <nav aria-label="Connect with Erik">
