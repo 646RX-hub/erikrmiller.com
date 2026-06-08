@@ -109,7 +109,8 @@ nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items
 .fc-read{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(184,146,42,0.3);padding-bottom:2px;}
 .fc-right{background:var(--ink);position:relative;overflow:hidden;min-height:320px;display:flex;align-items:flex-end;padding:2.5rem;}
 .fc-ghost{font-family:var(--serif);font-size:10rem;font-weight:300;font-style:italic;color:rgba(184,146,42,0.15);line-height:1;position:absolute;top:0.5rem;right:1rem;user-select:none;}
-.fc-num{font-family:var(--serif);font-size:0.9rem;font-weight:300;font-style:italic;color:rgba(247,244,238,0.65);position:relative;z-index:2;}
+.fc-num{font-family:var(--serif);font-size:1.15rem;font-weight:300;font-style:normal;line-height:1.5;color:rgba(247,244,238,0.95);position:relative;z-index:2;max-width:300px;}
+.fc-num strong{color:var(--gold-lt);font-weight:400;}
 
 /* POST GRID */
 .posts{background:var(--paper);padding:4rem 4rem 8rem;}
@@ -250,19 +251,19 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <section class="featured">
   <div class="featured-inner">
     <p class="featured-label">Featured Post</p>
-    <a class="featured-card" href="demand-creation-vs-demand-capture/">
+    <a class="featured-card" href="revenue-execution-gap/">
       <div class="fc-left">
-        <span class="fc-tag">Demand Generation</span>
-        <h2 class="fc-title">Demand Creation vs. <em>Demand Capture:</em> The Budget Architecture B2B Leaders Get Wrong</h2>
-        <p class="fc-body">Most B2B marketing budgets are structurally inverted &mdash; built for the 5% in-market today while the 95% who will buy tomorrow go uninfluenced. The ERM Demand Architecture, the Capture Decay Curve, and the board-level framework for CMOs, CEOs, Founders, and PE investors.</p>
+        <span class="fc-tag">Revenue Leadership</span>
+        <h2 class="fc-title">The Revenue Execution Gap: <em>Why Great Strategies Fail to Deliver Results</em></h2>
+        <p class="fc-body">The average company realizes only 63% of its strategy &mdash; because execution loss is multiplicative, not additive. The Law of Execution Decay, the five-layer ERM Revenue Execution Gap Framework, and a 15-question executive self-assessment for CMOs, CROs, founders, and PE operators.</p>
         <div class="fc-meta">
-          <span class="fc-date">Wednesday, June 5, 2026</span>
+          <span class="fc-date">Monday, June 8, 2026</span>
           <span class="fc-read">Read &rarr;</span>
         </div>
       </div>
       <div class="fc-right">
-        <div class="fc-ghost">01</div>
-        <span class="fc-num">Featured · 01</span>
+        <div class="fc-ghost" style="font-size:6.5rem;">63%</div>
+        <span class="fc-num">The average company realizes only <strong>63%</strong> of its strategy. This article is about the other 37%.</span>
       </div>
     </a>
   </div>
@@ -272,16 +273,6 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <section class="posts">
   <div class="posts-inner">
     <div class="posts-grid" id="postsGrid">
-      <a class="post-card" href="revenue-execution-gap/" data-category="leadership">
-        <span class="pc-tag">Revenue Leadership</span>
-        <h3 class="pc-title">The Revenue Execution Gap: <em>Why Great Strategies Fail to Deliver Results</em></h3>
-        <p class="pc-body">The average company realizes only 63% of its strategy &mdash; because execution loss is multiplicative, not additive. The Law of Execution Decay, the five-layer ERM Revenue Execution Gap Framework, and a 15-question executive self-assessment.</p>
-        <div class="pc-footer">
-          <span class="pc-date">Monday, June 8, 2026</span>
-          <span class="pc-arrow">&rarr;</span>
-        </div>
-      </a>
-
       <a class="post-card" href="demand-creation-vs-demand-capture/" data-category="demand-gen">
         <span class="pc-tag">Demand Generation</span>
         <h3 class="pc-title">Demand Creation vs. <em>Demand Capture:</em> The Budget Architecture B2B Leaders Get Wrong</h3>
