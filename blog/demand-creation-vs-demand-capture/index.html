@@ -237,6 +237,7 @@ footer{background:var(--ink);padding:4rem;}
 @media(max-width:768px){nav#nav{padding:1.25rem 1.5rem;}.nav-links{display:none;}.nav-hamburger{display:flex;}.art-hero{padding:7rem 1.5rem 4rem;}.art-wrap{padding:3.5rem 1.5rem 5rem;}.ft{grid-template-columns:1fr;gap:2.5rem;}footer{padding:3rem 1.5rem;}.author-bio{grid-template-columns:1fr;}.resource-cta{grid-template-columns:1fr;}.rc-icon{display:none;}.decay-phases .dp-phase{grid-template-columns:1fr;}.dp-label{padding:1rem 1.25rem;}}
 </style>
 <link rel="stylesheet" href="/assets/search/search.css">
+<link rel="stylesheet" href="/assets/nav/nav.css">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
@@ -244,29 +245,33 @@ footer{background:var(--ink);padding:4rem;}
 <div class="cur" id="cur" aria-hidden="true"></div>
 <div class="cur-ring" id="cring" aria-hidden="true"></div>
 
-<nav id="nav" role="navigation" aria-label="Main navigation">
-  <a href="../../" class="nav-logo">Erik R. Miller</a>
-  <ul class="nav-links">
-    <li><a href="../../#who">About</a></li>
-    
-    <li><a href="../../frameworks/">Frameworks</a></li>
-    <li><a href="../" class="active">Blog</a></li>
-    <li><a href="../../resources/">Resources</a></li>
+<!-- NAV:START -->
+<nav id="nav" aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="Erik R. Miller — Home">E.R.M.</a>
+    <ul class="nav-links" role="list">
+    <li><a href="/about/">About</a></li>
+    <li><a href="/about/#global">Global</a></li>
+    <li><a href="/frameworks/">Frameworks</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/resources/">Resources</a></li>
   <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
-    <li><a href="../../#contact" class="nav-cta">Work Together</a></li>
+    <li><a href="/#contact" class="nav-cta">Work Together</a></li>
   </ul>
-  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
     <span></span><span></span><span></span>
   </button>
 </nav>
-<ul class="nav-links-mobile" id="mobileNav" role="list">
-  <li><a href="../../#who">About</a></li>
-  
-  <li><a href="../">Blog</a></li>
-  <li><a href="../../resources/">Resources</a></li>
+<!-- Mobile nav overlay -->
+<ul class="nav-links-mobile" id="mobileNav" role="list" aria-label="Mobile navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/about/#global">Global</a></li>
+  <li><a href="/frameworks/">Frameworks</a></li>
+  <li><a href="/blog/">Blog</a></li>
+  <li><a href="/resources/">Resources</a></li>
   <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
-  <li><a href="../../#contact" class="nav-cta">Work Together</a></li>
+  <li><a href="/#contact" class="nav-cta">Work Together</a></li>
 </ul>
+<!-- NAV:END -->
 
 <header class="art-hero">
   <div class="ah-glow" aria-hidden="true"></div>
@@ -851,7 +856,7 @@ footer{background:var(--ink);padding:4rem;}
     <div>
       <p class="ft-ht">Navigate</p>
       <ul class="ft-ul">
-        <li><a href="../../#who">About</a></li>
+        <li><a href="/about/">About</a></li>
         
         <li><a href="../">Blog</a></li>
         <li><a href="../../resources/">Resources</a></li>
@@ -890,5 +895,6 @@ const ham=document.getElementById('navHamburger'),mob=document.getElementById('m
 if(ham){ham.addEventListener('click',()=>{const open=mob.classList.toggle('open');ham.setAttribute('aria-expanded',String(open));});}
 </script>
 <script src="/assets/search/search.js"></script>
+<script src="/assets/nav/nav.js" defer></script>
 </body>
 </html>

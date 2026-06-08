@@ -261,18 +261,37 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 </script>
 <link rel="stylesheet" href="/assets/search/search.css">
 <script src="/assets/search/search.js" defer></script>
+<link rel="stylesheet" href="/assets/nav/nav.css">
 </head>
 <body>
 
-<nav id="nav" style="background:rgba(12,11,9,0.95);backdrop-filter:blur(20px);">
-  <a href="/" class="nav-logo">E.R.M.</a>
-  <ul class="nav-links">
+<!-- NAV:START -->
+<nav id="nav" aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="Erik R. Miller — Home">E.R.M.</a>
+    <ul class="nav-links" role="list">
     <li><a href="/about/">About</a></li>
+    <li><a href="/about/#global">Global</a></li>
+    <li><a href="/frameworks/">Frameworks</a></li>
     <li><a href="/blog/">Blog</a></li>
-    <li><a href="/resources/">Resources</a></li>    <li><button type="button" class="erm-search-trigger" data-erm-search-trigger aria-label="Open search (Cmd+K)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search<kbd>⌘K</kbd></button></li>
+    <li><a href="/resources/">Resources</a></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
     <li><a href="/#contact" class="nav-cta">Work Together</a></li>
   </ul>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<!-- Mobile nav overlay -->
+<ul class="nav-links-mobile" id="mobileNav" role="list" aria-label="Mobile navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/about/#global">Global</a></li>
+  <li><a href="/frameworks/">Frameworks</a></li>
+  <li><a href="/blog/">Blog</a></li>
+  <li><a href="/resources/">Resources</a></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
+  <li><a href="/#contact" class="nav-cta">Work Together</a></li>
+</ul>
+<!-- NAV:END -->
 
 <div class="blog-hero">
   <div class="blog-hero-inner">
@@ -517,5 +536,6 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <script>
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('stuck',scrollY>60));
 </script>
+<script src="/assets/nav/nav.js" defer></script>
 </body>
 </html>

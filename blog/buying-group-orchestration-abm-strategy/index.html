@@ -408,6 +408,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 {"@context":"https://schema.org","@type":"Organization","@id":"https://erikrmiller.com/#organization","name":"E.R.M. Advisory","alternateName":"ERM Advisory","url":"https://erikrmiller.com","founder":{"@type":"Person","name":"Erik R. Miller","url":"https://erikrmiller.com","sameAs":["https://www.linkedin.com/in/erikrm/","https://erikrmiller.com"]},"description":"B2B marketing advisory practice specializing in GTM strategy, account-based marketing, demand generation, and revenue marketing for enterprise and growth-stage companies.","knowsAbout":["Account-Based Marketing","Buying Group Orchestration","Demand Generation","Revenue Marketing","GTM Strategy","ICP Development","Revenue Operations"],"areaServed":"Worldwide","sameAs":["https://www.linkedin.com/in/erikrm/","https://www.instagram.com/ermadvisory/","https://www.facebook.com/ERMAdvisory"]}
 </script>
 <link rel="stylesheet" href="/assets/search/search.css">
+<link rel="stylesheet" href="/assets/nav/nav.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -415,32 +416,33 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <div class="cur-ring" id="cring"></div>
 <div class="reading-progress" aria-hidden="true"><div class="rp-fill" id="rpFill"></div></div>
 
+<!-- NAV:START -->
 <nav id="nav" aria-label="Main navigation">
-  <a href="../../" class="nav-logo" aria-label="Erik R. Miller &mdash; Home">E.R.M.</a>
-  <ul class="nav-links" role="list">
-    <li><a href="../../#who">About</a></li>
-    <li><a href="../../#global">Global</a></li>
-  <li><a href="../../frameworks/">Frameworks</a></li>
-    
-    <li><a href="../../frameworks/">Frameworks</a></li>
-    <li><a href="../" class="active">Blog</a></li>
-    <li><a href="../../#resources">Resources</a></li>
+  <a href="/" class="nav-logo" aria-label="Erik R. Miller — Home">E.R.M.</a>
+    <ul class="nav-links" role="list">
+    <li><a href="/about/">About</a></li>
+    <li><a href="/about/#global">Global</a></li>
+    <li><a href="/frameworks/">Frameworks</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/resources/">Resources</a></li>
   <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
-    <li><a href="../../#contact" class="nav-cta">Work Together</a></li>
+    <li><a href="/#contact" class="nav-cta">Work Together</a></li>
   </ul>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
     <span></span><span></span><span></span>
   </button>
 </nav>
+<!-- Mobile nav overlay -->
 <ul class="nav-links-mobile" id="mobileNav" role="list" aria-label="Mobile navigation">
-  <li><a href="../../#who" onclick="closeMobileNav()">About</a></li>
-  <li><a href="../../#global" onclick="closeMobileNav()">Global</a></li>
-  
-  <li><a href="../">Blog</a></li>
-  <li><a href="../../#resources" onclick="closeMobileNav()">Resources</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/about/#global">Global</a></li>
+  <li><a href="/frameworks/">Frameworks</a></li>
+  <li><a href="/blog/">Blog</a></li>
+  <li><a href="/resources/">Resources</a></li>
   <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
-  <li><a href="../../#contact" class="nav-cta" onclick="closeMobileNav()">Work Together</a></li>
+  <li><a href="/#contact" class="nav-cta">Work Together</a></li>
 </ul>
+<!-- NAV:END -->
 
 <section class="art-hero">
   <div class="ah-glow"></div>
@@ -1038,7 +1040,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <div>
       <p class="ft-ht">Navigate</p>
       <ul class="ft-ul">
-        <li><a href="../../#who">About</a></li>
+        <li><a href="/about/">About</a></li>
         
         <li><a href="../">Blog</a></li>
         <li><a href="../../#resources">Resources</a></li>
@@ -1080,5 +1082,6 @@ function closeMobileNav(){mob.classList.remove('open');ham.setAttribute('aria-ex
 if(ham){ham.addEventListener('click',()=>{const open=mob.classList.toggle('open');ham.setAttribute('aria-expanded',String(open));});}
 </script>
 <script src="/assets/search/search.js"></script>
+<script src="/assets/nav/nav.js" defer></script>
 </body>
 </html>

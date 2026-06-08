@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Marketing Operating System Blueprint | E.R.M. Advisory</title>
 <meta name="description" content="The complete Marketing Operating System Blueprint: annual planning template, quarterly OKR framework, weekly cadence, accountability matrix, and KPI framework.">
-<link rel="canonical" href="https://www.erikrmiller.com/resources/marketing-operating-system-blueprint/">
+<link rel="canonical" href="https://erikrmiller.com/resources/marketing-operating-system-blueprint/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
@@ -78,19 +78,37 @@ footer{background:var(--ink);padding:4rem;border-top:1px solid rgba(247,244,238,
 @media(max-width:768px){nav{padding:1.25rem 1.5rem;}.nav-links{display:none;}.hero{padding:7rem 1.5rem 3.5rem;}.wrap{padding:3rem 1.5rem 4rem;}.cadence-grid{grid-template-columns:1fr 1fr;}footer{padding:3rem 1.5rem;}}
 </style>
 <link rel="stylesheet" href="/assets/search/search.css">
+<link rel="stylesheet" href="/assets/nav/nav.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
-<nav aria-label="Main navigation">
+<!-- NAV:START -->
+<nav id="nav" aria-label="Main navigation">
   <a href="/" class="nav-logo" aria-label="Erik R. Miller — Home">E.R.M.</a>
-  <ul class="nav-links" role="list">
+    <ul class="nav-links" role="list">
     <li><a href="/about/">About</a></li>
+    <li><a href="/about/#global">Global</a></li>
+    <li><a href="/frameworks/">Frameworks</a></li>
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/resources/">Resources</a></li>
   <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
-  <li><a href="/#contact" class="nav-cta">Work Together</a></li>
+    <li><a href="/#contact" class="nav-cta">Work Together</a></li>
   </ul>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<!-- Mobile nav overlay -->
+<ul class="nav-links-mobile" id="mobileNav" role="list" aria-label="Mobile navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/about/#global">Global</a></li>
+  <li><a href="/frameworks/">Frameworks</a></li>
+  <li><a href="/blog/">Blog</a></li>
+  <li><a href="/resources/">Resources</a></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
+  <li><a href="/#contact" class="nav-cta">Work Together</a></li>
+</ul>
+<!-- NAV:END -->
 <header class="hero">
   <div class="hero-inner">
     <div class="hero-tag">Free Resource</div>
@@ -322,5 +340,6 @@ footer{background:var(--ink);padding:4rem;border-top:1px solid rgba(247,244,238,
   </div>
 </footer>
 <script src="/assets/search/search.js"></script>
+<script src="/assets/nav/nav.js" defer></script>
 </body>
 </html>

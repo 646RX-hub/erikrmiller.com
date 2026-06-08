@@ -3,3 +3,13 @@ COWORK_BRIEFING.md
 _drafts/
 .DS_Store
 *.backup
+
+# Working files / previews / launch packages — never deploy or commit
+index-icp-working.html
+activation-loop-preview.html
+index-*-working.html
+*-preview.html
+commit-framework-launch.sh
+**/LAUNCH-PACKAGE.md
+*.bak
+.indexnow/

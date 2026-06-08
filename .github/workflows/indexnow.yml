@@ -1,0 +1,146 @@
+name: IndexNow Submit
+
+# Submits newly created or materially updated URLs to IndexNow after each
+# deploy to the production branch. Only changed, indexable HTML URLs are sent.
+# Endpoint : https://api.indexnow.org/IndexNow
+# Host     : erikrmiller.com
+# Key file : https://erikrmiller.com/944495abd75a4b04ac89208cfe0a1d93.txt
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'sitemap.xml'
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: 'Optional: space-separated URLs to submit manually'
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    env:
+      HOST: erikrmiller.com
+      KEY: 944495abd75a4b04ac89208cfe0a1d93
+      KEY_LOCATION: https://erikrmiller.com/944495abd75a4b04ac89208cfe0a1d93.txt
+      ENDPOINT: https://api.indexnow.org/IndexNow
+    steps:
+      - name: Checkout (with history for diff)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Build changed URL list
+        id: build
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .indexnow
+          : > .indexnow/changed.txt
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.urls }}" ]; then
+            printf '%s\n' ${{ github.event.inputs.urls }} > .indexnow/changed.txt
+          else
+            BEFORE="${{ github.event.before }}"
+            if [ -z "${BEFORE}" ] || ! git cat-file -e "${BEFORE}^{commit}" 2>/dev/null; then
+              BEFORE="$(git rev-parse HEAD~1 2>/dev/null || echo '')"
+            fi
+            if [ -n "${BEFORE}" ]; then
+              git diff --name-only --diff-filter=ACMR "${BEFORE}" "${{ github.sha }}" > .indexnow/files.txt || true
+            else
+              git ls-files '*.html' > .indexnow/files.txt
+            fi
+
+            while IFS= read -r f; do
+              [ -n "$f" ] || continue
+              case "$f" in
+                *.html) ;;
+                *) continue ;;
+              esac
+              # Skip drafts, backups, working copies, and the 404 page
+              case "$f" in
+                _drafts/*|*.backup|index-icp-working.html|activation-loop-preview.html|404.html) continue ;;
+              esac
+              # Skip files that no longer exist (deletions/renames source side)
+              [ -f "$f" ] || continue
+              # Skip redirect stubs and noindex pages
+              grep -q 'http-equiv="refresh"' "$f" && continue || true
+              grep -q 'name="robots"[^>]*noindex' "$f" && continue || true
+
+              # Map file path -> canonical URL
+              if [ "$f" = "index.html" ]; then
+                url="/"
+              elif [ "${f##*/}" = "index.html" ]; then
+                url="/${f%index.html}"          # dir/index.html -> /dir/
+              else
+                url="/$f"                        # top-level page.html -> /page.html
+              fi
+              echo "https://${HOST}${url}" >> .indexnow/changed.txt
+            done < .indexnow/files.txt
+            sort -u -o .indexnow/changed.txt .indexnow/changed.txt
+          fi
+
+          COUNT=$(grep -c . .indexnow/changed.txt || echo 0)
+          echo "count=${COUNT}" >> "$GITHUB_OUTPUT"
+          echo "Changed indexable URLs (${COUNT}):"
+          cat .indexnow/changed.txt || true
+
+      - name: Submit to IndexNow
+        if: steps.build.outputs.count != '0'
+        shell: bash
+        run: |
+          set -euo pipefail
+          TS="$(date -u +%FT%TZ)"
+          mapfile -t URLS < .indexnow/changed.txt
+
+          JSON=$(jq -n \
+            --arg host "$HOST" --arg key "$KEY" --arg kl "$KEY_LOCATION" \
+            '{host:$host, key:$key, keyLocation:$kl, urlList:$ARGS.positional}' \
+            --args "${URLS[@]}")
+          printf '%s' "$JSON" > .indexnow/payload.json
+
+          HTTP=$(curl -sS -o .indexnow/response.txt -w '%{http_code}' \
+            -X POST "$ENDPOINT" \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data @.indexnow/payload.json)
+
+          RESULT="success"
+          if [ "$HTTP" -ge 400 ] || [ "$HTTP" -lt 200 ]; then RESULT="failure"; fi
+
+          {
+            echo "timestamp:       $TS"
+            echo "endpoint:        $ENDPOINT"
+            echo "host:            $HOST"
+            echo "key_location:    $KEY_LOCATION"
+            echo "http_status:     $HTTP"
+            echo "result:          $RESULT"
+            echo "submitted_count: ${#URLS[@]}"
+            echo "submitted_urls:"
+            printf '  - %s\n' "${URLS[@]}"
+            echo "response_body:"
+            sed 's/^/  /' .indexnow/response.txt || true
+          } | tee .indexnow/log.txt
+
+          echo "::notice title=IndexNow::${RESULT} (HTTP ${HTTP}) — ${#URLS[@]} URL(s) submitted at ${TS}"
+          [ "$RESULT" = "success" ]
+
+      - name: No changes to submit
+        if: steps.build.outputs.count == '0'
+        run: echo "No indexable URL changes detected — nothing submitted to IndexNow."
+
+      - name: Upload IndexNow log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: indexnow-log-${{ github.run_id }}
+          path: .indexnow/
+          retention-days: 90
