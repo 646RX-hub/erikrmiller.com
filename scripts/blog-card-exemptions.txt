@@ -1,0 +1,11 @@
+# Blog card coverage exemptions
+# -----------------------------
+# Slugs listed here are production articles under /blog/ that are INTENTIONALLY
+# not shown as a card on the blog index (/blog/). One slug per line.
+# Blank lines and lines beginning with '#' are ignored.
+#
+# By default this file lists nothing, so the coverage check is fully strict:
+# every blog/<slug>/index.html must be linked from blog/index.html.
+#
+# To intentionally omit an article from the index, add its slug below, e.g.:
+#   year-one-gtm-seven-questions

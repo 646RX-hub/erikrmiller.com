@@ -1,0 +1,27 @@
+name: Validate Blog Cards
+
+# Fails the build if a production article exists under /blog/ but has no
+# corresponding card (link) on the blog index (/blog/). Keeps the blog index
+# from silently dropping published articles.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-blog-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Validate every /blog/ article has a card on the blog index
+        run: python3 scripts/validate-blog-cards.py
