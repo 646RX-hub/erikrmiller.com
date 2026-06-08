@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" role="img" aria-labelledby="continuum-title continuum-desc" focusable="false">
+  <title id="continuum-title">The Revenue Execution Gap Continuum&#8482; — Erik R. Miller | ERM Advisory</title>
+  <desc id="continuum-desc">A framework diagram by Erik R. Miller showing the six-stage path from strategic intent to realized performance — Strategic Clarity, Organizational Alignment, Operational Readiness, Measurement and Visibility, Accountability and Adaptation, and Realized Performance. An intended path runs straight across the top at 100 percent while a realized path declines from 100 to 59 percent, illustrating the multiplicative Law of Execution Decay. The widening 41 percent distance between the two lines is the Revenue Execution Gap.</desc>
+
+  <rect width="1000" height="580" fill="#0c0b09"/>
+  <rect x="0" y="0" width="3" height="580" fill="#b8922a" opacity="0.5"/>
+
+  <text x="60" y="54" font-family="'Syne',Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2.5" fill="#d4ac4e">THE REVENUE EXECUTION GAP CONTINUUM&#8482;</text>
+  <text x="60" y="78" font-family="'DM Sans',Arial,sans-serif" font-size="13" font-weight="400" fill="#f7f4ee" opacity="0.62">Why 90% at every layer becomes 59% realized &#8212; the Law of Execution Decay</text>
+  <line x1="60" y1="94" x2="940" y2="94" stroke="#b8922a" stroke-width="0.7" opacity="0.3"/>
+
+  <text x="60" y="146" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#d4ac4e">INTENDED OUTCOME &#183; 100%</text>
+  <line x1="100" y1="168" x2="900" y2="168" stroke="#b8922a" stroke-width="1.5" opacity="0.85" stroke-dasharray="3,4"/>
+
+  <path d="M100,168 L260,200 L420,244 L580,290 L740,332 L900,362" fill="none" stroke="#f7f4ee" stroke-width="2.4" opacity="0.6"/>
+
+  <!-- the gap wedge -->
+  <path d="M100,168 L260,200 L420,244 L580,290 L740,332 L900,362 L900,168 Z" fill="rgba(184,146,42,0.08)"/>
+  <text x="648" y="246" font-family="Georgia,serif" font-size="26" font-weight="300" font-style="italic" fill="#d4ac4e" opacity="0.8" transform="rotate(-9 648 246)">the execution gap</text>
+  <text x="660" y="274" text-anchor="middle" font-family="'DM Sans',Arial,sans-serif" font-size="15" font-weight="500" fill="#d4ac4e" opacity="0.92" transform="rotate(-9 660 274)">41% of strategy lost</text>
+
+  <!-- cumulative realized percentages (above nodes) -->
+  <g font-family="'Syne',Arial,sans-serif" font-size="17" font-weight="700" fill="#d4ac4e" text-anchor="middle">
+    <text x="260" y="182">90%</text>
+    <text x="420" y="226">81%</text>
+    <text x="580" y="272">73%</text>
+    <text x="740" y="314">66%</text>
+    <text x="900" y="344">59%</text>
+  </g>
+
+  <!-- failure labels (below the line, high-contrast white) -->
+  <g font-family="'DM Sans',Arial,sans-serif" font-size="14" font-weight="400" fill="#f7f4ee" opacity="0.78" text-anchor="middle">
+    <text x="180" y="208">&#215; translation loss</text>
+    <text x="340" y="244">&#215; silo friction</text>
+    <text x="500" y="288">&#215; execution debt</text>
+    <text x="660" y="334">&#215; visibility gap</text>
+    <text x="838" y="368">&#215; no adaptation</text>
+  </g>
+
+  <!-- nodes -->
+  <circle cx="100" cy="168" r="9" fill="#0c0b09" stroke="#b8922a" stroke-width="2.4"/><circle cx="100" cy="168" r="3" fill="#b8922a"/>
+  <circle cx="260" cy="200" r="9" fill="#0c0b09" stroke="#b8922a" stroke-width="2.4"/><circle cx="260" cy="200" r="3" fill="#b8922a"/>
+  <circle cx="420" cy="244" r="9" fill="#0c0b09" stroke="#b8922a" stroke-width="2.4"/><circle cx="420" cy="244" r="3" fill="#b8922a"/>
+  <circle cx="580" cy="290" r="9" fill="#0c0b09" stroke="#b8922a" stroke-width="2.4"/><circle cx="580" cy="290" r="3" fill="#b8922a"/>
+  <circle cx="740" cy="332" r="9" fill="#0c0b09" stroke="#b8922a" stroke-width="2.4"/><circle cx="740" cy="332" r="3" fill="#b8922a"/>
+  <circle cx="900" cy="362" r="13" fill="#b8922a"/><circle cx="900" cy="168" r="6" fill="#b8922a" opacity="0.5"/>
+  <text x="916" y="368" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#f7f4ee" opacity="0.6">REALIZED</text>
+
+  <line x1="60" y1="432" x2="940" y2="432" stroke="rgba(247,244,238,0.08)" stroke-width="1"/>
+
+  <!-- stage labels -->
+  <g text-anchor="middle">
+    <text x="100" y="478" font-family="Georgia,serif" font-size="30" font-weight="300" font-style="italic" fill="rgba(184,146,42,0.28)">01</text>
+    <text x="100" y="506" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#d4ac4e">STRATEGIC</text>
+    <text x="100" y="522" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#d4ac4e">CLARITY</text>
+
+    <text x="260" y="478" font-family="Georgia,serif" font-size="30" font-weight="300" font-style="italic" fill="rgba(184,146,42,0.28)">02</text>
+    <text x="260" y="506" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#f7f4ee" opacity="0.92">ORGANIZATIONAL</text>
+    <text x="260" y="522" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#f7f4ee" opacity="0.92">ALIGNMENT</text>
+
+    <text x="420" y="478" font-family="Georgia,serif" font-size="30" font-weight="300" font-style="italic" fill="rgba(184,146,42,0.28)">03</text>
+    <text x="420" y="506" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#f7f4ee" opacity="0.92">OPERATIONAL</text>
+    <text x="420" y="522" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#f7f4ee" opacity="0.92">READINESS</text>
+
+    <text x="580" y="478" font-family="Georgia,serif" font-size="30" font-weight="300" font-style="italic" fill="rgba(184,146,42,0.28)">04</text>
+    <text x="580" y="506" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#f7f4ee" opacity="0.92">MEASUREMENT</text>
+    <text x="580" y="522" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#f7f4ee" opacity="0.92">&amp; VISIBILITY</text>
+
+    <text x="740" y="478" font-family="Georgia,serif" font-size="30" font-weight="300" font-style="italic" fill="rgba(184,146,42,0.28)">05</text>
+    <text x="740" y="506" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#f7f4ee" opacity="0.92">ACCOUNTABILITY</text>
+    <text x="740" y="522" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#f7f4ee" opacity="0.92">&amp; ADAPTATION</text>
+
+    <text x="900" y="478" font-family="Georgia,serif" font-size="30" font-weight="300" font-style="italic" fill="rgba(184,146,42,0.45)">06</text>
+    <text x="900" y="506" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#d4ac4e">REALIZED</text>
+    <text x="900" y="522" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#d4ac4e">PERFORMANCE</text>
+  </g>
+
+  <line x1="60" y1="548" x2="940" y2="548" stroke="#b8922a" stroke-width="0.6" opacity="0.22"/>
+  <text x="60" y="568" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="600" letter-spacing="1.2" fill="#f7f4ee" opacity="0.5">ERM ADVISORY &#183; THE LAW OF EXECUTION DECAY</text>
+  <text x="940" y="568" text-anchor="end" font-family="'Syne',Arial,sans-serif" font-size="13" font-weight="600" letter-spacing="1.2" fill="#f7f4ee" opacity="0.5">ERIK R. MILLER &#183; ERIKRMILLER.COM</text>
+</svg>

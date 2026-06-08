@@ -1011,8 +1011,8 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <nav id="nav" aria-label="Main navigation">
   <a href="#top" class="nav-logo" aria-label="Erik R. Miller — Home">E.R.M.</a>
     <ul class="nav-links" role="list">
-    <li><a href="/about.html">About</a></li>
-    <li><a href="/about.html#global">Global</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/about/#global">Global</a></li>
     <li><a href="/frameworks/">Frameworks</a></li>
     <li><a href="/blog/">Blog</a></li>
     <li><a href="#resources">Resources</a></li>
@@ -1025,8 +1025,8 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 </nav>
 <!-- Mobile nav overlay -->
 <ul class="nav-links-mobile" id="mobileNav" role="list" aria-label="Mobile navigation">
-  <li><a href="/about.html">About</a></li>
-  <li><a href="/about.html#global">Global</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/about/#global">Global</a></li>
   <li><a href="/frameworks/">Frameworks</a></li>
   <li><a href="/blog/">Blog</a></li>
   <li><a href="#resources">Resources</a></li>
@@ -1071,7 +1071,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <p class="hero-desc" id="hdesc">I partner with founders, executives, and business owners who believe great marketing builds real businesses — and want someone who will roll up their sleeves and build it with them.</p>
     <div class="hero-ctas" id="hctas">
       <a href="#contact" class="hero-cta-primary">Work Together</a>
-      <a href="about.html" class="hero-cta-secondary">The full story →</a>
+      <a href="/about/" class="hero-cta-secondary">The full story →</a>
     </div>
   </div>
   <div class="hero-scroll" id="hscr" aria-hidden="true">
@@ -1089,18 +1089,27 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     </div>
     <div class="featured-grid">
       <article class="featured-main">
-        <a href="blog/demand-creation-vs-demand-capture/" class="featured-main-link"
-           aria-label="Read: Demand Creation vs. Demand Capture — The Budget Architecture B2B Leaders Get Wrong">
-          <span class="htag">New &middot; Demand Generation</span>
-          <h3 class="featured-main-title">Demand Creation vs. <em>Demand Capture:</em> The Budget Architecture B2B Leaders Get Wrong</h3>
-          <p class="featured-main-body">Most B2B marketing budgets are structurally inverted &mdash; built for the 5% in-market today while the 95% who will buy tomorrow go uninfluenced. The ERM Demand Architecture, the Capture Decay Curve, and the board-level framework for CMOs, CEOs, Founders, and PE investors.</p>
+        <a href="blog/revenue-execution-gap/" class="featured-main-link"
+           aria-label="Read: The Revenue Execution Gap — Why Great Strategies Fail to Deliver Results">
+          <span class="htag">New &middot; Revenue Leadership</span>
+          <h3 class="featured-main-title">The Revenue Execution Gap: <em>Why Great Strategies Fail to Deliver Results</em></h3>
+          <p class="featured-main-body">The average company realizes only 63% of its strategy &mdash; because execution loss is multiplicative, not additive. The Law of Execution Decay, the five-layer ERM Revenue Execution Gap Framework, and a 15-question executive self-assessment for CMOs, CROs, founders, and PE operators.</p>
           <div class="featured-meta">
-            <time datetime="2026-06-05">June 5, 2026</time>
+            <time datetime="2026-06-08">June 8, 2026</time>
             <span class="featured-read">Read &rarr;</span>
           </div>
         </a>
       </article>
       <div class="featured-side">
+        <article class="featured-side-card">
+          <a href="blog/demand-creation-vs-demand-capture/" class="featured-side-link"
+             aria-label="Read: Demand Creation vs. Demand Capture — The Budget Architecture B2B Leaders Get Wrong">
+            <span class="htag">Demand Generation</span>
+            <h3 class="featured-side-title">Demand Creation vs. <em>Demand Capture:</em> The Budget Architecture B2B Leaders Get Wrong</h3>
+            <p class="featured-side-body">Most B2B budgets are structurally inverted &mdash; built for the 5% in-market today while the 95% who buy tomorrow go uninfluenced. The ERM Demand Architecture and the Capture Decay Curve.</p>
+            <time class="featured-side-date" datetime="2026-06-05">June 5, 2026</time>
+          </a>
+        </article>
         <article class="featured-side-card">
           <a href="blog/marketing-execution-gap/" class="featured-side-link"
              aria-label="Read: The Marketing Execution Gap — Why Great Strategies Fail and How High-Performing Teams Close It">
@@ -1117,15 +1126,6 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
             <h3 class="featured-side-title">Buying Group Orchestration: <em>The Missing Layer in Your ABM Strategy</em></h3>
             <p class="featured-side-body">If your champion left tomorrow, would the deal survive? The practitioner guide to buying group orchestration &mdash; ERM Four-Layer Model and CMO action plan.</p>
             <time class="featured-side-date" datetime="2026-06-01">June 1, 2026</time>
-          </a>
-        </article>
-        <article class="featured-side-card">
-          <a href="blog/signal-centric-abm-operating-model/" class="featured-side-link"
-             aria-label="Read: Signal-Centric ABM — The Operating Model Replacing Campaign-Centric Account Marketing">
-            <span class="htag">ABM</span>
-            <h3 class="featured-side-title">Signal-Centric ABM: <em>The Operating Model Replacing Campaign-Centric Account Marketing</em></h3>
-            <p class="featured-side-body">Campaign-centric ABM is structurally limited. Here&rsquo;s how modern GTM teams build signal-centric account intelligence systems.</p>
-            <time class="featured-side-date" datetime="2026-05-27">May 27, 2026</time>
           </a>
         </article>
       </div>
@@ -1416,8 +1416,8 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <nav aria-label="Footer navigation">
       <p class="ft-ht">Navigate</p>
       <ul class="ft-ul" role="list">
-        <li><a href="about.html">About</a></li>
-        <li><a href="about.html#global">Global Reach</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/about/#global">Global Reach</a></li>
         
         <li><a href="blog/">Blog</a></li>
         <li><a href="#resources">Resources</a></li>
