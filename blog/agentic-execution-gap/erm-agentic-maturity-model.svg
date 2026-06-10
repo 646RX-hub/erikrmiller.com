@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="amm-t amm-d" focusable="false">
+  <title id="amm-t">The ERM Agentic Maturity Model&#8482; — Erik R. Miller | ERM Advisory</title>
+  <desc id="amm-d">A five-stage maturity model by Erik R. Miller showing how organizations progress in their use of AI agents, drawn as an ascending staircase. Stage 1 Experimenting: isolated pilots and proofs of concept. Stage 2 Assisted: agents help individuals but the workflow is unchanged. Stage 3 Embedded: agents run inside core workflows with human oversight. Stage 4 Operational: agents are a dependable part of how the business runs, measured and governed. Stage 5 Autonomous: agents act within defined boundaries with exception-based human control. Most organizations are stuck between Stage 1 and Stage 2 — the Agentic Execution Gap is the distance from there to Stage 4.</desc>
+
+  <rect width="1000" height="560" fill="#0c0b09"/>
+  <rect x="0" y="0" width="3" height="560" fill="#b8922a" opacity="0.5"/>
+
+  <text x="70" y="50" font-family="'Syne',Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="#d4ac4e">THE ERM AGENTIC MATURITY MODEL&#8482;</text>
+  <text x="70" y="74" font-family="'DM Sans',Arial,sans-serif" font-size="13" font-weight="400" fill="#f7f4ee" opacity="0.72">Five stages from isolated experiment to governed autonomy</text>
+  <line x1="70" y1="90" x2="930" y2="90" stroke="#b8922a" stroke-width="0.7" opacity="0.3"/>
+
+  <!-- baseline -->
+  <line x1="70" y1="450" x2="930" y2="450" stroke="rgba(247,244,238,0.12)" stroke-width="1"/>
+
+  <!-- ascending step columns: 5 steps, x widths 164 each starting 78 -->
+  <!-- heights increase: tops at y 410,360,300,230,150 -->
+  <g>
+    <!-- Stage 1 -->
+    <rect x="82" y="410" width="150" height="40" fill="#161411" stroke="#b8922a" stroke-opacity="0.3"/>
+    <rect x="82" y="410" width="150" height="3" fill="#b8922a" opacity="0.5"/>
+    <!-- Stage 2 -->
+    <rect x="246" y="360" width="150" height="90" fill="#161411" stroke="#b8922a" stroke-opacity="0.3"/>
+    <rect x="246" y="360" width="150" height="3" fill="#b8922a" opacity="0.6"/>
+    <!-- Stage 3 -->
+    <rect x="410" y="300" width="150" height="150" fill="#161411" stroke="#b8922a" stroke-opacity="0.3"/>
+    <rect x="410" y="300" width="150" height="3" fill="#b8922a" opacity="0.7"/>
+    <!-- Stage 4 -->
+    <rect x="574" y="230" width="150" height="220" fill="#1b1813" stroke="#b8922a" stroke-opacity="0.4"/>
+    <rect x="574" y="230" width="150" height="3" fill="#b8922a" opacity="0.85"/>
+    <!-- Stage 5 -->
+    <rect x="738" y="150" width="150" height="300" fill="#b8922a" fill-opacity="0.12" stroke="#b8922a" stroke-opacity="0.5"/>
+    <rect x="738" y="150" width="150" height="3" fill="#d4ac4e"/>
+  </g>
+
+  <!-- stage numbers (italic serif) on each step top -->
+  <g font-family="Georgia,serif" font-weight="300" font-style="italic" fill="#b8922a" text-anchor="middle">
+    <text x="157" y="400" font-size="30" opacity="0.45">1</text>
+    <text x="321" y="350" font-size="30" opacity="0.5">2</text>
+    <text x="485" y="290" font-size="30" opacity="0.6">3</text>
+    <text x="649" y="220" font-size="30" opacity="0.7">4</text>
+    <text x="813" y="140" font-size="32" opacity="0.95" fill="#d4ac4e">5</text>
+  </g>
+
+  <!-- stage names + descriptors inside columns -->
+  <g text-anchor="middle">
+    <text x="157" y="432" font-family="'Syne',Arial,sans-serif" font-size="12.5" font-weight="700" letter-spacing="0.5" fill="#f7f4ee">EXPERIMENTING</text>
+    <text x="321" y="392" font-family="'Syne',Arial,sans-serif" font-size="12.5" font-weight="700" letter-spacing="0.5" fill="#f7f4ee">ASSISTED</text>
+    <text x="321" y="412" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#f7f4ee" opacity="0.55">helps people</text>
+    <text x="485" y="332" font-family="'Syne',Arial,sans-serif" font-size="12.5" font-weight="700" letter-spacing="0.5" fill="#f7f4ee">EMBEDDED</text>
+    <text x="485" y="352" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#f7f4ee" opacity="0.55">in the workflow</text>
+    <text x="649" y="262" font-family="'Syne',Arial,sans-serif" font-size="12.5" font-weight="700" letter-spacing="0.5" fill="#f7f4ee">OPERATIONAL</text>
+    <text x="649" y="282" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#f7f4ee" opacity="0.55">runs the business</text>
+    <text x="813" y="182" font-family="'Syne',Arial,sans-serif" font-size="12.5" font-weight="700" letter-spacing="0.5" fill="#d4ac4e">AUTONOMOUS</text>
+    <text x="813" y="202" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#f7f4ee" opacity="0.6">governed boundaries</text>
+  </g>
+
+  <!-- the gap bracket between stage 1-2 and stage 4 -->
+  <line x1="157" y1="475" x2="649" y2="475" stroke="#d4ac4e" stroke-width="1.2" opacity="0.7"/>
+  <line x1="157" y1="469" x2="157" y2="481" stroke="#d4ac4e" stroke-width="1.2" opacity="0.7"/>
+  <line x1="649" y1="469" x2="649" y2="481" stroke="#d4ac4e" stroke-width="1.2" opacity="0.7"/>
+  <text x="403" y="498" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" fill="#d4ac4e">THE AGENTIC EXECUTION GAP &#8212; WHERE MOST ORGANIZATIONS STALL</text>
+
+  <line x1="70" y1="524" x2="930" y2="524" stroke="#b8922a" stroke-width="0.6" opacity="0.22"/>
+  <text x="70" y="544" font-family="'Syne',Arial,sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#f7f4ee" opacity="0.5">&#169; ERIK R. MILLER | ERM ADVISORY &#183; VERSION 1.0</text>
+  <text x="930" y="544" text-anchor="end" font-family="'Syne',Arial,sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#f7f4ee" opacity="0.5">ERIKRMILLER.COM</text>
+</svg>

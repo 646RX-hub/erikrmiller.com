@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-labelledby="rm-t rm-d" focusable="false">
+  <title id="rm-t">The 90-Day Agentic Scale Roadmap&#8482; — Erik R. Miller | ERM Advisory</title>
+  <desc id="rm-d">A 90-day implementation roadmap by Erik R. Miller divided into three phases along a timeline. Phase One, Days 1 to 30, Foundation: define the business outcome, pick one high-value workflow, set guardrails, and establish a baseline. Phase Two, Days 31 to 60, Workflow Integration: embed the agent in the real workflow, design human oversight, and instrument measurement. Phase Three, Days 61 to 90, Governance and Scale: prove ROI against the baseline, formalize governance, and expand to the next workflow. The roadmap moves an organization from experiment to operational scale by closing each layer of the Agentic Execution Gap in sequence.</desc>
+
+  <rect width="1000" height="520" fill="#0c0b09"/>
+  <rect x="0" y="0" width="3" height="520" fill="#b8922a" opacity="0.5"/>
+
+  <text x="60" y="50" font-family="'Syne',Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="#d4ac4e">THE 90-DAY AGENTIC SCALE ROADMAP&#8482;</text>
+  <text x="60" y="74" font-family="'DM Sans',Arial,sans-serif" font-size="13" font-weight="400" fill="#f7f4ee" opacity="0.72">From isolated experiment to operational scale, one workflow at a time</text>
+  <line x1="60" y1="90" x2="940" y2="90" stroke="#b8922a" stroke-width="0.7" opacity="0.3"/>
+
+  <!-- timeline track -->
+  <line x1="100" y1="130" x2="900" y2="130" stroke="#b8922a" stroke-width="1.4" opacity="0.5"/>
+  <circle cx="100" cy="130" r="6" fill="#b8922a"/>
+  <circle cx="367" cy="130" r="6" fill="#b8922a"/>
+  <circle cx="634" cy="130" r="6" fill="#b8922a"/>
+  <circle cx="900" cy="130" r="8" fill="#d4ac4e"/>
+  <text x="100" y="116" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#f7f4ee" opacity="0.7">DAY 1</text>
+  <text x="367" y="116" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#f7f4ee" opacity="0.7">DAY 30</text>
+  <text x="634" y="116" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#f7f4ee" opacity="0.7">DAY 60</text>
+  <text x="900" y="116" text-anchor="middle" font-family="'Syne',Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#d4ac4e">DAY 90</text>
+
+  <!-- three phase panels -->
+  <g>
+    <!-- Phase 1 -->
+    <rect x="80" y="168" width="266" height="250" fill="#161411" stroke="#b8922a" stroke-opacity="0.25"/>
+    <rect x="80" y="168" width="266" height="3" fill="#b8922a"/>
+    <text x="104" y="206" font-family="'Syne',Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#d4ac4e">DAYS 1&#8211;30</text>
+    <text x="104" y="234" font-family="Georgia,serif" font-size="24" font-weight="300" fill="#f7f4ee">Foundation</text>
+    <g font-family="'DM Sans',Arial,sans-serif" font-size="12.5" fill="#f7f4ee" opacity="0.72">
+      <text x="104" y="268">&#8594;  Name the business outcome</text>
+      <text x="104" y="294">&#8594;  Pick one high-value workflow</text>
+      <text x="104" y="320">&#8594;  Set guardrails &amp; access</text>
+      <text x="104" y="346">&#8594;  Establish a hard baseline</text>
+      <text x="104" y="372">&#8594;  Assign a single owner</text>
+    </g>
+
+    <!-- Phase 2 -->
+    <rect x="367" y="168" width="266" height="250" fill="#0f0e0c" stroke="#b8922a" stroke-opacity="0.25"/>
+    <rect x="367" y="168" width="266" height="3" fill="#b8922a"/>
+    <text x="391" y="206" font-family="'Syne',Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#d4ac4e">DAYS 31&#8211;60</text>
+    <text x="391" y="234" font-family="Georgia,serif" font-size="24" font-weight="300" fill="#f7f4ee">Workflow Integration</text>
+    <g font-family="'DM Sans',Arial,sans-serif" font-size="12.5" fill="#f7f4ee" opacity="0.72">
+      <text x="391" y="268">&#8594;  Embed in the real workflow</text>
+      <text x="391" y="294">&#8594;  Design human-in-the-loop</text>
+      <text x="391" y="320">&#8594;  Instrument every action</text>
+      <text x="391" y="346">&#8594;  Build trust with the team</text>
+      <text x="391" y="372">&#8594;  Tune against the baseline</text>
+    </g>
+
+    <!-- Phase 3 -->
+    <rect x="654" y="168" width="266" height="250" fill="#1b1813" stroke="#b8922a" stroke-opacity="0.4"/>
+    <rect x="654" y="168" width="266" height="3" fill="#d4ac4e"/>
+    <text x="678" y="206" font-family="'Syne',Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#d4ac4e">DAYS 61&#8211;90</text>
+    <text x="678" y="234" font-family="Georgia,serif" font-size="24" font-weight="300" fill="#f7f4ee">Governance &amp; Scale</text>
+    <g font-family="'DM Sans',Arial,sans-serif" font-size="12.5" fill="#f7f4ee" opacity="0.72">
+      <text x="678" y="268">&#8594;  Prove ROI vs. baseline</text>
+      <text x="678" y="294">&#8594;  Formalize governance</text>
+      <text x="678" y="320">&#8594;  Document the operating model</text>
+      <text x="678" y="346">&#8594;  Expand to the next workflow</text>
+      <text x="678" y="372">&#8594;  Set the maturity target</text>
+    </g>
+  </g>
+
+  <line x1="60" y1="448" x2="940" y2="448" stroke="#b8922a" stroke-width="0.6" opacity="0.22"/>
+  <text x="60" y="468" font-family="'Syne',Arial,sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#f7f4ee" opacity="0.5">&#169; ERIK R. MILLER | ERM ADVISORY &#183; VERSION 1.0</text>
+  <text x="940" y="468" text-anchor="end" font-family="'Syne',Arial,sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#f7f4ee" opacity="0.5">ERIKRMILLER.COM</text>
+</svg>
