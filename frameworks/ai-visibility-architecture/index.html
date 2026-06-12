@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Visibility Architecture Framework — ERM Advisory | Answer Engine Optimization for B2B</title>
+<meta name="description" content="The AI Visibility Architecture by Erik R. Miller — a four-layer framework for Answer Engine Optimization that makes B2B companies the vendor AI cites and recommends.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Erik R. Miller">
+<link rel="canonical" href="https://erikrmiller.com/frameworks/ai-visibility-architecture/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://erikrmiller.com/frameworks/ai-visibility-architecture/">
+<meta property="og:title" content="AI Visibility Architecture Framework — ERM Advisory">
+<meta property="og:description" content="A four-layer Answer Engine Optimization framework for becoming the vendor AI recommends: Entity Foundation, Citable Substance, Corroboration Network, Machine Legibility.">
+<meta property="og:image" content="https://erikrmiller.com/frameworks/ai-visibility-architecture/erm-ai-visibility-architecture-framework-og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Erik R. Miller — ERM Advisory">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Visibility Architecture Framework — ERM Advisory">
+<meta name="twitter:description" content="A four-layer Answer Engine Optimization framework for becoming the vendor AI recommends.">
+<meta name="twitter:image" content="https://erikrmiller.com/frameworks/ai-visibility-architecture/erm-ai-visibility-architecture-framework-og-image.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "AI Visibility Architecture", "alternateName": "AI Visibility Architecture Framework", "description": "A four-layer Answer Engine Optimization framework for B2B companies: Entity Foundation, Citable Substance, Corroboration Network, and Machine Legibility, measured by Share of Model.", "url": "https://erikrmiller.com/frameworks/ai-visibility-architecture/", "author": {"@type": "Person", "name": "Erik R. Miller", "url": "https://erikrmiller.com"}, "publisher": {"@type": "Organization", "name": "E.R.M. Advisory", "url": "https://erikrmiller.com"}, "keywords": ["AI visibility architecture", "answer engine optimization", "AEO", "generative engine optimization", "Share of Model", "AI search", "AI visibility gap", "B2B AEO"], "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://erikrmiller.com/"}, {"@type": "ListItem", "position": 2, "name": "Frameworks", "item": "https://erikrmiller.com/frameworks/"}, {"@type": "ListItem", "position": 3, "name": "AI Visibility Architecture Framework", "item": "https://erikrmiller.com/frameworks/ai-visibility-architecture/"}]}}</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230c0b09'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2Cserif' font-size='18' font-style='italic' font-weight='300' fill='%23b8922a'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0c0b09;--ink-soft:rgba(12,11,9,.72);
+  --paper:#f7f4ee;--cream:#edeae0;--warm:#e5e0d4;--white:#ffffff;
+  --gold:#b8922a;--gold-a11y:#7a5e12;--muted:#5a5047;
+  --border:rgba(12,11,9,.10);--border-md:rgba(12,11,9,.16);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Syne',sans-serif;--body:'DM Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);overflow-x:hidden;font-size:1.0625rem;line-height:1.75;}
+.skip-link{position:absolute;top:-100%;left:1rem;z-index:10000;padding:.65rem 1.25rem;background:var(--gold-a11y);color:#fff;font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:top .2s;}
+.skip-link:focus{top:1rem;}
+:focus-visible{outline:3px solid var(--gold-a11y);outline-offset:3px;}
+:focus:not(:focus-visible){outline:none;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+/* NAV — dark bar, white text 19.7:1 */
+nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 4rem;background:rgba(12,11,9,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(184,146,42,.18);}
+.nav-logo{font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:#fff;text-decoration:none;}
+.nav-links{display:flex;gap:2.25rem;list-style:none;}
+.nav-links a{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.82);text-decoration:none;transition:color .2s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:100%;height:1px;background:var(--gold);transition:right .3s;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-links a:hover::after,.nav-links a.active::after{right:0;}
+.nav-links a.active{color:rgba(212,172,78,.9);}
+.nav-cta{color:rgba(212,172,78,.9)!important;border:1px solid rgba(184,146,42,.55);padding:.38rem .95rem;}
+.nav-cta:hover{background:rgba(184,146,42,.12);}
+.nav-cta::after{display:none!important;}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:300;}
+.nav-hamburger span{display:block;width:24px;height:1.5px;background:#fff;transition:transform .3s,opacity .3s;}
+.nav-hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.nav-hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.nav-links-mobile{display:none;position:fixed;inset:0;z-index:250;background:rgba(12,11,9,.97);flex-direction:column;align-items:center;justify-content:center;gap:2.25rem;list-style:none;}
+.nav-links-mobile.open{display:flex;}
+.nav-links-mobile a{font-family:var(--serif);font-size:clamp(2rem,6vw,3.2rem);font-weight:300;color:rgba(255,255,255,.9);text-decoration:none;transition:color .2s;}
+.nav-links-mobile a:hover{color:rgba(212,172,78,.9);}
+.nav-links-mobile .nav-cta{font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(212,172,78,.9)!important;border:1px solid rgba(184,146,42,.45);padding:.75rem 2rem;}
+@media(min-width:769px){.nav-hamburger{display:none!important;}.nav-links-mobile{display:none!important;}}
+/* HERO — paper bg */
+.fd-hero{background:var(--paper);padding:6rem 0 4rem;border-bottom:1px solid var(--border);position:relative;}
+.fd-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold) 0%,rgba(184,146,42,.25) 100%);}
+.fd-hero-inner{max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);}
+.fd-breadcrumb{display:flex;align-items:center;gap:.6rem;margin-bottom:1.75rem;flex-wrap:wrap;}
+.fd-breadcrumb a{font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.fd-breadcrumb a:hover{color:var(--gold-a11y);}
+.fd-breadcrumb-sep{font-family:var(--sans);font-size:.6rem;color:var(--border-md);}
+.fd-breadcrumb-cur{font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-a11y);}
+.fd-eyebrow{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-a11y);display:flex;align-items:center;gap:.8rem;margin-bottom:1.1rem;}
+.fd-eyebrow::before{content:'';width:20px;height:2px;background:var(--gold);flex-shrink:0;}
+.fd-tag-row{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.25rem;}
+.fd-tag{font-family:var(--sans);font-size:.52rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-a11y);border:1px solid var(--gold);padding:.22rem .65rem;}
+.fd-h1{font-family:var(--serif);font-size:clamp(2.8rem,6vw,6rem);font-weight:300;line-height:.92;letter-spacing:-.025em;color:var(--ink);margin-bottom:1.35rem;}
+.fd-h1 em{font-style:italic;color:var(--gold-a11y);}
+.fd-summary{font-family:var(--serif);font-size:clamp(1.1rem,1.7vw,1.4rem);font-weight:300;font-style:italic;color:var(--muted);line-height:1.65;max-width:620px;border-left:3px solid var(--gold);padding-left:1.25rem;}
+/* VISUAL — cream bg */
+.fd-visual-section{background:var(--cream);border-bottom:1px solid var(--border);}
+.fd-visual-inner{max-width:1200px;margin:0 auto;padding:4.5rem 4rem;}
+.fd-visual-wrap{max-width:760px;margin:0 auto;}
+.fd-figure{border:1px solid var(--border-md);background:var(--white);}
+.fd-figure svg{width:100%;height:auto;display:block;}
+.fd-figcaption{font-family:var(--body);font-size:.78rem;color:var(--muted);padding:.75rem 1rem;border-top:1px solid var(--border);line-height:1.5;}
+/* LAYOUT */
+.fd-layout{max-width:1200px;margin:0 auto;padding:0 4rem;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start;}
+.fd-article{padding:4rem 0 5rem;}
+.fd-sidebar{position:sticky;top:calc(70px + 2rem);padding:4rem 0 5rem;}
+/* ARTICLE TYPOGRAPHY */
+.fd-sect-label{font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-a11y);display:flex;align-items:center;gap:.7rem;margin-bottom:1.1rem;margin-top:3rem;}
+.fd-sect-label:first-child{margin-top:0;}
+.fd-sect-label::before{content:'';width:14px;height:2px;background:var(--gold);flex-shrink:0;}
+.fd-h2{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.2rem);font-weight:300;line-height:1.15;color:var(--ink);margin-bottom:1.1rem;}
+.fd-h2 em{font-style:italic;color:var(--gold-a11y);}
+.fd-p{font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.85;margin-bottom:1.25rem;}
+.fd-ul{margin-bottom:1.25rem;}
+.fd-ul li{font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.8;margin-bottom:.65rem;list-style:none;padding-left:1.5rem;position:relative;}
+.fd-ul li::before{content:'';position:absolute;left:0;top:.72em;width:6px;height:2px;background:var(--gold);flex-shrink:0;}
+.fd-highlight{background:var(--cream);border-left:4px solid var(--gold);padding:1.4rem 1.6rem;margin:2rem 0;}
+.fd-highlight p{font-family:var(--serif);font-size:1.15rem;font-weight:300;font-style:italic;color:var(--ink);line-height:1.72;margin:0;}
+/* SIDEBAR */
+.fd-sidebar-card{background:var(--white);border:1px solid var(--border-md);border-top:3px solid var(--gold);padding:1.75rem;margin-bottom:1.25rem;}
+.fd-sidebar-label{font-family:var(--sans);font-size:.55rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-a11y);margin-bottom:1.1rem;}
+.fd-sidebar-list{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
+.fd-sidebar-list a{font-family:var(--body);font-size:1rem;font-weight:300;color:var(--muted);text-decoration:none;transition:color .2s;display:flex;align-items:flex-start;gap:.55rem;}
+.fd-sidebar-list a::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.5em;}
+.fd-sidebar-list a:hover{color:var(--gold-a11y);}
+.fd-dl-cta{background:var(--ink);padding:1.5rem;text-align:center;margin-bottom:1.25rem;}
+.fd-dl-cta p{font-family:var(--body);font-size:.9rem;font-weight:300;color:rgba(255,255,255,.75);margin-bottom:.7rem;line-height:1.55;}
+.fd-dl-cta a{font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(212,172,78,.9);text-decoration:none;}
+.fd-dl-cta a:hover{color:#fff;}
+/* TAKEAWAYS — cream */
+.fd-takeaways{background:var(--cream);padding:5rem 0;border-top:1px solid var(--border);}
+.fd-takeaways-inner{max-width:1200px;margin:0 auto;padding:0 4rem;}
+.fd-takeaway-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem;}
+.fd-takeaway{background:var(--white);border:1px solid var(--border-md);border-top:3px solid var(--gold);padding:1.75rem;}
+.fd-takeaway-n{font-family:var(--serif);font-size:2.25rem;font-weight:300;font-style:italic;color:var(--gold);line-height:1;margin-bottom:.65rem;}
+.fd-takeaway-txt{font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.72;}
+/* AUTHOR — paper bg */
+.fd-author{background:var(--paper);padding:4.5rem 0;border-top:1px solid var(--border);}
+.fd-author-inner{max-width:1200px;margin:0 auto;padding:0 4rem;}
+.fd-author-grid{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:start;}
+.fd-author-avatar{width:76px;height:76px;border-radius:50%;background:var(--cream);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:2rem;font-weight:300;font-style:italic;color:var(--gold-a11y);flex-shrink:0;}
+.fd-author-label{font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-a11y);margin-bottom:.5rem;}
+.fd-author-name{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--ink);margin-bottom:.75rem;}
+.fd-author-bio{font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.8;}
+.fd-author-link{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-a11y);text-decoration:none;margin-top:.9rem;border-bottom:2px solid var(--gold);padding-bottom:2px;transition:color .2s,border-color .2s;}
+.fd-author-link:hover{color:var(--ink);border-color:var(--ink);}
+/* FOOTER */
+footer{background:var(--ink);padding:4.5rem 4rem 2.5rem;border-top:3px solid var(--gold);}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;padding-bottom:2.5rem;margin-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.08);}
+.ft-brand{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:#fff;margin-bottom:.6rem;}
+.ft-tag{font-family:var(--body);font-size:.95rem;font-weight:300;color:rgba(255,255,255,.62);line-height:1.72;max-width:230px;margin-bottom:1rem;}
+.ft-global{font-family:var(--sans);font-size:.55rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);}
+.ft-ht{font-family:var(--sans);font-size:.55rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(212,172,78,.75);margin-bottom:1.25rem;}
+.ft-ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.ft-ul a{font-family:var(--body);font-size:.95rem;font-weight:300;color:rgba(255,255,255,.62);text-decoration:none;transition:color .2s;}
+.ft-ul a:hover{color:#fff;}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.ft-copy{font-family:var(--body);font-size:.8rem;color:rgba(255,255,255,.38);}
+.ft-soc{display:flex;gap:1.5rem;}
+.ft-soc a{font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s;}
+.ft-soc a:hover{color:rgba(212,172,78,.9);}
+/* RESPONSIVE */
+@media(min-width:769px) and (max-width:1024px){
+  nav#nav{padding:1.25rem 3rem;}
+  .fd-hero-inner,.fd-visual-inner,.fd-layout,.fd-takeaways-inner,.fd-author-inner{padding-left:3rem;padding-right:3rem;}
+  .fd-layout{grid-template-columns:1fr 260px;gap:3rem;}
+  .fd-takeaway-grid{grid-template-columns:repeat(2,1fr);}
+  footer{padding:4rem 3rem 2rem;}
+  .ft{grid-template-columns:1fr 1fr;gap:3rem;}
+}
+@media(max-width:768px){
+  nav#nav{padding:1rem 1.5rem;}
+  .nav-links{display:none;}
+  .nav-hamburger{display:flex;}
+  .fd-hero-inner,.fd-visual-inner,.fd-takeaways-inner,.fd-author-inner{padding-left:1.5rem;padding-right:1.5rem;}
+  .fd-layout{grid-template-columns:1fr;gap:0;padding:0 1.5rem;}
+  .fd-sidebar{position:relative;top:auto;padding-top:0;padding-bottom:3rem;}
+  .fd-h1{font-size:clamp(2.6rem,10vw,4.2rem);}
+  .fd-takeaway-grid{grid-template-columns:1fr;gap:1rem;}
+  .fd-author-grid{grid-template-columns:1fr;gap:1.5rem;}
+  footer{padding:3rem 1.5rem 2rem;}
+  .ft{grid-template-columns:1fr;gap:2.5rem;}
+  .ft-bot{flex-direction:column;align-items:flex-start;}
+}
+/* PRINT */
+@media print{
+  *{background:#fff!important;color:#000!important;box-shadow:none!important;}
+  nav#nav,.nav-links-mobile,.fd-dl-cta,.fd-sidebar .fd-sidebar-card:last-child,footer{display:none!important;}
+  .fd-hero::before,.fd-takeaway-n{display:none!important;}
+  body{font-size:11pt;line-height:1.6;}
+  .fd-hero{padding:.75cm 0 .5cm;border-bottom:1pt solid #ccc;}
+  .fd-hero-inner,.fd-visual-inner,.fd-layout,.fd-takeaways-inner,.fd-author-inner{padding-left:0;padding-right:0;}
+  .fd-h1{font-size:26pt;}
+  .fd-summary{border-left:2pt solid #7a5e12!important;font-size:12pt;}
+  .fd-visual-section{background:#fff!important;}
+  .fd-layout{grid-template-columns:1fr!important;gap:0;}
+  .fd-sidebar{display:none!important;}
+  .fd-highlight{background:#f5f5f5!important;border-left:2pt solid #7a5e12!important;}
+  .fd-p,.fd-ul li,.fd-takeaway-txt,.fd-author-bio{color:#222!important;}
+  .fd-takeaway-grid{grid-template-columns:repeat(3,1fr)!important;}
+  .fd-takeaway{border-top:2pt solid #7a5e12!important;}
+  .fd-figure{border:1pt solid #ccc!important;}
+  a{color:#000!important;text-decoration:none!important;}
+  .fd-sect-label,.fd-eyebrow,.fd-author-label{color:#7a5e12!important;}
+  .fd-h2{font-size:16pt;}
+  .fd-author{padding-top:1cm;border-top:1pt solid #ccc;}
+}
+
+/* scoped comparison table */
+.fd-table{border-collapse:collapse;width:100%;margin:1.5rem 0 2rem;font-family:var(--body);font-size:1rem;}
+.fd-table caption{text-align:left;font-family:var(--sans);font-size:.58rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-bottom:.7rem;}
+.fd-table th,.fd-table td{text-align:left;padding:.8rem 1rem;border-bottom:1px solid var(--border);color:var(--muted);}
+.fd-table thead th{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid var(--gold);}
+.fd-table thead th:first-child{color:var(--muted);}
+.fd-table thead th:last-child{color:var(--gold-a11y);}
+.fd-table tbody th{font-weight:600;color:var(--ink);font-family:var(--body);font-size:1rem;}
+.fd-table tbody td{color:var(--gold-a11y);font-weight:600;}
+.fd-table tr:nth-child(even) th,.fd-table tr:nth-child(even) td{background:var(--cream);}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Erik R. Miller", "url": "https://erikrmiller.com", "jobTitle": "Marketing Leader & GTM Operator", "description": "Senior B2B marketing executive, fractional CMO, and builder of revenue marketing functions. 15+ years across four continents.", "sameAs": ["https://www.linkedin.com/in/erikrm/", "https://www.instagram.com/ermadvisory/"], "knowsAbout": ["B2B Marketing", "Answer Engine Optimization", "Generative Engine Optimization", "AI Search", "GTM Strategy", "Revenue Marketing", "Account-Based Marketing", "Marketing Execution"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "E.R.M. Advisory", "url": "https://erikrmiller.com", "founder": {"@type": "Person", "name": "Erik R. Miller", "url": "https://erikrmiller.com"}, "description": "E.R.M. Advisory provides fractional CMO services, GTM strategy, ABM programs, and demand generation for B2B technology and professional services companies.", "sameAs": ["https://www.linkedin.com/in/erikrm/", "https://www.instagram.com/ermadvisory/", "https://www.facebook.com/ERMAdvisory"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the AI Visibility Architecture?", "acceptedAnswer": {"@type": "Answer", "text": "The AI Visibility Architecture is a four-layer framework from ERM Advisory for Answer Engine Optimization in B2B. The layers are Entity Foundation, Citable Substance, Corroboration Network, and Machine Legibility. Together they make a company legible, credible, and citable to AI systems such as ChatGPT, Google AI Overviews, Perplexity, and Gemini, so it appears on the vendor shortlist AI assembles before a buyer contacts sales."}}, {"@type": "Question", "name": "What is the AI Visibility Gap?", "acceptedAnswer": {"@type": "Answer", "text": "The AI Visibility Gap is the distance between the demand a company has earned with human buyers and the citations it earns from AI engines. A brand can be well known to people yet nearly invisible to the models that now build vendor shortlists. The AI Visibility Architecture is the system for closing that gap."}}, {"@type": "Question", "name": "What is Share of Model?", "acceptedAnswer": {"@type": "Answer", "text": "Share of Model is a metric developed at ERM Advisory that measures how frequently AI systems cite, recommend, and accurately describe a company across a defined set of buyer questions. It is the answer-engine-era successor to share of voice."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "AI Visibility Architecture Framework", "name": "AI Visibility Architecture Framework", "description": "A four-layer Answer Engine Optimization framework for B2B companies to become the vendor AI cites and recommends, measured by Share of Model.", "url": "https://erikrmiller.com/frameworks/ai-visibility-architecture/", "datePublished": "2026-06-12", "dateModified": "2026-06-12", "version": "v1.0", "keywords": ["AI visibility architecture", "answer engine optimization", "AEO", "generative engine optimization", "Share of Model", "AI visibility gap", "B2B AEO"], "author": {"@type": "Person", "name": "Erik R. Miller", "url": "https://erikrmiller.com", "sameAs": "https://www.linkedin.com/in/erikrm/"}, "publisher": {"@type": "Organization", "name": "E.R.M. Advisory", "url": "https://erikrmiller.com", "logo": {"@type": "ImageObject", "url": "https://erikrmiller.com/erik-r-miller-b2b-marketing-leader-personal-website-thumbnail.png"}}, "about": ["Answer Engine Optimization", "AI search visibility", "B2B marketing"], "isPartOf": {"@type": "WebSite", "name": "ERM Advisory Framework Library", "url": "https://erikrmiller.com/frameworks/"}, "image": {"@type": "ImageObject", "url": "https://erikrmiller.com/frameworks/ai-visibility-architecture/erm-ai-visibility-architecture-framework-og-image.png", "width": 1200, "height": 630}}</script>
+<link rel="stylesheet" href="/assets/search/search.css">
+<link rel="stylesheet" href="/assets/nav/nav.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<!-- NAV:START -->
+<nav id="nav" aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="Erik R. Miller — Home">E.R.M.</a>
+    <ul class="nav-links" role="list">
+    <li><a href="/about/">About</a></li>
+    <li><a href="/about/#global">Global</a></li>
+    <li><a href="/frameworks/">Frameworks</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/resources/">Resources</a></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>&#8984;K</kbd></button></li>
+    <li><a href="/#contact" class="nav-cta">Work Together</a></li>
+  </ul>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<ul class="nav-links-mobile" id="mobileNav" role="list" aria-label="Mobile navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/about/#global">Global</a></li>
+  <li><a href="/frameworks/">Frameworks</a></li>
+  <li><a href="/blog/">Blog</a></li>
+  <li><a href="/resources/">Resources</a></li>
+  <li><a href="/#contact" class="nav-cta">Work Together</a></li>
+</ul>
+<!-- NAV:END -->
+<main id="main" style="padding-top:62px;">
+  <section class="fd-hero" aria-labelledby="fd-h1">
+    <div class="fd-hero-inner">
+      <nav aria-label="Breadcrumb" class="fd-breadcrumb">
+        <a href="/">Home</a><span class="fd-breadcrumb-sep" aria-hidden="true">&#8250;</span>
+        <a href="/frameworks/">Frameworks</a><span class="fd-breadcrumb-sep" aria-hidden="true">&#8250;</span>
+        <span class="fd-breadcrumb-cur" aria-current="page">AI Visibility Architecture</span>
+      </nav>
+      <p class="fd-eyebrow">ERM Advisory &middot; Framework</p>
+      <div class="fd-tag-row"><span class="fd-tag">AI Visibility</span><span class="fd-tag">Vendor Selection</span><span class="fd-tag">GTM Strategy</span><span class="fd-tag">AEO</span></div>
+      <h1 class="fd-h1" id="fd-h1">AI Visibility<br><em>Architecture</em></h1>
+      <p class="fd-summary">Your buyers are building their vendor shortlist inside AI before they ever contact sales. If the models that now mediate B2B research cannot find you, you lose influence before the first conversation. The AI Visibility Architecture is the four-layer system for becoming the vendor AI recommends.</p>
+    </div>
+  </section>
+  <section class="fd-visual-section" aria-label="Framework diagram">
+    <div class="fd-visual-inner"><div class="fd-visual-wrap">
+      <figure class="fd-figure">
+        <svg viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ava-t ava-d">
+<title id="ava-t">AI Visibility leads to AI Recommendation, measured as Share of Model</title>
+<desc id="ava-d">The four-layer AI Visibility Architecture (Entity Foundation, Citable Substance, Corroboration Network, Machine Legibility) creates AI Visibility. AI Visibility produces AI Recommendation inside engines such as ChatGPT, Google AI Overviews, Perplexity, and Gemini. AI Recommendation is measured as Share of Model, the business metric. ERM Advisory, Erik R. Miller.</desc>
+<rect width="700" height="500" fill="#f7f4ee"/>
+<text x="40" y="38" font-family="Syne,sans-serif" font-size="11" font-weight="700" letter-spacing="2.5" fill="#7a5e12">THE AI VISIBILITY ARCHITECTURE</text>
+<text x="40" y="60" font-family="DM Sans,sans-serif" font-size="12" font-style="italic" fill="#5a5047">AI Visibility &#8594; AI Recommendation &#8594; Share of Model</text>
+<line x1="40" y1="74" x2="660" y2="74" stroke="#b8922a" stroke-width="1"/>
+<!-- four layers -->
+<g font-family="DM Sans,sans-serif">
+<rect x="40" y="98" width="300" height="56" rx="3" fill="#0c0b09"/><text x="58" y="123" font-family="Syne,sans-serif" font-size="9" font-weight="700" letter-spacing="1.5" fill="#d4ac4e">LAYER 4</text><text x="58" y="141" font-size="13.5" font-weight="600" fill="#f7f4ee">Machine Legibility</text>
+<rect x="40" y="162" width="300" height="56" rx="3" fill="#161411"/><text x="58" y="187" font-family="Syne,sans-serif" font-size="9" font-weight="700" letter-spacing="1.5" fill="#d4ac4e">LAYER 3</text><text x="58" y="205" font-size="13.5" font-weight="600" fill="#f7f4ee">Corroboration Network</text>
+<rect x="40" y="226" width="300" height="56" rx="3" fill="#5a4d2a"/><text x="58" y="251" font-family="Syne,sans-serif" font-size="9" font-weight="700" letter-spacing="1.5" fill="#f0deae">LAYER 2</text><text x="58" y="269" font-size="13.5" font-weight="600" fill="#f7f4ee">Citable Substance</text>
+<rect x="40" y="290" width="300" height="56" rx="3" fill="#b8922a"/><text x="58" y="315" font-family="Syne,sans-serif" font-size="9" font-weight="700" letter-spacing="1.5" fill="#0c0b09">LAYER 1</text><text x="58" y="333" font-size="13.5" font-weight="600" fill="#0c0b09">Entity Foundation</text>
+</g>
+<!-- visibility bracket -->
+<path d="M348 98 q8 0 8 8 v108 q0 8 8 8 q-8 0 -8 8 v108 q0 8 -8 8" fill="none" stroke="#7a5e12" stroke-width="1.4"/>
+<text x="372" y="226" font-family="Syne,sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#7a5e12" transform="rotate(0)">= AI</text>
+<text x="372" y="244" font-family="Syne,sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#7a5e12">VISIBILITY</text>
+<defs><marker id="ar2" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#0c0b09"/></marker></defs>
+<!-- arrow to recommendation -->
+<path d="M438 222 L470 222" stroke="#0c0b09" stroke-width="2" marker-end="url(#ar2)"/>
+<rect x="478" y="150" width="182" height="120" rx="3" fill="#fff" stroke="#0c0b09" stroke-width="1.5"/>
+<text x="569" y="180" text-anchor="middle" font-family="Syne,sans-serif" font-size="11" font-weight="700" letter-spacing="1.2" fill="#0c0b09">AI RECOMMENDATION</text>
+<text x="569" y="202" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#3d3830">Engines recommend you</text>
+<text x="569" y="219" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#3d3830">to the buyer, before sales</text>
+<text x="569" y="248" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#7a5e12">ChatGPT &#183; AI Overviews</text>
+<text x="569" y="262" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#7a5e12">Perplexity &#183; Gemini</text>
+<!-- arrow down to share of model -->
+<path d="M569 272 L569 304" stroke="#0c0b09" stroke-width="2" marker-end="url(#ar2)"/>
+<rect x="478" y="312" width="182" height="92" rx="3" fill="#0c0b09"/>
+<rect x="478" y="312" width="182" height="22" rx="3" fill="#b8922a"/>
+<text x="569" y="328" text-anchor="middle" font-family="Syne,sans-serif" font-size="9" font-weight="700" letter-spacing="2" fill="#0c0b09">THE BUSINESS METRIC</text>
+<text x="569" y="362" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="19" font-weight="600" fill="#f7f4ee">Share of Model</text>
+<text x="569" y="386" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#cfc9ba">Your share of AI recommendations</text>
+<text x="40" y="372" font-family="DM Sans,sans-serif" font-size="11" font-style="italic" fill="#5a5047">Four layers compound. A weak Entity Foundation caps everything built above it.</text>
+<text x="40" y="478" font-family="Syne,sans-serif" font-size="7.5" letter-spacing="2" fill="rgba(122,94,18,0.4)">ERM ADVISORY &#183; AI VISIBILITY ARCHITECTURE &#183; ERIK R. MILLER</text>
+</svg>
+        <figcaption class="fd-figcaption">The AI Visibility Architecture &mdash; how four layers become AI Visibility, then AI Recommendation, measured as Share of Model &middot; ERM Advisory &middot; Erik R. Miller</figcaption>
+      </figure>
+    </div></div>
+  </section>
+  <div class="fd-layout" style="background:var(--paper);">
+    <article class="fd-article" aria-label="Framework content">
+<p class="fd-sect-label">The Business Problem</p>
+<h2 class="fd-h2">Why AI Recommends Your Competitors, Not You</h2>
+<p class="fd-p">Executives are asking a new set of questions. Why are competitors being recommended inside ChatGPT and Gemini? Why do buyers arrive with a shortlist already built? Why are we losing influence before sales ever engages? The answer is the same in every case: B2B buyers now research and shortlist vendors inside AI, and the systems doing the recommending do not yet know you. <a href="https://www.forrester.com/press-newsroom/forrester-b2b-summit-north-america-2025-new-research/" style="color:var(--gold-a11y);">Forrester's Buyers' Journey Survey (2025)</a> found that more B2B buyers name generative AI as their most meaningful source of information than any other channel.</p>
+<p class="fd-p">This is the supply-side response to the <a href="/frameworks/ai-buying-committee/" style="color:var(--gold-a11y);">AI Buying Committee Framework</a>, which maps how buyers delegate research and evaluation to AI. The AI Visibility Architecture, developed by Erik R. Miller at ERM Advisory, is the operating model for influencing that moment. It organizes the work into four layers that compound: each one is necessary, none is sufficient alone. Answer Engine Optimization is the mechanism. Becoming the vendor AI recommends is the goal.</p>
+<p class="fd-p">The framework exists to close a specific problem: the <strong>AI Visibility Gap</strong>, the distance between the demand a company has earned with human buyers and the recommendations it earns from AI engines. The two are produced by different mechanisms, which is why strong brands are so often missing from the answer.</p>
+<div class="fd-highlight"><p>"You can be well known to people and nearly invisible to models. The AI Visibility Architecture is the system for closing that gap."</p></div>
+<p class="fd-sect-label">The Four Layers</p>
+<h2 class="fd-h2">Entity, Substance, Corroboration, Legibility</h2>
+<p class="fd-p"><strong>Layer 1 &mdash; Entity Foundation.</strong> Before a model can recommend you, it must know what you are with confidence. Become an unambiguous, consistent entity across your site, LinkedIn, review profiles, and reference databases, with a named, credible author behind your content. Everything above this layer inherits its strength.</p>
+<p class="fd-p"><strong>Layer 2 &mdash; Citable Substance.</strong> The content a model wants to extract: original point of view, clear definitions, real data, and direct comparisons that answer the questions buyers actually ask. The test is simple: can a model lift one paragraph and use it as a complete, accurate answer? Distinct intellectual property, such as a named framework or proprietary benchmark, is the most durable advantage you can hold in AI recommendation.</p>
+<p class="fd-p"><strong>Layer 3 &mdash; Corroboration Network.</strong> The independent sources that say what you say about yourself: reviews, analyst and press mentions, customer stories, and the communities where practitioners compare notes. Engines weight consensus heavily because it lowers their risk of being wrong. You cannot publish your way here. You earn it.</p>
+<p class="fd-p"><strong>Layer 4 &mdash; Machine Legibility.</strong> The technical work that lets a machine read and trust your content: structured data and schema, clean semantic HTML, question-shaped headings, FAQ and HowTo markup, and fast, crawlable, current pages. Necessary, but the most over-weighted layer. Schema on a page with no substance is a clean label on an empty jar.</p>
+<p class="fd-p">The engines named here, such as ChatGPT, Google AI Overviews, Perplexity, and Gemini, are examples, not the framework. The specific tools will change. The four layers describe how any system that reads, corroborates, and parses the web decides what to recommend, which is why the model outlasts the vendors.</p>
+<p class="fd-sect-label">The ERM Advisory AI Operating System</p>
+<h2 class="fd-h2">Three Frameworks, One System</h2>
+<p class="fd-p">The AI Visibility Architecture is one half of a connected system for the AI-mediated buying journey. The <a href="/frameworks/ai-buying-committee/" style="color:var(--gold-a11y);">AI Buying Committee Framework</a> explains the demand side: how buyers now delegate research and evaluation to AI. This framework is the supply side: how vendors become visible, citable, and recommendable in that process. <strong>Share of Model</strong> is how you measure it. Together they form the ERM Advisory AI Operating System.</p>
+<p class="fd-p">That system connects to the wider library. It treats buyer behavior as intelligence, in the spirit of the <a href="/frameworks/signal-centric-abm/" style="color:var(--gold-a11y);">Signal-Centric ABM Operating Model</a>; it depends on disciplined delivery, the subject of the <a href="/frameworks/marketing-execution-gap/" style="color:var(--gold-a11y);">Marketing Execution Gap Framework</a> and the <a href="/blog/revenue-execution-gap/" style="color:var(--gold-a11y);">Revenue Execution Gap</a>; and it is operationalized within the <a href="/frameworks/erm-revenue-execution-system/" style="color:var(--gold-a11y);">ERM Revenue Execution System</a>. Visibility that never reaches the <a href="/frameworks/buying-group-orchestration/" style="color:var(--gold-a11y);">buying group</a> is wasted, which is why recommendation is the beginning of the work, not the end.</p>
+<p class="fd-sect-label">The Shift</p>
+<h2 class="fd-h2">From Ranking to Recommendation</h2>
+<p class="fd-p">When buyers researched in a search engine, you competed for a ranking and a click. When buyers research in AI, you compete to be recommended. Answer Engine Optimization is the mechanism, but the contest itself has changed, from position to recommendation. The <a href="/blog/demand-creation-vs-demand-capture/" style="color:var(--gold-a11y);">demand you create</a> only converts if the model names you when the buyer asks.</p>
+<table class="fd-table">
+<caption>Traditional Search vs AI-Mediated Buying</caption>
+<thead><tr><th scope="col">Traditional Search</th><th scope="col">AI Search</th></tr></thead>
+<tbody>
+<tr><th scope="row">Clicks</th><td>Answers</td></tr>
+<tr><th scope="row">Rankings</th><td>Citations</td></tr>
+<tr><th scope="row">Share of Voice</th><td>Share of Model</td></tr>
+<tr><th scope="row">SERP position</th><td>AI recommendation</td></tr>
+<tr><th scope="row">Traffic</th><td>Recommendation presence</td></tr>
+</tbody>
+</table>
+<p class="fd-sect-label">The Metric</p>
+<h2 class="fd-h2">Share of Model</h2>
+<p class="fd-p">At ERM Advisory, we use a metric called <strong>Share of Model</strong> to measure how frequently AI systems cite, recommend, and accurately describe a company across a defined set of buyer questions. It is the answer-engine-era successor to share of voice.</p>
+<p class="fd-p">Measure it by assembling a fixed set of the questions your buyers actually ask, running them across the major engines on a cadence, and tracking three things: citation frequency, description accuracy, and assisted pipeline from AI-shaped research. Together they tell you whether your AI visibility is translating into qualified demand. You can baseline it today with the <a href="/frameworks/ai-visibility-architecture/ERM-AI-Visibility-Scorecard.pdf" style="color:var(--gold-a11y);">AI Visibility Scorecard</a>.</p>
+<p class="fd-p" style="font-size:.98rem;color:var(--gold-a11y);"><strong>Forthcoming:</strong> Share of Model will be expanded into its own framework covering buyer-question selection, citation and recommendation tracking, description accuracy, reporting cadence, and executive dashboards. It is an emerging ERM Advisory measurement standard.</p>
+<p class="fd-sect-label">Ownership</p>
+<h2 class="fd-h2">Who Owns AI Visibility</h2>
+<p class="fd-p">AI visibility sits at the intersection of content, product marketing, PR, SEO, customer advocacy, and revenue operations. That is precisely why it stalls: when it belongs to everyone, it belongs to no one. It needs a single accountable owner, usually in marketing, with authority to coordinate owned, earned, and technical work, and a seat in the revenue operating rhythm.</p>
+<div class="fd-highlight"><p>"Schema on a page with no substance is a clean label on an empty jar. The foundation and the substance do the heavy lifting."</p></div>
+</article>
+    <aside class="fd-sidebar" aria-label="Framework resources">
+      <div class="fd-dl-cta"><p>Download the AI Visibility Scorecard &mdash; free PDF.</p><a href="/frameworks/ai-visibility-architecture/ERM-AI-Visibility-Scorecard.pdf" download>Download Scorecard PDF &rarr;</a></div>
+      <div class="fd-sidebar-card">
+        <p class="fd-sidebar-label">Related Frameworks</p>
+        <ul class="fd-sidebar-list" role="list"><li><a href="/frameworks/ai-buying-committee/">AI Buying Committee Framework</a></li><li><a href="/frameworks/buying-group-orchestration/">Buying Group Orchestration Framework</a></li><li><a href="/frameworks/signal-centric-abm/">Signal-Centric ABM Operating Model</a></li><li><a href="/frameworks/marketing-execution-gap/">Marketing Execution Gap Framework</a></li><li><a href="/frameworks/erm-revenue-execution-system/">ERM Revenue Execution System</a></li></ul>
+      </div>
+      <div class="fd-sidebar-card">
+        <p class="fd-sidebar-label">Related Articles</p>
+        <ul class="fd-sidebar-list" role="list"><li><a href="/blog/answer-engine-optimization-b2b/">Answer Engine Optimization for B2B: How to Become the Vendor AI Recommends</a></li><li><a href="/blog/ai-buying-committee-b2b-vendor-research/">Your Buyer's AI Is Already Researching You Before Sales Speaks</a></li><li><a href="/blog/ai-powered-icp-development/">AI-Powered ICP Development</a></li><li><a href="/blog/the-hidden-abm-problem-buying-groups/">The Hidden ABM Problem: Buying Groups, Not Accounts</a></li></ul>
+      </div>
+      <div class="fd-sidebar-card">
+        <p class="fd-sidebar-label">Work with Erik</p>
+        <p style="font-family:var(--body);font-size:1rem;font-weight:300;color:var(--muted);line-height:1.65;margin-bottom:1rem;">Bring these frameworks to your revenue team with hands-on advisory support.</p>
+        <a href="/frameworks/erm-revenue-execution-system/" style="font-family:var(--body);font-size:.95rem;font-weight:300;text-decoration:none;display:block;margin-bottom:1rem;border-bottom:2px solid var(--gold);padding-bottom:2px;color:var(--gold-a11y);">The ERM Revenue Execution System&#8482; &rarr;</a>
+        <a href="/#contact" style="font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-a11y);text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:2px;">Get in Touch &rarr;</a>
+      </div>
+    </aside>
+  </div>
+  <section class="fd-takeaways" aria-labelledby="tk-h2">
+    <div class="fd-takeaways-inner">
+      <p style="font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-a11y);display:flex;align-items:center;gap:.7rem;margin-bottom:.5rem;"><span style="width:14px;height:2px;background:var(--gold);display:inline-block;flex-shrink:0;"></span>Summary</p>
+      <h2 id="tk-h2" style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:var(--ink);">Key <em style="font-style:italic;color:var(--gold-a11y);">Takeaways</em></h2>
+      <div class="fd-takeaway-grid"><div class="fd-takeaway"><div class="fd-takeaway-n">01</div><p class="fd-takeaway-txt">The AI Visibility Gap is the distance between demand earned with humans and citations earned from machines. Closing it is now a revenue function.</p></div><div class="fd-takeaway"><div class="fd-takeaway-n">02</div><p class="fd-takeaway-txt">Four layers compound: Entity Foundation and Citable Substance do the heavy lifting, Corroboration earns trust, and Machine Legibility makes it readable.</p></div><div class="fd-takeaway"><div class="fd-takeaway-n">03</div><p class="fd-takeaway-txt">Manage it with Share of Model: citation frequency, description accuracy, and assisted pipeline, owned by one accountable leader.</p></div></div>
+    </div>
+  </section>
+  <section style="background:var(--cream);padding:4.5rem 0;border-top:1px solid var(--border);" aria-labelledby="faq-h2">
+    <div style="max-width:1200px;margin:0 auto;padding:0 4rem;">
+      <p style="font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-a11y);display:flex;align-items:center;gap:.7rem;margin-bottom:.5rem;"><span style="width:14px;height:2px;background:var(--gold);display:inline-block;"></span>Frequently Asked Questions</p>
+      <h2 id="faq-h2" style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:var(--ink);margin-bottom:2rem;">Common <em style="font-style:italic;color:var(--gold-a11y);">Questions</em></h2>
+      <dl>
+      <div style="margin-bottom:2rem;">
+        <dt style="font-family:var(--sans);font-size:.88rem;font-weight:700;letter-spacing:.04em;color:var(--ink);margin-bottom:.65rem;padding-left:1.25rem;border-left:3px solid var(--gold);">What is the AI Visibility Architecture?</dt>
+        <dd style="font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.8;padding-left:1.25rem;">The AI Visibility Architecture is a four-layer framework from ERM Advisory for Answer Engine Optimization in B2B: Entity Foundation, Citable Substance, Corroboration Network, and Machine Legibility. Together they make a company legible, credible, and citable to AI systems such as ChatGPT, Google AI Overviews, Perplexity, and Gemini, so it appears on the vendor shortlist AI assembles before a buyer contacts sales.</dd>
+      </div>
+      <div style="margin-bottom:2rem;">
+        <dt style="font-family:var(--sans);font-size:.88rem;font-weight:700;letter-spacing:.04em;color:var(--ink);margin-bottom:.65rem;padding-left:1.25rem;border-left:3px solid var(--gold);">What is the AI Visibility Gap?</dt>
+        <dd style="font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.8;padding-left:1.25rem;">The AI Visibility Gap is the distance between the demand a company has earned with human buyers and the citations it earns from AI engines. A brand can be well known to people yet nearly invisible to the models that now build vendor shortlists. The AI Visibility Architecture is the system for closing that gap.</dd>
+      </div>
+      <div style="margin-bottom:2rem;">
+        <dt style="font-family:var(--sans);font-size:.88rem;font-weight:700;letter-spacing:.04em;color:var(--ink);margin-bottom:.65rem;padding-left:1.25rem;border-left:3px solid var(--gold);">What is Share of Model?</dt>
+        <dd style="font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.8;padding-left:1.25rem;">Share of Model is a metric developed at ERM Advisory that measures how frequently AI systems cite, recommend, and accurately describe a company across a defined set of buyer questions. It is the answer-engine-era successor to share of voice.</dd>
+      </div>
+      </dl>
+    </div>
+  </section>
+  <section style="background:var(--paper);padding:4rem 0;border-top:1px solid var(--border);" aria-labelledby="evid-h2">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);">
+      <p style="font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-a11y);display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;"><span style="width:14px;height:2px;background:var(--gold);display:inline-block;"></span>Research &amp; Supporting Evidence</p>
+      <h2 id="evid-h2" style="font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:300;color:var(--ink);margin-bottom:.5rem;">The <em style="font-style:italic;color:var(--gold-a11y);">Evidence</em></h2>
+      <p style="font-family:var(--body);font-size:1rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:1.5rem;">The AI Visibility Architecture, the AI Visibility Gap, and Share of Model are original to ERM Advisory. The market context is drawn from primary research.</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.7rem;">
+        <li style="font-family:var(--body);font-size:1rem;font-weight:300;color:var(--muted);line-height:1.65;padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://www.forrester.com/press-newsroom/forrester-b2b-summit-north-america-2025-new-research/" style="color:var(--gold-a11y);text-decoration:none;font-weight:600;">Forrester, Buyers' Journey Survey (2025)</a> &mdash; more B2B buyers name generative AI as their most meaningful source of information than any other channel.</li>
+        <li style="font-family:var(--body);font-size:1rem;font-weight:300;color:var(--muted);line-height:1.65;padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-20-gartner-survey-finds-sixty-nine-percent-of-b-two-b-buyers-turn-to-sales-reps-to-validate-ai-generated-insights" style="color:var(--gold-a11y);text-decoration:none;font-weight:600;">Gartner (2025 to 2026)</a> &mdash; 45% of B2B buyers used AI during a recent purchase; most still validate AI insights with a human seller.</li>
+        <li style="font-family:var(--body);font-size:1rem;font-weight:300;color:var(--muted);line-height:1.65;padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-fundamental-truths-how-b2b-winners-keep-growing" style="color:var(--gold-a11y);text-decoration:none;font-weight:600;">McKinsey, B2B Pulse (2024)</a> &mdash; buyers now use roughly ten interaction channels across the buying journey.</li>
+        <li style="font-family:var(--body);font-size:1rem;font-weight:300;color:var(--muted);line-height:1.65;padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://blog.google/products/search/google-search-ai-mode-update/" style="color:var(--gold-a11y);text-decoration:none;font-weight:600;">Google (2025)</a> &mdash; AI Overviews and AI Mode each reached billion-plus user scale, moving AI answers to the center of search.</li>
+      </ul>
+    </div>
+  </section>
+  <section style="background:var(--white);padding:4rem 0;border-top:1px solid var(--border);" aria-labelledby="ref-h2-ava">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);">
+      <p style="font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-a11y);display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;"><span style="width:14px;height:2px;background:var(--gold);display:inline-block;"></span>Topic Cluster</p>
+      <h2 id="ref-h2-ava" style="font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:300;color:var(--ink);margin-bottom:.5rem;">Referenced <em style="font-style:italic;color:var(--gold-a11y);">In</em></h2>
+      <p style="font-family:var(--body);font-size:1rem;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:2rem;">This framework is the canonical source for the AI Visibility Architecture, the AI Visibility Gap, and Share of Model. It is referenced in the following ERM Advisory publications.</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.85rem;">
+        <li style="display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 1.25rem;background:var(--paper);border:1px solid var(--border);border-left:3px solid var(--gold);">
+          <span style="font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-a11y);padding-top:.2rem;flex-shrink:0;">&#8599;</span>
+          <div>
+            <a href="/blog/answer-engine-optimization-b2b/" style="font-family:var(--sans);font-size:.82rem;font-weight:700;letter-spacing:.04em;color:var(--ink);text-decoration:none;display:block;margin-bottom:.25rem;">Answer Engine Optimization for B2B: How to Become the Vendor AI Recommends</a>
+            <span style="font-family:var(--body);font-size:.82rem;font-weight:300;color:var(--muted);">ERM Advisory Blog</span>
+          </div>
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 1.25rem;background:var(--paper);border:1px solid var(--border);border-left:3px solid var(--gold);">
+          <span style="font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-a11y);padding-top:.2rem;flex-shrink:0;">&#8599;</span>
+          <div>
+            <a href="/frameworks/ai-buying-committee/" style="font-family:var(--sans);font-size:.82rem;font-weight:700;letter-spacing:.04em;color:var(--ink);text-decoration:none;display:block;margin-bottom:.25rem;">AI Buying Committee Framework</a>
+            <span style="font-family:var(--body);font-size:.82rem;font-weight:300;color:var(--muted);">ERM Advisory Framework</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="fd-author" aria-labelledby="auth-h2">
+    <div class="fd-author-inner">
+      <div class="fd-author-grid">
+        <div class="fd-author-avatar" aria-hidden="true">E</div>
+        <div>
+          <p class="fd-author-label" id="auth-h2">About the Author</p>
+          <p class="fd-author-name">Erik R. Miller</p>
+          <p class="fd-author-bio">Marketing leader, builder, and operator with 15+ years building revenue marketing functions across four continents. Erik has designed ABM programs, demand generation systems, and GTM architectures for companies ranging from early-stage startups to $10B+ enterprises. The frameworks here are drawn directly from that operational experience.</p>
+          <a href="/about/" class="fd-author-link">Learn More About Erik &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer role="contentinfo">
+  <div class="ft">
+    <div>
+      <div class="ft-brand">Erik R. Miller</div>
+      <p class="ft-tag">Marketing Leader. Builder. Operator. Based in New York.</p>
+      <p class="ft-global">New York &middot; Globally experienced</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <p class="ft-ht">Navigate</p>
+      <ul class="ft-ul" role="list">
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/frameworks/">Frameworks</a></li>
+        <li><a href="/#resources">Resources</a></li>
+        <li><a href="/#contact">Work Together</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Connect">
+      <p class="ft-ht">Connect</p>
+      <ul class="ft-ul" role="list">
+        <li><a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+        <li><a href="mailto:erikrmiller@outlook.com">Email Erik</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="ft-bot">
+    <p class="ft-copy">&copy; 2026 Erik R. Miller &middot; E.R.M. Advisory &middot; New York City</p>
+    <div class="ft-soc">
+      <a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank">Instagram</a>
+    </div>
+  </div>
+</footer>
+<script>
+const hb=document.getElementById('navHamburger');
+const mn=document.getElementById('mobileNav');
+hb.addEventListener('click',()=>{
+  const e=hb.getAttribute('aria-expanded')==='true';
+  hb.setAttribute('aria-expanded',String(!e));
+  mn.classList.toggle('open',!e);
+  document.body.style.overflow=e?'':'hidden';
+});
+mn.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  hb.setAttribute('aria-expanded','false');mn.classList.remove('open');document.body.style.overflow='';
+}));
+</script>
+<script src="/assets/search/search.js"></script>
+<script src="/assets/nav/nav.js" defer></script>
+</body></html>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="t d" font-family="'DM Sans',Helvetica,Arial,sans-serif">
+<title id="t">The Shift to AI-Mediated Buying</title>
+<desc id="d">A comparison of traditional search and AI-mediated buying. Clicks become Answers. Rankings become Citations. Share of Voice becomes Share of Model. SERP position becomes recommendation. Traffic becomes presence in the answer. ERM Advisory, Erik R. Miller.</desc>
+<rect width="1200" height="1200" fill="#f7f4ee"/>
+<rect width="1200" height="250" fill="#0c0b09"/>
+<rect width="1200" height="6" fill="#b8922a"/>
+<text x="80" y="90" font-size="20" font-weight="700" letter-spacing="4" fill="#b8922a">ERM ADVISORY &#183; THE AI VISIBILITY ARCHITECTURE</text>
+<text x="80" y="162" font-family="'Cormorant Garamond',Georgia,serif" font-size="60" font-weight="300" fill="#f7f4ee">The Shift to <tspan font-style="italic" fill="#d4ac4e">AI-Mediated Buying</tspan></text>
+<text x="80" y="208" font-size="20" font-weight="300" fill="rgba(247,244,238,0.62)">Buyers build the shortlist inside AI, before sales ever engages.</text>
+<text x="300" y="338" text-anchor="middle" font-size="23" font-weight="700" fill="#6b6456">TRADITIONAL SEARCH</text>
+<text x="880" y="338" text-anchor="middle" font-size="23" font-weight="700" fill="#7a5e12">AI-MEDIATED BUYING</text>
+<line x1="80" y1="364" x2="1120" y2="364" stroke="#b8922a" stroke-width="2"/>
+<g font-family="'Cormorant Garamond',Georgia,serif">
+<rect x="80" y="412" width="1040" height="114" fill="#edeae0"/>
+<text x="290" y="470" text-anchor="middle" font-size="44" font-weight="300" fill="#3d3830">Clicks</text>
+<line x1="540" y1="454" x2="620" y2="454" stroke="#b8922a" stroke-width="3"/>
+<polygon points="620,444 642,454 620,464" fill="#b8922a"/>
+<text x="870" y="470" text-anchor="middle" font-size="44" font-weight="600" fill="#7a5e12">Answers</text>
+<rect x="80" y="552" width="1040" height="114" fill="#f7f4ee"/>
+<text x="290" y="610" text-anchor="middle" font-size="44" font-weight="300" fill="#3d3830">Rankings</text>
+<line x1="540" y1="594" x2="620" y2="594" stroke="#b8922a" stroke-width="3"/>
+<polygon points="620,584 642,594 620,604" fill="#b8922a"/>
+<text x="870" y="610" text-anchor="middle" font-size="44" font-weight="600" fill="#7a5e12">Citations</text>
+<rect x="80" y="692" width="1040" height="114" fill="#edeae0"/>
+<text x="290" y="750" text-anchor="middle" font-size="44" font-weight="300" fill="#3d3830">Share of Voice</text>
+<line x1="540" y1="734" x2="620" y2="734" stroke="#b8922a" stroke-width="3"/>
+<polygon points="620,724 642,734 620,744" fill="#b8922a"/>
+<text x="870" y="750" text-anchor="middle" font-size="44" font-weight="600" fill="#7a5e12">Share of Model</text>
+<rect x="80" y="832" width="1040" height="114" fill="#f7f4ee"/>
+<text x="290" y="890" text-anchor="middle" font-size="44" font-weight="300" fill="#3d3830">SERP Position</text>
+<line x1="540" y1="874" x2="620" y2="874" stroke="#b8922a" stroke-width="3"/>
+<polygon points="620,864 642,874 620,884" fill="#b8922a"/>
+<text x="870" y="890" text-anchor="middle" font-size="44" font-weight="600" fill="#7a5e12">Recommendation</text>
+<rect x="80" y="972" width="1040" height="114" fill="#edeae0"/>
+<text x="290" y="1030" text-anchor="middle" font-size="44" font-weight="300" fill="#3d3830">Traffic</text>
+<line x1="540" y1="1014" x2="620" y2="1014" stroke="#b8922a" stroke-width="3"/>
+<polygon points="620,1004 642,1014 620,1024" fill="#b8922a"/>
+<text x="870" y="1030" text-anchor="middle" font-size="44" font-weight="600" fill="#7a5e12">In the Answer</text>
+</g>
+<rect x="80" y="1090" width="1040" height="56" rx="3" fill="#0c0b09"/>
+<g font-family="'DM Sans',sans-serif" font-size="20" font-weight="600">
+<text x="300" y="1126" fill="#f7f4ee">AI Visibility</text>
+<line x1="455" y1="1118" x2="487" y2="1118" stroke="#d4ac4e" stroke-width="2.5"/><polygon points="487,1112 505,1118 487,1124" fill="#d4ac4e"/>
+<text x="520" y="1126" fill="#f7f4ee">Recommendation</text>
+<line x1="700" y1="1118" x2="732" y2="1118" stroke="#d4ac4e" stroke-width="2.5"/><polygon points="732,1112 750,1118 732,1124" fill="#d4ac4e"/>
+<text x="765" y="1126" fill="#d4ac4e">Share of Model</text>
+</g>
+</svg>
