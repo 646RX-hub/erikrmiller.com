@@ -2,6 +2,8 @@ name: IndexNow Submit
 
 # Submits newly created or materially updated URLs to IndexNow after each
 # deploy to the production branch. Only changed, indexable HTML URLs are sent.
+# Before anything is submitted, the sitemap-presence guard requires every changed
+# URL to exist in sitemap.xml (missing URLs block the run; stale lastmod warns).
 # Endpoint : https://api.indexnow.org/IndexNow
 # Host     : erikrmiller.com
 # Key file : https://erikrmiller.com/944495abd75a4b04ac89208cfe0a1d93.txt
@@ -46,6 +48,7 @@ jobs:
           set -euo pipefail
           mkdir -p .indexnow
           : > .indexnow/changed.txt
+          : > .indexnow/map.tsv          # url<TAB>source-file (push event only)
 
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.urls }}" ]; then
             printf '%s\n' ${{ github.event.inputs.urls }} > .indexnow/changed.txt
@@ -84,7 +87,9 @@ jobs:
               else
                 url="/$f"                        # top-level page.html -> /page.html
               fi
-              echo "https://${HOST}${url}" >> .indexnow/changed.txt
+              full="https://${HOST}${url}"
+              echo "$full" >> .indexnow/changed.txt
+              printf '%s\t%s\n' "$full" "$f" >> .indexnow/map.tsv
             done < .indexnow/files.txt
             sort -u -o .indexnow/changed.txt .indexnow/changed.txt
           fi
@@ -93,6 +98,80 @@ jobs:
           echo "count=${COUNT}" >> "$GITHUB_OUTPUT"
           echo "Changed indexable URLs (${COUNT}):"
           cat .indexnow/changed.txt || true
+
+      # ────────────────────────────────────────────────────────────────────
+      # Sitemap-presence gate. Runs BEFORE any submission.
+      #   * HARD FAIL  — a changed URL is absent from sitemap.xml (a new page
+      #                  that was not added). Nothing is submitted; fix the
+      #                  sitemap and re-push.
+      #   * WARN ONLY  — the URL is in sitemap.xml but its <lastmod> is older
+      #                  than the page's last change (e.g. a cosmetic/sitewide
+      #                  edit). The run proceeds; the stale entries are logged.
+      # Keeps the hand-curated sitemap the source of truth without blocking
+      # routine deploys. Skipped for manual workflow_dispatch URLs.
+      # ────────────────────────────────────────────────────────────────────
+      - name: Verify changed URLs are present in sitemap.xml
+        if: steps.build.outputs.count != '0' && !(github.event_name == 'workflow_dispatch' && github.event.inputs.urls != '')
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ ! -f sitemap.xml ]; then
+            echo "::error title=Sitemap missing::sitemap.xml not found at repo root — cannot verify before submitting."
+            exit 1
+          fi
+
+          MISSING=0
+          : > .indexnow/sitemap-missing.txt
+          : > .indexnow/sitemap-stale.txt
+
+          while IFS=$'\t' read -r url file; do
+            [ -n "$url" ] || continue
+
+            # HARD requirement: URL must exist in sitemap.xml (literal match).
+            if ! grep -qF "<loc>${url}</loc>" sitemap.xml; then
+              echo "${url}  (source: ${file})" >> .indexnow/sitemap-missing.txt
+              MISSING=1
+              continue
+            fi
+
+            # Soft check: lastmod freshness -> warning only, never blocks.
+            # POSIX awk; index() for literal loc match; ISO dates compare lexically.
+            map_lastmod="$(awk -v loc="<loc>${url}</loc>" '
+              index($0, loc){found=1}
+              found && /<lastmod>/ {
+                line=$0
+                sub(/.*<lastmod>/,"",line)
+                sub(/<\/lastmod>.*/,"",line)
+                print line; exit
+              }' sitemap.xml)"
+
+            file_date="$(git log -1 --format=%cs -- "$file" 2>/dev/null || echo '')"
+            if [ -z "$map_lastmod" ]; then
+              echo "${url}: no <lastmod> in sitemap  (source: ${file})" >> .indexnow/sitemap-stale.txt
+            elif [ -n "$file_date" ] && [ "$map_lastmod" \< "$file_date" ]; then
+              echo "${url}: sitemap lastmod=${map_lastmod} < changed=${file_date}  (source: ${file})" >> .indexnow/sitemap-stale.txt
+            fi
+          done < .indexnow/map.tsv
+
+          # Emit warnings for stale-but-present URLs (does not block).
+          if [ -s .indexnow/sitemap-stale.txt ]; then
+            echo "Stale (present in sitemap but lastmod not bumped) — submitting anyway:"
+            while IFS= read -r line; do
+              [ -n "$line" ] || continue
+              echo "::warning title=Sitemap lastmod stale::${line}"
+            done < .indexnow/sitemap-stale.txt
+          fi
+
+          # Block only when a changed URL is missing from the sitemap.
+          if [ "$MISSING" = "1" ]; then
+            echo "::error title=URL missing from sitemap::Add the URL(s) below to sitemap.xml, then re-push. IndexNow submission was blocked so no URL is pinged that the sitemap does not represent."
+            echo "Missing from sitemap.xml:"
+            sed 's/^/  - /' .indexnow/sitemap-missing.txt
+            exit 1
+          fi
+
+          echo "All changed URLs are present in sitemap.xml — proceeding to submit."
 
       - name: Submit to IndexNow
         if: steps.build.outputs.count != '0'
