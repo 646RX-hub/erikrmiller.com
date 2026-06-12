@@ -760,8 +760,8 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 .ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;padding-bottom:3rem;margin-bottom:3rem;border-bottom:1px solid rgba(247,244,238,0.06);}
 .ft-ht{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem;}
 .ft-global{font-family:var(--sans);font-size:0.5rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(247,244,238,0.2);margin-top:0.75rem;}
-.ft-soc{display:flex;gap:1.6rem;}
-.ft-soc a{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.62);text-decoration:none;transition:color 0.2s;}
+.ft-soc{display:flex;gap:1.6rem;flex-wrap:wrap;}
+.ft-soc a{font-family:var(--sans);font-size:0.8rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.78);text-decoration:none;transition:color 0.2s;display:inline-block;padding:0.5rem 0.45rem;}
 .ft-soc a:hover{color:var(--gold);}
 .ft-brand{font-family:var(--serif);font-size:1.55rem;font-weight:300;color:var(--paper);margin-bottom:0.7rem;letter-spacing:-0.01em;}
 .ft-tag{font-family:var(--body);font-size:0.88rem;font-weight:300;color:rgba(247,244,238,0.62);line-height:1.72;max-width:230px;margin-bottom:1.25rem;}
@@ -771,9 +771,9 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 .ft-ul a{font-family:var(--body);font-size:0.92rem;font-weight:300;color:rgba(247,244,238,0.65);text-decoration:none;transition:color 0.2s;}
 .ft-ul a:hover{color:var(--paper);}
 .ft-bot{display:flex;justify-content:space-between;align-items:center;}
-.ft-copy{font-family:var(--body);font-size:0.75rem;color:rgba(247,244,238,0.48);}
-.ft-soc{display:flex;gap:1.6rem;}
-.ft-soc a{font-family:var(--sans);font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.55);text-decoration:none;transition:color 0.2s;}
+.ft-copy{font-family:var(--body);font-size:0.75rem;color:rgba(247,244,238,0.6);}
+.ft-soc{display:flex;gap:1.6rem;flex-wrap:wrap;}
+.ft-soc a{font-family:var(--sans);font-size:0.8rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.78);text-decoration:none;transition:color 0.2s;display:inline-block;padding:0.5rem 0.45rem;}
 .ft-soc a:hover{color:var(--gold);}
 
 /* ═══════════════════════════════════════════
@@ -932,7 +932,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   footer{padding:3rem 1.5rem 2rem;}
   .ft{grid-template-columns:1fr;gap:2.5rem;}
   .ft-bot{flex-direction:column;gap:1rem;text-align:center;}
-  .ft-soc{justify-content:center;}
+  .ft-soc{justify-content:center;flex-wrap:wrap;}
 
   /* CONTACT */
   .contact{padding:5rem 0;}
@@ -1453,10 +1453,8 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <nav aria-label="Connect with Erik">
       <p class="ft-ht">Connect</p>
       <ul class="ft-ul" role="list">
-        <li><a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank" aria-label="Erik R. Miller on LinkedIn (opens in new tab)">LinkedIn</a></li><li><a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank" aria-label="ERM Advisory on Instagram (opens in new tab)">Instagram</a></li><li><a href="https://www.facebook.com/ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="ERM Advisory on Facebook (opens in new tab)">Facebook</a></li>
         <li><a href="mailto:erikrmiller@outlook.com">Email Erik</a></li>
         <li><a href="#contact">Work Together</a></li>
-        <li><a href="https://www.linkedin.com/in/erikrm/" target="_blank" rel="noopener noreferrer" aria-label="View Erik's profile on LinkedIn (opens in new tab)">LinkedIn Profile</a></li>
       </ul>
     </nav>
   </div>
@@ -1464,8 +1462,12 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <p class="ft-copy">© 2026 Erik R. Miller · E.R.M. Advisory · New York City</p>
     <nav aria-label="Social media links">
       <div class="ft-soc">
-        <a href="https://www.linkedin.com/company/erik-r-miller-advisory/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn (opens in new tab)">LinkedIn</a><a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank" aria-label="Instagram (opens in new tab)">Instagram</a><a href="https://www.facebook.com/ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="Facebook (opens in new tab)">Facebook</a>
-      </div>
+      <a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn, Erik R. Miller profile (opens in new tab)">LinkedIn (Erik R. Miller)</a>
+      <a href="https://www.linkedin.com/company/erik-r-miller-advisory/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn, ERM Advisory company page (opens in new tab)">LinkedIn (ERM Advisory)</a>
+      <a href="https://www.facebook.com/ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="Facebook (opens in new tab)">Facebook</a>
+      <a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank" aria-label="Instagram (opens in new tab)">Instagram</a>
+      <a href="https://www.youtube.com/@ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="YouTube (opens in new tab)">YouTube</a>
+    </div>
     </nav>
   </div>
 </footer>

@@ -73,8 +73,11 @@ p{font-family:var(--body);font-size:1.02rem;font-weight:300;line-height:1.85;col
 .acct-matrix td:first-child{font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);}
 .cta-back{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-a11y);text-decoration:underline;text-decoration-color:rgba(184,146,42,0.4);text-underline-offset:3px;margin-top:3rem;}
 footer{background:var(--ink);padding:4rem;border-top:1px solid rgba(247,244,238,0.05);}
-.ft-bot{display:flex;justify-content:space-between;align-items:center;}
-.ft-copy{font-family:var(--body);font-size:0.65rem;color:rgba(247,244,238,0.2);}
+.ft-bot{display:flex;flex-direction:column;gap:1.2rem;align-items:flex-start;}
+.ft-copy{font-family:var(--body);font-size:0.75rem;color:rgba(247,244,238,0.6);}
+.ft-soc{display:flex;flex-wrap:wrap;gap:1.4rem;}
+.ft-soc a{font-family:var(--body);font-size:0.8rem;color:rgba(247,244,238,0.78);text-decoration:none;display:inline-block;padding:0.5rem 0.45rem;transition:color 0.2s;}
+.ft-soc a:hover{color:var(--gold);}
 @media(max-width:768px){nav{padding:1.25rem 1.5rem;}.nav-links{display:none;}.hero{padding:7rem 1.5rem 3.5rem;}.wrap{padding:3rem 1.5rem 4rem;}.cadence-grid{grid-template-columns:1fr 1fr;}footer{padding:3rem 1.5rem;}}
 </style>
 <link rel="stylesheet" href="/assets/search/search.css">
@@ -337,6 +340,15 @@ footer{background:var(--ink);padding:4rem;border-top:1px solid rgba(247,244,238,
 <footer role="contentinfo">
   <div class="ft-bot">
     <p class="ft-copy">&copy; 2026 Erik R. Miller / E.R.M. Advisory. All rights reserved.</p>
+    <nav aria-label="Social media links">
+      <div class="ft-soc">
+        <a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn, Erik R. Miller profile (opens in new tab)">LinkedIn (Erik R. Miller)</a>
+        <a href="https://www.linkedin.com/company/erik-r-miller-advisory/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn, ERM Advisory company page (opens in new tab)">LinkedIn (ERM Advisory)</a>
+        <a href="https://www.facebook.com/ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="Facebook (opens in new tab)">Facebook</a>
+        <a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank" aria-label="Instagram (opens in new tab)">Instagram</a>
+        <a href="https://www.youtube.com/@ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="YouTube (opens in new tab)">YouTube</a>
+      </div>
+    </nav>
   </div>
 </footer>
 <script src="/assets/search/search.js"></script>

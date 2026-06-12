@@ -144,9 +144,9 @@ footer{background:var(--ink);padding:4.5rem 4rem 2.5rem;border-top:3px solid var
 .ft-ul a{font-family:var(--body);font-size:.95rem;font-weight:300;color:rgba(255,255,255,.62);text-decoration:none;transition:color .2s;}
 .ft-ul a:hover{color:#fff;}
 .ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-.ft-copy{font-family:var(--body);font-size:.8rem;color:rgba(255,255,255,.38);}
-.ft-soc{display:flex;gap:1.5rem;}
-.ft-soc a{font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s;}
+.ft-copy{font-family:var(--body);font-size:.8rem;color:rgba(247,244,238,0.6);}
+.ft-soc{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.ft-soc a{font-family:var(--sans);font-size:0.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,244,238,0.78);text-decoration:none;transition:color .2s;display:inline-block;padding:0.5rem 0.45rem;}
 .ft-soc a:hover{color:rgba(212,172,78,.9);}
 /* RESPONSIVE */
 @media(min-width:769px) and (max-width:1024px){
@@ -411,8 +411,6 @@ footer{background:var(--ink);padding:4.5rem 4rem 2.5rem;border-top:3px solid var
     <nav aria-label="Connect">
       <p class="ft-ht">Connect</p>
       <ul class="ft-ul" role="list">
-        <li><a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
-        <li><a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
         <li><a href="mailto:erikrmiller@outlook.com">Email Erik</a></li>
       </ul>
     </nav>
@@ -420,8 +418,11 @@ footer{background:var(--ink);padding:4.5rem 4rem 2.5rem;border-top:3px solid var
   <div class="ft-bot">
     <p class="ft-copy">© 2026 Erik R. Miller · E.R.M. Advisory · New York City</p>
     <div class="ft-soc">
-      <a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-      <a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn, Erik R. Miller profile (opens in new tab)">LinkedIn (Erik R. Miller)</a>
+      <a href="https://www.linkedin.com/company/erik-r-miller-advisory/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn, ERM Advisory company page (opens in new tab)">LinkedIn (ERM Advisory)</a>
+      <a href="https://www.facebook.com/ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="Facebook (opens in new tab)">Facebook</a>
+      <a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank" aria-label="Instagram (opens in new tab)">Instagram</a>
+      <a href="https://www.youtube.com/@ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="YouTube (opens in new tab)">YouTube</a>
     </div>
   </div>
 </footer>
