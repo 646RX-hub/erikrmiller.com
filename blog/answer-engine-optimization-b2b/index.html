@@ -7,13 +7,12 @@
 <meta name="description" content="Your buyers' AI builds the vendor shortlist before sales ever speaks. Answer Engine Optimization is how B2B revenue teams become the answer AI cites and recommends.">
 <meta name="author" content="Erik R. Miller">
 <meta name="robots" content="index, follow">
+<meta name="keywords" content="answer engine optimization, AEO, generative engine optimization, GEO, AI search, AI visibility, AI visibility gap, share of model, vendor shortlist, AI buying committee, B2B marketing, GTM strategy, fractional CMO">
 <link rel="canonical" href="https://erikrmiller.com/blog/answer-engine-optimization-b2b/">
-
-<!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://erikrmiller.com/blog/answer-engine-optimization-b2b/">
-<meta property="og:title" content="Answer Engine Optimization for B2B: The Revenue Leader's Guide">
-<meta property="og:description" content="Your buyers' AI builds the vendor shortlist before sales ever speaks. AEO is how B2B revenue teams become the answer AI cites and recommends.">
+<meta property="og:title" content="Answer Engine Optimization for B2B: How to Become the Vendor AI Recommends">
+<meta property="og:description" content="Your buyers build the vendor shortlist inside AI before they ever contact sales. AEO is how B2B revenue teams become the answer AI cites and recommends.">
 <meta property="og:image" content="https://erikrmiller.com/blog/answer-engine-optimization-b2b/erm-answer-engine-optimization-b2b-og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -22,15 +21,14 @@
 <meta property="article:author" content="Erik R. Miller">
 <meta property="article:published_time" content="2026-06-12T08:00:00-05:00">
 <meta property="article:section" content="GTM Strategy">
-
-<!-- Twitter / X Card -->
+<meta property="article:tag" content="answer engine optimization">
+<meta property="article:tag" content="AI visibility">
+<meta property="article:tag" content="share of model">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://erikrmiller.com/blog/answer-engine-optimization-b2b/">
-<meta name="twitter:title" content="Answer Engine Optimization for B2B: The Revenue Leader's Guide">
-<meta name="twitter:description" content="Your buyers' AI builds the vendor shortlist before sales ever speaks. AEO is how B2B revenue teams become the answer AI cites and recommends.">
+<meta name="twitter:title" content="Answer Engine Optimization for B2B: How to Become the Vendor AI Recommends">
+<meta name="twitter:description" content="Your buyers build the vendor shortlist inside AI before sales. AEO is how B2B revenue teams become the answer AI cites and recommends.">
 <meta name="twitter:image" content="https://erikrmiller.com/blog/answer-engine-optimization-b2b/erm-answer-engine-optimization-b2b-og-image.png">
-
-<!-- Schema.org: BlogPosting -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,8 +57,6 @@
   "keywords": "answer engine optimization, AEO, B2B marketing, generative engine optimization, AI search, AI visibility, Erik R. Miller, fractional CMO, revenue marketing"
 }
 </script>
-
-<!-- Schema.org: FAQPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,8 +70,6 @@
   ]
 }
 </script>
-
-<!-- Schema.org: Breadcrumb -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,8 +81,6 @@
   ]
 }
 </script>
-
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDN7MBR58X"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -96,7 +88,6 @@
   gtag('js', new Date());
   gtag('config', 'G-LDN7MBR58X');
 </script>
-
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230c0b09'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2Cserif' font-size='18' font-style='italic' font-weight='300' fill='%23b8922a'%3EE%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -105,167 +96,473 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
   --ink:#0c0b09;--ink2:#161411;--paper:#f7f4ee;--cream:#edeae0;
-  --gold:#b8922a;--gold-lt:#d4ac4e;--gold-a11y:#7a5e12;--muted:#6b6456;
+  --warm:#e5e0d4;--gold:#b8922a;--gold-lt:#d4ac4e;
+  --gold-pale:rgba(184,146,42,0.1);--gold-a11y:#7a5e12;--muted:#6b6456;
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'Syne',sans-serif;--body:'DM Sans',sans-serif;
 }
 html{scroll-behavior:smooth;}
 body{font-family:var(--body);background:var(--paper);color:var(--ink);overflow-x:hidden;}
-.skip-link{position:absolute;left:-999px;top:0;z-index:999;background:var(--gold-a11y);color:#fff;font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.7rem 1.2rem;text-decoration:none;}
-.skip-link:focus{left:1rem;top:1rem;}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.75rem 4rem;transition:padding 0.5s,background 0.5s;}
-nav.stuck{padding:1rem 4rem;background:rgba(12,11,9,0.94);backdrop-filter:blur(20px);}
+.skip-link{position:absolute;top:-100%;left:1rem;z-index:10000;padding:0.65rem 1.25rem;background:var(--gold);color:var(--ink);font-family:var(--sans);font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;transition:top 0.2s;}
+.skip-link:focus{top:1rem;}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+:focus:not(:focus-visible){outline:none;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;scroll-behavior:auto!important;}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.reading-progress{position:fixed;top:0;left:0;right:0;height:2px;background:rgba(184,146,42,0.15);z-index:300;}
+.rp-fill{height:100%;background:var(--gold);width:0%;transition:width 0.1s linear;}
+nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 4rem;background:rgba(12,11,9,0.95);backdrop-filter:blur(20px);}
 .nav-logo{font-family:var(--sans);font-size:0.7rem;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--paper);text-decoration:none;}
 .nav-links{display:flex;gap:2.5rem;list-style:none;}
 .nav-links a{font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:rgba(247,244,238,0.58);text-decoration:none;transition:color 0.22s;}
-.nav-links a:hover{color:var(--paper);}
-.nav-cta{color:var(--gold) !important;border:1px solid rgba(184,146,42,0.4);padding:0.4rem 1rem;}
-.blog-hero{background:var(--ink);padding:10rem 0 5rem;position:relative;overflow:hidden;}
-.blog-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 100%,rgba(184,146,42,0.1),transparent 65%);}
-.blog-hero-inner{max-width:820px;margin:0 auto;padding:0 4rem;position:relative;z-index:2;}
-.blog-breadcrumb{font-family:var(--body);font-size:0.78rem;color:rgba(247,244,238,0.4);margin-bottom:1.5rem;}
-.blog-breadcrumb a{color:rgba(247,244,238,0.55);text-decoration:none;}
-.blog-breadcrumb a:hover{color:var(--gold-lt);}
-.blog-tag{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;}
-.blog-tag::before{content:'';width:22px;height:1px;background:var(--gold);}
-.blog-title{font-family:var(--serif);font-size:clamp(2.8rem,5vw,4.5rem);font-weight:300;line-height:1.05;letter-spacing:-0.02em;color:var(--paper);margin-bottom:1.5rem;}
-.blog-title em{font-style:italic;color:var(--gold-lt);}
-.blog-meta{font-family:var(--body);font-size:0.82rem;font-weight:300;color:rgba(247,244,238,0.4);display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
-.blog-meta-dot{width:3px;height:3px;border-radius:50%;background:rgba(184,146,42,0.4);}
-.blog-body{max-width:820px;margin:0 auto;padding:5rem 4rem 6rem;}
-.blog-body p{font-family:var(--body);font-size:1.08rem;font-weight:300;line-height:1.88;color:#3d3830;margin-bottom:1.6rem;}
-.blog-body h2{font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:300;line-height:1.2;letter-spacing:-0.01em;color:var(--ink);margin:3.5rem 0 1.2rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(10,9,8,0.08);}
-.blog-body h2::before{content:'';display:block;width:28px;height:2px;background:var(--gold);margin-bottom:0.8rem;}
-.blog-body h3{font-family:var(--sans);font-size:1.12rem;font-weight:700;letter-spacing:0.01em;color:var(--ink);margin:2.4rem 0 0.9rem;}
-.blog-body hr{border:none;border-top:1px solid rgba(10,9,8,0.08);margin:3rem 0;}
-.blog-body strong{font-weight:600;color:var(--ink);}
-.blog-body em{font-style:italic;}
-.blog-body a{color:var(--gold-a11y);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px;}
-.blog-body a:hover{color:var(--gold);}
-.blog-body ul,.blog-body ol{margin:0 0 1.7rem 1.3rem;padding:0;}
-.blog-body li{font-family:var(--body);font-size:1.06rem;font-weight:300;line-height:1.8;color:#3d3830;margin-bottom:0.7rem;padding-left:0.3rem;}
-.blog-body li strong{font-weight:600;}
-.blog-callout{background:var(--cream);border-left:3px solid var(--gold);padding:1.75rem 2rem;margin:2.5rem 0;}
-.blog-callout p{font-family:var(--serif);font-size:1.28rem;font-weight:300;font-style:italic;line-height:1.55;color:var(--ink);margin-bottom:0;}
-.erm-answer{background:#fff;border:1px solid rgba(10,9,8,0.12);border-top:3px solid var(--gold);padding:1.6rem 1.9rem;margin:2rem 0 2.5rem;border-radius:2px;}
-.erm-answer .lbl{font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-a11y);display:block;margin-bottom:0.6rem;}
-.erm-answer p{font-size:1.12rem;line-height:1.7;color:var(--ink);margin-bottom:0;}
-.erm-summary{background:var(--ink);color:var(--paper);padding:2.2rem 2.4rem;margin:2.5rem 0;border-radius:2px;}
-.erm-summary .lbl{font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-lt);display:block;margin-bottom:1rem;}
-.erm-summary ul{margin:0 0 0 1.2rem;}
-.erm-summary li{color:rgba(247,244,238,0.82);font-size:1rem;line-height:1.72;margin-bottom:0.6rem;}
-.erm-summary li strong{color:var(--paper);}
-.erm-table-wrap{overflow-x:auto;margin:2rem 0 2.5rem;}
-.erm-table{border-collapse:collapse;width:100%;font-family:var(--body);font-size:0.96rem;}
-.erm-table caption{text-align:left;font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);padding-bottom:0.8rem;}
-.erm-table th,.erm-table td{text-align:left;padding:0.85rem 1rem;border-bottom:1px solid rgba(10,9,8,0.1);vertical-align:top;line-height:1.55;color:#3d3830;}
-.erm-table thead th{background:var(--cream);font-family:var(--sans);font-size:0.7rem;font-weight:700;letter-spacing:0.04em;color:var(--ink);text-transform:uppercase;border-bottom:2px solid var(--gold);}
-.erm-table tbody th{font-weight:600;color:var(--ink);}
-.erm-table tr:nth-child(even) td,.erm-table tr:nth-child(even) th{background:rgba(237,234,224,0.4);}
-.erm-check{background:var(--cream);border:1px solid rgba(10,9,8,0.1);padding:1.9rem 2.1rem;margin:2.2rem 0;border-radius:2px;}
-.erm-check .lbl{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-a11y);display:block;margin-bottom:1.1rem;}
-.erm-check ul{list-style:none;margin:0;padding:0;}
-.erm-check li{position:relative;padding-left:2.1rem;margin-bottom:1rem;font-size:1.02rem;line-height:1.65;color:#3d3830;}
-.erm-check li::before{content:'';position:absolute;left:0;top:0.15em;width:1.15rem;height:1.15rem;border:2px solid var(--gold);border-radius:3px;}
-.erm-figure{margin:2.5rem 0;text-align:center;}
-.erm-figure svg{max-width:100%;height:auto;border:1px solid rgba(10,9,8,0.1);background:#fff;border-radius:2px;}
-.erm-figure figcaption{font-family:var(--body);font-size:0.82rem;color:var(--muted);margin-top:0.9rem;font-style:italic;}
-.blog-framework-cta{background:#fff;border:1px solid rgba(10,9,8,0.14);border-left:3px solid var(--gold);padding:1.5rem 1.8rem;margin:2.5rem 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;}
-.blog-framework-cta p{font-family:var(--body);font-size:1rem;color:var(--ink);margin:0;}
-.blog-framework-cta a{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:0.7rem 1.3rem;text-decoration:none;white-space:nowrap;border-radius:2px;}
-.blog-framework-cta a:hover{background:var(--gold-lt);}
-.erm-faq{margin:2rem 0;}
-.erm-faq details{border-bottom:1px solid rgba(10,9,8,0.12);padding:1.1rem 0;}
-.erm-faq summary{font-family:var(--sans);font-size:1.02rem;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;}
-.erm-faq summary::-webkit-details-marker{display:none;}
-.erm-faq summary::after{content:'+';color:var(--gold-a11y);font-weight:700;}
-.erm-faq details[open] summary::after{content:'\2212';}
-.erm-faq details p{margin:1rem 0 0.3rem;font-size:1.02rem;line-height:1.7;color:#3d3830;}
-.blog-author{max-width:820px;margin:0 auto;padding:3rem 4rem;border-top:1px solid rgba(10,9,8,0.08);}
-.blog-author-name{font-family:var(--sans);font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);margin-bottom:0.3rem;}
-.blog-author-bio{font-family:var(--body);font-size:0.9rem;font-weight:300;color:var(--muted);line-height:1.65;}
-.blog-author-bio a{color:var(--gold-a11y);text-decoration:none;}
-.blog-nav{max-width:820px;margin:0 auto;padding:2.5rem 4rem 5rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;border-top:1px solid rgba(10,9,8,0.08);}
-.blog-nav-link{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(10,9,8,0.15);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
-.blog-nav-link:hover{color:var(--gold);border-color:var(--gold);}
+.nav-links a:hover,.nav-links a.active{color:var(--paper);}
+.nav-cta{color:var(--gold)!important;border:1px solid rgba(184,146,42,0.4);padding:0.4rem 1rem;}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.nav-hamburger span{display:block;width:24px;height:1.5px;background:var(--paper);transition:transform 0.3s,opacity 0.3s;}
+.nav-links-mobile{display:none;position:fixed;inset:0;z-index:250;background:rgba(9,8,10,0.97);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;list-style:none;}
+.nav-links-mobile.open{display:flex;}
+.nav-links-mobile a{font-family:var(--serif);font-size:clamp(2rem,6vw,3.5rem);font-weight:300;color:rgba(247,244,238,0.9);text-decoration:none;}
+.nav-hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.nav-hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.art-hero{background:var(--ink);padding:9rem 4rem 5rem;position:relative;overflow:hidden;}
+.ah-glow{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 100%,rgba(184,146,42,0.09),transparent 65%);}
+.ah-inner{max-width:1000px;margin:0 auto;position:relative;z-index:2;}
+.ah-breadcrumb{display:flex;align-items:center;gap:0.6rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.ah-breadcrumb a{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:rgba(247,244,238,0.35);text-decoration:none;transition:color 0.2s;}
+.ah-breadcrumb a:hover{color:rgba(247,244,238,0.7);}
+.ah-breadcrumb span{font-family:var(--sans);font-size:0.58rem;color:rgba(247,244,238,0.2);}
+.ah-tag{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;}
+.ah-tag::before{content:'';width:22px;height:1px;background:var(--gold);}
+.ah-title{font-family:var(--serif);font-size:clamp(2.6rem,5vw,4.2rem);font-weight:300;line-height:1.05;letter-spacing:-0.02em;color:var(--paper);margin-bottom:1.25rem;}
+.ah-title em{font-style:italic;color:var(--gold-lt);}
+.ah-deck{font-family:var(--body);font-size:1.08rem;font-weight:300;line-height:1.75;color:rgba(247,244,238,0.55);margin-bottom:2rem;max-width:640px;}
+.ah-meta{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;}
+.ah-author{font-family:var(--body);font-size:0.8rem;font-weight:300;color:rgba(247,244,238,0.9);}
+.ah-author strong{color:rgba(247,244,238,0.82);font-weight:400;}
+.ah-divider{width:1px;height:12px;background:rgba(247,244,238,0.12);}
+.ah-date,.ah-read{font-family:var(--body);font-size:0.82rem;font-weight:300;color:rgba(247,244,238,0.32);}
+.article-datebar{background:var(--cream);border-bottom:1px solid rgba(10,9,8,0.07);}
+.adb-inner{max-width:960px;margin:0 auto;padding:0.85rem 4rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.adb-item{display:flex;align-items:center;gap:0.5rem;font-family:var(--body);font-size:0.78rem;font-weight:300;color:var(--muted);}
+.adb-label{font-family:var(--sans);font-size:0.48rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);}
+.adb-sep{width:1px;height:14px;background:rgba(10,9,8,0.12);}
+.art-wrap{max-width:1000px;margin:0 auto;padding:4.5rem 4rem 6rem;}
+.art-back{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--sans);font-size:0.6rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-bottom:2.5rem;border-bottom:1px solid rgba(107,100,86,0.25);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
+.art-back:hover{color:var(--gold);border-color:var(--gold);}
+.art-lede{font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.6rem);font-weight:300;line-height:1.55;color:var(--ink);margin-bottom:2rem;letter-spacing:-0.01em;}
+.art-wrap p{font-family:var(--body);font-size:1.05rem;font-weight:300;line-height:1.88;color:#3d3830;margin-bottom:1.6rem;}
+.art-wrap h2{font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:300;line-height:1.2;letter-spacing:-0.01em;color:var(--ink);margin:3.5rem 0 1.2rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(10,9,8,0.08);}
+.art-wrap h2::before{content:'';display:block;width:28px;height:2px;background:var(--gold);margin-bottom:0.8rem;}
+.art-wrap h3{font-family:var(--serif);font-size:clamp(1.2rem,2vw,1.55rem);font-weight:400;line-height:1.3;color:var(--ink);margin:2.5rem 0 1rem;}
+.art-wrap strong{font-weight:600;color:var(--ink);}
+.art-wrap em{font-style:italic;}
+.art-wrap hr{border:none;border-top:1px solid rgba(10,9,8,0.08);margin:3rem 0;}
+.art-wrap cite{font-style:italic;}
+.pull-quote{border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0;background:rgba(184,146,42,0.04);}
+.pull-quote blockquote{font-family:var(--serif);font-size:clamp(1.3rem,2.2vw,1.6rem);font-weight:300;font-style:italic;line-height:1.45;color:var(--ink);margin-bottom:0.75rem;}
+.pull-quote cite{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);font-style:normal;}
+.signal-emphasis{background:var(--ink);padding:2.5rem;margin:2.5rem 0;position:relative;overflow:hidden;}
+.signal-emphasis::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);}
+.se-label{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:rgba(184,146,42,0.7);display:block;margin-bottom:1rem;}
+.se-quote{font-family:var(--serif);font-size:clamp(1.2rem,2vw,1.5rem);font-weight:300;font-style:italic;line-height:1.5;color:var(--paper)!important;margin-bottom:0.75rem!important;}
+.se-cite{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(184,146,42,0.6);}
+.callout{background:var(--cream);border:1px solid rgba(10,9,8,0.07);border-left:3px solid var(--gold);padding:1.75rem 2rem;margin:2.5rem 0;}
+.callout-label{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem;}
+.callout p{font-family:var(--body);font-size:0.95rem;font-weight:300;line-height:1.78;color:#2a2520;margin-bottom:0!important;}
+/* Framework: Execution Flywheel */
+.flywheel-wrap{margin:2.5rem 0;border:1px solid rgba(10,9,8,0.08);}
+.flywheel-header{background:var(--ink);padding:1.75rem 2rem;position:relative;}
+.flywheel-header::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);}
+.fw-frame-label{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:#b8922a;display:block;margin-bottom:0.4rem;}
+.fw-frame-title{font-family:var(--serif);font-size:1.4rem;font-weight:300;color:var(--paper);}
+.fw-frame-title em{font-style:italic;color:var(--gold-lt);}
+.flywheel-stages{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(10,9,8,0.08);}
+.fw-stage{background:var(--paper);padding:1.5rem 1.25rem;text-align:center;}
+.fw-stage:nth-child(even){background:rgba(10,9,8,0.02);}
+.fw-stage-num{font-family:var(--serif);font-size:2rem;font-weight:300;font-style:italic;color:rgba(184,146,42,0.2);display:block;line-height:1;margin-bottom:0.5rem;}
+.fw-stage-name{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem;}
+.fw-stage-desc{font-family:var(--body);font-size:0.82rem;font-weight:300;line-height:1.6;color:var(--muted);}
+.flywheel-note{padding:1.25rem 2rem;background:rgba(184,146,42,0.04);border-top:1px solid rgba(10,9,8,0.07);}
+.flywheel-note p{font-family:var(--body);font-size:0.85rem;font-weight:300;line-height:1.65;color:var(--muted);margin-bottom:0!important;}
+.flywheel-note strong{color:var(--ink);font-weight:500;}
+/* Framework: Cascade */
+.cascade-label{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem;}
+.cascade-wrap{margin:0.5rem 0 2.5rem;}
+.cascade-level{display:grid;grid-template-columns:160px 1fr 110px;margin-bottom:4px;border:1px solid rgba(10,9,8,0.08);}
+.cl-tier{padding:1.25rem 1.5rem;background:var(--ink);display:flex;flex-direction:column;justify-content:center;}
+.cl-tier-num{font-family:var(--serif);font-size:1.6rem;font-weight:300;font-style:italic;color:rgba(184,146,42,0.9);line-height:1;margin-bottom:0.25rem;}
+.cl-tier-label{font-family:var(--sans);font-size:0.48rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#b8922a;}
+.cl-body{padding:1.25rem 1.5rem;background:var(--paper);}
+.cascade-level:nth-child(2) .cl-body{background:rgba(10,9,8,0.02);}
+.cascade-level:nth-child(3) .cl-body{background:rgba(184,146,42,0.025);}
+.cascade-level:nth-child(4) .cl-body{background:rgba(184,146,42,0.05);}
+.cl-name{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:0.35rem;}
+.cl-desc{font-family:var(--body);font-size:0.88rem;font-weight:300;line-height:1.65;color:#2a2520;margin:0!important;}
+.cl-cadence{padding:1.25rem;background:var(--cream);display:flex;flex-direction:column;justify-content:center;align-items:center;border-left:1px solid rgba(10,9,8,0.07);}
+.cl-cadence-val{font-family:var(--serif);font-size:1rem;font-weight:300;font-style:italic;color:var(--gold);display:block;text-align:center;line-height:1.2;margin-bottom:0.2rem;}
+.cl-cadence-label{font-family:var(--sans);font-size:0.42rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);text-align:center;}
+/* Framework: Five Execution Killers */
+.killers-wrap{margin:2.5rem 0;border:1px solid rgba(10,9,8,0.08);}
+.killers-header{background:var(--ink);padding:1.5rem 2rem;position:relative;}
+.killers-header::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);}
+.kh-label{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:#b8922a;display:block;margin-bottom:0.3rem;}
+.kh-title{font-family:var(--serif);font-size:1.2rem;font-weight:300;color:var(--paper);}
+.killer-row{display:grid;grid-template-columns:3rem 1fr auto;border-bottom:1px solid rgba(10,9,8,0.07);background:var(--paper);align-items:start;}
+.killer-row:last-child{border-bottom:none;}
+.killer-row:nth-child(even){background:rgba(10,9,8,0.02);}
+.kr-num{font-family:var(--serif);font-size:1.5rem;font-weight:300;font-style:italic;color:rgba(184,146,42,0.22);padding:1.25rem 0 1.25rem 1.25rem;}
+.kr-body{padding:1.25rem;}
+.kr-name{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:0.3rem;}
+.kr-desc{font-family:var(--body);font-size:0.9rem;font-weight:300;line-height:1.65;color:#2a2520;margin:0;}
+.kr-impact{padding:1.25rem 1.25rem 1.25rem 0;}
+.kr-sev{font-family:var(--sans);font-size:0.48rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.25rem 0.6rem;border:1px solid;white-space:nowrap;}
+.kr-sev.critical{color:#c0392b;border-color:rgba(192,57,43,0.35);}
+.kr-sev.high{color:#7a5e12;border-color:rgba(184,146,42,0.4);}
+/* Framework: MOS */
+.mos-wrap{margin:2.5rem 0;border:1px solid rgba(10,9,8,0.08);}
+.mos-header{background:var(--ink);padding:1.75rem 2rem;position:relative;}
+.mos-header::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);}
+.mos-h-label{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:#b8922a;display:block;margin-bottom:0.4rem;}
+.mos-h-title{font-family:var(--serif);font-size:1.4rem;font-weight:300;color:var(--paper);}
+.mos-h-title em{font-style:italic;color:var(--gold-lt);}
+.mos-components{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(10,9,8,0.08);}
+.mos-comp{background:var(--paper);padding:1.5rem 1.25rem;}
+.mos-comp:nth-child(even){background:rgba(10,9,8,0.02);}
+.mos-comp-num{font-family:var(--sans);font-size:0.44rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem;}
+.mos-comp-name{font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:0.5rem;line-height:1.35;}
+.mos-comp-desc{font-family:var(--body);font-size:0.82rem;font-weight:300;line-height:1.6;color:var(--muted);margin:0;}
+.mos-comp-q{font-family:var(--serif);font-size:0.88rem;font-style:italic;color:var(--gold);margin-top:0.75rem;display:block;line-height:1.45;}
+/* Tables */
+.acct-table{width:100%;border-collapse:collapse;margin:2rem 0;font-family:var(--body);}
+.acct-table caption{font-family:var(--sans);font-size:0.55rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);text-align:left;padding-bottom:0.75rem;}
+.acct-table thead th{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);background:var(--cream);padding:0.75rem 1rem;text-align:left;border-bottom:2px solid rgba(10,9,8,0.1);}
+.acct-table tbody td{font-family:var(--body);font-size:0.88rem;font-weight:300;line-height:1.6;color:#2a2520;padding:0.8rem 1rem;border-bottom:1px solid rgba(10,9,8,0.06);vertical-align:top;}
+.acct-table tbody tr:last-child td{border-bottom:none;}
+.acct-table tbody tr:nth-child(even) td{background:rgba(10,9,8,0.02);}
+.acct-table td:first-child{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);}
+.metrics-table{width:100%;border-collapse:collapse;margin:2rem 0;}
+.metrics-table caption{font-family:var(--sans);font-size:0.55rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);text-align:left;padding-bottom:0.75rem;}
+.metrics-table thead th{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:0.85rem 1.25rem;text-align:left;border-bottom:2px solid rgba(184,146,42,0.3);}
+.metrics-table thead th:first-child{border-left:3px solid var(--gold);}
+.metrics-table tbody td{font-family:var(--body);font-size:0.88rem;font-weight:300;line-height:1.65;color:#2a2520;padding:0.85rem 1.25rem;border-bottom:1px solid rgba(10,9,8,0.06);}
+.metrics-table tbody tr:last-child td{border-bottom:none;}
+.metrics-table tbody tr:nth-child(even) td{background:rgba(10,9,8,0.02);}
+.mt-category{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);}
+.mt-badge{display:inline-block;font-family:var(--sans);font-size:0.42rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:0.18rem 0.5rem;border:1px solid;vertical-align:middle;margin-left:0.3rem;}
+.mt-badge.lagging{color:var(--muted);border-color:rgba(107,100,86,0.35);}
+.mt-badge.leading{color:#1e5c3a;border-color:rgba(45,106,79,0.35);}
+.mt-badge.outcome{color:#7a5e12;border-color:rgba(184,146,42,0.4);}
+/* 90-day roadmap */
+.roadmap-wrap{margin:2.5rem 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(10,9,8,0.08);border:1px solid rgba(10,9,8,0.08);}
+.rm-phase{background:var(--paper);padding:1.75rem 1.5rem;}
+.rm-phase:nth-child(2){background:rgba(10,9,8,0.02);}
+.rm-phase:nth-child(3){background:rgba(184,146,42,0.03);}
+.rm-period{font-family:var(--sans);font-size:0.5rem;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.6rem;}
+.rm-title{font-family:var(--serif);font-size:1.2rem;font-weight:300;color:var(--ink);margin-bottom:1.25rem;line-height:1.2;}
+.rm-items{list-style:none;padding:0;margin:0;}
+.rm-items li{font-family:var(--body);font-size:0.88rem;font-weight:300;line-height:1.65;color:#2a2520;padding:0.55rem 0;border-bottom:1px solid rgba(10,9,8,0.06);display:flex;align-items:baseline;gap:0.65rem;}
+.rm-items li:last-child{border-bottom:none;}
+.rm-items li::before{content:"→";color:var(--gold);font-family:var(--sans);font-size:0.65rem;flex-shrink:0;}
+/* Series link */
+.series-link{background:var(--cream);border:1px solid rgba(10,9,8,0.07);padding:1.5rem 2rem;margin:2.5rem 0;display:flex;align-items:center;gap:1.5rem;}
+.sl-label{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);flex-shrink:0;}
+.sl-text{font-family:var(--body);font-size:0.9rem;font-weight:300;color:#2a2520;line-height:1.6;margin:0!important;}
+.sl-text a{color:var(--gold-a11y);text-decoration:underline;text-decoration-color:rgba(184,146,42,0.45);text-underline-offset:3px;}
+/* Resource CTA */
+.resource-cta{background:var(--ink);padding:3rem;margin:3rem 0;display:flex;align-items:flex-start;gap:2rem;text-decoration:none;border:1px solid rgba(184,146,42,0.15);transition:border-color 0.3s;}
+.resource-cta:hover{border-color:rgba(184,146,42,0.45);}
+.rc-icon{font-family:var(--serif);font-size:3rem;font-weight:300;font-style:italic;color:rgba(184,146,42,0.7);line-height:1;flex-shrink:0;}
+.rc-label{font-family:var(--sans);font-size:0.72rem;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem;}
+.rc-title{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:#fff;display:block;margin-bottom:0.5rem;}
+.rc-desc{font-family:var(--body);font-size:0.88rem;font-weight:300;line-height:1.72;color:#f0ece2;margin-bottom:0.9rem!important;}
+.rc-cta-link{font-family:var(--sans);font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);}
+/* Tags */
+.art-tags{display:flex;flex-wrap:wrap;gap:0.6rem;margin:3rem 0 2rem;padding-top:2.5rem;border-top:1px solid rgba(10,9,8,0.08);}
+.art-tag{font-family:var(--sans);font-size:0.46rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);padding:0.35rem 0.9rem;border:1px solid rgba(10,9,8,0.12);}
+/* Author bio */
+.author-bio{margin-top:4rem;padding-top:2.5rem;border-top:1px solid rgba(10,9,8,0.08);display:flex;gap:1.5rem;align-items:flex-start;}
+.author-initial{width:48px;height:48px;min-width:48px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.4rem;font-weight:300;font-style:italic;color:var(--ink);flex-shrink:0;}
+.author-bio-name{font-family:var(--sans);font-size:0.64rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:0.4rem;}
+.author-bio-text{font-family:var(--body);font-size:0.88rem;font-weight:300;color:var(--muted);line-height:1.78;margin:0!important;}
+.author-bio-text a{color:var(--gold-a11y);text-decoration:underline;text-decoration-color:rgba(184,146,42,0.45);text-underline-offset:3px;}
+/* FAQ */
+.faq-section{margin:4rem 0;padding:3rem;background:var(--cream);border:1px solid rgba(10,9,8,0.07);}
+.faq-label{font-family:var(--sans);font-size:0.72rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:block;}
+.faq-item{border-bottom:1px solid rgba(10,9,8,0.08);padding:1.5rem 0;}
+.faq-item:first-of-type{padding-top:0;}
+.faq-item:last-child{border-bottom:none;padding-bottom:0;}
+.faq-q{font-family:var(--serif);font-size:1.15rem;font-weight:400;line-height:1.3;color:var(--ink);margin-bottom:0.75rem;}
+.faq-a{font-family:var(--body);font-size:0.95rem;font-weight:300;line-height:1.8;color:var(--muted);margin-bottom:0!important;}
+/* Related */
+.related{max-width:1000px;margin:0 auto;padding:3rem 4rem 4rem;border-top:1px solid rgba(10,9,8,0.08);}
+.related-label{font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem;}
+.related-label::before{content:'';width:22px;height:1px;background:var(--gold);}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+.related-card{display:block;padding:1.5rem 1.6rem;background:var(--cream);text-decoration:none;color:inherit;border-left:3px solid transparent;transition:border-color 0.22s,background 0.22s;}
+.related-card:hover{border-left-color:var(--gold);background:#e8e4d6;}
+.related-tag{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.related-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;line-height:1.3;color:var(--ink);}
+/* Subscribe */
 .blog-subscribe{background:var(--ink);padding:5rem 4rem;text-align:center;}
-.blog-subscribe h3{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--paper);margin-bottom:0.8rem;}
-.blog-subscribe h3 em{font-style:italic;color:var(--gold-lt);}
+.blog-subscribe h2{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--paper);margin-bottom:0.8rem;}
+.blog-subscribe h2 em{font-style:italic;color:var(--gold-lt);}
 .blog-subscribe p{font-family:var(--body);font-size:0.95rem;font-weight:300;color:rgba(247,244,238,0.45);margin-bottom:2rem;}
 .blog-subscribe-btn{display:inline-flex;font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink);background:var(--gold);text-decoration:none;padding:0.9rem 2rem;transition:background 0.22s;}
 .blog-subscribe-btn:hover{background:var(--gold-lt);}
+/* Footer */
 footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(247,244,238,0.05);}
 .ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;padding-bottom:3rem;margin-bottom:3rem;border-bottom:1px solid rgba(247,244,238,0.06);}
 .ft-brand{font-family:var(--serif);font-size:1.55rem;font-weight:300;color:var(--paper);margin-bottom:0.7rem;}
-.ft-tag{font-family:var(--body);font-size:0.9rem;font-weight:300;color:rgba(247,244,238,0.25);line-height:1.72;max-width:230px;margin-bottom:1.25rem;}
-.ft-global{font-family:var(--body);font-size:0.8rem;color:rgba(247,244,238,0.3);}
-.ft-ht{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem;}
+.ft-tag{font-family:var(--body);font-size:0.8rem;font-weight:300;color:rgba(247,244,238,0.28);line-height:1.72;max-width:230px;margin-bottom:1.25rem;}
+.ft-global{font-family:var(--sans);font-size:0.5rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(247,244,238,0.18);margin-top:0.75rem;}
+.ft-ht{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem;}
 .ft-ul{list-style:none;display:flex;flex-direction:column;gap:0.62rem;}
-.ft-ul a{font-family:var(--body);font-size:0.92rem;font-weight:300;color:rgba(247,244,238,0.28);text-decoration:none;transition:color 0.2s;}
+.ft-ul a{font-family:var(--body);font-size:0.8rem;font-weight:300;color:rgba(247,244,238,0.32);text-decoration:none;transition:color 0.2s;}
 .ft-ul a:hover{color:var(--paper);}
 .ft-bot{display:flex;justify-content:space-between;align-items:center;}
-.ft-copy{font-family:var(--body);font-size:0.72rem;color:rgba(247,244,238,0.14);}
+.ft-copy{font-family:var(--body);font-size:0.65rem;color:rgba(247,244,238,0.16);}
 .ft-soc{display:flex;gap:1.6rem;}
-.ft-soc a{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.18);text-decoration:none;transition:color 0.2s;}
+.ft-soc a{font-family:var(--sans);font-size:0.52rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.26);text-decoration:none;transition:color 0.2s;}
 .ft-soc a:hover{color:var(--gold);}
 @media(max-width:768px){
-  nav{padding:1.25rem 1.5rem;}
+  nav#nav{padding:1.25rem 1.5rem;}
   .nav-links{display:none;}
-  .blog-hero{padding:7rem 0 3rem;}
-  .blog-hero-inner{padding:0 1.5rem;}
-  .blog-title{font-size:clamp(2rem,8vw,3rem);}
-  .blog-body{padding:3rem 1.5rem 4rem;}
-  .blog-body p{font-size:1rem;line-height:1.78;}
-  .blog-body h2{font-size:clamp(1.4rem,5vw,1.8rem);}
-  .blog-callout{padding:1.25rem 1.5rem;}
-  .erm-summary,.erm-check,.erm-answer{padding:1.4rem 1.4rem;}
-  .blog-author{padding:2rem 1.5rem;}
-  .blog-nav{padding:2rem 1.5rem 3rem;flex-direction:column;gap:1.5rem;align-items:flex-start;}
+  .nav-hamburger{display:flex;}
+  .art-hero{padding:7rem 1.5rem 3.5rem;}
+  .art-wrap{padding:3rem 1.5rem 4rem;}
+  .art-wrap p{font-size:1rem;line-height:1.78;}
+  .art-wrap h2{font-size:clamp(1.4rem,5vw,1.8rem);}
+  .flywheel-stages{grid-template-columns:1fr 1fr;}
+  .cascade-level{grid-template-columns:1fr;}.cl-cadence{border-left:none;border-top:1px solid rgba(10,9,8,0.07);flex-direction:row;justify-content:flex-start;padding:0.75rem 1.5rem;}
+  .mos-components{grid-template-columns:1fr 1fr;}
+  .roadmap-wrap{grid-template-columns:1fr;}
+  .metrics-table{font-size:0.82rem;}
+  .acct-table{font-size:0.82rem;}
+  .related{padding:2rem 1.5rem 2.5rem;}.related-grid{grid-template-columns:1fr;}
   .blog-subscribe{padding:3rem 1.5rem;}
-  footer{padding:3rem 1.5rem 2rem;}
-  .ft{grid-template-columns:1fr;gap:2rem;}
-  .ft-bot{flex-direction:column;gap:1rem;}
+  footer{padding:3rem 1.5rem 2rem;}.ft{grid-template-columns:1fr;gap:2rem;}.ft-bot{flex-direction:column;gap:1rem;}
+  .adb-inner{padding:0.85rem 1.5rem;}
+  .resource-cta{flex-direction:column;padding:2rem;}
+  .faq-section{padding:2rem 1.5rem;}
+  .author-bio{flex-direction:column;}
+  .series-link{flex-direction:column;gap:0.75rem;}
 }
+
+.art-wrap a{color:var(--gold-a11y);text-decoration:underline;text-decoration-color:rgba(184,146,42,0.4);text-underline-offset:3px;transition:text-decoration-color 0.2s;}
+.art-wrap a:hover{text-decoration-color:var(--gold);}
+.art-wrap sup{font-size:0.65em;line-height:0;position:relative;top:-0.4em;}
+.art-wrap sup a{font-family:var(--sans);font-size:0.6rem;font-weight:700;color:var(--gold);text-decoration:none;border-bottom:none;}
+.art-wrap sup a:hover{color:var(--gold-lt);}
+.citations{margin:3rem 0 0;padding:2rem;background:var(--cream);border:1px solid rgba(10,9,8,0.07);border-left:3px solid rgba(184,146,42,0.3);}
+.citations-label{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem;}
+.citations ol{padding-left:1.25rem;margin:0;}
+.citations li{font-family:var(--body);font-size:0.82rem;font-weight:300;line-height:1.65;color:var(--muted);margin-bottom:0.4rem;}
+.citations li cite{font-style:italic;color:#2a2520;}
+.svg-flywheel-wrap{background:var(--ink);padding:2.5rem 2rem;display:flex;justify-content:center;align-items:center;margin:2.5rem 0;border:1px solid rgba(184,146,42,0.12);}
+.svg-flywheel-wrap svg{max-width:400px;width:100%;height:auto;}
+.svg-gap-wrap{margin:0 0 2.5rem;overflow:hidden;border:1px solid rgba(184,146,42,0.1);}
+.svg-gap-wrap svg{width:100%;height:auto;display:block;max-height:360px;}
+.framework-caption{font-family:var(--sans);font-size:0.5rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);text-align:center;padding:0.6rem 0 0;}
+
+/* Typography: orphans, widows, text-wrap */
+.art-wrap h1,.art-wrap h2,.art-wrap h3,.ah-title{
+  text-wrap:balance;
+}
+.art-wrap p,.art-lede{
+  orphans:3;
+  widows:3;
+  text-wrap:pretty;
+}
+@supports not (text-wrap:pretty){
+  .art-wrap p,.art-lede{
+    orphans:3;
+    widows:3;
+  }
+}
+
+/* Resource CTA — override art-wrap link color bleed */
+.art-wrap .resource-cta,
+.art-wrap .resource-cta:hover{
+  text-decoration:none;
+}
+.art-wrap .resource-cta .rc-label{
+  color:var(--gold)!important;
+  text-decoration:none;
+}
+.art-wrap .resource-cta .rc-title{
+  color:#ffffff!important;
+  text-decoration:none;
+}
+.art-wrap .resource-cta .rc-desc{
+  color:#f0ece2!important;
+  text-decoration:none;
+}
+.art-wrap .resource-cta .rc-cta-link{
+  color:var(--gold)!important;
+  text-decoration:none;
+}
+.art-wrap .resource-cta .rc-icon{
+  color:rgba(184,146,42,0.7)!important;
+  text-decoration:none;
+}
+
+/* MOS stacked visual */
+.svg-stack-wrap{margin:2.5rem 0;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid rgba(184,146,42,0.12);}
+.svg-stack-wrap svg{width:100%;min-width:860px;height:auto;display:block;}
+
+/* ============ Revenue Execution Gap — incremental components ============ */
+/* Definition / Answer block (AEO) */
+.def-block{background:var(--cream);border:1px solid rgba(10,9,8,0.07);border-left:3px solid var(--gold);padding:1.75rem 2rem;margin:2.5rem 0;}
+.def-block .def-term{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.6rem;}
+.def-block p{font-family:var(--body);font-size:1rem;font-weight:300;line-height:1.8;color:#2a2520;margin-bottom:0!important;}
+.def-block p strong{font-weight:600;color:var(--ink);}
+/* Five-layer framework grid */
+.layers-wrap{margin:2.5rem 0;border:1px solid rgba(10,9,8,0.08);}
+.layers-header{background:var(--ink);padding:1.75rem 2rem;position:relative;}
+.layers-header::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);}
+.lh-label{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:#b8922a;display:block;margin-bottom:0.4rem;}
+.lh-title{font-family:var(--serif);font-size:1.4rem;font-weight:300;color:var(--paper);}
+.lh-title em{font-style:italic;color:var(--gold-lt);}
+.layers-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(10,9,8,0.08);}
+.layer-cell{background:var(--paper);padding:1.5rem 1.25rem;}
+.layer-cell:nth-child(even){background:rgba(10,9,8,0.02);}
+.layer-num{font-family:var(--serif);font-size:1.8rem;font-weight:300;font-style:italic;color:rgba(184,146,42,0.25);display:block;line-height:1;margin-bottom:0.5rem;}
+.layer-name{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:0.5rem;line-height:1.35;}
+.layer-q{font-family:var(--serif);font-size:0.9rem;font-style:italic;color:var(--gold);display:block;line-height:1.45;}
+/* Layer detail block */
+.layer-detail{border:1px solid rgba(10,9,8,0.08);margin:2rem 0;}
+.ld-top{background:var(--ink);padding:1.25rem 1.75rem;position:relative;display:flex;align-items:baseline;gap:1rem;}
+.ld-top::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);}
+.ld-num{font-family:var(--serif);font-size:1.5rem;font-weight:300;font-style:italic;color:var(--gold-lt);line-height:1;}
+.ld-name{font-family:var(--serif);font-size:1.35rem;font-weight:300;color:var(--paper);}
+.ld-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(10,9,8,0.08);}
+.ld-cell{background:var(--paper);padding:1.25rem 1.5rem;}
+.ld-cell:nth-child(even){background:rgba(10,9,8,0.02);}
+.ld-cell.full{grid-column:1 / -1;background:rgba(184,146,42,0.03);}
+.ld-k{font-family:var(--sans);font-size:0.5rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem;}
+.ld-cell p{font-family:var(--body);font-size:0.9rem;font-weight:300;line-height:1.7;color:#2a2520;margin-bottom:0!important;}
+.ld-cell ul{list-style:none;padding:0;margin:0;}
+.ld-cell li{font-family:var(--body);font-size:0.88rem;font-weight:300;line-height:1.55;color:#2a2520;padding:0.32rem 0;display:flex;align-items:baseline;gap:0.6rem;}
+.ld-cell li::before{content:"\2014";color:var(--gold);flex-shrink:0;}
+.ld-cell.q li::before{content:"?";font-family:var(--serif);font-style:italic;color:var(--gold);}
+/* IP concept cards */
+.ip-card{border:1px solid rgba(10,9,8,0.08);border-left:3px solid var(--gold);background:var(--cream);padding:1.5rem 1.75rem;margin:1.5rem 0;}
+.ip-name{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--ink);margin-bottom:0.5rem;display:block;}
+.ip-name sup{font-size:0.5em;color:var(--gold);top:-0.6em;}
+.ip-def{font-family:var(--body);font-size:0.95rem;font-weight:300;line-height:1.75;color:#2a2520;margin-bottom:0!important;}
+.ip-def strong{font-weight:600;color:var(--ink);}
+/* Assessment */
+.assess-wrap{margin:2.5rem 0;border:1px solid rgba(10,9,8,0.08);}
+.assess-head{background:var(--ink);padding:1.75rem 2rem;position:relative;}
+.assess-head::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);}
+.assess-head .ah-l{font-family:var(--sans);font-size:0.52rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:#b8922a;display:block;margin-bottom:0.4rem;}
+.assess-head .ah-t{font-family:var(--serif);font-size:1.4rem;font-weight:300;color:var(--paper);}
+.assess-group{padding:0.5rem 0;}
+.assess-cat{font-family:var(--sans);font-size:0.5rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);padding:1rem 2rem 0.4rem;display:block;background:rgba(184,146,42,0.03);}
+.assess-q{display:grid;grid-template-columns:2.2rem 1fr;background:var(--paper);border-bottom:1px solid rgba(10,9,8,0.06);}
+.assess-q:nth-child(even){background:rgba(10,9,8,0.02);}
+.aq-n{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:rgba(184,146,42,0.5);padding:1rem 0 1rem 1.25rem;}
+.aq-t{font-family:var(--body);font-size:0.92rem;font-weight:300;line-height:1.6;color:#2a2520;padding:1rem 1.5rem 1rem 0.75rem;}
+.score-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(10,9,8,0.08);border:1px solid rgba(10,9,8,0.08);margin:2rem 0;}
+.score-cell{background:var(--paper);padding:1.4rem 1.25rem;text-align:center;}
+.score-range{font-family:var(--serif);font-size:1.5rem;font-weight:300;font-style:italic;color:var(--gold);display:block;margin-bottom:0.4rem;}
+.score-label{font-family:var(--sans);font-size:0.54rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);display:block;line-height:1.4;}
+.score-cell:nth-child(4){background:rgba(192,57,43,0.04);}
+.score-cell:nth-child(4) .score-range{color:#c0392b;}
+
+/* AEO article components (themed) */
+.exec-summary{background:var(--ink);padding:2rem 2.2rem;margin:2.5rem 0;}
+.exec-summary .callout-label{color:var(--gold-lt);}
+.exec-summary ul{margin:0 0 0 1.15rem;padding:0;}
+.exec-summary li{font-family:var(--body);font-size:1rem;font-weight:300;line-height:1.7;color:rgba(247,244,238,0.82);margin-bottom:0.6rem;}
+.exec-summary li strong{color:var(--paper);font-weight:600;}
+.art-wrap ul,.art-wrap ol{margin:0 0 1.6rem 1.4rem;padding:0;}
+.art-wrap li{font-family:var(--body);font-size:1.05rem;font-weight:300;line-height:1.8;color:#3d3830;margin-bottom:0.6rem;}
+.art-wrap li strong{font-weight:600;color:var(--ink);}
+.art-wrap p a,.art-wrap li a{color:#7a5e12;text-decoration:underline;text-underline-offset:2px;}
+.art-wrap p a:hover,.art-wrap li a:hover{color:var(--gold);}
+.art-wrap table{border-collapse:collapse;width:100%;margin:2rem 0;font-family:var(--body);font-size:0.98rem;}
+.art-wrap caption{text-align:left;font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);padding-bottom:0.7rem;}
+.art-wrap th,.art-wrap td{text-align:left;padding:0.8rem 1rem;border-bottom:1px solid rgba(10,9,8,0.1);vertical-align:top;line-height:1.55;color:#3d3830;}
+.art-wrap thead th{background:var(--cream);font-family:var(--sans);font-size:0.66rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink);border-bottom:2px solid var(--gold);}
+.art-wrap tbody th{font-weight:600;color:var(--ink);}
+.checklist{background:var(--cream);border:1px solid rgba(10,9,8,0.07);border-left:3px solid var(--gold);padding:1.75rem 2rem;margin:2.5rem 0;}
+.checklist ul{list-style:none;margin:0;padding:0;}
+.checklist li{position:relative;padding-left:2rem;margin-bottom:0.9rem;font-size:1rem;line-height:1.6;color:#3d3830;}
+.checklist li::before{content:'';position:absolute;left:0;top:0.2em;width:1.05rem;height:1.05rem;border:2px solid var(--gold);border-radius:3px;}
+.fw-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;background:var(--ink);padding:1.5rem 1.8rem;margin:2.5rem 0;}
+.fw-cta p{font-family:var(--body)!important;color:rgba(247,244,238,0.82)!important;font-size:0.98rem!important;font-weight:300!important;margin:0!important;}
+.fw-cta a{font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink)!important;background:var(--gold);padding:0.7rem 1.3rem;text-decoration:none!important;white-space:nowrap;}
+.fw-cta a:hover{background:var(--gold-lt);}
+.art-figure{margin:2.5rem 0;text-align:center;}
+.art-figure svg{max-width:100%;height:auto;border:1px solid rgba(10,9,8,0.1);background:#fff;}
+.art-figure figcaption{font-family:var(--body);font-size:0.82rem;color:var(--muted);margin-top:0.9rem;font-style:italic;}
 </style>
+<link rel="stylesheet" href="/assets/search/search.css">
+<link rel="stylesheet" href="/assets/nav/nav.css">
 </head>
 <body>
 
-<a href="#main" class="skip-link">Skip to content</a>
-
-<nav id="nav" style="background:rgba(12,11,9,0.95);backdrop-filter:blur(20px);">
-  <a href="/" class="nav-logo">E.R.M.</a>
-  <ul class="nav-links">
-    <li><a href="/#who">About</a></li>
-    <li><a href="/#global">Global</a></li>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress" aria-hidden="true"><div class="rp-fill" id="rpFill"></div></div>
+<!-- NAV:START -->
+<nav id="nav" aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="Erik R. Miller — Home">E.R.M.</a>
+    <ul class="nav-links" role="list">
+    <li><a href="/about/">About</a></li>
+    <li><a href="/about/#global">Global</a></li>
     <li><a href="/frameworks/">Frameworks</a></li>
-    <li><a href="/blog.html">Blog</a></li>
-    <li><a href="/#resources">Resources</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/resources/">Resources</a></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
     <li><a href="/#contact" class="nav-cta">Work Together</a></li>
   </ul>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<!-- Mobile nav overlay -->
+<ul class="nav-links-mobile" id="mobileNav" role="list" aria-label="Mobile navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/about/#global">Global</a></li>
+  <li><a href="/frameworks/">Frameworks</a></li>
+  <li><a href="/blog/">Blog</a></li>
+  <li><a href="/resources/">Resources</a></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
+  <li><a href="/#contact" class="nav-cta">Work Together</a></li>
+</ul>
+<!-- NAV:END -->
 
-<div class="blog-hero">
-  <div class="blog-hero-inner">
-    <nav class="blog-breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a> &rsaquo; <a href="/blog.html">Blog</a> &rsaquo; <span>Answer Engine Optimization for B2B</span>
+<header class="art-hero">
+  <div class="ah-glow" aria-hidden="true"></div>
+  <div class="ah-inner">
+    <nav class="ah-breadcrumb" aria-label="Breadcrumb">
+      <a href="../../">Home</a><span aria-hidden="true">/</span>
+      <a href="../">Blog</a><span aria-hidden="true">/</span>
+      <span style="color:rgba(247,244,238,0.4);">Answer Engine Optimization for B2B</span>
     </nav>
-    <div class="blog-tag">GTM Strategy &middot; AEO</div>
-    <h1 class="blog-title">Answer Engine Optimization for B2B: How to Become the Vendor <em>AI Recommends</em></h1>
-    <div class="blog-meta">
-      <span>Erik R. Miller</span>
-      <span class="blog-meta-dot"></span>
-      <time datetime="2026-06-12">June 12, 2026</time>
-      <span class="blog-meta-dot"></span>
-      <span>16 min read</span>
+    <div class="ah-tag">GTM Strategy &middot; AEO</div>
+    <h1 class="ah-title">Answer Engine Optimization for B2B:<br><em>How to Become the Vendor AI Recommends</em></h1>
+    <p class="ah-deck">Your buyers are building their vendor shortlist inside AI before they ever contact sales. This is the operating model for becoming the vendor AI recommends.</p>
+    <div class="ah-meta">
+      <span class="ah-author">By <strong>Erik R. Miller</strong></span>
+      <span class="ah-divider" aria-hidden="true"></span>
+      <time class="ah-date" datetime="2026-06-12">June 12, 2026</time>
+      <span class="ah-divider" aria-hidden="true"></span>
+      <span class="ah-read">16 min read</span>
     </div>
   </div>
-</div>
+</header>
 
-<main id="main">
-<article class="blog-body">
 
-<div class="erm-answer">
-  <span class="lbl">The Short Answer</span>
+<main id="main-content">
+<article class="art-wrap" aria-label="Article: Answer Engine Optimization for B2B — How to Become the Vendor AI Recommends">
+
+  <a href="../" class="art-back">&larr; Back to all posts</a>
+
+<div class="callout">
+  <span class="callout-label">The Short Answer</span>
   <p>Answer Engine Optimization is the practice of structuring your expertise, evidence, and digital presence so AI systems like ChatGPT, Google AI Overviews, Perplexity, and Gemini cite and recommend you when buyers ask category questions. In B2B, it decides whether you make the shortlist that AI assembles before a buyer ever talks to your sales team.</p>
 </div>
 
@@ -275,8 +572,8 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 
 <p>This is the shift that Answer Engine Optimization addresses. The buyer's research no longer starts on your website or even on a search results page. It starts inside a model that has already read the internet, formed a view of your category, and decided whether you belong in the consideration set. The job of the modern revenue organization is to make sure the machine that advises your buyer knows who you are, describes you accurately, and recommends you for the right reasons.</p>
 
-<div class="erm-summary">
-  <span class="lbl">Executive Summary</span>
+<div class="exec-summary">
+  <span class="callout-label">Executive Summary</span>
   <ul>
     <li><strong>The buying journey now begins inside AI.</strong> Most B2B buyers use generative AI across their research, and a large majority use it to build a vendor shortlist before contacting any company.</li>
     <li><strong>SEO and AEO are different games.</strong> SEO wins a clickable link. AEO wins inclusion in the answer itself, where there is frequently no list of links to compete for.</li>
@@ -294,9 +591,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 
 <p>The behavior underneath that finding is a shift in where research begins. <a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-20-gartner-survey-finds-sixty-nine-percent-of-b-two-b-buyers-turn-to-sales-reps-to-validate-ai-generated-insights">Gartner's 2025 buyer research</a> found that 45% of B2B buyers said they used AI during a recent purchase, and most buyers now prefer to run their early research through <a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience">digital, self-service channels</a> rather than a sales rep. Increasingly, buyers delegate the first pass of vendor research to AI assistants before they contact a company at all.</p>
 
-<div class="blog-callout">
-  <p>The first sales call no longer happens at the start of the buying process. It happens after the model has already narrowed the field. By then, you are either on the list or arguing with a decision that was made without you.</p>
-</div>
+<div class="pull-quote"><blockquote>The first sales call no longer happens at the start of the buying process. It happens after the model has already narrowed the field. By then, you are either on the list or arguing with a decision that was made without you.</blockquote></div>
 
 <p>This is not a fringe channel. Google has moved AI-generated answers to the center of search: AI Overviews reached more than a billion people, and <a href="https://blog.google/products/search/google-search-ai-mode-update/">Google's AI Mode passed a billion monthly users</a> in 2025. More of the demand you used to capture as a click is now resolved inside the answer itself. If you are not in the answer, the demand still exists. It simply flows to whoever the model named instead of you.</p>
 
@@ -310,7 +605,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 
 <p>The gap exists because answer engines do not reward the things human marketing optimized for. A polished homepage, a strong brand campaign, a busy events calendar: these build memory in humans. They do almost nothing for a model that has never seen your booth and cannot click your hero video. The model forms its view from text it can read, evidence it can corroborate, and structure it can parse.</p>
 
-<div class="erm-figure">
+<figure class="art-figure">
 <svg viewBox="0 0 820 470" role="img" aria-labelledby="ava-title ava-desc" xmlns="http://www.w3.org/2000/svg">
 <title id="ava-title">The ERM AI Visibility Architecture diagram</title>
 <desc id="ava-desc">A four-layer model stacked from foundation to surface. From bottom to top: Layer 1 Entity Foundation, Layer 2 Citable Substance, Layer 3 Corroboration Network, Layer 4 Machine Legibility. The four layers feed into AI answer engines on the right, which produce an output labeled Share of Model. ERM Advisory, Erik R. Miller.</desc>
@@ -352,7 +647,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <text x="40" y="438" font-family="DM Sans,sans-serif" font-size="11.5" font-style="italic" fill="#6b6456">Four layers compound. A weak foundation caps everything built above it. ERM Advisory &middot; Erik R. Miller</text>
 </svg>
 <figcaption>The ERM AI Visibility Architecture &middot; how the four layers feed AI answer engines &middot; ERM Advisory &middot; Erik R. Miller</figcaption>
-</div>
+</figure>
 
 <p>There is a second, quieter problem hiding inside the first. When models do mention you, they are often wrong. They describe a product you sunset two years ago, attribute a competitor's weakness to you, or place you in the wrong category entirely. An inaccurate citation can be worse than no citation, because it shapes the buyer's frame before you ever enter the conversation.</p>
 
@@ -360,8 +655,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 
 <p>To influence AI recommendations, you have to understand how the recommendation is produced. The mechanics differ across engines, but the underlying logic is consistent enough to plan around. Start with the shift itself: traditional search and AI search reward different things, which is why AEO is a different game and not an SEO setting.</p>
 
-<div class="erm-table-wrap">
-<table class="erm-table">
+<table>
 <caption>Traditional search vs AI search: what each one rewards</caption>
 <thead><tr><th scope="col">Traditional Search</th><th scope="col">AI Search</th></tr></thead>
 <tbody>
@@ -372,7 +666,6 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <tr><th scope="row">Traffic</th><td>Recommendation presence</td></tr>
 </tbody>
 </table>
-</div>
 
 <h3>Retrieval, not ranking</h3>
 
@@ -396,7 +689,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 
 <p>Most teams respond to the AI Visibility Gap with a scramble of tactics. They publish a flurry of FAQ pages, sprinkle in schema, and hope. Tactics without structure produce motion without movement. The <a href="/frameworks/ai-visibility-architecture/">AI Visibility Architecture</a> organizes the work into four layers that build on each other. Each layer is necessary. None is sufficient alone. This article is the field guide; the framework page is its canonical home, with the full diagram and a downloadable scorecard.</p>
 
-<div class="blog-framework-cta">
+<div class="fw-cta">
   <p>This article builds directly on the <strong>AI Buying Committee Framework</strong>, which maps how AI agents now participate in vendor evaluation.</p>
   <a href="/frameworks/ai-buying-committee/">Explore the framework</a>
 </div>
@@ -429,9 +722,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 
 <p>Legibility is necessary but it is the most over weighted layer in practice, because it feels concrete and technical teams can ship it quickly. Schema on a page with no substance and no corroboration is a clean label on an empty jar. Do this layer well, but do not mistake it for the whole job.</p>
 
-<div class="blog-callout">
-  <p>The four layers compound. A weak Entity Foundation caps everything you build above it. Most teams obsess over Layer 4 and neglect Layer 1, which is exactly backward.</p>
-</div>
+<div class="pull-quote"><blockquote>The four layers compound. A weak Entity Foundation caps everything you build above it. Most teams obsess over Layer 4 and neglect Layer 1, which is exactly backward.</blockquote></div>
 
 <h2>Share of Model: The Metric That Replaces Share of Voice</h2>
 
@@ -441,8 +732,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 
 <p>Measuring it is more straightforward than it sounds. Build a fixed set of the questions your buyers actually ask, the ones that precede a purchase. Run them across the major engines on a regular cadence. Then track three things over time.</p>
 
-<div class="erm-table-wrap">
-<table class="erm-table">
+<table>
 <caption>The three components of Share of Model</caption>
 <thead>
 <tr><th scope="col">Component</th><th scope="col">What it measures</th><th scope="col">Why it matters</th></tr>
@@ -453,7 +743,6 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <tr><th scope="row">Assisted pipeline</th><td>Qualified pipeline influenced by AI referred or AI shaped research</td><td>Connects visibility to revenue, not vanity</td></tr>
 </tbody>
 </table>
-</div>
 
 <p>The third component is the one executives care about. AI-referred sessions are still small as a share of total traffic, but they behave differently: the buyer arrives already informed, having let the model do the early comparison. A small, high-intent stream is worth measuring closely.</p>
 
@@ -498,16 +787,14 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 
 <p>That is exactly why it stalls. When a discipline spans six teams, it tends to become the responsibility of none. The fix is the same one that closes the execution gap: a single accountable owner, usually in marketing, with the authority to coordinate across those functions and a seat in the revenue operating rhythm.</p>
 
-<div class="blog-callout">
-  <p>AEO does not need a new department. It needs one owner with a mandate that crosses content, PR, SEO, and revenue operations, and a metric that makes the work visible to leadership.</p>
-</div>
+<div class="pull-quote"><blockquote>AEO does not need a new department. It needs one owner with a mandate that crosses content, PR, SEO, and revenue operations, and a metric that makes the work visible to leadership.</blockquote></div>
 
 <h2>Executive Assessment: The AI Visibility Scorecard</h2>
 
 <p>Before you invest, find out where you actually stand. Work through this checklist with your marketing and web leads. Each unchecked box is a gap in one of the four layers, and the layer it sits in tells you where to start.</p>
 
-<div class="erm-check">
-  <span class="lbl">The AI Visibility Scorecard</span>
+<div class="checklist">
+  <span class="callout-label">The AI Visibility Scorecard</span>
   <ul>
     <li>We have asked the major engines our top buyer questions in the last 30 days and recorded who they named.</li>
     <li>When we are mentioned, the model describes our category, product, and ideal customer correctly.</li>
@@ -567,31 +854,13 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 
 <h2>Frequently Asked Questions</h2>
 
-<div class="erm-faq">
-<details>
-<summary>What is Answer Engine Optimization (AEO) in B2B?</summary>
-<p>Answer Engine Optimization is the practice of structuring your expertise, evidence, and digital presence so AI systems such as ChatGPT, Google AI Overviews, Perplexity, and Gemini cite and recommend you when buyers ask category questions. In B2B, it determines whether you appear on the vendor shortlist that AI assembles before a buyer ever contacts your sales team.</p>
-</details>
-<details>
-<summary>How is AEO different from SEO?</summary>
-<p>SEO optimizes for ranking a link that a human clicks. AEO optimizes for being the source an AI model extracts, synthesizes, and cites inside a generated answer. SEO competes for position on a results page. AEO competes for inclusion in the answer itself, where there is often no list of links to win in the first place.</p>
-</details>
-<details>
-<summary>Is AEO the same as GEO?</summary>
-<p>The terms overlap. Generative Engine Optimization tends to emphasize being cited by large language models like ChatGPT and Gemini, while Answer Engine Optimization is often used more broadly to include AI search features such as Google's AI Overviews. In practice they describe the same goal: becoming the source AI trusts and surfaces. The four layer architecture applies to both.</p>
-</details>
-<details>
-<summary>How do we measure whether AEO is working?</summary>
-<p>Track Share of Model: citation frequency across a fixed set of buyer questions on each major engine, the accuracy of how models describe you, and assisted pipeline from AI shaped research. Run the question set on a regular cadence so you can see movement over time rather than a single snapshot.</p>
-</details>
-<details>
-<summary>How long does AEO take to show results?</summary>
-<p>Entity and legibility fixes can change how models describe you within weeks. Substance and corroboration compound over quarters. A realistic expectation is meaningful movement in your priority questions within one to two quarters, with the strongest gains coming from original content and earned mentions that accumulate over time.</p>
-</details>
-<details>
-<summary>Who should own AEO in a B2B organization?</summary>
-<p>It needs a single accountable owner, usually in marketing, with authority to coordinate content, web, PR, and reviews. Because AEO spans owned, earned, and technical work, it fails when it is treated as a side task. Give it an owner, a metric, and a place in the revenue operating rhythm.</p>
-</details>
+<div class="faq-section">
+<div class="faq-item"><p class="faq-q">What is Answer Engine Optimization (AEO) in B2B?</p><p class="faq-a">Answer Engine Optimization is the practice of structuring your expertise, evidence, and digital presence so AI systems such as ChatGPT, Google AI Overviews, Perplexity, and Gemini cite and recommend you when buyers ask category questions. In B2B, it determines whether you appear on the vendor shortlist that AI assembles before a buyer ever contacts your sales team.</p></div>
+<div class="faq-item"><p class="faq-q">How is AEO different from SEO?</p><p class="faq-a">SEO optimizes for ranking a link that a human clicks. AEO optimizes for being the source an AI model extracts, synthesizes, and cites inside a generated answer. SEO competes for position on a results page. AEO competes for inclusion in the answer itself, where there is often no list of links to win in the first place.</p></div>
+<div class="faq-item"><p class="faq-q">Is AEO the same as GEO?</p><p class="faq-a">The terms overlap. Generative Engine Optimization tends to emphasize being cited by large language models like ChatGPT and Gemini, while Answer Engine Optimization is often used more broadly to include AI search features such as Google's AI Overviews. In practice they describe the same goal: becoming the source AI trusts and surfaces. The four layer architecture applies to both.</p></div>
+<div class="faq-item"><p class="faq-q">How do we measure whether AEO is working?</p><p class="faq-a">Track Share of Model: citation frequency across a fixed set of buyer questions on each major engine, the accuracy of how models describe you, and assisted pipeline from AI shaped research. Run the question set on a regular cadence so you can see movement over time rather than a single snapshot.</p></div>
+<div class="faq-item"><p class="faq-q">How long does AEO take to show results?</p><p class="faq-a">Entity and legibility fixes can change how models describe you within weeks. Substance and corroboration compound over quarters. A realistic expectation is meaningful movement in your priority questions within one to two quarters, with the strongest gains coming from original content and earned mentions that accumulate over time.</p></div>
+<div class="faq-item"><p class="faq-q">Who should own AEO in a B2B organization?</p><p class="faq-a">It needs a single accountable owner, usually in marketing, with authority to coordinate content, web, PR, and reviews. Because AEO spans owned, earned, and technical work, it fails when it is treated as a side task. Give it an owner, a metric, and a place in the revenue operating rhythm.</p></div>
 </div>
 
 <h2>Research &amp; Supporting Evidence</h2>
@@ -619,64 +888,84 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 
 <p><em>&mdash; Erik R. Miller</em></p>
 
+<div class="art-tags"><span class="art-tag">Answer Engine Optimization</span><span class="art-tag">AI Visibility</span><span class="art-tag">GTM Strategy</span><span class="art-tag">Share of Model</span><span class="art-tag">Vendor Selection</span></div>
 </article>
+
+<nav class="related" aria-label="Related articles">
+  <p class="related-label">Read Next</p>
+  <div class="related-grid">
+    <a class="related-card" href="/blog/ai-buying-committee-b2b-vendor-research/">
+      <div class="related-tag">GTM Strategy</div>
+      <div class="related-title">Your Buyer&rsquo;s AI Is Already Researching You Before Sales Speaks</div>
+    </a>
+    <a class="related-card" href="/frameworks/ai-visibility-architecture/">
+      <div class="related-tag">Framework</div>
+      <div class="related-title">The AI Visibility Architecture: Become the Vendor AI Recommends</div>
+    </a>
+    <a class="related-card" href="/blog/signal-centric-abm-operating-model/">
+      <div class="related-tag">Account Intelligence</div>
+      <div class="related-title">Signal-Centric ABM: The Operating Model Replacing Campaign-Centric Account Marketing</div>
+    </a>
+    <a class="related-card" href="/blog/demand-creation-vs-demand-capture/">
+      <div class="related-tag">Demand Generation</div>
+      <div class="related-title">Demand Creation vs. Demand Capture: The Budget Architecture B2B Leaders Get Wrong</div>
+    </a>
+  </div>
+</nav>
 </main>
 
-<div class="blog-author">
-  <div class="blog-author-name">Erik R. Miller</div>
-  <p class="blog-author-bio">B2B marketing executive. Builder. Operator. 15+ years. Four continents. Still fascinated. <a href="https://theoperator-erm.beehiiv.com/subscribe">Subscribe to The Operator</a> for more.</p>
-</div>
+<!-- Subscribe CTA -->
+<section class="blog-subscribe" aria-labelledby="subscribe-heading">
+  <h2 id="subscribe-heading">Enjoyed this? Get <em>The Operator.</em></h2>
+  <p>Revenue leadership and operator frameworks. Three times a week. No fluff.</p>
+  <a href="https://theoperator-erm.beehiiv.com/subscribe" class="blog-subscribe-btn" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to The Operator newsletter (opens in new tab)">Subscribe Free &rarr;</a>
+</section>
 
-<div class="blog-nav">
-  <a href="/blog/agentic-execution-gap/" class="blog-nav-link">&larr; The Agentic Execution Gap</a>
-  <a href="/blog/ai-buying-committee-b2b-vendor-research/" class="blog-nav-link">Your Buyer's AI Is Already Researching You &rarr;</a>
-</div>
-
-<div class="blog-subscribe">
-  <h3>Enjoyed this? Get <em>The Operator.</em></h3>
-  <p>B2B marketing intel three times a week. No fluff.</p>
-  <a href="https://theoperator-erm.beehiiv.com/subscribe" class="blog-subscribe-btn" target="_blank" rel="noopener noreferrer">Subscribe Free &rarr;</a>
-</div>
-
-<footer>
+<!-- FOOTER -->
+<footer role="contentinfo">
   <div class="ft">
     <div>
       <div class="ft-brand">Erik R. Miller</div>
-      <p class="ft-tag">Marketing Leader. Builder. Operator. Building things that actually work, for companies of every size, anywhere in the world.</p>
-      <p class="ft-global">New York &middot; London &middot; Mumbai &middot; Singapore</p>
+      <p class="ft-tag">Revenue Operator. Builder. Advisor. Helping leadership teams close the gap between strategy and results &mdash; for companies of every size, anywhere in the world.</p>
+      <p class="ft-global">New York City</p>
     </div>
     <div>
       <p class="ft-ht">Navigate</p>
-      <ul class="ft-ul">
-        <li><a href="/#who">About</a></li>
-        <li><a href="/#global">Global Reach</a></li>
+      <ul class="ft-ul" role="list">
+        <li><a href="/about/">About</a></li>
         <li><a href="/frameworks/">Frameworks</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/#resources">Resources</a></li>
+    <li><a href="/blog/">Blog</a></li>
+        <li><a href="/resources/">Resources</a></li>
       </ul>
     </div>
     <div>
       <p class="ft-ht">Connect</p>
-      <ul class="ft-ul">
-        <li><a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+      <ul class="ft-ul" role="list">
+        <li><a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn (opens in new tab)">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank" aria-label="Instagram (opens in new tab)">Instagram</a></li>
+        <li><a href="https://www.facebook.com/ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="Facebook (opens in new tab)">Facebook</a></li>
         <li><a href="mailto:erikrmiller@outlook.com">Email Erik</a></li>
         <li><a href="/#contact">Work Together</a></li>
-        <li><a href="#">Download CV</a></li>
       </ul>
     </div>
   </div>
   <div class="ft-bot">
-    <p class="ft-copy">&copy; 2026 Erik R. Miller &middot; E.R.M. Advisory &middot; New York City</p>
+    <p class="ft-copy">&copy; 2026 Erik R. Miller. All rights reserved.</p>
     <div class="ft-soc">
-      <a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-      <a href="#">YouTube</a>
-      <a href="#">Twitter / X</a>
+      <a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn (opens in new tab)">LI</a>
+      <a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank" aria-label="Instagram (opens in new tab)">IG</a>
+      <a href="https://www.facebook.com/ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="Facebook (opens in new tab)">FB</a>
     </div>
   </div>
 </footer>
 
 <script>
-window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('stuck',scrollY>60));
+(function(){var fill=document.getElementById("rpFill");if(!fill)return;window.addEventListener("scroll",function(){var s=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;fill.style.width=(h>0?Math.round(s/h*100):0)+"%";},{passive:true});})();
+(function(){var btn=document.getElementById("navHamburger");var menu=document.getElementById("mobileNav");if(!btn||!menu)return;btn.addEventListener("click",function(){var open=menu.classList.toggle("open");btn.setAttribute("aria-expanded",open);document.body.style.overflow=open?"hidden":"";});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&menu.classList.contains("open")){closeMobileNav();}});})();
+function closeMobileNav(){var menu=document.getElementById("mobileNav");var btn=document.getElementById("navHamburger");if(menu)menu.classList.remove("open");if(btn)btn.setAttribute("aria-expanded","false");document.body.style.overflow="";}
 </script>
+
+<script src="/assets/search/search.js"></script>
+<script src="/assets/nav/nav.js" defer></script>
 </body>
 </html>
