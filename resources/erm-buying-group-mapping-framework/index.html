@@ -240,6 +240,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <link rel="stylesheet" href="/assets/search/search.css">
 <script src="/assets/search/search.js" defer></script>
 <link rel="stylesheet" href="/assets/nav/nav.css">
+<link rel="stylesheet" href="/assets/footer/footer.css">
 </head>
 <body>
 
@@ -526,42 +527,45 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 </section>
 
 <!-- FOOTER -->
-<footer>
+<!-- FOOTER:START -->
+<footer role="contentinfo">
   <div class="ft">
     <div>
       <div class="ft-brand">Erik R. Miller</div>
-      <p class="ft-tag">Marketing Leader. Builder. Operator. Building things that actually work, for companies of every size, anywhere in the world.</p>
-      <p class="ft-global">New York · London · Mumbai · Singapore</p>
+      <p class="ft-tag">Marketing Leader. Builder. Operator. Based in New York. Experienced across four continents.</p>
+      <p class="ft-global">New York · Globally experienced</p>
     </div>
-    <div>
+    <nav aria-label="Footer navigation">
       <p class="ft-ht">Navigate</p>
-      <ul class="ft-ul">
+      <ul class="ft-ul" role="list">
         <li><a href="/about/">About</a></li>
-        <li><a href="/#global">Global Reach</a></li>
-        <li><a href="/#advisory">Advisory</a></li>
+        <li><a href="/about/#global">Global Reach</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/resources/">Resources</a></li>
       </ul>
-    </div>
-    <div>
+    </nav>
+    <nav aria-label="Connect with Erik">
       <p class="ft-ht">Connect</p>
-      <ul class="ft-ul">
+      <ul class="ft-ul" role="list">
         <li><a href="mailto:erikrmiller@outlook.com">Email Erik</a></li>
         <li><a href="/#contact">Work Together</a></li>
       </ul>
-    </div>
+    </nav>
   </div>
   <div class="ft-bot">
     <p class="ft-copy">© 2026 Erik R. Miller · E.R.M. Advisory · New York City</p>
-    <div class="ft-soc">
+    <nav aria-label="Social media links">
+      <div class="ft-soc">
       <a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn, Erik R. Miller profile (opens in new tab)">LinkedIn (Erik R. Miller)</a>
       <a href="https://www.linkedin.com/company/erik-r-miller-advisory/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn, ERM Advisory company page (opens in new tab)">LinkedIn (ERM Advisory)</a>
       <a href="https://www.facebook.com/ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="Facebook (opens in new tab)">Facebook</a>
       <a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank" aria-label="Instagram (opens in new tab)">Instagram</a>
       <a href="https://www.youtube.com/@ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="YouTube (opens in new tab)">YouTube</a>
     </div>
+    </nav>
   </div>
 </footer>
+<!-- FOOTER:END -->
 
 <script>
 // Cursor
