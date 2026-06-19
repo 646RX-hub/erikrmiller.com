@@ -135,6 +135,7 @@ footer{background:var(--ink);padding:4.5rem clamp(1.5rem,4vw,4rem) 2.5rem;border
 </style>
 <link rel="stylesheet" href="/assets/search/search.css">
 <link rel="stylesheet" href="/assets/nav/nav.css">
+<link rel="stylesheet" href="/assets/footer/footer.css">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -617,41 +618,45 @@ footer{background:var(--ink);padding:4.5rem clamp(1.5rem,4vw,4rem) 2.5rem;border
 
 </main>
 
+<!-- FOOTER:START -->
 <footer role="contentinfo">
   <div class="ft">
     <div>
       <div class="ft-brand">Erik R. Miller</div>
-      <p class="ft-tag">Marketing Leader. Builder. Operator. Based in New York.</p>
+      <p class="ft-tag">Marketing Leader. Builder. Operator. Based in New York. Experienced across four continents.</p>
       <p class="ft-global">New York · Globally experienced</p>
     </div>
     <nav aria-label="Footer navigation">
       <p class="ft-ht">Navigate</p>
       <ul class="ft-ul" role="list">
         <li><a href="/about/">About</a></li>
-        <li><a href="/frameworks/">Frameworks</a></li>
-        <li><a href="/visual-library/">Visual Library</a></li>
+        <li><a href="/about/#global">Global Reach</a></li>
         <li><a href="/blog/">Blog</a></li>
-        <li><a href="/#contact">Work Together</a></li>
+        <li><a href="/resources/">Resources</a></li>
       </ul>
     </nav>
-    <nav aria-label="Connect">
+    <nav aria-label="Connect with Erik">
       <p class="ft-ht">Connect</p>
       <ul class="ft-ul" role="list">
         <li><a href="mailto:erikrmiller@outlook.com">Email Erik</a></li>
+        <li><a href="/#contact">Work Together</a></li>
       </ul>
     </nav>
   </div>
   <div class="ft-bot">
     <p class="ft-copy">© 2026 Erik R. Miller · E.R.M. Advisory · New York City</p>
-    <div class="ft-soc">
+    <nav aria-label="Social media links">
+      <div class="ft-soc">
       <a href="https://www.linkedin.com/in/erikrm/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn, Erik R. Miller profile (opens in new tab)">LinkedIn (Erik R. Miller)</a>
       <a href="https://www.linkedin.com/company/erik-r-miller-advisory/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn, ERM Advisory company page (opens in new tab)">LinkedIn (ERM Advisory)</a>
       <a href="https://www.facebook.com/ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="Facebook (opens in new tab)">Facebook</a>
       <a href="https://www.instagram.com/ermadvisory/" rel="noopener noreferrer" target="_blank" aria-label="Instagram (opens in new tab)">Instagram</a>
       <a href="https://www.youtube.com/@ERMAdvisory" rel="noopener noreferrer" target="_blank" aria-label="YouTube (opens in new tab)">YouTube</a>
     </div>
+    </nav>
   </div>
 </footer>
+<!-- FOOTER:END -->
 <script>
 const hb=document.getElementById('navHamburger'),mn=document.getElementById('mobileNav');
 hb.addEventListener('click',()=>{const e=hb.getAttribute('aria-expanded')==='true';hb.setAttribute('aria-expanded',String(!e));mn.classList.toggle('open',!e);document.body.style.overflow=e?'':'hidden';});

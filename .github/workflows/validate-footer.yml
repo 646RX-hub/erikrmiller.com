@@ -1,0 +1,26 @@
+name: Validate Footer
+
+# Fails the build if any production page's footer drifts from the single
+# source of truth (partials/footer.html). Keeps the sitewide footer permanently consistent.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-footer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Validate footer is identical sitewide
+        run: python3 scripts/validate-footer.py
