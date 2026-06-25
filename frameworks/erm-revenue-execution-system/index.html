@@ -122,9 +122,9 @@ nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items
 .sys-vb-item{font-family:var(--sans);font-size:.56rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:.5rem;}
 .sys-vb-item strong{color:rgba(212,172,78,.7);}
 /* SYSTEM DIAGRAM */
-.sys-diagram{background:var(--ink2);border-top:1px solid rgba(255,255,255,.04);border-bottom:3px solid var(--gold);padding:5rem 0;}
+.sys-diagram{background:var(--ink2);border-top:1px solid rgba(255,255,255,.04);border-bottom:3px solid var(--gold);padding:1.75rem 0 2rem;}
 .sys-diagram-inner{max-width:1000px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);}
-.sys-diagram-label{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:rgba(212,172,78,.7);display:flex;align-items:center;gap:.75rem;margin-bottom:2rem;}
+.sys-diagram-label{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:rgba(212,172,78,.7);display:flex;align-items:center;gap:.75rem;margin-bottom:.55rem;}
 .sys-diagram-label::before{content:'';width:18px;height:2px;background:var(--gold);}
 /* System Architecture SVG */
 /* BODY TEXT */
@@ -272,84 +272,75 @@ footer{background:var(--ink);padding:4.5rem clamp(1.5rem,4vw,4rem) 2.5rem;}
   <section class="sys-diagram" aria-labelledby="diagram-h2">
     <div class="sys-diagram-inner">
       <p class="sys-diagram-label">System Architecture</p>
-      <h2 id="diagram-h2" style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:#fff;margin-bottom:2.5rem;">How the <em style="font-style:italic;color:rgba(212,172,78,.9);">Six Layers Connect</em></h2>
-      <figure>
-        <svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sys-svg-t sys-svg-d" style="width:100%;height:auto;display:block;">
-          <title id="sys-svg-t">ERM Revenue Execution System — Six-Layer Architecture Diagram</title>
-          <desc id="sys-svg-d">Six horizontal layers stacked vertically forming the ERM Revenue Execution System. From bottom to top: Foundation (Marketing Execution Gap), Layer 1 (Signal-Centric ABM — Intelligence), Layer 2 (Account Activation Gap — Measurement), Layer 3 (Buying Group Mapping — Stakeholders), Layer 4 (Buying Group Orchestration — Execution), and a parallel track on the right (AI Buying Committee — AI Discovery). Arrows connect each layer to the next. The system is labeled ERM Revenue Execution System at the top.</desc>
-          <rect width="900" height="520" fill="#161411"/>
-
-          <!-- Title -->
-          <text x="450" y="30" text-anchor="middle" font-family="Syne,sans-serif" font-size="10" font-weight="700" letter-spacing="3" fill="rgba(184,146,42,0.5)">ERM REVENUE EXECUTION SYSTEM™</text>
-
-          <!-- FOUNDATION bar -->
-          <rect x="30" y="460" width="840" height="44" rx="3" fill="rgba(184,146,42,0.06)" stroke="rgba(184,146,42,0.2)" stroke-width="1"/>
-          <text x="450" y="477" text-anchor="middle" font-family="Syne,sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" fill="rgba(247,244,238,0.4)">OPERATIONAL FOUNDATION</text>
-          <text x="450" y="492" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="10" font-style="italic" fill="rgba(184,146,42,0.55)">Marketing Execution Gap Framework — ensures strategy gets executed</text>
-          <text x="820" y="485" text-anchor="end" font-family="Syne,sans-serif" font-size="7" font-weight="700" fill="rgba(184,146,42,0.4)" letter-spacing="0.5">v1.0</text>
-
-          <!-- Layer arrows (up) -->
-          <line x1="450" y1="458" x2="450" y2="438" stroke="rgba(184,146,42,0.35)" stroke-width="1.5"/>
-          <polygon points="446,438 450,430 454,438" fill="rgba(184,146,42,0.4)"/>
-
-          <!-- LAYER 1: Signal-Centric ABM -->
-          <rect x="30" y="380" width="560" height="56" rx="3" fill="rgba(184,146,42,0.12)" stroke="#7a5e12" stroke-width="1.5"/>
-          <text x="40" y="402" font-family="Syne,sans-serif" font-size="7.5" font-weight="700" letter-spacing="1" fill="rgba(212,172,78,0.7)">LAYER 1 — INTELLIGENCE</text>
-          <text x="40" y="418" font-family="Syne,sans-serif" font-size="10" font-weight="700" fill="#fff">Signal-Centric ABM Operating Model</text>
-          <text x="40" y="430" font-family="DM Sans,sans-serif" font-size="8.5" fill="rgba(247,244,238,0.5)">Account Selection · Intent Intelligence · Multi-Channel Orchestration · Revenue Activation</text>
-          <text x="578" y="415" text-anchor="end" font-family="Syne,sans-serif" font-size="7" font-weight="700" fill="rgba(184,146,42,0.4)" letter-spacing="0.5">v1.0</text>
-
-          <line x1="280" y1="378" x2="280" y2="358" stroke="rgba(184,146,42,0.35)" stroke-width="1.5"/>
-          <polygon points="276,358 280,350 284,358" fill="rgba(184,146,42,0.4)"/>
-
-          <!-- LAYER 2: Account Activation Gap -->
-          <rect x="30" y="300" width="560" height="50" rx="3" fill="rgba(184,146,42,0.09)" stroke="rgba(184,146,42,0.45)" stroke-width="1.2"/>
-          <text x="40" y="320" font-family="Syne,sans-serif" font-size="7.5" font-weight="700" letter-spacing="1" fill="rgba(212,172,78,0.6)">LAYER 2 — MEASUREMENT</text>
-          <text x="40" y="335" font-family="Syne,sans-serif" font-size="10" font-weight="700" fill="#fff">Account Activation Gap Framework</text>
-          <text x="40" y="346" font-family="DM Sans,sans-serif" font-size="8.5" fill="rgba(247,244,238,0.45)">Cold · Warming · Active · Engaged — four-state model with gap diagnostics</text>
-
-          <line x1="280" y1="298" x2="280" y2="278" stroke="rgba(184,146,42,0.3)" stroke-width="1.5"/>
-          <polygon points="276,278 280,270 284,278" fill="rgba(184,146,42,0.35)"/>
-
-          <!-- LAYER 3: Buying Group Mapping -->
-          <rect x="30" y="222" width="560" height="50" rx="3" fill="rgba(184,146,42,0.07)" stroke="rgba(184,146,42,0.38)" stroke-width="1.2"/>
-          <text x="40" y="242" font-family="Syne,sans-serif" font-size="7.5" font-weight="700" letter-spacing="1" fill="rgba(212,172,78,0.55)">LAYER 3 — STAKEHOLDERS</text>
-          <text x="40" y="257" font-family="Syne,sans-serif" font-size="10" font-weight="700" fill="#fff">Buying Group Mapping Framework</text>
-          <text x="40" y="268" font-family="DM Sans,sans-serif" font-size="8.5" fill="rgba(247,244,238,0.4)">Economic Buyer · Champion · Technical Evaluator · End User · Procurement</text>
-
-          <line x1="280" y1="220" x2="280" y2="200" stroke="rgba(184,146,42,0.25)" stroke-width="1.5"/>
-          <polygon points="276,200 280,192 284,200" fill="rgba(184,146,42,0.3)"/>
-
-          <!-- LAYER 4: Buying Group Orchestration -->
-          <rect x="30" y="144" width="560" height="50" rx="3" fill="rgba(184,146,42,0.05)" stroke="rgba(184,146,42,0.28)" stroke-width="1"/>
-          <text x="40" y="164" font-family="Syne,sans-serif" font-size="7.5" font-weight="700" letter-spacing="1" fill="rgba(212,172,78,0.48)">LAYER 4 — EXECUTION</text>
-          <text x="40" y="179" font-family="Syne,sans-serif" font-size="10" font-weight="700" fill="rgba(247,244,238,0.85)">Buying Group Orchestration Framework</text>
-          <text x="40" y="190" font-family="DM Sans,sans-serif" font-size="8.5" fill="rgba(247,244,238,0.35)">Signal Detection · Segmentation · Multi-Channel Activation · Measure</text>
-
-          <!-- AI Track — parallel right column -->
-          <rect x="618" y="144" width="252" height="310" rx="3" fill="rgba(184,146,42,0.04)" stroke="rgba(184,146,42,0.18)" stroke-width="1" stroke-dasharray="4,3"/>
-          <text x="744" y="174" text-anchor="middle" font-family="Syne,sans-serif" font-size="7.5" font-weight="700" letter-spacing="1" fill="rgba(212,172,78,0.45)">PARALLEL TRACK</text>
-          <text x="744" y="192" text-anchor="middle" font-family="Syne,sans-serif" font-size="9.5" font-weight="700" fill="rgba(247,244,238,0.7)">AI Buying</text>
-          <text x="744" y="207" text-anchor="middle" font-family="Syne,sans-serif" font-size="9.5" font-weight="700" fill="rgba(247,244,238,0.7)">Committee</text>
-          <text x="744" y="222" text-anchor="middle" font-family="Syne,sans-serif" font-size="9.5" font-weight="700" fill="rgba(247,244,238,0.7)">Framework</text>
-          <text x="744" y="248" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="rgba(247,244,238,0.35)">AI-mediated discovery</text>
-          <text x="744" y="261" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="rgba(247,244,238,0.35)">before human conversation</text>
-          <text x="744" y="290" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(184,146,42,0.45)">ChatGPT · Perplexity</text>
-          <text x="744" y="303" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(184,146,42,0.45)">Claude · Gemini · Copilot</text>
-          <text x="744" y="332" text-anchor="middle" font-family="Syne,sans-serif" font-size="7" fill="rgba(247,244,238,0.25)">AEO · Schema · Entity</text>
-          <text x="744" y="345" text-anchor="middle" font-family="Syne,sans-serif" font-size="7" fill="rgba(247,244,238,0.25)">Authority · Clarity</text>
-
-          <!-- Connector from main track to AI track -->
-          <line x1="590" y1="194" x2="618" y2="222" stroke="rgba(184,146,42,0.2)" stroke-width="1" stroke-dasharray="3,3"/>
-          <line x1="590" y1="290" x2="618" y2="320" stroke="rgba(184,146,42,0.2)" stroke-width="1" stroke-dasharray="3,3"/>
-
-          <!-- System boundary -->
-          <rect x="15" y="48" width="870" height="468" rx="4" fill="none" stroke="rgba(184,146,42,0.08)" stroke-width="1.5" stroke-dasharray="6,4"/>
-
-          <!-- Watermark -->
-          <text x="450" y="510" text-anchor="middle" font-family="Syne,sans-serif" font-size="7" letter-spacing="2" fill="rgba(184,146,42,0.25)">ERM ADVISORY · ERIK R. MILLER · ERIKRMILLER.COM · 2026</text>
-        </svg>
-        <figcaption style="font-family:var(--body);font-size:.78rem;color:rgba(247,244,238,.35);text-align:center;margin-top:1rem;line-height:1.5;">ERM Revenue Execution System™ · Six-Layer Architecture · ERM Advisory · Erik R. Miller · 2026</figcaption>
+      <h2 id="diagram-h2" style="font-family:var(--serif);font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:300;color:#fff;margin-bottom:.6rem;">How the <em style="font-style:italic;color:rgba(212,172,78,.9);">Six Layers Connect</em></h2>
+      <style id="rex-diagram-css">
+        .rex-fig{margin:0;}
+        .rex-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+        .rex-diagram{background:#161411;border:1px solid rgba(184,146,42,.18);border-radius:6px;padding:clamp(.8rem,1.5vw,1rem);}
+        .rex-sys-title{font-family:var(--sans);font-size:clamp(.8rem,1.5vw,.92rem);font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#d4ac4e;text-align:center;margin:0 0 .5rem;text-wrap:balance;}
+        .rex-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,260px);gap:.7rem;align-items:stretch;}
+        .rex-track{display:flex;flex-direction:column;}
+        .rex-row{background:rgba(184,146,42,.08);border:1px solid rgba(184,146,42,.4);border-radius:4px;padding:clamp(.42rem,.9vw,.55rem) clamp(.8rem,1.5vw,1rem);}
+        .rex-row--foundation{background:rgba(184,146,42,.05);text-align:center;}
+        .rex-eyebrow{font-family:var(--sans);font-size:clamp(.78rem,1.4vw,.83rem);font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#d4ac4e;margin:0 0 .14rem;}
+        .rex-title{font-family:var(--sans);font-size:clamp(1rem,1.9vw,1.12rem);font-weight:700;color:#fff;margin:0 0 .12rem;line-height:1.16;text-wrap:balance;}
+        .rex-desc{font-family:var(--body);font-size:clamp(.82rem,1.4vw,.92rem);color:#cdc7bb;margin:0;line-height:1.28;text-wrap:pretty;}
+        .rex-foundation-text{font-family:var(--serif);font-style:italic;font-size:clamp(.92rem,1.6vw,1.05rem);color:#d4ac4e;margin:.04rem 0 0;line-height:1.22;text-wrap:balance;}
+        .rex-arrow{align-self:center;color:#d4ac4e;font-size:.7rem;line-height:1;margin:.02rem 0;}
+        .rex-aside{background:rgba(184,146,42,.05);border:1px dashed rgba(184,146,42,.4);border-radius:4px;padding:clamp(.9rem,1.8vw,1.2rem);display:flex;flex-direction:column;justify-content:center;}
+        .rex-aside .rex-eyebrow{text-align:center;}
+        .rex-aside-title{font-family:var(--sans);font-size:clamp(1rem,1.8vw,1.1rem);font-weight:700;color:#fff;text-align:center;margin:0 0 .6rem;line-height:1.2;text-wrap:balance;}
+        .rex-aside-desc{font-family:var(--body);font-size:clamp(.82rem,1.4vw,.9rem);color:#cdc7bb;text-align:center;margin:0 0 .85rem;line-height:1.4;text-wrap:balance;}
+        .rex-chips{font-family:var(--body);font-size:clamp(.8rem,1.4vw,.88rem);color:#d4ac4e;text-align:center;margin:0 0 .45rem;line-height:1.45;text-wrap:balance;}
+        .rex-meta{font-family:var(--body);font-size:clamp(.8rem,1.3vw,.85rem);letter-spacing:.04em;color:#cdc7bb;text-align:center;margin:0;line-height:1.45;text-wrap:balance;}
+        @media(max-width:767px){.rex-grid{grid-template-columns:1fr;}.rex-aside{margin-top:.25rem;}}
+      </style>
+      <figure class="rex-fig">
+        <div class="rex-diagram" role="img" aria-labelledby="sys-svg-t" aria-describedby="sys-svg-d">
+          <h3 id="sys-svg-t" class="rex-sr">ERM Revenue Execution System — Six-Layer Architecture Diagram</h3>
+          <p id="sys-svg-d" class="rex-sr">Six horizontal layers stacked vertically forming the ERM Revenue Execution System. From bottom to top: Foundation (Marketing Execution Gap), Layer 1 (Signal-Centric ABM — Intelligence), Layer 2 (Account Activation Gap — Measurement), Layer 3 (Buying Group Mapping — Stakeholders), Layer 4 (Buying Group Orchestration — Execution), and a parallel track on the right (AI Buying Committee — AI Discovery). Arrows connect each layer to the next. The system is labeled ERM Revenue Execution System at the top.</p>
+          <p class="rex-sys-title">ERM Revenue Execution System™</p>
+          <div class="rex-grid">
+            <div class="rex-track">
+              <div class="rex-row">
+                <p class="rex-eyebrow">Layer 4 — Execution</p>
+                <p class="rex-title">Buying Group Orchestration Framework</p>
+                <p class="rex-desc">Signal Detection · Segmentation · Multi-Channel Activation · Measure</p>
+              </div>
+              <div class="rex-arrow" aria-hidden="true">▲</div>
+              <div class="rex-row">
+                <p class="rex-eyebrow">Layer 3 — Stakeholders</p>
+                <p class="rex-title">Buying Group Mapping Framework</p>
+                <p class="rex-desc">Economic Buyer · Champion · Technical Evaluator · End User · Procurement</p>
+              </div>
+              <div class="rex-arrow" aria-hidden="true">▲</div>
+              <div class="rex-row">
+                <p class="rex-eyebrow">Layer 2 — Measurement</p>
+                <p class="rex-title">Account Activation Gap Framework</p>
+                <p class="rex-desc">Cold · Warming · Active · Engaged — four-state model with gap diagnostics</p>
+              </div>
+              <div class="rex-arrow" aria-hidden="true">▲</div>
+              <div class="rex-row">
+                <p class="rex-eyebrow">Layer 1 — Intelligence</p>
+                <p class="rex-title">Signal-Centric ABM Operating Model</p>
+                <p class="rex-desc">Account Selection · Intent Intelligence · Multi-Channel Orchestration · Revenue Activation</p>
+              </div>
+              <div class="rex-arrow" aria-hidden="true">▲</div>
+              <div class="rex-row rex-row--foundation">
+                <p class="rex-eyebrow">Operational Foundation</p>
+                <p class="rex-foundation-text">Marketing Execution Gap Framework — ensures strategy gets executed</p>
+              </div>
+            </div>
+            <aside class="rex-aside">
+              <p class="rex-eyebrow">Parallel Track</p>
+              <p class="rex-aside-title">AI Buying Committee Framework</p>
+              <p class="rex-aside-desc">AI-mediated discovery before human conversation</p>
+              <p class="rex-chips">ChatGPT · Perplexity · Claude · Gemini · Copilot</p>
+              <p class="rex-meta">AEO · Schema · Entity · Authority · Clarity</p>
+            </aside>
+          </div>
+        </div>
+        <figcaption style="font-family:var(--body);font-size:.78rem;color:rgba(247,244,238,.7);text-align:center;margin-top:.45rem;line-height:1.5;">ERM Revenue Execution System™ · Six-Layer Architecture · ERM Advisory · Erik R. Miller · 2026</figcaption>
       </figure>
     </div>
   </section>
