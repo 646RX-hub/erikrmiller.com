@@ -289,6 +289,19 @@
   </url>
 
   <url>
+    <loc>https://erikrmiller.com/frameworks/enterprise-marketing-operating-system/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://erikrmiller.com/blog/enterprise-marketing-operating-system/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
     <loc>https://erikrmiller.com/frameworks/buying-group-mapping/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
