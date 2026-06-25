@@ -69,7 +69,8 @@ body{font-family:var(--body);background:var(--paper);color:var(--ink);overflow-x
 .rp-fill{height:100%;background:var(--gold);width:0%;transition:width 0.1s linear;}
 nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 4rem;background:rgba(12,11,9,0.95);backdrop-filter:blur(20px);}
 .nav-logo{font-family:var(--sans);font-size:0.7rem;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--paper);text-decoration:none;}
-.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center;flex:1;}
+.nav-links .nav-search-item{margin-left:auto;}
 .nav-links a{font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:rgba(247,244,238,0.58);text-decoration:none;transition:color 0.22s;}
 .nav-links a:hover,.nav-links a.active{color:var(--paper);}
 .nav-cta{color:var(--gold)!important;border:1px solid rgba(184,146,42,0.4);padding:0.4rem 1rem;}
@@ -485,6 +486,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 @media (max-width:760px){.erm-search-kbd,.erm-search-trigger kbd{display:none;}.erm-search-trigger{padding:0.45rem 0.55rem;}}
 </style>
 <link rel="stylesheet" href="/assets/search/search.css">
+<link rel="stylesheet" href="/assets/nav/nav.css">
 </head>
 <body>
 
@@ -492,14 +494,14 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 <div class="reading-progress" aria-hidden="true"><div class="rp-fill" id="rpFill"></div></div>
 <!-- NAV:START -->
 <nav id="nav" aria-label="Main navigation">
-  <a href="/" class="nav-logo" aria-label="Erik R. Miller — Home">E.R.M.</a>
-    <ul class="nav-links" role="list">
+  <ul class="nav-links" role="list">
+    <li><a href="/">Home</a></li>
     <li><a href="/about/">About</a></li>
     <li><a href="/about/#global">Global</a></li>
     <li><a href="/frameworks/">Frameworks</a></li>
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/resources/">Resources</a></li>
-  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg class="erm-search-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> <span class="erm-search-label">Search</span><kbd class="erm-search-kbd">⌘K</kbd></button></li>
+    <li class="nav-search-item"><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
     <li><a href="/#contact" class="nav-cta">Work Together</a></li>
   </ul>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
@@ -508,12 +510,13 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 </nav>
 <!-- Mobile nav overlay -->
 <ul class="nav-links-mobile" id="mobileNav" role="list" aria-label="Mobile navigation">
+  <li><a href="/">Home</a></li>
   <li><a href="/about/">About</a></li>
   <li><a href="/about/#global">Global</a></li>
   <li><a href="/frameworks/">Frameworks</a></li>
   <li><a href="/blog/">Blog</a></li>
   <li><a href="/resources/">Resources</a></li>
-  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg class="erm-search-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> <span class="erm-search-label">Search</span><kbd class="erm-search-kbd">⌘K</kbd></button></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
   <li><a href="/#contact" class="nav-cta">Work Together</a></li>
 </ul>
 <!-- NAV:END -->
