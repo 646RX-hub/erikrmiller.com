@@ -540,6 +540,21 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
 .exec-summary ul li a:hover{color:#e9cf86 !important;}
 .fw-cta p{color:rgba(247,244,238,0.92) !important;}
 .fw-cta p strong{color:#ffffff !important;font-weight:600;}
+
+/* ===== Search trigger — template-level fallback (deterministic) =====
+   Guarantees the nav search trigger never renders as a browser-default
+   button, even if /assets/search/search.css fails to load. These rules sit
+   just before the search.css <link>, so the canonical search.css wins when
+   present and this block applies as the fallback when it does not. ===== */
+.erm-search-trigger{display:inline-flex;align-items:center;gap:0.5rem;width:auto;height:auto;padding:0.45rem 0.75rem;background:transparent;border:0;color:rgba(247,244,238,0.82);font-family:var(--sans,'Syne',sans-serif);cursor:pointer;line-height:1;transition:color 0.22s;}
+.erm-search-trigger:hover,.erm-search-trigger:focus-visible{color:var(--gold,#b8922a);outline:none;}
+.erm-search-icon{width:16px;height:16px;display:block;flex:0 0 auto;stroke:currentColor;}
+.erm-search-label{font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:inherit;}
+.erm-search-kbd{font-family:var(--sans,'Syne',sans-serif);font-size:0.58rem;font-weight:600;letter-spacing:0.08em;color:inherit;background:rgba(247,244,238,0.06);border:1px solid rgba(247,244,238,0.12);padding:0.18rem 0.4rem;border-radius:3px;margin-left:0.35rem;line-height:1;}
+/* belt-and-suspenders: constrain bare svg/kbd even if class names are ever absent */
+.erm-search-trigger svg{width:16px;height:16px;display:block;flex:0 0 auto;stroke:currentColor;}
+.erm-search-trigger kbd{font-size:0.58rem;}
+@media (max-width:760px){.erm-search-kbd,.erm-search-trigger kbd{display:none;}.erm-search-trigger{padding:0.45rem 0.55rem;}}
 </style>
 <link rel="stylesheet" href="/assets/search/search.css">
 </head>
@@ -556,7 +571,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
     <li><a href="/frameworks/">Frameworks</a></li>
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/resources/">Resources</a></li>
-  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg class="erm-search-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> <span class="erm-search-label">Search</span><kbd class="erm-search-kbd">⌘K</kbd></button></li>
     <li><a href="/#contact" class="nav-cta">Work Together</a></li>
   </ul>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
@@ -570,7 +585,7 @@ footer{background:var(--ink);padding:5rem 4rem 3rem;border-top:1px solid rgba(24
   <li><a href="/frameworks/">Frameworks</a></li>
   <li><a href="/blog/">Blog</a></li>
   <li><a href="/resources/">Resources</a></li>
-  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Search<kbd>⌘K</kbd></button></li>
+  <li><button class="erm-search-trigger" data-erm-search-trigger type="button" aria-label="Search site"><svg class="erm-search-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> <span class="erm-search-label">Search</span><kbd class="erm-search-kbd">⌘K</kbd></button></li>
   <li><a href="/#contact" class="nav-cta">Work Together</a></li>
 </ul>
 <!-- NAV:END -->
