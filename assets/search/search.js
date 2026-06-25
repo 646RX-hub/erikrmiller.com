@@ -13,6 +13,26 @@
 (function () {
   'use strict';
 
+  // ---- Stylesheet guard --------------------------------------------------
+  // The search trigger + modal depend on search.css. A few self-contained
+  // page templates include search.js without linking that stylesheet, which
+  // leaves the trigger as an unstyled <button>: its inline SVG (viewBox, no
+  // width/height) balloons to the 300x150 replaced-element default, producing
+  // a large white box with the label crammed beneath. Guarantee the stylesheet
+  // is present so the component styles itself on every page it loads on.
+  (function ensureStylesheet() {
+    try {
+      var links = document.querySelectorAll('link[rel="stylesheet"]');
+      for (var i = 0; i < links.length; i++) {
+        if ((links[i].getAttribute('href') || '').indexOf('assets/search/search.css') !== -1) return;
+      }
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = '/assets/search/search.css';
+      (document.head || document.documentElement).appendChild(link);
+    } catch (e) { /* noop */ }
+  })();
+
   // ---- Config -----------------------------------------------------------
   const INDEX_URL = '/assets/search/search-index.json';
   const MINISEARCH_CDN = 'https://cdn.jsdelivr.net/npm/minisearch@7.1.0/dist/umd/index.min.js';
