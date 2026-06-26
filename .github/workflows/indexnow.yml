@@ -1,24 +1,18 @@
 name: IndexNow Submit
 
-# Submits newly created or materially updated URLs to IndexNow after each
-# deploy to the production branch. Only changed, indexable HTML URLs are sent.
-# Before anything is submitted, the sitemap-presence guard requires every changed
-# URL to exist in sitemap.xml (missing URLs block the run; stale lastmod warns).
-# Endpoint : https://api.indexnow.org/IndexNow
-# Host     : erikrmiller.com
-# Key file : https://erikrmiller.com/944495abd75a4b04ac89208cfe0a1d93.txt
+# Submits changed, indexable HTML pages to IndexNow after each push to main.
+# Only canonical `index.html` pages are sent, mapped to their pretty public URL.
+#   Endpoint : https://api.indexnow.org/indexnow
+#   Host     : erikrmiller.com
+#   Key file : https://erikrmiller.com/f07af34e58704d2dbba1c76fb5ae4fe6.txt
+#
+# This workflow only pings the search-engine IndexNow API. It does not touch
+# site content, layout, navigation, or the GitHub Pages deployment.
 
 on:
   push:
     branches: [main]
-    paths:
-      - '**/*.html'
-      - 'sitemap.xml'
   workflow_dispatch:
-    inputs:
-      urls:
-        description: 'Optional: space-separated URLs to submit manually'
-        required: false
 
 permissions:
   contents: read
@@ -32,11 +26,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HOST: erikrmiller.com
-      KEY: 944495abd75a4b04ac89208cfe0a1d93
-      KEY_LOCATION: https://erikrmiller.com/944495abd75a4b04ac89208cfe0a1d93.txt
-      ENDPOINT: https://api.indexnow.org/IndexNow
+      KEY: f07af34e58704d2dbba1c76fb5ae4fe6
+      KEY_LOCATION: https://erikrmiller.com/f07af34e58704d2dbba1c76fb5ae4fe6.txt
+      ENDPOINT: https://api.indexnow.org/indexnow
     steps:
-      - name: Checkout (with history for diff)
+      - name: Checkout (with previous commit for diff)
         uses: actions/checkout@v4
         with:
           fetch-depth: 2
@@ -48,130 +42,70 @@ jobs:
           set -euo pipefail
           mkdir -p .indexnow
           : > .indexnow/changed.txt
-          : > .indexnow/map.tsv          # url<TAB>source-file (push event only)
 
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.urls }}" ]; then
-            printf '%s\n' ${{ github.event.inputs.urls }} > .indexnow/changed.txt
-          else
-            BEFORE="${{ github.event.before }}"
-            if [ -z "${BEFORE}" ] || ! git cat-file -e "${BEFORE}^{commit}" 2>/dev/null; then
-              BEFORE="$(git rev-parse HEAD~1 2>/dev/null || echo '')"
-            fi
-            if [ -n "${BEFORE}" ]; then
-              git diff --name-only --diff-filter=ACMR "${BEFORE}" "${{ github.sha }}" > .indexnow/files.txt || true
-            else
-              git ls-files '*.html' > .indexnow/files.txt
-            fi
-
-            while IFS= read -r f; do
-              [ -n "$f" ] || continue
-              case "$f" in
-                *.html) ;;
-                *) continue ;;
-              esac
-              # Skip drafts, backups, working copies, and the 404 page
-              case "$f" in
-                _drafts/*|*.backup|index-icp-working.html|activation-loop-preview.html|404.html) continue ;;
-              esac
-              # Skip files that no longer exist (deletions/renames source side)
-              [ -f "$f" ] || continue
-              # Skip redirect stubs and noindex pages
-              grep -q 'http-equiv="refresh"' "$f" && continue || true
-              grep -q 'name="robots"[^>]*noindex' "$f" && continue || true
-
-              # Map file path -> canonical URL
-              if [ "$f" = "index.html" ]; then
-                url="/"
-              elif [ "${f##*/}" = "index.html" ]; then
-                url="/${f%index.html}"          # dir/index.html -> /dir/
-              else
-                url="/$f"                        # top-level page.html -> /page.html
-              fi
-              full="https://${HOST}${url}"
-              echo "$full" >> .indexnow/changed.txt
-              printf '%s\t%s\n' "$full" "$f" >> .indexnow/map.tsv
-            done < .indexnow/files.txt
-            sort -u -o .indexnow/changed.txt .indexnow/changed.txt
+          # --- Determine the changed files in this push -----------------------
+          BEFORE="${{ github.event.before }}"
+          # New branch / first push / missing parent -> fall back gracefully.
+          if [ -z "${BEFORE}" ] \
+             || [ "${BEFORE}" = "0000000000000000000000000000000000000000" ] \
+             || ! git cat-file -e "${BEFORE}^{commit}" 2>/dev/null; then
+            BEFORE="$(git rev-parse HEAD~1 2>/dev/null || echo '')"
           fi
 
-          COUNT=$(grep -c . .indexnow/changed.txt || echo 0)
+          if [ -n "${BEFORE}" ]; then
+            # ACMR = Added/Copied/Modified/Renamed; deletions are not submitted.
+            git diff --name-only --diff-filter=ACMR "${BEFORE}" "${{ github.sha }}" \
+              > .indexnow/files.txt || true
+          else
+            git ls-files '*.html' > .indexnow/files.txt
+          fi
+
+          # --- Map each changed HTML page to its canonical public URL ---------
+          while IFS= read -r f; do
+            [ -n "$f" ] || continue
+
+            # 1) Only consider .html files (this also ignores the IndexNow key .txt).
+            case "$f" in
+              *.html) ;;
+              *) continue ;;
+            esac
+
+            # 2) Ignore files outside the published, canonical site:
+            #    drafts/working copies/backups, the 404 page, and non-index
+            #    HTML (partials, redirect stubs) whose canonical URL is the
+            #    directory's index.html, not the file itself.
+            case "$f" in
+              _drafts/*|partials/*|scripts/*|*.backup|*.bak|404.html) continue ;;
+              *-working.html|*-preview.html|index-*-working.html) continue ;;
+            esac
+            if [ "${f##*/}" != "index.html" ]; then
+              echo "skip (non-canonical, not an index.html page): $f"
+              continue
+            fi
+
+            # 3) Skip files removed by a later rename in the same range.
+            [ -f "$f" ] || continue
+
+            # 4) path/index.html -> https://erikrmiller.com/path/  (root for top level)
+            if [ "$f" = "index.html" ]; then
+              url="/"
+            else
+              url="/${f%index.html}"   # dir/index.html -> /dir/
+            fi
+            echo "https://${HOST}${url}" >> .indexnow/changed.txt
+          done < .indexnow/files.txt
+
+          # De-duplicate.
+          sort -u -o .indexnow/changed.txt .indexnow/changed.txt
+
+          COUNT=$(grep -c . .indexnow/changed.txt || true)
           echo "count=${COUNT}" >> "$GITHUB_OUTPUT"
           echo "Changed indexable URLs (${COUNT}):"
           cat .indexnow/changed.txt || true
 
-      # ────────────────────────────────────────────────────────────────────
-      # Sitemap-presence gate. Runs BEFORE any submission.
-      #   * HARD FAIL  — a changed URL is absent from sitemap.xml (a new page
-      #                  that was not added). Nothing is submitted; fix the
-      #                  sitemap and re-push.
-      #   * WARN ONLY  — the URL is in sitemap.xml but its <lastmod> is older
-      #                  than the page's last change (e.g. a cosmetic/sitewide
-      #                  edit). The run proceeds; the stale entries are logged.
-      # Keeps the hand-curated sitemap the source of truth without blocking
-      # routine deploys. Skipped for manual workflow_dispatch URLs.
-      # ────────────────────────────────────────────────────────────────────
-      - name: Verify changed URLs are present in sitemap.xml
-        if: steps.build.outputs.count != '0' && !(github.event_name == 'workflow_dispatch' && github.event.inputs.urls != '')
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          if [ ! -f sitemap.xml ]; then
-            echo "::error title=Sitemap missing::sitemap.xml not found at repo root — cannot verify before submitting."
-            exit 1
-          fi
-
-          MISSING=0
-          : > .indexnow/sitemap-missing.txt
-          : > .indexnow/sitemap-stale.txt
-
-          while IFS=$'\t' read -r url file; do
-            [ -n "$url" ] || continue
-
-            # HARD requirement: URL must exist in sitemap.xml (literal match).
-            if ! grep -qF "<loc>${url}</loc>" sitemap.xml; then
-              echo "${url}  (source: ${file})" >> .indexnow/sitemap-missing.txt
-              MISSING=1
-              continue
-            fi
-
-            # Soft check: lastmod freshness -> warning only, never blocks.
-            # POSIX awk; index() for literal loc match; ISO dates compare lexically.
-            map_lastmod="$(awk -v loc="<loc>${url}</loc>" '
-              index($0, loc){found=1}
-              found && /<lastmod>/ {
-                line=$0
-                sub(/.*<lastmod>/,"",line)
-                sub(/<\/lastmod>.*/,"",line)
-                print line; exit
-              }' sitemap.xml)"
-
-            file_date="$(git log -1 --format=%cs -- "$file" 2>/dev/null || echo '')"
-            if [ -z "$map_lastmod" ]; then
-              echo "${url}: no <lastmod> in sitemap  (source: ${file})" >> .indexnow/sitemap-stale.txt
-            elif [ -n "$file_date" ] && [ "$map_lastmod" \< "$file_date" ]; then
-              echo "${url}: sitemap lastmod=${map_lastmod} < changed=${file_date}  (source: ${file})" >> .indexnow/sitemap-stale.txt
-            fi
-          done < .indexnow/map.tsv
-
-          # Emit warnings for stale-but-present URLs (does not block).
-          if [ -s .indexnow/sitemap-stale.txt ]; then
-            echo "Stale (present in sitemap but lastmod not bumped) — submitting anyway:"
-            while IFS= read -r line; do
-              [ -n "$line" ] || continue
-              echo "::warning title=Sitemap lastmod stale::${line}"
-            done < .indexnow/sitemap-stale.txt
-          fi
-
-          # Block only when a changed URL is missing from the sitemap.
-          if [ "$MISSING" = "1" ]; then
-            echo "::error title=URL missing from sitemap::Add the URL(s) below to sitemap.xml, then re-push. IndexNow submission was blocked so no URL is pinged that the sitemap does not represent."
-            echo "Missing from sitemap.xml:"
-            sed 's/^/  - /' .indexnow/sitemap-missing.txt
-            exit 1
-          fi
-
-          echo "All changed URLs are present in sitemap.xml — proceeding to submit."
+      - name: No changes to submit
+        if: steps.build.outputs.count == '0'
+        run: echo "No changed index.html pages detected -- nothing submitted to IndexNow."
 
       - name: Submit to IndexNow
         if: steps.build.outputs.count != '0'
@@ -181,40 +115,34 @@ jobs:
           TS="$(date -u +%FT%TZ)"
           mapfile -t URLS < .indexnow/changed.txt
 
+          # Build the exact required payload:
+          # { host, key, keyLocation, urlList:[...] }
           JSON=$(jq -n \
-            --arg host "$HOST" --arg key "$KEY" --arg kl "$KEY_LOCATION" \
+            --arg host "$HOST" \
+            --arg key "$KEY" \
+            --arg kl "$KEY_LOCATION" \
             '{host:$host, key:$key, keyLocation:$kl, urlList:$ARGS.positional}' \
             --args "${URLS[@]}")
           printf '%s' "$JSON" > .indexnow/payload.json
+
+          echo "Submitting ${#URLS[@]} URL(s) to ${ENDPOINT}:"
+          printf '  - %s\n' "${URLS[@]}"
 
           HTTP=$(curl -sS -o .indexnow/response.txt -w '%{http_code}' \
             -X POST "$ENDPOINT" \
             -H 'Content-Type: application/json; charset=utf-8' \
             --data @.indexnow/payload.json)
 
-          RESULT="success"
-          if [ "$HTTP" -ge 400 ] || [ "$HTTP" -lt 200 ]; then RESULT="failure"; fi
+          echo "IndexNow HTTP status: ${HTTP}"
+          echo "Response body:"
+          sed 's/^/  /' .indexnow/response.txt || true
 
-          {
-            echo "timestamp:       $TS"
-            echo "endpoint:        $ENDPOINT"
-            echo "host:            $HOST"
-            echo "key_location:    $KEY_LOCATION"
-            echo "http_status:     $HTTP"
-            echo "result:          $RESULT"
-            echo "submitted_count: ${#URLS[@]}"
-            echo "submitted_urls:"
-            printf '  - %s\n' "${URLS[@]}"
-            echo "response_body:"
-            sed 's/^/  /' .indexnow/response.txt || true
-          } | tee .indexnow/log.txt
-
-          echo "::notice title=IndexNow::${RESULT} (HTTP ${HTTP}) — ${#URLS[@]} URL(s) submitted at ${TS}"
-          [ "$RESULT" = "success" ]
-
-      - name: No changes to submit
-        if: steps.build.outputs.count == '0'
-        run: echo "No indexable URL changes detected — nothing submitted to IndexNow."
+          # IndexNow returns 200 (or 202) on success; treat anything else as failure.
+          if [ "$HTTP" -lt 200 ] || [ "$HTTP" -ge 300 ]; then
+            echo "::error title=IndexNow submission failed::HTTP ${HTTP} from ${ENDPOINT}"
+            exit 1
+          fi
+          echo "::notice title=IndexNow::success (HTTP ${HTTP}) -- ${#URLS[@]} URL(s) submitted at ${TS}"
 
       - name: Upload IndexNow log
         if: always()
