@@ -125,7 +125,7 @@ nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items
 .lib-feat-link{font-family:var(--sans);font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(212,172,78,.9);text-decoration:none;border-bottom:2px solid rgba(184,146,42,.4);padding-bottom:2px;transition:border-color .2s,color .2s;display:inline-flex;align-items:center;gap:.5rem;}
 .lib-feat-link:hover{color:#fff;border-color:#fff;}
 .lib-feat-link::after{content:'→';}
-.lib-feat-meta{display:flex;gap:1.5rem;margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08);}
+.lib-feat-meta{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08);}
 .lib-feat-meta-item{font-family:var(--sans);font-size:.55rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);display:flex;align-items:center;gap:.4rem;}
 .lib-feat-meta-item span{color:rgba(212,172,78,.7);}
 
@@ -208,7 +208,7 @@ nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items
 .lib-nl-h2 em{font-style:italic;color:var(--gold-a11y);}
 .lib-nl-sub{font-family:var(--body);font-size:1.0625rem;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:2.25rem;}
 .lib-nl-form{display:flex;max-width:400px;margin:0 auto;}
-.lib-nl-inp{flex:1;padding:.9rem 1.2rem;border:1px solid var(--border-md);border-right:none;background:var(--paper);font-family:var(--body);font-size:1rem;color:var(--ink);outline:none;transition:border-color .2s;}
+.lib-nl-inp{flex:1;min-width:0;padding:.9rem 1.2rem;border:1px solid var(--border-md);border-right:none;background:var(--paper);font-family:var(--body);font-size:1rem;color:var(--ink);outline:none;transition:border-color .2s;}
 .lib-nl-inp::placeholder{color:var(--muted);}
 .lib-nl-inp:focus{border-color:var(--gold-a11y);}
 .lib-nl-btn{padding:.9rem 1.4rem;background:var(--ink);color:#fff;border:1px solid var(--ink);font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .2s;}
@@ -671,12 +671,12 @@ footer{background:var(--ink);padding:4.5rem 4rem 2.5rem;border-top:3px solid var
 
       <!-- Pillar page + Visual Library CTAs -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.25rem;">
-        <a href="/frameworks/all/" style="background:var(--ink);padding:2rem;text-decoration:none;display:flex;flex-direction:column;gap:.75rem;border-top:3px solid var(--gold);transition:background .2s;" onmouseover="this.style.background='#1c1a17'" onmouseout="this.style.background='var(--ink)'">
+        <a href="/frameworks/all/" style="background:var(--ink);padding:2rem;text-decoration:none;display:flex;flex-direction:column;gap:.75rem;border-top:3px solid var(--gold);transition:background .2s;min-width:0;" onmouseover="this.style.background='#1c1a17'" onmouseout="this.style.background='var(--ink)'">
           <span style="font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(212,172,78,.8);">Deep Dive →</span>
           <span style="font-family:var(--sans);font-size:.88rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#fff;line-height:1.3;">The ERM Advisory Framework Collection</span>
           <span style="font-family:var(--body);font-size:.95rem;font-weight:300;color:rgba(255,255,255,.6);line-height:1.65;">The comprehensive pillar guide — all seven frameworks in one resource.</span>
         </a>
-        <a href="/visual-library/" style="background:var(--white);border:1px solid var(--border-md);border-top:3px solid var(--gold);padding:2rem;text-decoration:none;display:flex;flex-direction:column;gap:.75rem;transition:box-shadow .2s,transform .2s;" onmouseover="this.style.boxShadow='0 5px 22px rgba(12,11,9,.09)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='';this.style.transform=''">
+        <a href="/visual-library/" style="background:var(--white);border:1px solid var(--border-md);border-top:3px solid var(--gold);padding:2rem;text-decoration:none;display:flex;flex-direction:column;gap:.75rem;transition:box-shadow .2s,transform .2s;min-width:0;" onmouseover="this.style.boxShadow='0 5px 22px rgba(12,11,9,.09)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='';this.style.transform=''">
           <span style="font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-a11y);">Visual Library →</span>
           <span style="font-family:var(--sans);font-size:.88rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);line-height:1.3;">Download Framework Diagrams</span>
           <span style="font-family:var(--body);font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.65;">Large-format diagrams, embed codes, and downloadable visuals for every framework.</span>
