@@ -1,8 +1,11 @@
-name: Validate Blog Cards
+name: Validate Content
 
-# Fails the build if a production article exists under /blog/ but has no
-# corresponding card (link) on the blog index (/blog/). Keeps the blog index
-# from silently dropping published articles.
+# Content-integrity guards for the published site. Fails the build if either:
+#   1. A production article under /blog/ has no card (link) on the blog index
+#      (/blog/) — keeps the blog index from silently dropping published posts.
+#   2. The search index (assets/search/search-index.json) is malformed,
+#      internally inconsistent, references drafts, or lists a blog post that
+#      is not carded on /blog/.
 
 on:
   push:
@@ -15,7 +18,7 @@ permissions:
   contents: read
 
 jobs:
-  validate-blog-cards:
+  validate-content:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,3 +28,5 @@ jobs:
           python-version: '3.x'
       - name: Validate every /blog/ article has a card on the blog index
         run: python3 scripts/validate-blog-cards.py
+      - name: Validate search index integrity
+        run: python3 scripts/validate-search-index.py
