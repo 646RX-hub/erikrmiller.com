@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-07-01T20:05:05.548174Z",
- "count": 49,
+ "generated_at": "2026-07-08T16:00:00.000000Z",
+ "count": 51,
  "documents": [
   {
    "id": "home",
@@ -463,6 +463,28 @@
    "headings": "From Research Assistant to Buyer: The Agentic Buying Continuum · The Delegation Threshold · The Sixth Seat: What the Agent Changes About the Buying Group · The Agent-Ready Stack · The Machine Customer Readiness Index · What This Means for the Funnel You Report On · Who Owns Agent Readiness · The Honest Caveats · Key Takeaways · Frequently Asked Questions",
    "body": "An agent-ready revenue architecture makes your offers legible, verifiable, transactable, and governable for AI agents that research, negotiate, and buy on behalf of B2B customers. It has four layers: Machine Legibility, Verifiable Substance, Transactability, and Negotiation and Governance, one diagnostic (the Machine Customer Readiness Index), and one new metric (Share of Transaction). Getting recommended by AI is a visibility problem; getting bought by AI is a transactability problem. The Agentic Buying Continuum runs from Human-Led to Autonomous, and the Delegation Threshold is where every human-centric GTM assumption breaks. The Sixth Seat is the AI agent as a permanent member of the buying group. Gartner projects 90 percent of B2B buying will be agent-intermediated by 2028; Forrester expects one in five sellers to face buyer agents in 2026.",
    "date": "2026-07-06"
+  },
+  {
+   "id": "blog-sixth-seat-ai-agent-buying-committee",
+   "url": "/blog/sixth-seat-ai-agent-buying-committee/",
+   "type": "post",
+   "title": "The Sixth Seat: Why Every Enterprise Buying Committee Now Includes an AI Agent",
+   "description": "An AI agent now sits on every enterprise buying committee. What the Sixth Seat reads, what it ignores, why veto by omission decides deals, and how marketing and sales adapt.",
+   "tags": "Blog · Agent-Ready GTM · Buying Groups",
+   "headings": "The First Meeting Happens Without You · What Is the Sixth Seat? · Why It Matters, and Why Now · How the Sixth Seat Extends Buying Group Mapping · What the Agent Consumes and What It Ignores · Veto by Omission · How Enterprise Marketing Adapts · How Sales Adapts · The Next Twelve Months: An Executive Sequence · Key Takeaways · Frequently Asked Questions",
+   "body": "The Sixth Seat is the AI agent as a permanent member of the enterprise buying group, joining the five human archetypes of Buying Group Mapping: the Economic Buyer, the Champion, the Technical Evaluator, the End User, and Legal and Procurement. It consumes structured, verifiable, retrievable information; it ignores persuasion, gated content, and brand theater; and it holds veto by omission, the power to leave a vendor off a machine-built shortlist without anyone knowing it was excluded. Forrester puts the enterprise buying group at roughly 13 internal stakeholders and 9 external influencers. Marketing makes the company legible and verifiable; sales learns to sell through the agent brief; executives baseline the Machine Customer Readiness Index and re-score quarterly.",
+   "date": "2026-07-08"
+  },
+  {
+   "id": "resource-machine-customer-readiness-index",
+   "url": "/resources/machine-customer-readiness-index/",
+   "type": "resource",
+   "title": "Machine Customer Readiness Index Scorecard",
+   "description": "Measure how prepared your company is for AI assisted buying with this free executive assessment. Score machine readability, trust, governance, transaction readiness, and AI discoverability in about ten minutes.",
+   "tags": "Resource · Agent-Ready GTM",
+   "headings": "Executive Summary · Introduction · How to Use the Scorecard · The Assessment · The Four Readiness Levels · Executive Guidance · Where This Sits in the ERM Framework Ecosystem",
+   "body": "The Machine Customer Readiness Index (MCRI) is an interactive 20-question self-assessment with live scoring. It measures readiness for AI-assisted buying across five dimensions: Machine Legibility, Verifiable Substance, Transaction Readiness, Governance, and Discoverability. Score each question 1 to 5 for a total out of 100 and a level: Invisible (20-44), Legible (45-64), Transactable (65-84), or Agent Ready (85-100), with your level capped by your weakest dimension. Results include your strongest capability, your first wall, executive interpretation, 90-day priorities, and recommended ERM frameworks. Includes a downloadable Executive Workshop Scorecard PDF with a board summary page. The diagnostic companion to the Agent-Ready Revenue Architecture.",
+   "date": "2026-07-08"
   },
   {
    "id": "blog/signal-centric-abm-operating-model",
