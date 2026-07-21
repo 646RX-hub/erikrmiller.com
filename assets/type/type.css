@@ -1,0 +1,148 @@
+/* ============================================================================
+   ERM Advisory — Supporting Label Typography (shared layer)
+   ----------------------------------------------------------------------------
+   PURPOSE (narrow and deliberate)
+   Stop future articles inheriting undersized supporting labels through the
+   copy-forward publishing workflow. This is NOT a typography redesign.
+
+   SCOPE — supporting labels only:
+     section overlines · uppercase section labels · timeline labels
+     card labels · framework labels · table category cells & chips
+     in-article action labels · footer column headings
+
+   EXPLICITLY OUT OF SCOPE — untouched by this file:
+     hero/display · h1–h6 · lead paragraphs · body copy · line-height
+     spacing rhythm · colour · layout · navigation
+
+   ADDITIVE. Loads after each page's inline <style>. Nothing is deleted; legacy
+   declarations remain dormant underneath. Revert = remove one <link>.
+
+   GOVERNING PRINCIPLE: nothing may become smaller than it is today. Every value
+   below is larger than the declaration it supersedes.
+   Standard: docs/ERM-TYPOGRAPHY-STANDARD.md · Enforced: scripts/validate-type.py
+   ========================================================================== */
+
+:root{
+  /* Section overline — the dominant label introducing a content block.
+     15px = 0.88x body copy. Reads as structure; stays clearly under an H3.
+     Tracking eases 0.26em -> 0.14em: heavy tracking was compensating for
+     undersized type and becomes noise once the size is right. */
+  --type-overline: 1.125rem;         /* 18px — production standard raised 3pt */
+  --type-overline-track: 0.14em;     /* production standard */
+  --type-overline-leading: 1.45;
+  --type-overline-space-above: 2.2rem;
+  --type-overline-space-below: 0.85rem;
+
+  /* Card, timeline and chip labels — the 13px floor. */
+  --type-label: 0.9375rem;           /* 15px — raised off the 13px floor */
+  --type-label-track: 0.11em;
+  --type-label-leading: 1.4;
+
+  /* In-article action labels — back link, breadcrumb, read-more, CTA link. */
+  --type-action: 0.9375rem;          /* 15px */
+  --type-action-track: 0.10em;
+
+  /* Accessible label colour for LIGHT surfaces (paper #f7f4ee / cream #edeae0).
+     Brand gold #b8922a measures 2.43-2.66:1 there — below the 4.5:1 that WCAG 2.2
+     AA requires for normal-size text (15px/13px bold is NOT "large text").
+     #7a5e12 is the same hue, darkened until it passes: 5.57:1 on paper,
+     5.09:1 on cream. Brand gold is UNCHANGED on ink, where it already passes. */
+  --type-label-on-light: #7a5e12;
+
+  /* Governed labels on INK that were set in low-opacity rgba and fell below AA:
+     gold at 0.6 alpha measured 3.07:1, paper at 0.32 alpha measured 2.68:1.
+     Raised to opacities that clear 4.5:1 while keeping the same hue and the
+     intended recessive feel. */
+  --type-label-on-ink-gold: rgba(184,146,42,0.88);   /* 5.30:1 on ink */
+  --type-label-on-ink-mute: rgba(247,244,238,0.55);  /* 5.61:1 on ink */
+}
+
+/* --- A. Section overlines -> 15px ---------------------------------------- */
+.callout-label,.faq-label,.se-label,.sl-label,.cascade-label,.fw-frame-label,
+.rc-label,.citations-label,.def-term,.def-block .def-term,.lh-label,.kh-label,
+.mos-h-label,.assess-head .ah-l,.assess-cat,.related-label,.ah-tag,
+.featured-kicker,.featured-label,.section-label{
+  font-size: var(--type-overline) !important;
+  letter-spacing: var(--type-overline-track) !important;
+  font-weight: 700 !important;
+  line-height: var(--type-overline-leading) !important;
+  margin-bottom: var(--type-overline-space-below) !important;
+  display: block;
+}
+/* Overlines that open a section, rather than sitting inside a panel, also need
+   room above them. Panel-internal labels keep their container's padding. */
+.related-label,.section-label,.cascade-label,.citations-label{
+  margin-top: var(--type-overline-space-above) !important;
+}
+
+/* --- B. Timeline, card, framework and table labels -> 13px --------------- */
+.rm-period,.cl-tier-label,.fw-stage-name,.mos-comp-num,.mos-comp-name,
+.layer-name,.kr-name,.ld-k,.ld-name,.score-label,.adb-label,.cl-cadence-label,
+.related-tag,.art-tag,.pc-tag,.fc-tag,.htag,.mt-category,.mt-badge,.kr-sev,
+.framework-caption,.acct-table caption,.metrics-table caption,
+.acct-table td:first-child,.acct-table thead th,.metrics-table thead th{
+  font-size: var(--type-label) !important;
+  letter-spacing: var(--type-label-track) !important;
+  font-weight: 700 !important;
+  line-height: var(--type-label-leading) !important;
+}
+/* bordered chips: trim padding so larger type does not grow row heights */
+.mt-badge,.kr-sev{ padding: 0.2rem 0.5rem !important; }
+
+/* --- C. In-article action labels -> 13px --------------------------------- */
+.art-back,.ah-breadcrumb a,.ah-read,.rc-cta-link,.author-bio-name,
+.pull-quote cite,.se-cite,.featured-read,.featured-all{
+  font-size: var(--type-action) !important;
+  letter-spacing: var(--type-action-track) !important;
+  font-weight: 600 !important;
+}
+
+/* --- D. Footer column headings -> 13px ----------------------------------- */
+.ft-ht,.ft-global{
+  font-size: var(--type-label) !important;
+  letter-spacing: 0.12em !important;
+  line-height: var(--type-label-leading) !important;
+}
+
+/* --- Responsive: the floor is a floor. Never below 13px, any viewport. ---- */
+@media (max-width: 768px){
+  :root{
+    --type-overline: 1rem;           /* 16px floor on small screens; no small text */
+    --type-overline-track: 0.12em;
+    --type-overline-space-above: 1.6rem;
+    --type-overline-space-below: 0.7rem;
+    --type-label-track: 0.10em;
+    --type-action-track: 0.09em;
+  }
+}
+@media (min-width: 1600px){
+  :root{ --type-overline: 1rem; }    /* 16px — optical parity on wide screens */
+}
+
+/* Labels that can wrap in narrow columns. */
+.cascade-label,.rm-period,.cl-tier-label,.ft-ht,.related-tag,.art-tag{
+  text-wrap: balance;
+}
+
+/* ---------------------------------------------------------------------------
+   ACCESSIBLE LABEL COLOUR — light surfaces only
+   Scoped to governed supporting labels that render on paper or cream. Labels on
+   ink keep brand gold #b8922a (6.73:1) and are deliberately absent from this list.
+   Nothing else is recoloured: headings, rules, borders, icons, backgrounds and
+   the brand palette are untouched.
+
+   Adding a new supporting label on a light surface? Add it here and it inherits
+   the accessible colour automatically — never hard-code a label colour on a page.
+   ------------------------------------------------------------------------ */
+.callout-label,.faq-label,.sl-label,.cascade-label,.citations-label,
+.def-block .def-term,.assess-cat,.related-label,.related-tag,.rm-period,
+.fw-stage-name,.mos-comp-num,.ld-k,.adb-label,.acct-table caption,
+.metrics-table caption,.pull-quote cite,.featured-label,.fc-tag,.pc-tag,
+.section-label{
+  color: var(--type-label-on-light) !important;
+}
+
+/* Governed labels on ink whose low-opacity colour failed AA. Hue unchanged;
+   opacity raised to the minimum that clears 4.5:1. */
+.se-cite{ color: var(--type-label-on-ink-gold) !important; }
+.ah-read,.ah-date{ color: var(--type-label-on-ink-mute) !important; }
