@@ -18,6 +18,7 @@ The JSON file is keyed for MiniSearch: id, url, type, title, description,
 tags, headings, body, date. The runtime is responsible for tokenization,
 weighting, and snippet generation — we just give it clean text.
 """
+import html as _html
 import json, os, re, sys
 from datetime import datetime
 from html.parser import HTMLParser
@@ -73,11 +74,19 @@ def title_of(html: str) -> str:
 def first_h1(html: str) -> str:
     m = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.I | re.S)
     if not m: return ""
-    return re.sub(r"<[^>]+>", "", m.group(1)).strip()
+    # Replace tags with a space (not nothing) so <br> and inline tags do not
+    # weld adjacent words together, then decode entities (&nbsp;, &rsquo;, ...)
+    # and collapse the resulting whitespace.
+    text = re.sub(r"<[^>]+>", " ", m.group(1))
+    return re.sub(r"\s+", " ", _html.unescape(text)).strip()
 
 def all_headings(html: str) -> list[str]:
     hs = re.findall(r"<h[2-3][^>]*>(.*?)</h[2-3]>", html, re.I | re.S)
-    return [re.sub(r"<[^>]+>", "", h).strip() for h in hs]
+    out = []
+    for h in hs:
+        t = re.sub(r"<[^>]+>", " ", h)
+        out.append(re.sub(r"\s+", " ", _html.unescape(t)).strip())
+    return out
 
 def body_of(html: str) -> str:
     # Strip head entirely; we only want main content text.
@@ -175,7 +184,7 @@ def docs_for_homepage(home_file: Path) -> list[dict]:
         h = re.search(r"<h[12][^>]*>(.*?)</h[12]>", body, re.I | re.S)
         if not h: continue
         h_text = re.sub(r"<[^>]+>", " ", h.group(1))
-        h_text = re.sub(r"\s+", " ", h_text).strip()
+        h_text = re.sub(r"\s+", " ", _html.unescape(h_text)).strip()
         if not h_text: continue
         # Surrounding paragraph or kicker for description
         kicker_m = re.search(r'class=["\']kicker[^"\']*["\'][^>]*>(.*?)<', body, re.I | re.S)
