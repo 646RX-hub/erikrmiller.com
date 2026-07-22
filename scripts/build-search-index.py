@@ -60,12 +60,12 @@ def meta(html: str, name: str) -> str:
         rf'<meta\s+(?:name|property)=["\']{re.escape(name)}["\']\s+content=["\']([^"\']*)["\']',
         html, re.I,
     )
-    if m: return m.group(1).strip()
+    if m: return _html.unescape(m.group(1)).strip()
     m = re.search(
         rf'<meta\s+content=["\']([^"\']*)["\']\s+(?:name|property)=["\']{re.escape(name)}["\']',
         html, re.I,
     )
-    return m.group(1).strip() if m else ""
+    return _html.unescape(m.group(1)).strip() if m else ""
 
 def title_of(html: str) -> str:
     m = re.search(r"<title[^>]*>(.*?)</title>", html, re.I | re.S)
@@ -188,9 +188,9 @@ def docs_for_homepage(home_file: Path) -> list[dict]:
         if not h_text: continue
         # Surrounding paragraph or kicker for description
         kicker_m = re.search(r'class=["\']kicker[^"\']*["\'][^>]*>(.*?)<', body, re.I | re.S)
-        kicker = re.sub(r"<[^>]+>", "", kicker_m.group(1)).strip() if kicker_m else ""
+        kicker = _html.unescape(re.sub(r"<[^>]+>", "", kicker_m.group(1))).strip() if kicker_m else ""
         snippet = re.sub(r"<[^>]+>", " ", body)
-        snippet = re.sub(r"\s+", " ", snippet).strip()[:600]
+        snippet = re.sub(r"\s+", " ", _html.unescape(snippet)).strip()[:600]
         docs.append({
             "id": f"home#{sid}",
             "url": f"/#{sid}",
