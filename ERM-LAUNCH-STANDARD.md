@@ -17,7 +17,7 @@ Every flagship ERM framework launches as a complete resource ecosystem — never
 
 ## Editorial standards
 
-Executive language throughout: no jargon without an inline plain-English explanation; questions answerable by a CMO/CRO/RevOps leader without a second document. Framework names retained, with executive subtitles ("Can AI understand your company?"). Dense multi-concept sentences become scannable lists. Micro-typography floor: 0.62rem for uppercase eyebrows; 1rem+ for instructional text.
+Executive language throughout: no jargon without an inline plain-English explanation; questions answerable by a CMO/CRO/RevOps leader without a second document. Framework names retained, with executive subtitles ("Can AI understand your company?"). Dense multi-concept sentences become scannable lists. Supporting-label floor: **no uppercase label below 13px** — section overlines 15px, card/timeline/chip labels 13px; 1rem+ for instructional text. Governed by `docs/ERM-TYPOGRAPHY-STANDARD.md` and `assets/type/type.css`; enforced by `scripts/validate-type.py`. The former 0.62rem (9.9px) floor is retired. Headings, lede and body copy are unchanged and out of scope.
 
 ## Terminology registry
 
